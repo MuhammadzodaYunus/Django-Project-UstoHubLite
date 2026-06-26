@@ -34,6 +34,7 @@ class RepairRequest(models.Model):
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='other')
     urgency = models.CharField(max_length=20, choices=URGENCY_CHOICES, default='medium')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='open')
+    assigned_master = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL, related_name='assigned_repair_requests', limit_choices_to={"user_type": "master"})
     address = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -41,3 +42,4 @@ class RepairRequest(models.Model):
 
     def __str__(self):
         return self.title
+    
