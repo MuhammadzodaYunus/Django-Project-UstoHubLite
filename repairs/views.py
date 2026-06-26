@@ -84,3 +84,12 @@ def repair_delete_view(request, pk):
     
     else:
         return render(request, 'repairs/repair_confirm_delete.html', {'repair': repair})
+    
+
+@login_required
+def professional_request_list_view(request):
+    if request.user.user_type != 'master':
+        return redirect('repair_list')
+    
+    repairs = RepairRequest.objects.filter(status='open').order_by('-created_at')
+    return render(request, 'repairs/professional_request_list.html', {'repairs': repairs})
