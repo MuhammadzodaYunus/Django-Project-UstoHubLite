@@ -127,6 +127,10 @@
         gap: 32px;
     }
 
+    .repair-request-grid {
+        grid-template-columns: 1fr;
+    }
+
     .section-heading--sticky {
         position: static;
     }
@@ -168,7 +172,9 @@
     .hero-actions,
     .final-cta__inner,
     .pro-panel,
-    .form-actions {
+    .form-actions,
+    .repair-list-heading,
+    .repair-request-card__header {
         align-items: stretch;
         flex-direction: column;
     }
@@ -185,9 +191,15 @@
     .trust-grid,
     .category-grid,
     .field-grid,
+    .repair-list-summary,
+    .repair-meta-grid,
     .dashboard-overview,
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+
+    .repair-list-summary__metric {
+        text-align: left;
     }
 
     .auth-card {
@@ -268,7 +280,8 @@
     .empty-state,
     .category-card,
     .process-list li,
-    .repair-guidance__item {
+    .repair-guidance__item,
+    .repair-request-card {
         padding: 18px;
     }
 

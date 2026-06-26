@@ -7,7 +7,7 @@
 {% block hero_title %}Tell UstoHub what needs fixing.{% endblock %}
 {% block hero_text %}Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account.{% endblock %}
 {% block hero_actions %}
-    <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">Back to account overview</a>
+    <a class="btn btn--secondary" href="{% url 'repair_list' %}">Back to My Requests</a>
 {% endblock %}
 {% block hero_support %}
     <div class="repair-guidance" aria-label="Request guidance">
@@ -175,7 +175,7 @@
                 <span class="btn__label">Submit Repair Request</span>
                 <span class="btn__spinner" aria-hidden="true"></span>
             </button>
-            <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">Cancel</a>
+            <a class="btn btn--secondary" href="{% url 'repair_list' %}">Cancel</a>
         </div>
     </form>
 </article>

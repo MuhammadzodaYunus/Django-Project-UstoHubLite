@@ -104,3 +104,224 @@
 .repair-form__choices {
     gap: 14px;
 }
+
+.page-repair-list .hero-grid {
+    align-items: start;
+}
+
+.repair-overview-card {
+    width: min(100%, 520px);
+}
+
+.repair-list-summary {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    max-width: 660px;
+    margin-top: 32px;
+    padding: 18px;
+    gap: 18px;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.repair-list-summary__metric {
+    display: grid;
+    min-width: 128px;
+    padding: 18px;
+    gap: 4px;
+    text-align: center;
+    background: #F8FAFC;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.repair-list-summary__metric strong {
+    color: var(--color-navy);
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.repair-list-summary__metric span,
+.repair-list-count,
+.repair-request-card__eyebrow {
+    color: var(--color-text-soft);
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.repair-list-summary__copy h2 {
+    margin: 0;
+    color: var(--color-navy);
+    font-size: 1.08rem;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.repair-list-summary__copy p {
+    margin: 6px 0 0;
+    color: var(--color-text-soft);
+    font-size: 0.94rem;
+}
+
+.repair-list-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.repair-list-heading h2 {
+    margin: 10px 0 0;
+    color: var(--color-navy);
+    font-size: 2.35rem;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.repair-list-heading p:not(.eyebrow) {
+    max-width: 760px;
+    margin: 12px 0 0;
+    color: var(--color-text-soft);
+}
+
+.repair-list-count {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 10px 12px;
+    background: #F8FAFC;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.repair-request-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.repair-request-card {
+    display: grid;
+    min-width: 0;
+    padding: 22px;
+    gap: 18px;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.repair-request-card__header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.repair-request-card__eyebrow {
+    margin: 0 0 6px;
+    text-transform: uppercase;
+}
+
+.repair-request-card h3 {
+    margin: 0;
+    color: var(--color-navy);
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.repair-request-card__description {
+    margin: 0;
+    color: var(--color-text-soft);
+}
+
+.repair-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0;
+    gap: 10px;
+}
+
+.repair-meta-grid div {
+    min-width: 0;
+    padding: 12px;
+    background: #F8FAFC;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.repair-meta-grid dt {
+    color: var(--color-text-muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.repair-meta-grid dd {
+    margin: 6px 0 0;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.request-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 4px 8px;
+    color: var(--color-navy);
+    font-size: 0.78rem;
+    font-weight: 800;
+    background: #F1F5F9;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+}
+
+.request-chip--success {
+    color: #15803D;
+    background: #F0FDF4;
+    border-color: #BBF7D0;
+}
+
+.request-chip--warning {
+    color: #B45309;
+    background: #FFFBEB;
+    border-color: #FDE68A;
+}
+
+.request-chip--danger {
+    color: #B91C1C;
+    background: #FEF2F2;
+    border-color: #FECACA;
+}
+
+.repair-request-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 2px;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.repair-request-address .icon {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    color: var(--color-text-soft);
+}
+
+.repair-empty-state {
+    max-width: 620px;
+}
+
+.repair-empty-state .btn {
+    margin-top: 18px;
+}

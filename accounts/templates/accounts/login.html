@@ -8,7 +8,7 @@
 {% block hero_text %}{% if request.user.is_authenticated %}Continue managing repair requests, professional offers, bookings, warranty records, and account details.{% else %}Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details.{% endif %}{% endblock %}
 {% block hero_actions %}
     {% if request.user.is_authenticated %}
-        <a class="btn btn--primary" href="{% url 'register' %}#account-panel">Open Dashboard</a>
+        <a class="btn btn--primary" href="{% url 'repair_list' %}">Open Dashboard</a>
         <a class="btn btn--secondary" href="{% url 'register' %}#how-it-works">How UstoHub Works</a>
     {% else %}
         <a class="btn btn--primary" href="#account-panel">Log in securely</a>
@@ -24,7 +24,7 @@
         <h2 id="signed-in-title">You are already logged in.</h2>
         <p>Continue to your UstoHub overview or log out from the header when you are finished.</p>
     </header>
-    <a class="btn btn--primary auth-submit" href="{% url 'register' %}#account-panel">Open Dashboard</a>
+    <a class="btn btn--primary auth-submit" href="{% url 'repair_list' %}">Open Dashboard</a>
 </article>
 {% else %}
 <article class="auth-card auth-card--login" aria-labelledby="login-title">
