@@ -1,0 +1,160 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}UstoHub Accounts{% endblock %}</title>
+    <link rel="icon" href="{% static 'accounts/images/ustohub-mark.svg' %}" type="image/svg+xml">
+    <link rel="stylesheet" href="{% static 'accounts/css/accounts.css' %}">
+</head>
+<body class="auth-body {% block body_class %}{% endblock %}">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="ambient-system" aria-hidden="true">
+        <span class="ambient-system__beam ambient-system__beam--one"></span>
+        <span class="ambient-system__beam ambient-system__beam--two"></span>
+        <span class="ambient-system__mesh"></span>
+    </div>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Account navigation">
+            <a class="brand" href="{% url 'register' %}" aria-label="UstoHub registration">
+                <img class="brand__logo" src="{% static 'accounts/images/ustohub-logo.svg' %}" width="194" height="44" alt="UstoHub">
+            </a>
+
+            <div class="site-nav__links">
+                {% with current=request.resolver_match.url_name %}
+                    <a class="site-nav__link {% if current == 'register' %}is-active{% endif %}" href="{% url 'register' %}">Create account</a>
+                    <a class="site-nav__link {% if current == 'login' %}is-active{% endif %}" href="{% url 'login' %}">Log in</a>
+                {% endwith %}
+                {% if request.user.is_authenticated %}
+                    <form class="site-nav__logout" method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button class="site-nav__link site-nav__button" type="submit">Logout</button>
+                    </form>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="account-canvas" data-parallax-root>
+        <section class="brand-stage" aria-labelledby="stage-title">
+            <div class="stage-copy reveal-item">
+                <p class="stage-kicker">{% block stage_kicker %}Repair operating system{% endblock %}</p>
+                <h1 id="stage-title">{% block stage_title %}Home repair, routed through one trusted workspace.{% endblock %}</h1>
+            </div>
+
+            <div class="repair-map reveal-item" data-depth="18" aria-label="UstoHub repair network visualization">
+                <div class="repair-map__halo" aria-hidden="true"></div>
+                <svg class="blueprint" viewBox="0 0 720 560" role="img" aria-labelledby="blueprint-title blueprint-desc">
+                    <title id="blueprint-title">UstoHub home repair network</title>
+                    <desc id="blueprint-desc">A blueprint house with connected service nodes for plumbing, electric, appliance, furniture, and verified masters.</desc>
+                    <defs>
+                        <linearGradient id="blueprintLine" x1="120" y1="74" x2="620" y2="500" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#7ee7ff"/>
+                            <stop offset="0.55" stop-color="#2f7bff"/>
+                            <stop offset="1" stop-color="#ffb84d"/>
+                        </linearGradient>
+                        <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                            <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.64 0 0 0 0 1 0 0 0 .72 0"/>
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <g class="blueprint__grid">
+                        <path d="M64 92h592M64 172h592M64 252h592M64 332h592M64 412h592M64 492h592"/>
+                        <path d="M96 58v458M176 58v458M256 58v458M336 58v458M416 58v458M496 58v458M576 58v458"/>
+                    </g>
+
+                    <g class="blueprint__house">
+                        <path d="M153 258 360 88l207 170"/>
+                        <path d="M201 251v205h318V251"/>
+                        <path d="M257 456V318h206v138"/>
+                        <path d="M201 320h318M360 318v138"/>
+                        <path d="M276 212h76v58h-76zM390 212h76v58h-76z"/>
+                    </g>
+
+                    <g class="blueprint__routes">
+                        <path d="M360 278 C260 252 208 202 147 146"/>
+                        <path d="M360 278 C464 234 530 190 598 128"/>
+                        <path d="M360 278 C462 322 541 358 606 438"/>
+                        <path d="M360 278 C283 346 224 399 151 462"/>
+                        <path d="M360 278 C360 224 360 181 360 132"/>
+                    </g>
+
+                    <g class="blueprint__mark">
+                        <circle cx="360" cy="278" r="52"/>
+                        <path d="M327 265 360 238l33 27"/>
+                        <path d="M334 263v31c0 20 10 32 26 32s26-12 26-32v-31h-18v30c0 9-3 14-8 14s-8-5-8-14v-30h-18z"/>
+                        <path d="M381 256a17 17 0 0 1 20-18l-10 10 10 10 10-10a17 17 0 0 1-21 21l-28 28"/>
+                    </g>
+
+                    <g class="blueprint__nodes">
+                        <g class="node node--plumbing">
+                            <circle cx="147" cy="146" r="24"/>
+                            <path d="M137 146h20M147 136v20M137 156c0 8 20 8 20 0"/>
+                        </g>
+                        <g class="node node--electric">
+                            <circle cx="598" cy="128" r="24"/>
+                            <path d="M601 113 588 134h11l-4 14 15-22h-11l2-13Z"/>
+                        </g>
+                        <g class="node node--appliance">
+                            <circle cx="606" cy="438" r="24"/>
+                            <path d="M593 424h26v28h-26zM599 431h14M600 445h12"/>
+                        </g>
+                        <g class="node node--furniture">
+                            <circle cx="151" cy="462" r="24"/>
+                            <path d="M137 457h28v13M142 457v-10h18v10M142 470v8M160 470v8"/>
+                        </g>
+                        <g class="node node--master">
+                            <circle cx="360" cy="132" r="24"/>
+                            <path d="M360 117 347 123v11c0 12 7 22 13 25 6-3 13-13 13-25v-11l-13-6Z"/>
+                            <path d="m352 137 6 6 11-13"/>
+                        </g>
+                    </g>
+                </svg>
+
+                <div class="service-signal service-signal--plumbing" data-depth="34">
+                    <span class="service-signal__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h14v3H5v-3Zm2-5h10v3H7V7Zm3 8h4v5h-4v-5Z"/></svg>
+                    </span>
+                    <span>Plumbing</span>
+                </div>
+                <div class="service-signal service-signal--electric" data-depth="28">
+                    <span class="service-signal__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M13 2 5 13h6l-1 9 9-13h-6l0-7Z"/></svg>
+                    </span>
+                    <span>Electrical</span>
+                </div>
+                <div class="service-signal service-signal--appliance" data-depth="22">
+                    <span class="service-signal__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M6 3h12v18H6V3Zm2 2v5h8V5H8Zm1 10h6v2H9v-2Zm0-3h6v2H9v-2Z"/></svg>
+                    </span>
+                    <span>Appliance</span>
+                </div>
+                <div class="service-signal service-signal--verified" data-depth="30">
+                    <span class="service-signal__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2 5 5v6c0 5 3 9 7 11 4-2 7-6 7-11V5l-7-3Zm-2 14-4-4 1.6-1.6L10 12.8l6.4-6.4L18 8l-8 8Z"/></svg>
+                    </span>
+                    <span>Verified master</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-area reveal-item" aria-label="{% block auth_label %}UstoHub account form{% endblock %}">
+            {% block content %}{% endblock %}
+        </section>
+    </main>
+
+    <footer class="auth-footer">
+        <span>UstoHub account security protects repair requests before work begins.</span>
+    </footer>
+
+    <script src="{% static 'accounts/js/accounts.js' %}" defer></script>
+</body>
+</html>

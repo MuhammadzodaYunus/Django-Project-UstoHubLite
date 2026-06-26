@@ -1,0 +1,179 @@
+{% extends "accounts/base.html" %}
+
+{% block title %}Create account | UstoHub{% endblock %}
+{% block body_class %}page-register{% endblock %}
+{% block stage_kicker %}Dispatch-ready repair network{% endblock %}
+{% block stage_title %}Connect household problems with verified masters.{% endblock %}
+{% block auth_label %}Create a UstoHub account{% endblock %}
+
+{% block content %}
+<article class="auth-panel auth-panel--register" aria-labelledby="register-title">
+    <div class="auth-panel__topline">
+        <span class="flow-chip">Account setup</span>
+        <span class="secure-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 5 5v6c0 5 3 9 7 11 4-2 7-6 7-11V5l-7-3Zm-1 14-4-4 1.5-1.5L11 13l4.5-4.5L17 10l-6 6Z"/></svg>
+            Email verified next
+        </span>
+    </div>
+
+    <header class="auth-panel__header">
+        <p class="eyebrow">Create profile</p>
+        <h2 id="register-title">Launch your UstoHub workspace.</h2>
+        <p>Register as a customer or master. The backend will send the verification code after this step.</p>
+    </header>
+
+    <form class="auth-form" method="post" novalidate data-auth-form>
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            <div class="form-alert" role="alert">
+                <strong>Account details need attention.</strong>
+                <ul>
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div class="field-grid">
+            <div class="form-field {% if form.username.errors %}form-field--error{% endif %}" data-field="username">
+                {{ form.username.label_tag }}
+                <div class="control">
+                    {{ form.username }}
+                </div>
+                {% if form.username.help_text %}
+                    <div id="id_username_help" class="field-hint">{{ form.username.help_text|safe }}</div>
+                {% endif %}
+                {% if form.username.errors %}
+                    <ul id="id_username_errors" class="field-errors">
+                        {% for error in form.username.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field {% if form.email.errors %}form-field--error{% endif %}" data-field="email">
+                {{ form.email.label_tag }}
+                <div class="control">
+                    {{ form.email }}
+                </div>
+                {% if form.email.help_text %}
+                    <div id="id_email_help" class="field-hint">{{ form.email.help_text|safe }}</div>
+                {% endif %}
+                {% if form.email.errors %}
+                    <ul id="id_email_errors" class="field-errors">
+                        {% for error in form.email.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field {% if form.phone_number.errors %}form-field--error{% endif %}" data-field="phone_number">
+                {{ form.phone_number.label_tag }}
+                <div class="control">
+                    {{ form.phone_number }}
+                </div>
+                {% if form.phone_number.help_text %}
+                    <div id="id_phone_number_help" class="field-hint">{{ form.phone_number.help_text|safe }}</div>
+                {% endif %}
+                {% if form.phone_number.errors %}
+                    <ul id="id_phone_number_errors" class="field-errors">
+                        {% for error in form.phone_number.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field {% if form.user_type.errors %}form-field--error{% endif %}" data-field="user_type">
+                {{ form.user_type.label_tag }}
+                <div class="role-select" data-role-picker>
+                    <div class="role-options" aria-label="Choose account role">
+                        <button class="role-option" type="button" data-role-value="customer">
+                            <span class="role-option__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="M4 11 12 4l8 7v9h-6v-5h-4v5H4v-9Z"/></svg>
+                            </span>
+                            <span>Customer</span>
+                        </button>
+                        <button class="role-option" type="button" data-role-value="master">
+                            <span class="role-option__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="M16.5 3.5a5 5 0 0 0-5.7 6L4 16.3V20h3.7l6.8-6.8a5 5 0 0 0 6-5.7l-3.2 3.2-3-3 3.2-3.2Z"/></svg>
+                            </span>
+                            <span>Master</span>
+                        </button>
+                    </div>
+                    <div class="control control--select role-select__native">
+                        {{ form.user_type }}
+                    </div>
+                </div>
+                {% if form.user_type.help_text %}
+                    <div id="id_user_type_help" class="field-hint">{{ form.user_type.help_text|safe }}</div>
+                {% endif %}
+                {% if form.user_type.errors %}
+                    <ul id="id_user_type_errors" class="field-errors">
+                        {% for error in form.user_type.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field form-field--wide form-field--password {% if form.password1.errors %}form-field--error{% endif %}" data-field="password1">
+                {{ form.password1.label_tag }}
+                <div class="control password-control">
+                    {{ form.password1 }}
+                    <button class="password-toggle" type="button" data-password-toggle aria-label="Show password" aria-pressed="false">
+                        <svg class="icon-show" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5C6.5 5 3 9.2 2 12c1 2.8 4.5 7 10 7s9-4.2 10-7c-1-2.8-4.5-7-10-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2.2a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Z"/></svg>
+                        <svg class="icon-hide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4.2 3 16.8 16.8-1.2 1.2-3-3A11 11 0 0 1 12 19c-5.5 0-9-4.2-10-7 .5-1.4 1.8-3.2 3.6-4.6L3 4.2 4.2 3Zm4.4 7.1A4 4 0 0 0 13.9 15l-5.3-4.9ZM12 5c5.5 0 9 4.2 10 7-.3.8-1 1.8-1.9 2.9L17 11.8A4 4 0 0 0 12.2 7L10.4 5.2c.5-.1 1-.2 1.6-.2Z"/></svg>
+                    </button>
+                </div>
+                {% if form.password1.help_text %}
+                    <details class="password-requirements"{% if form.password1.errors %} open{% endif %}>
+                        <summary>Password requirements</summary>
+                        <div id="id_password1_help" class="field-hint">{{ form.password1.help_text|safe }}</div>
+                    </details>
+                {% endif %}
+                {% if form.password1.errors %}
+                    <ul id="id_password1_errors" class="field-errors">
+                        {% for error in form.password1.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field form-field--wide form-field--password {% if form.password2.errors %}form-field--error{% endif %}" data-field="password2">
+                {{ form.password2.label_tag }}
+                <div class="control password-control">
+                    {{ form.password2 }}
+                    <button class="password-toggle" type="button" data-password-toggle aria-label="Show password confirmation" aria-pressed="false">
+                        <svg class="icon-show" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5C6.5 5 3 9.2 2 12c1 2.8 4.5 7 10 7s9-4.2 10-7c-1-2.8-4.5-7-10-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2.2a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Z"/></svg>
+                        <svg class="icon-hide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4.2 3 16.8 16.8-1.2 1.2-3-3A11 11 0 0 1 12 19c-5.5 0-9-4.2-10-7 .5-1.4 1.8-3.2 3.6-4.6L3 4.2 4.2 3Zm4.4 7.1A4 4 0 0 0 13.9 15l-5.3-4.9ZM12 5c5.5 0 9 4.2 10 7-.3.8-1 1.8-1.9 2.9L17 11.8A4 4 0 0 0 12.2 7L10.4 5.2c.5-.1 1-.2 1.6-.2Z"/></svg>
+                    </button>
+                </div>
+                {% if form.password2.help_text %}
+                    <div id="id_password2_help" class="field-hint">{{ form.password2.help_text|safe }}</div>
+                {% endif %}
+                {% if form.password2.errors %}
+                    <ul id="id_password2_errors" class="field-errors">
+                        {% for error in form.password2.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+
+        <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
+            <span class="btn__label">Create account</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.4 5.4 20 12l-6.6 6.6-1.4-1.4 4.2-4.2H4v-2h12.2L12 6.8l1.4-1.4Z"/></svg>
+        </button>
+    </form>
+
+    <p class="auth-switch">Already operating on UstoHub? <a href="{% url 'login' %}">Log in</a></p>
+</article>
+{% endblock %}
