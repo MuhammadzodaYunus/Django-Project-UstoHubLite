@@ -222,6 +222,8 @@
     .repair-meta-grid,
     .repair-detail-summary,
     .repair-detail-meta-grid,
+    .repair-delete-warning,
+    .repair-delete-summary,
     .dashboard-overview,
     .footer-grid {
         grid-template-columns: 1fr;
@@ -314,7 +316,9 @@
     .repair-request-card,
     .repair-detail-summary,
     .repair-detail-title-row,
-    .repair-detail-section {
+    .repair-detail-section,
+    .repair-delete-warning,
+    .repair-delete-record {
         padding: 18px;
     }
 

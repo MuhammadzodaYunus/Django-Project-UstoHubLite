@@ -1,13 +1,17 @@
 {% extends "accounts/base.html" %}
 
-{% block title %}Create Repair Request | UstoHub{% endblock %}
-{% block body_class %}page-repair-create{% endblock %}
-{% block auth_label %}Create a repair request{% endblock %}
-{% block hero_eyebrow %}Repair request{% endblock %}
-{% block hero_title %}Tell UstoHub what needs fixing.{% endblock %}
-{% block hero_text %}Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account.{% endblock %}
+{% block title %}{% if form.instance.pk %}Edit Repair Request{% else %}Post a Repair Request{% endif %} | UstoHub{% endblock %}
+{% block body_class %}page-repair-form {% if form.instance.pk %}page-repair-edit{% else %}page-repair-create{% endif %}{% endblock %}
+{% block auth_label %}{% if form.instance.pk %}Edit a repair request{% else %}Create a repair request{% endif %}{% endblock %}
+{% block hero_eyebrow %}{% if form.instance.pk %}Repair request update{% else %}Repair request{% endif %}{% endblock %}
+{% block hero_title %}{% if form.instance.pk %}Edit Repair Request{% else %}Post a Repair Request{% endif %}{% endblock %}
+{% block hero_text %}{% if form.instance.pk %}Update the saved repair details for this request while keeping ownership and status managed by UstoHub.{% else %}Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account.{% endif %}{% endblock %}
 {% block hero_actions %}
-    <a class="btn btn--secondary" href="{% url 'repair_list' %}">Back to My Requests</a>
+    {% if form.instance.pk %}
+        <a class="btn btn--secondary" href="{% url 'repair_detail' form.instance.pk %}">Back to Request Details</a>
+    {% else %}
+        <a class="btn btn--secondary" href="{% url 'repair_list' %}">Back to My Requests</a>
+    {% endif %}
 {% endblock %}
 {% block hero_support %}
     <div class="repair-guidance" aria-label="Request guidance">
@@ -16,8 +20,13 @@
                 <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16M4 12h12M4 19h8"/></svg>
             </span>
             <div>
-                <h2>Keep it specific.</h2>
-                <p>Use the title and description to explain what happened, where the issue is, and what you have already checked.</p>
+                {% if form.instance.pk %}
+                    <h2>Update only what changed.</h2>
+                    <p>Adjust the title, description, category, urgency, or address so the request stays accurate.</p>
+                {% else %}
+                    <h2>Keep it specific.</h2>
+                    <p>Use the title and description to explain what happened, where the issue is, and what you have already checked.</p>
+                {% endif %}
             </div>
         </div>
         <div class="repair-guidance__item">
@@ -25,8 +34,13 @@
                 <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
             </span>
             <div>
-                <h2>Account protected.</h2>
-                <p>Your account and request status are handled by UstoHub, so you only need to submit the repair details.</p>
+                {% if form.instance.pk %}
+                    <h2>Status stays protected.</h2>
+                    <p>Customer ownership and request status remain managed by UstoHub while you save the updated details.</p>
+                {% else %}
+                    <h2>Account protected.</h2>
+                    <p>Your account and request status are handled by UstoHub, so you only need to submit the repair details.</p>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -36,9 +50,13 @@
 {% block content %}
 <article class="auth-card repair-card" aria-labelledby="repair-form-title">
     <header class="auth-card__header">
-        <span class="status-badge status-badge--info">New Repair Request</span>
-        <h2 id="repair-form-title">Create request details.</h2>
-        <p>All required fields are marked. UstoHub will review the request details before saving them.</p>
+        <span class="status-badge status-badge--info">{% if form.instance.pk %}Existing Repair Request{% else %}New Repair Request{% endif %}</span>
+        <h2 id="repair-form-title">{% if form.instance.pk %}Edit request details.{% else %}Create request details.{% endif %}</h2>
+        {% if form.instance.pk %}
+            <p>Update the saved fields below. All required fields are marked, and backend validation will confirm the changes before saving.</p>
+        {% else %}
+            <p>All required fields are marked. UstoHub will review the request details before saving them.</p>
+        {% endif %}
     </header>
 
     <form class="auth-form repair-form" method="post" novalidate data-auth-form>
@@ -167,15 +185,23 @@
 
         <p class="trust-note">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-            UstoHub links this request to your signed-in account and sets the request status automatically.
+            {% if form.instance.pk %}
+                UstoHub keeps this request linked to your account and preserves system-managed status details automatically.
+            {% else %}
+                UstoHub links this request to your signed-in account and sets the request status automatically.
+            {% endif %}
         </p>
 
         <div class="form-actions">
             <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
-                <span class="btn__label">Submit Repair Request</span>
+                <span class="btn__label">{% if form.instance.pk %}Save Changes{% else %}Post Repair Request{% endif %}</span>
                 <span class="btn__spinner" aria-hidden="true"></span>
             </button>
-            <a class="btn btn--secondary" href="{% url 'repair_list' %}">Cancel</a>
+            {% if form.instance.pk %}
+                <a class="btn btn--secondary" href="{% url 'repair_detail' form.instance.pk %}">Back to Request Details</a>
+            {% else %}
+                <a class="btn btn--secondary" href="{% url 'repair_list' %}">Cancel</a>
+            {% endif %}
         </div>
     </form>
 </article>

@@ -88,6 +88,31 @@
     border-color: var(--color-orange-dark);
 }
 
+.btn--danger {
+    color: #ffffff;
+    background: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.btn--danger:hover {
+    color: #ffffff;
+    background: #B91C1C;
+    border-color: #B91C1C;
+    box-shadow: 0 14px 30px rgba(220, 38, 38, 0.22);
+}
+
+.btn--danger:focus-visible {
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.18), 0 0 0 1px rgba(220, 38, 38, 0.9);
+}
+
+.btn--danger:active,
+.btn--danger.is-active,
+.btn--danger.is-pressed {
+    color: #ffffff;
+    background: #991B1B;
+    border-color: #991B1B;
+}
+
 .btn--secondary {
     color: var(--color-navy);
     background: #ffffff;

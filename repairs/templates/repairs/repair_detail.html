@@ -80,6 +80,12 @@
     </section>
 
     <div class="repair-detail-actions">
+        <a class="btn btn--secondary repair-detail-edit-action" href="{% url 'repair_update' repair.pk %}" aria-label="Edit repair request {{ repair.title }}">
+            Edit Request
+        </a>
+        <a class="btn btn--secondary repair-detail-delete-action" href="{% url 'repair_delete' repair.pk %}" aria-label="Delete repair request {{ repair.title }}">
+            Delete Request
+        </a>
         <a class="btn btn--secondary" href="{% url 'repair_list' %}">Back to My Requests</a>
     </div>
 </article>
