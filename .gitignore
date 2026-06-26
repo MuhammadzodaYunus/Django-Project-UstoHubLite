@@ -1,8 +1,62 @@
+```gitignore
+# Virtual environments
 .venv/
+venv/
+env/
+ENV/
+
+# Python cache and compiled files
 __pycache__/
 *.py[cod]
+*$py.class
+
+# Django database
 db.sqlite3
+db.sqlite3-journal
+*.sqlite3-journal
+
+# Environment variables and secrets
 .env
+.env.*
+!.env.example
+
+# User uploads and collected static files
 media/
 staticfiles/
+
+# IDE and editor files
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Type-checker and linter caches
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+```
