@@ -1,0 +1,106 @@
+.auth-card--login {
+    max-width: 500px;
+}
+
+.auth-card--verify {
+    max-width: 500px;
+}
+
+.dashboard-card {
+    width: min(100%, 620px);
+}
+
+.dashboard-overview {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 8px 0 18px;
+    gap: 10px;
+}
+
+.summary-card {
+    display: grid;
+    min-width: 0;
+    padding: 14px;
+    gap: 5px;
+    background: #F8FAFC;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.summary-card__label {
+    color: var(--color-text-soft);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.summary-card strong {
+    color: var(--color-navy);
+    font-size: 1.55rem;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.summary-card p {
+    margin: 0;
+    color: var(--color-text-soft);
+    font-size: 0.8rem;
+}
+
+.page-verify .hero-section {
+    min-height: calc(100vh - 76px);
+    display: grid;
+    align-items: center;
+}
+
+.page-verify .site-footer {
+    margin-top: 0;
+}
+
+.page-repair-create .hero-grid {
+    align-items: start;
+}
+
+.repair-card {
+    width: min(100%, 620px);
+}
+
+.repair-card .auth-card__header {
+    margin-bottom: 24px;
+}
+
+.repair-guidance {
+    display: grid;
+    max-width: 660px;
+    margin-top: 32px;
+    gap: 14px;
+}
+
+.repair-guidance__item {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: start;
+    padding: 18px;
+    gap: 14px;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.repair-guidance__item h2 {
+    margin: 0;
+    color: var(--color-navy);
+    font-size: 1.08rem;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.repair-guidance__item p {
+    margin: 6px 0 0;
+    color: var(--color-text-soft);
+    font-size: 0.94rem;
+}
+
+.repair-form__choices {
+    gap: 14px;
+}

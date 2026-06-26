@@ -2,35 +2,33 @@
 
 {% block title %}Verify email | UstoHub{% endblock %}
 {% block body_class %}page-verify{% endblock %}
-{% block stage_kicker %}Secure activation{% endblock %}
-{% block stage_title %}Confirm the inbox before the repair network opens.{% endblock %}
 {% block auth_label %}Verify your UstoHub email{% endblock %}
+{% block hero_eyebrow %}Account verification{% endblock %}
+{% block hero_title %}Confirm your email before repair activity begins.{% endblock %}
+{% block hero_text %}Enter the six-digit code sent to your inbox so your account can be activated securely.{% endblock %}
+{% block hero_actions %}
+    <a class="btn btn--primary" href="#account-panel">Enter verification code</a>
+    <a class="btn btn--secondary" href="{% url 'login' %}">Back to log in</a>
+{% endblock %}
+{% block product_sections %}{% endblock %}
 
 {% block content %}
-<article class="auth-panel auth-panel--verify" aria-labelledby="verify-title">
+<article class="auth-card auth-card--verify" aria-labelledby="verify-title">
     <ol class="flow-progress" aria-label="Account progress">
         <li class="is-complete"><span>1</span>Account</li>
         <li class="is-active"><span>2</span>Verify</li>
         <li><span>3</span>Ready</li>
     </ol>
 
-    <div class="verify-visual" aria-hidden="true">
-        <span class="verify-visual__ring"></span>
-        <svg viewBox="0 0 160 120" focusable="false">
-            <path class="verify-visual__envelope" d="M28 36h104v68H28V36Zm0 0 52 42 52-42M28 104l37-35M132 104 95 69"/>
-            <path class="verify-visual__shield" d="M80 16 58 26v18c0 22 13 38 22 43 9-5 22-21 22-43V26L80 16Z"/>
-            <path class="verify-visual__check" d="m69 48 8 8 17-18"/>
-        </svg>
-    </div>
-
-    <header class="auth-panel__header">
-        <p class="eyebrow">Email checkpoint</p>
+    <header class="auth-card__header">
+        <span class="status-badge status-badge--warning">Email checkpoint</span>
         <h2 id="verify-title">Enter the six-digit code.</h2>
-        <p>Sent to <strong>{{ user.email }}</strong></p>
+        <p>We sent it to <strong>{{ user.email }}</strong>.</p>
     </header>
 
     <form class="auth-form" method="post" novalidate data-auth-form>
         {% csrf_token %}
+        {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
 
         {% if form.non_field_errors %}
             <div class="form-alert" role="alert">
@@ -53,7 +51,7 @@
                     {{ form.code }}
                 </div>
             </div>
-            <p id="id_code_help" class="field-hint">Numbers only. Paste is supported.</p>
+            <p id="id_code_help" class="field-hint">Use numbers only. Paste is supported.</p>
             {% if form.code.errors %}
                 <ul id="id_code_errors" class="field-errors">
                     {% for error in form.code.errors %}
@@ -63,15 +61,14 @@
             {% endif %}
         </div>
 
-        <p class="security-note">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 5 5v6c0 5 3 9 7 11 4-2 7-6 7-11V5l-7-3Zm0 3 4 1.7V11c0 3.4-1.6 6-4 7.5C9.6 17 8 14.4 8 11V6.7L12 5Z"/></svg>
-            The code protects the account before requests or master work can begin.
+        <p class="trust-note">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+            Verification protects your account before repair requests or professional work can begin.
         </p>
 
         <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
             <span class="btn__label">Verify email</span>
             <span class="btn__spinner" aria-hidden="true"></span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.4 5.4 20 12l-6.6 6.6-1.4-1.4 4.2-4.2H4v-2h12.2L12 6.8l1.4-1.4Z"/></svg>
         </button>
     </form>
 </article>

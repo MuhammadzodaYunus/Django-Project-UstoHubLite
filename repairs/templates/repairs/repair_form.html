@@ -1,0 +1,182 @@
+{% extends "accounts/base.html" %}
+
+{% block title %}Create Repair Request | UstoHub{% endblock %}
+{% block body_class %}page-repair-create{% endblock %}
+{% block auth_label %}Create a repair request{% endblock %}
+{% block hero_eyebrow %}Repair request{% endblock %}
+{% block hero_title %}Tell UstoHub what needs fixing.{% endblock %}
+{% block hero_text %}Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account.{% endblock %}
+{% block hero_actions %}
+    <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">Back to account overview</a>
+{% endblock %}
+{% block hero_support %}
+    <div class="repair-guidance" aria-label="Request guidance">
+        <div class="repair-guidance__item">
+            <span class="icon-tile" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16M4 12h12M4 19h8"/></svg>
+            </span>
+            <div>
+                <h2>Keep it specific.</h2>
+                <p>Use the title and description to explain what happened, where the issue is, and what you have already checked.</p>
+            </div>
+        </div>
+        <div class="repair-guidance__item">
+            <span class="icon-tile" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+            </span>
+            <div>
+                <h2>Account protected.</h2>
+                <p>Your account and request status are handled by UstoHub, so you only need to submit the repair details.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block product_sections %}{% endblock %}
+
+{% block content %}
+<article class="auth-card repair-card" aria-labelledby="repair-form-title">
+    <header class="auth-card__header">
+        <span class="status-badge status-badge--info">New Repair Request</span>
+        <h2 id="repair-form-title">Create request details.</h2>
+        <p>All required fields are marked. UstoHub will review the request details before saving them.</p>
+    </header>
+
+    <form class="auth-form repair-form" method="post" novalidate data-auth-form>
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+
+        {% if form.non_field_errors %}
+            <div class="form-alert" role="alert">
+                <strong>The request needs attention.</strong>
+                <ul>
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div class="field-stack">
+            <div class="form-field {% if form.title.errors %}form-field--error{% endif %}" data-field="title">
+                <label for="{{ form.title.id_for_label }}">
+                    Repair title
+                    {% if form.title.field.required %}
+                        <span class="required-mark" aria-hidden="true">*</span>
+                        <span class="sr-only">required</span>
+                    {% endif %}
+                </label>
+                <div class="control">
+                    {{ form.title }}
+                </div>
+                <p id="id_title_help" class="field-hint">A short summary such as "Kitchen sink is leaking."</p>
+                {% if form.title.errors %}
+                    <ul id="id_title_errors" class="field-errors">
+                        {% for error in form.title.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field form-field--textarea {% if form.description.errors %}form-field--error{% endif %}" data-field="description">
+                <label for="{{ form.description.id_for_label }}">
+                    Problem description
+                    {% if form.description.field.required %}
+                        <span class="required-mark" aria-hidden="true">*</span>
+                        <span class="sr-only">required</span>
+                    {% endif %}
+                </label>
+                <div class="control">
+                    {{ form.description }}
+                </div>
+                <p id="id_description_help" class="field-hint">Include symptoms, timing, affected room, and any safety concerns.</p>
+                {% if form.description.errors %}
+                    <ul id="id_description_errors" class="field-errors">
+                        {% for error in form.description.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="field-grid repair-form__choices">
+                <div class="form-field {% if form.category.errors %}form-field--error{% endif %}" data-field="category">
+                    <label for="{{ form.category.id_for_label }}">
+                        Service category
+                        {% if form.category.field.required %}
+                            <span class="required-mark" aria-hidden="true">*</span>
+                            <span class="sr-only">required</span>
+                        {% endif %}
+                    </label>
+                    <div class="control control--select">
+                        {{ form.category }}
+                    </div>
+                    <p id="id_category_help" class="field-hint">Choose the closest repair area.</p>
+                    {% if form.category.errors %}
+                        <ul id="id_category_errors" class="field-errors">
+                            {% for error in form.category.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <div class="form-field {% if form.urgency.errors %}form-field--error{% endif %}" data-field="urgency">
+                    <label for="{{ form.urgency.id_for_label }}">
+                        Urgency
+                        {% if form.urgency.field.required %}
+                            <span class="required-mark" aria-hidden="true">*</span>
+                            <span class="sr-only">required</span>
+                        {% endif %}
+                    </label>
+                    <div class="control control--select">
+                        {{ form.urgency }}
+                    </div>
+                    <p id="id_urgency_help" class="field-hint">Set how quickly the issue should be reviewed.</p>
+                    {% if form.urgency.errors %}
+                        <ul id="id_urgency_errors" class="field-errors">
+                            {% for error in form.urgency.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="form-field {% if form.address.errors %}form-field--error{% endif %}" data-field="address">
+                <label for="{{ form.address.id_for_label }}">
+                    Service address
+                    {% if form.address.field.required %}
+                        <span class="required-mark" aria-hidden="true">*</span>
+                        <span class="sr-only">required</span>
+                    {% endif %}
+                </label>
+                <div class="control">
+                    {{ form.address }}
+                </div>
+                <p id="id_address_help" class="field-hint">Enter the address where the repair is needed.</p>
+                {% if form.address.errors %}
+                    <ul id="id_address_errors" class="field-errors">
+                        {% for error in form.address.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+
+        <p class="trust-note">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+            UstoHub links this request to your signed-in account and sets the request status automatically.
+        </p>
+
+        <div class="form-actions">
+            <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
+                <span class="btn__label">Submit Repair Request</span>
+                <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+            <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">Cancel</a>
+        </div>
+    </form>
+</article>
+{% endblock %}

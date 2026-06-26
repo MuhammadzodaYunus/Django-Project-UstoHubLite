@@ -2,20 +2,19 @@
     "use strict";
 
     var root = document.documentElement;
+    var body = document.body;
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var controller = "AbortController" in window ? new AbortController() : null;
-    var eventOptions = controller ? { signal: controller.signal } : false;
 
     root.classList.add("js");
 
-    var ready = function () {
+    var onReady = function () {
         root.classList.add("is-ready");
     };
 
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", ready, eventOptions);
+        document.addEventListener("DOMContentLoaded", onReady);
     } else {
-        ready();
+        onReady();
     }
 
     var focusInput = function (input) {
@@ -30,13 +29,89 @@
         }
     };
 
+    var enhanceHeader = function () {
+        var header = document.querySelector("[data-site-header]");
+        var toggle = document.querySelector("[data-nav-toggle]");
+        var panel = document.querySelector("[data-nav-panel]");
+
+        if (header) {
+            var syncHeader = function () {
+                header.classList.toggle("is-scrolled", window.scrollY > 8);
+            };
+
+            syncHeader();
+
+            if (!reduceMotion) {
+                window.addEventListener("scroll", syncHeader, { passive: true });
+            } else {
+                window.addEventListener("scroll", syncHeader);
+            }
+        }
+
+        if (!toggle || !panel) {
+            return;
+        }
+
+        var closePanel = function () {
+            toggle.setAttribute("aria-expanded", "false");
+            panel.classList.remove("is-open");
+            body.classList.remove("is-nav-open");
+        };
+
+        toggle.addEventListener("click", function () {
+            var isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+            toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+            panel.classList.toggle("is-open", !isOpen);
+            body.classList.toggle("is-nav-open", !isOpen);
+        });
+
+        panel.querySelectorAll("a, button").forEach(function (item) {
+            item.addEventListener("click", function () {
+                if (window.matchMedia("(max-width: 980px)").matches) {
+                    closePanel();
+                }
+            });
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closePanel();
+            }
+        });
+    };
+
     var describeFields = function () {
+        var autocomplete = {
+            username: "username",
+            email: "email",
+            phone_number: "tel",
+            password: "current-password",
+            password1: "new-password",
+            password2: "new-password",
+            code: "one-time-code"
+        };
+
         document.querySelectorAll(".form-field").forEach(function (field) {
             var input = field.querySelector("input, select, textarea");
             var descriptions = [];
 
             if (!input) {
                 return;
+            }
+
+            if (input.name && autocomplete[input.name]) {
+                input.setAttribute("autocomplete", autocomplete[input.name]);
+            }
+
+            if (input.name === "phone_number" && input.tagName === "INPUT") {
+                input.setAttribute("type", "tel");
+                input.setAttribute("inputmode", "tel");
+            }
+
+            if (input.name === "username") {
+                input.setAttribute("autocapitalize", "none");
+                input.setAttribute("spellcheck", "false");
             }
 
             field.querySelectorAll(".field-hint, .field-errors").forEach(function (message) {
@@ -59,14 +134,14 @@
 
             input.addEventListener("focus", function () {
                 field.classList.add("is-focused");
-            }, eventOptions);
+            });
 
             input.addEventListener("blur", function () {
                 field.classList.remove("is-focused");
-            }, eventOptions);
+            });
 
-            input.addEventListener("input", setValueState, eventOptions);
-            input.addEventListener("change", setValueState, eventOptions);
+            input.addEventListener("input", setValueState);
+            input.addEventListener("change", setValueState);
             setValueState();
         });
     };
@@ -81,14 +156,14 @@
             }
 
             button.addEventListener("click", function () {
-                var isHidden = input.type === "password";
+                var shouldShow = input.type === "password";
 
-                input.type = isHidden ? "text" : "password";
-                button.classList.toggle("is-visible", isHidden);
-                button.setAttribute("aria-pressed", isHidden ? "true" : "false");
-                button.setAttribute("aria-label", isHidden ? "Hide password" : "Show password");
+                input.type = shouldShow ? "text" : "password";
+                button.classList.toggle("is-visible", shouldShow);
+                button.setAttribute("aria-pressed", shouldShow ? "true" : "false");
+                button.setAttribute("aria-label", shouldShow ? "Hide password" : "Show password");
                 focusInput(input);
-            }, eventOptions);
+            });
         });
     };
 
@@ -104,6 +179,7 @@
             var sync = function () {
                 options.forEach(function (option) {
                     var selected = option.dataset.roleValue === select.value;
+
                     option.classList.toggle("is-selected", selected);
                     option.setAttribute("aria-pressed", selected ? "true" : "false");
                 });
@@ -114,10 +190,10 @@
                     select.value = option.dataset.roleValue;
                     select.dispatchEvent(new Event("change", { bubbles: true }));
                     sync();
-                }, eventOptions);
+                });
             });
 
-            select.addEventListener("change", sync, eventOptions);
+            select.addEventListener("change", sync);
             sync();
         });
     };
@@ -136,10 +212,11 @@
             }
 
             var renderSlots = function () {
-                var value = input.value;
+                var value = input.value || "";
 
                 slots.forEach(function (slot, index) {
                     var character = value[index] || "";
+
                     slot.textContent = character;
                     slot.classList.toggle("is-filled", Boolean(character));
                 });
@@ -150,7 +227,7 @@
                 renderSlots();
             };
 
-            input.addEventListener("input", normalizeCode, eventOptions);
+            input.addEventListener("input", normalizeCode);
 
             input.addEventListener("paste", function (event) {
                 var clipboard = event.clipboardData || window.clipboardData;
@@ -162,7 +239,7 @@
                 event.preventDefault();
                 input.value = clipboard.getData("text").replace(/\D/g, "").slice(0, 6);
                 input.dispatchEvent(new Event("input", { bubbles: true }));
-            }, eventOptions);
+            });
 
             renderSlots();
         });
@@ -182,56 +259,14 @@
                     submitButton.setAttribute("aria-busy", "true");
                     submitButton.disabled = true;
                 }
-            }, eventOptions);
+            });
         });
     };
 
-    var enhanceParallax = function () {
-        if (reduceMotion || window.matchMedia("(pointer: coarse)").matches) {
-            return;
-        }
-
-        document.querySelectorAll("[data-parallax-root]").forEach(function (area) {
-            var targets = area.querySelectorAll("[data-depth]");
-            var frame = null;
-            var nextX = 0;
-            var nextY = 0;
-
-            var paint = function () {
-                targets.forEach(function (target) {
-                    var depth = Number(target.dataset.depth || 12);
-                    target.style.setProperty("--parallax-x", (nextX * depth).toFixed(2) + "px");
-                    target.style.setProperty("--parallax-y", (nextY * depth).toFixed(2) + "px");
-                });
-
-                frame = null;
-            };
-
-            area.addEventListener("pointermove", function (event) {
-                var rect = area.getBoundingClientRect();
-                nextX = ((event.clientX - rect.left) / rect.width - 0.5) * 0.45;
-                nextY = ((event.clientY - rect.top) / rect.height - 0.5) * 0.45;
-
-                if (!frame) {
-                    frame = window.requestAnimationFrame(paint);
-                }
-            }, eventOptions);
-
-            area.addEventListener("pointerleave", function () {
-                nextX = 0;
-                nextY = 0;
-
-                if (!frame) {
-                    frame = window.requestAnimationFrame(paint);
-                }
-            }, eventOptions);
-        });
-    };
-
+    enhanceHeader();
     describeFields();
     enhancePasswords();
     enhanceRolePicker();
     enhanceCodeInputs();
     enhanceForms();
-    enhanceParallax();
 }());

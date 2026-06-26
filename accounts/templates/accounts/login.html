@@ -1,29 +1,42 @@
 {% extends "accounts/base.html" %}
 
-{% block title %}Log in | UstoHub{% endblock %}
+{% block title %}{% if request.user.is_authenticated %}Dashboard | UstoHub{% else %}Log in | UstoHub{% endif %}{% endblock %}
 {% block body_class %}page-login{% endblock %}
-{% block stage_kicker %}Return to dispatch{% endblock %}
-{% block stage_title %}Repair coordination stays in one secure control room.{% endblock %}
-{% block auth_label %}Log in to UstoHub{% endblock %}
+{% block auth_label %}{% if request.user.is_authenticated %}UstoHub dashboard access{% else %}Log in to UstoHub{% endif %}{% endblock %}
+{% block hero_eyebrow %}{% if request.user.is_authenticated %}Signed in{% else %}Secure account access{% endif %}{% endblock %}
+{% block hero_title %}{% if request.user.is_authenticated %}Your repair workspace is ready.{% else %}Return to your repair workspace.{% endif %}{% endblock %}
+{% block hero_text %}{% if request.user.is_authenticated %}Continue managing repair requests, professional offers, bookings, warranty records, and account details.{% else %}Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details.{% endif %}{% endblock %}
+{% block hero_actions %}
+    {% if request.user.is_authenticated %}
+        <a class="btn btn--primary" href="{% url 'register' %}#account-panel">Open Dashboard</a>
+        <a class="btn btn--secondary" href="{% url 'register' %}#how-it-works">How UstoHub Works</a>
+    {% else %}
+        <a class="btn btn--primary" href="#account-panel">Log in securely</a>
+        <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">Create account</a>
+    {% endif %}
+{% endblock %}
 
 {% block content %}
-<article class="auth-panel auth-panel--login" aria-labelledby="login-title">
-    <div class="auth-panel__topline">
-        <span class="flow-chip">Secure access</span>
-        <span class="secure-chip">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a2 2 0 0 1 2 2v8H4v-8a2 2 0 0 1 2-2h1Zm2 0h6V8a3 3 0 0 0-6 0v2Z"/></svg>
-            Protected session
-        </span>
-    </div>
-
-    <header class="auth-panel__header">
-        <p class="eyebrow">Welcome back</p>
-        <h2 id="login-title">Enter the workspace.</h2>
-        <p>Use the username and password attached to your UstoHub profile.</p>
+{% if request.user.is_authenticated %}
+<article class="auth-card auth-card--login" aria-labelledby="signed-in-title">
+    <header class="auth-card__header">
+        <span class="status-badge status-badge--success">Signed in</span>
+        <h2 id="signed-in-title">You are already logged in.</h2>
+        <p>Continue to your UstoHub overview or log out from the header when you are finished.</p>
+    </header>
+    <a class="btn btn--primary auth-submit" href="{% url 'register' %}#account-panel">Open Dashboard</a>
+</article>
+{% else %}
+<article class="auth-card auth-card--login" aria-labelledby="login-title">
+    <header class="auth-card__header">
+        <span class="status-badge status-badge--info">Protected session</span>
+        <h2 id="login-title">Log in to UstoHub.</h2>
+        <p>Use the username and password connected to your verified account.</p>
     </header>
 
     <form class="auth-form" method="post" novalidate data-auth-form>
         {% csrf_token %}
+        {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
 
         {% if form.non_field_errors %}
             <div class="form-alert" role="alert">
@@ -59,8 +72,8 @@
                 <div class="control password-control">
                     {{ form.password }}
                     <button class="password-toggle" type="button" data-password-toggle aria-label="Show password" aria-pressed="false">
-                        <svg class="icon-show" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5C6.5 5 3 9.2 2 12c1 2.8 4.5 7 10 7s9-4.2 10-7c-1-2.8-4.5-7-10-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2.2a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6Z"/></svg>
-                        <svg class="icon-hide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4.2 3 16.8 16.8-1.2 1.2-3-3A11 11 0 0 1 12 19c-5.5 0-9-4.2-10-7 .5-1.4 1.8-3.2 3.6-4.6L3 4.2 4.2 3Zm4.4 7.1A4 4 0 0 0 13.9 15l-5.3-4.9ZM12 5c5.5 0 9 4.2 10 7-.3.8-1 1.8-1.9 2.9L17 11.8A4 4 0 0 0 12.2 7L10.4 5.2c.5-.1 1-.2 1.6-.2Z"/></svg>
+                        <svg class="icon icon-show" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+                        <svg class="icon icon-hide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 3 18 18M10.6 10.6A3 3 0 0 0 13.4 13.4M9.9 4.2A10.8 10.8 0 0 1 12 4c6.5 0 10 8 10 8a18.4 18.4 0 0 1-3.2 4.3M6.6 6.6A17.5 17.5 0 0 0 2 12s3.5 8 10 8a10.8 10.8 0 0 0 5.4-1.5"/></svg>
                     </button>
                 </div>
                 {% if form.password.help_text %}
@@ -77,17 +90,17 @@
         </div>
 
         <p class="trust-note">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 3 7v6c0 4.5 3.8 8.6 9 9 5.2-.4 9-4.5 9-9V7l-9-5Zm0 3.2 6 3.3V13c0 3-2.4 5.6-6 6-3.6-.4-6-3-6-6V8.5l6-3.3Z"/></svg>
-            Verified accounts keep repair requests tied to the right person.
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5V11Z"/></svg>
+            Secure access keeps account activity tied to the right customer or professional.
         </p>
 
         <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
             <span class="btn__label">Log in</span>
             <span class="btn__spinner" aria-hidden="true"></span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.4 5.4 20 12l-6.6 6.6-1.4-1.4 4.2-4.2H4v-2h12.2L12 6.8l1.4-1.4Z"/></svg>
         </button>
     </form>
 
-    <p class="auth-switch">New to UstoHub? <a href="{% url 'register' %}">Create an account</a></p>
+    <p class="auth-switch">New to UstoHub? <a href="{% url 'register' %}#account-panel">Create an account</a></p>
 </article>
+{% endif %}
 {% endblock %}

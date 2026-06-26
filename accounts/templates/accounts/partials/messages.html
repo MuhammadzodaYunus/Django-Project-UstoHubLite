@@ -1,0 +1,12 @@
+{% if messages %}
+    <section class="message-region container" aria-label="Notifications">
+        {% for message in messages %}
+            <div class="notice notice--{{ message.tags|default:'info' }}" role="status">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/>
+                </svg>
+                <p>{{ message }}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endif %}
