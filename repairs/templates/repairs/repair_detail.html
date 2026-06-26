@@ -1,0 +1,86 @@
+{% extends "accounts/base.html" %}
+
+{% block title %}{{ repair.title }} | Repair Request | UstoHub{% endblock %}
+{% block body_class %}page-repair-detail{% endblock %}
+{% block auth_label %}Repair request detail{% endblock %}
+{% block hero_eyebrow %}Repair request detail{% endblock %}
+{% block hero_title %}{{ repair.title }}{% endblock %}
+{% block hero_text %}Review the saved repair details, service location, and current request status for this account-owned request.{% endblock %}
+{% block hero_actions %}
+    <a class="btn btn--secondary" href="{% url 'repair_list' %}">Back to My Requests</a>
+{% endblock %}
+{% block hero_support %}
+    <div class="repair-detail-summary" aria-label="Repair request status summary">
+        <span class="icon-tile" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18"/></svg>
+        </span>
+        <div>
+            <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
+                Status: {{ repair.get_status_display }}
+            </span>
+            <h2>Request information stays connected.</h2>
+            <p>Category, urgency, address, and timestamps come from the saved repair request record.</p>
+        </div>
+    </div>
+{% endblock %}
+{% block product_sections %}{% endblock %}
+
+{% block content %}
+<article class="auth-card repair-detail-card" aria-labelledby="repair-detail-title">
+    <header class="auth-card__header repair-detail-card__header">
+        <span class="status-badge status-badge--neutral">Saved Repair Request</span>
+        <h2 id="repair-detail-title">Request record.</h2>
+        <p>These are the details currently saved for this repair request.</p>
+    </header>
+
+    <div class="repair-detail-title-row">
+        <div>
+            <p class="repair-detail-label">Request title</p>
+            <h3>{{ repair.title }}</h3>
+        </div>
+        <span class="request-chip {% if repair.urgency == 'high' %}request-chip--danger{% elif repair.urgency == 'medium' %}request-chip--warning{% else %}request-chip--success{% endif %}">
+            Urgency: {{ repair.get_urgency_display }}
+        </span>
+    </div>
+
+    <dl class="repair-detail-meta-grid">
+        <div>
+            <dt>Category</dt>
+            <dd>{{ repair.get_category_display }}</dd>
+        </div>
+        <div>
+            <dt>Status</dt>
+            <dd>{{ repair.get_status_display }}</dd>
+        </div>
+        <div>
+            <dt>Created</dt>
+            <dd><time datetime="{{ repair.created_at|date:'c' }}">{{ repair.created_at|date:"M j, Y, g:i A" }}</time></dd>
+        </div>
+        <div>
+            <dt>Updated</dt>
+            <dd><time datetime="{{ repair.updated_at|date:'c' }}">{{ repair.updated_at|date:"M j, Y, g:i A" }}</time></dd>
+        </div>
+    </dl>
+
+    <section class="repair-detail-section" aria-labelledby="repair-detail-description-title">
+        <div class="repair-detail-section__heading">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16M4 12h12M4 19h8"/></svg>
+            <h3 id="repair-detail-description-title">Full description</h3>
+        </div>
+        <div class="repair-detail-copy">{{ repair.description|linebreaksbr }}</div>
+    </section>
+
+    <section class="repair-detail-section repair-detail-address" aria-labelledby="repair-detail-address-title">
+        <div class="repair-detail-section__heading">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z"/><path d="M12 10.5h.01"/></svg>
+            <h3 id="repair-detail-address-title">Service address</h3>
+        </div>
+        <address>{{ repair.address }}</address>
+    </section>
+
+    <div class="repair-detail-actions">
+        <a class="btn btn--secondary" href="{% url 'repair_list' %}">Back to My Requests</a>
+    </div>
+</article>
+{% endblock %}

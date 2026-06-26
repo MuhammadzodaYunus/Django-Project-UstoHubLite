@@ -30,18 +30,19 @@
                 <span class="nav-toggle__label">Menu</span>
             </button>
 
-            <div class="site-nav__panel" id="primary-navigation" data-nav-panel>
-                <div class="site-nav__links">
-                    <a href="{% url 'register' %}#services">Services</a>
-                    <a href="{% url 'register' %}#how-it-works">How It Works</a>
-                    <a href="{% url 'register' %}#professionals">Find Professionals</a>
-                    <a href="{% url 'register' %}#warranty">Warranty</a>
-                    <a href="{% url 'register' %}#for-professionals">For Professionals</a>
-                </div>
+            {% with current_route=request.resolver_match.url_name %}
+                <div class="site-nav__panel" id="primary-navigation" data-nav-panel>
+                    <div class="site-nav__links">
+                        <a href="{% url 'register' %}#services">Services</a>
+                        <a href="{% url 'register' %}#how-it-works">How It Works</a>
+                        <a href="{% url 'register' %}#professionals">Find Professionals</a>
+                        <a href="{% url 'register' %}#warranty">Warranty</a>
+                        <a href="{% url 'register' %}#for-professionals">For Professionals</a>
+                    </div>
 
-                <div class="site-nav__actions">
-                    {% if request.user.is_authenticated %}
-                        <a class="nav-dashboard" href="{% url 'repair_list' %}">
+                    <div class="site-nav__actions">
+                        {% if request.user.is_authenticated %}
+                        <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
                             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M3 13h8V3H3v10Zm10 8h8V3h-8v18ZM3 21h8v-6H3v6Z"/>
                             </svg>
@@ -55,12 +56,13 @@
                             {% csrf_token %}
                             <button class="btn btn--ghost" type="submit">Log out</button>
                         </form>
-                    {% else %}
-                        <a class="btn btn--ghost" href="{% url 'login' %}">Log in</a>
-                        <a class="btn btn--primary" href="{% url 'register' %}#account-panel">Create account</a>
-                    {% endif %}
+                        {% else %}
+                        <a class="btn btn--ghost{% if current_route == 'login' %} is-active{% endif %}" href="{% url 'login' %}"{% if current_route == 'login' %} aria-current="page"{% endif %}>Log in</a>
+                        <a class="btn btn--primary{% if current_route == 'register' %} is-active{% endif %}" href="{% url 'register' %}#account-panel"{% if current_route == 'register' %} aria-current="page"{% endif %}>Create account</a>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
+            {% endwith %}
         </nav>
     </header>
 
@@ -100,6 +102,37 @@
                                 Repair warranty
                             </li>
                         </ul>
+
+                        <div class="repair-photo-showcase" data-depth-scene aria-label="Repair visit photo preview">
+                            <figure class="repair-photo-card" data-depth-layer="0.85">
+                                <img
+                                    src="{% static 'accounts/images/repair-professional-kitchen.png' %}"
+                                    width="1586"
+                                    height="992"
+                                    alt="Repair professional fixing a kitchen sink cabinet in a bright home workspace."
+                                    loading="eager"
+                                    decoding="async"
+                                >
+                                <figcaption>
+                                    <span>Photo-ready repair context</span>
+                                    <strong>Issue, location, and professional visit evidence stay connected.</strong>
+                                </figcaption>
+                            </figure>
+                            <div class="photo-signal photo-signal--top" data-depth-layer="1.25">
+                                <span class="status-badge status-badge--success">Verified visit</span>
+                                <p>Clear visual context for the repair record.</p>
+                            </div>
+                            <div class="repair-proof-rail" data-depth-layer="0.55" aria-label="Repair evidence highlights">
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                    Verified visit
+                                </span>
+                                <span>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
+                                    Before-and-after ready
+                                </span>
+                            </div>
+                        </div>
 
                         <div class="workflow-preview" aria-label="Repair request workflow preview">
                             <div class="workflow-preview__header">

@@ -1,25 +1,191 @@
-# UstoHub Lite — Codex Rules
 
-## Project purpose
+# UstoHub Lite — Repository Rules for Codex
 
-This is a small Django MVT exam project.
+## 1. Project identity
 
-The student must personally write and understand all backend code.
+UstoHub Lite is a small Django MVT exam project.
 
-## Allowed work
+The backend is intentionally written and controlled by the student.
 
-Codex may independently work only inside:
+The student must personally understand every backend decision, Django concept, database operation, authentication rule, permission rule, and business rule.
+
+Codex is responsible only for implementing and maintaining the frontend within the explicitly allowed directories.
+
+These rules are mandatory for every task in this repository.
+
+---
+
+## 2. Instruction priority
+
+Before starting any task, Codex must read:
+
+1. This `AGENTS.md` file.
+2. `docs/FRONTEND_DESIGN_SYSTEM.md`, when the task involves frontend work.
+3. The existing relevant templates, CSS, and JavaScript.
+4. Relevant backend files in read-only mode when required to understand frontend integration.
+
+`AGENTS.md` defines repository permissions and safety boundaries.
+
+`docs/FRONTEND_DESIGN_SYSTEM.md` defines the permanent visual and UX direction of UstoHub.
+
+Neither document may be ignored, weakened, or replaced by assumptions.
+
+---
+
+## 3. Permanent frontend design direction
+
+All frontend work must follow the existing UstoHub design direction:
+
+**Industrial Premium Marketplace**
+
+The interface must combine:
+
+* trustworthiness similar to a modern financial product;
+* strength and practicality similar to a professional repair company;
+* clarity and refinement similar to a modern technology startup.
+
+The frontend must remain:
+
+* light-first;
+* professional;
+* trustworthy;
+* practical;
+* responsive;
+* accessible;
+* consistent;
+* scalable;
+* clean;
+* product-focused.
+
+The frontend must not become:
+
+* cyberpunk;
+* neon;
+* gaming-inspired;
+* blueprint-style;
+* glassmorphic;
+* excessively dark;
+* overly animated;
+* childish;
+* experimental;
+* visually inconsistent;
+* similar to a generic construction-company template.
+
+All new pages must continue the existing design system instead of creating a separate visual style.
+
+---
+
+## 4. Current language
+
+The current frontend version must use professional English only.
+
+Do not implement multilingual functionality.
+
+Do not add:
+
+* language switchers;
+* translation files;
+* Django internationalization configuration;
+* automatic translations;
+* Tajik or Russian interface text.
+
+The product may support multiple languages later, but that work is outside the current project scope.
+
+Visible English terminology must remain clear and consistent.
+
+Preferred user-facing terms include:
+
+* Customer
+* Professional
+* Repair Request
+* Service
+* Offer
+* Booking
+* Verified
+* In Progress
+* Completed
+* Warranty
+* Review
+
+The backend may use internal values such as:
+
+* `customer`
+* `master`
+
+The frontend may display `Professional` while preserving and submitting the exact backend value `master`.
+
+Never rename or alter backend values for visual wording.
+
+---
+
+## 5. Allowed write scope
+
+Codex may independently create, edit, replace, or delete files only inside:
 
 * `templates/`
 * `static/css/`
 * `static/js/`
 * `static/img/`
 
-Codex may create responsive HTML, CSS, JavaScript, icons, images, and accessible UI components.
+Allowed frontend work includes:
 
-## Protected backend files
+* Django HTML templates;
+* template inheritance;
+* template partials;
+* reusable frontend components;
+* semantic HTML;
+* responsive CSS;
+* CSS custom properties;
+* frontend JavaScript;
+* accessible interactions;
+* local SVG icons;
+* local frontend images;
+* loading states;
+* empty states;
+* success states;
+* error states;
+* form presentation;
+* responsive navigation;
+* frontend validation that does not replace backend validation.
 
-Codex must not create, edit, delete, or replace any of these without explicit permission:
+Codex must not write outside these directories unless the student gives explicit permission for a specific file and task.
+
+---
+
+## 6. Read-only backend inspection
+
+Codex may inspect backend files in read-only mode only when necessary to understand frontend integration.
+
+Read-only inspection may be used to identify:
+
+* existing URL paths;
+* Django URL names;
+* view behavior;
+* context variables;
+* form field names;
+* expected POST values;
+* hidden fields;
+* authentication state;
+* user roles;
+* permission conditions;
+* model data exposed to templates;
+* backend validation messages;
+* success redirects;
+* status values;
+* pagination variables;
+* uploaded-file fields;
+* Django message-framework usage;
+* existing business behavior.
+
+Reading a backend file does not grant permission to modify it.
+
+Codex must never make an unrequested backend change merely because it would make frontend implementation easier.
+
+---
+
+## 7. Protected backend files and systems
+
+Codex must not create, edit, delete, rename, replace, or auto-format any of the following without explicit student permission:
 
 * `models.py`
 * `views.py`
@@ -28,35 +194,824 @@ Codex must not create, edit, delete, or replace any of these without explicit pe
 * `admin.py`
 * `settings.py`
 * `tests.py`
+* `apps.py`
+* `manage.py`
+* middleware files
+* serializer files
+* service-layer files
+* utility files containing backend logic
 * migration files
+* database files
+* environment files
 * authentication logic
-* permissions
+* authorization logic
+* permission logic
 * database queries
+* model managers
+* signals
+* email logic
 * business logic
+* API endpoints
+* API response formats
+* Django project architecture
+* application structure
 
-## When backend work is required
+Codex must not modify Python files during a frontend task.
 
-Stop before writing code.
+This restriction applies even when the backend contains an error or missing feature.
 
-First explain:
+---
 
-1. Why the backend change is required.
+## 8. When a backend change appears necessary
+
+When frontend work appears to require a backend change, Codex must stop before writing backend code.
+
+Codex must first explain:
+
+1. Why the backend change appears necessary.
 2. Which Django concept is involved.
-3. Which files would change.
-4. A small example of the proposed logic.
-5. Any security or database consequences.
+3. Which exact files would need to change.
+4. What frontend requirement cannot be completed without it.
+5. A small conceptual example of the proposed logic.
+6. Any security consequences.
+7. Any database consequences.
+8. Whether the change requires a migration.
+9. Whether a frontend-only alternative exists.
 
-Then wait for explicit permission.
+Codex must then wait for explicit student permission.
 
-## General restrictions
+Silence, previous permission for another task, or a general request to “finish the project” does not count as permission.
 
-* Do not install packages.
-* Do not run migrations.
-* Do not modify the database.
-* Do not commit or push.
-* Do not redesign the project architecture.
-* Do not add multilingual systems.
-* Do not add APIs, AI features, payments, email confirmation, or other unrequested features.
-* Do not write backend code merely to make the frontend work.
+Permission must be specific to the proposed backend change.
+
+Without explicit permission, Codex must:
+
+* leave backend files unchanged;
+* implement only the frontend portion supported by the existing backend;
+* clearly report the remaining limitation.
+
+---
+
+## 9. Backend ownership
 
 The student owns all backend decisions.
+
+Codex must not independently decide:
+
+* which models to add;
+* which model fields to add;
+* how relationships should work;
+* how authentication should work;
+* how permissions should work;
+* how email confirmation should work;
+* which database queries to use;
+* which business rules to implement;
+* which API architecture to use;
+* which Django apps to create;
+* how backend validation should work.
+
+Codex may explain backend concepts only when requested or when a required backend limitation is discovered.
+
+Codex must not silently implement backend code.
+
+---
+
+## 10. Frontend continuation rule
+
+When a new backend feature is completed by the student, Codex must continue the existing UstoHub frontend rather than creating an unrelated design.
+
+Before implementing the frontend for a new feature, Codex must:
+
+1. Read `AGENTS.md`.
+2. Read `docs/FRONTEND_DESIGN_SYSTEM.md`.
+3. Inspect the current base template.
+4. Inspect existing reusable frontend components.
+5. Inspect current CSS design tokens.
+6. Inspect existing JavaScript patterns.
+7. Inspect the relevant backend implementation in read-only mode.
+8. Identify all integration requirements.
+9. Reuse and extend the existing UstoHub frontend system.
+
+Codex must not redesign the entire website again unless explicitly instructed.
+
+Codex must not introduce a second:
+
+* color system;
+* spacing system;
+* button system;
+* card system;
+* form system;
+* typography system;
+* icon system;
+* navigation system;
+* dashboard style.
+
+New frontend work must look like part of the same product.
+
+---
+
+## 11. Mandatory design tokens
+
+All pages must follow the design tokens defined in `docs/FRONTEND_DESIGN_SYSTEM.md`.
+
+Core palette:
+
+* Deep Navy: `#0B1F33`
+* Dark Navy: `#071726`
+* Safety Orange: `#F97316`
+* Deep Orange: `#EA580C`
+* Soft White: `#F8FAFC`
+* White Surface: `#FFFFFF`
+* Main Text: `#172033`
+* Secondary Text: `#64748B`
+* Muted Text: `#94A3B8`
+* Border: `#E2E8F0`
+* Strong Border: `#CBD5E1`
+* Success: `#16A34A`
+* Warning: `#F59E0B`
+* Error: `#DC2626`
+* Information: `#2563EB`
+
+Orange must be reserved primarily for important actions and selected highlights.
+
+Examples:
+
+* Post a Repair Request
+* Continue
+* Confirm
+* Book a Professional
+* Accept an Offer
+
+Do not use orange for every icon, heading, border, or decorative element.
+
+---
+
+## 12. Typography rules
+
+Use the existing UstoHub typography system.
+
+Preferred font stack:
+
+```css
+font-family:
+  Inter,
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+```
+
+Typography must have clear hierarchy.
+
+Do not introduce additional font families without explicit permission.
+
+Avoid:
+
+* oversized headings that break layout balance;
+* excessive uppercase text;
+* extremely tight line height;
+* decorative typefaces;
+* inconsistent font weights;
+* tiny unreadable text.
+
+---
+
+## 13. Reusable frontend architecture
+
+Codex must reuse existing frontend components whenever possible.
+
+Shared elements should not be duplicated across multiple templates.
+
+Reusable frontend elements may include:
+
+* base layout;
+* public header;
+* authenticated header;
+* customer navigation;
+* professional navigation;
+* dashboard sidebar;
+* mobile navigation;
+* footer;
+* buttons;
+* cards;
+* form fields;
+* status badges;
+* alerts;
+* empty states;
+* pagination;
+* modals;
+* breadcrumbs;
+* page headers;
+* tables;
+* dropdowns;
+* toast messages;
+* upload components;
+* loading indicators.
+
+Use Django template inheritance and includes where they already fit the project.
+
+Do not create unnecessary complexity or an oversized component framework for this small exam project.
+
+The implementation must remain understandable to the student.
+
+---
+
+## 14. Django template integration rules
+
+Every frontend change must preserve Django integration exactly.
+
+Codex must preserve:
+
+* `{% csrf_token %}`;
+* form actions;
+* request methods;
+* input `name` attributes;
+* backend field values;
+* hidden inputs;
+* submitted values;
+* Django template tags;
+* template variables;
+* loops;
+* conditionals;
+* authentication checks;
+* permission checks;
+* URL names;
+* query parameters;
+* pagination values;
+* file-upload behavior;
+* backend messages;
+* field errors;
+* non-field errors;
+* success redirects;
+* role values;
+* status values.
+
+Codex must not:
+
+* rename a form field;
+* rename a template variable;
+* change a URL name;
+* invent a URL name;
+* change an expected POST value;
+* remove a hidden input;
+* remove CSRF protection;
+* remove backend errors from the UI;
+* hardcode a URL when an existing Django URL tag should be used;
+* replace backend data with fake frontend data.
+
+Every `{% url %}` reference must point to an existing route.
+
+Do not create broken navigation links.
+
+---
+
+## 15. Authentication navigation rules
+
+Navigation must reflect the actual authenticated state.
+
+For unauthenticated users, the interface may show:
+
+* Log in
+* Create account
+
+For authenticated users, the interface may show:
+
+* Dashboard
+* Profile or account menu
+* Log out
+
+Never display all of the following simultaneously:
+
+* Create account
+* Log in
+* Log out
+
+Use the existing Django authentication context.
+
+Do not modify authentication logic to control frontend visibility.
+
+---
+
+## 16. Role rules
+
+Customer and professional interfaces must respect existing backend roles.
+
+Codex must inspect current role values and permission conditions before rendering role-specific navigation or actions.
+
+Do not show:
+
+* professional-only actions to customers;
+* customer-only actions to professionals;
+* links to routes the current role cannot access;
+* buttons for backend actions that do not exist.
+
+Display user-friendly terminology while preserving backend role values.
+
+Example:
+
+```html
+<input type="radio" name="user_type" value="master">
+<span>Professional</span>
+```
+
+The visible label may change.
+
+The submitted backend value must not change.
+
+---
+
+## 17. Form rules
+
+All forms must use the shared UstoHub form system.
+
+Each field should include, where applicable:
+
+* visible label;
+* correct input type;
+* correct `name`;
+* correct current value;
+* helper text;
+* backend field errors;
+* accessible focus state;
+* autocomplete attribute;
+* required indication;
+* disabled state;
+* success state;
+* error state.
+
+Do not use a placeholder as the only label.
+
+Do not hide backend validation messages.
+
+Frontend validation may improve usability but must never replace server-side validation.
+
+Password controls may include show/hide behavior, but must preserve the existing field and submission behavior.
+
+JavaScript must not prevent a valid backend form from submitting without a legitimate reason.
+
+---
+
+## 18. Real data and empty states
+
+Use real backend data whenever it is available.
+
+Do not add fake production records such as:
+
+* invented professionals;
+* invented reviews;
+* invented bookings;
+* invented offers;
+* invented customer names;
+* invented ratings;
+* invented prices;
+* invented repair requests.
+
+Static explanatory content is allowed for public marketing sections.
+
+When dynamic backend data is empty, show a professional empty state.
+
+An empty state should include:
+
+* a clear title;
+* a short explanation;
+* a relevant action only when a real route exists.
+
+Do not create fake data merely to make the page look populated.
+
+---
+
+## 19. Missing backend functionality
+
+Do not simulate unsupported backend functionality as if it were real.
+
+When a feature does not exist in the backend:
+
+* do not create a fake working button;
+* do not create a fake successful submission;
+* do not store production data only in browser memory;
+* do not pretend an action is connected;
+* do not invent an endpoint;
+* do not add a broken link.
+
+A future feature may be represented only as:
+
+* omitted UI;
+* a clearly disabled control;
+* a clearly labeled informational state.
+
+Prefer omission when a disabled control would confuse the user.
+
+---
+
+## 20. Responsive requirements
+
+Every edited page must work correctly on:
+
+* 1440px;
+* 1280px;
+* 1024px;
+* 768px;
+* 430px;
+* 390px;
+* 360px.
+
+Required behavior:
+
+* no horizontal page overflow;
+* no cut-off headings;
+* no overlapping controls;
+* no inaccessible navigation;
+* no fixed-width forms that break mobile;
+* no off-screen modals;
+* no unusable tables;
+* no buttons extending outside containers;
+* no unreadable text;
+* no broken card grids.
+
+Desktop layouts must not simply shrink into mobile.
+
+Mobile layouts must be intentionally adapted.
+
+Tables must use responsive scrolling or transform into readable stacked layouts where appropriate.
+
+---
+
+## 21. Accessibility requirements
+
+Frontend work must follow practical WCAG AA principles.
+
+Required:
+
+* semantic HTML;
+* correct heading hierarchy;
+* visible keyboard focus;
+* keyboard-operable controls;
+* linked form labels;
+* accessible button names;
+* sufficient color contrast;
+* meaningful image alt text;
+* decorative images hidden from screen readers;
+* accessible form errors;
+* status communicated by text, not color alone;
+* usable touch-target sizes;
+* support for `prefers-reduced-motion`.
+
+Do not remove browser focus styles without an accessible replacement.
+
+Do not use clickable `<div>` elements when a semantic button or link is appropriate.
+
+---
+
+## 22. JavaScript rules
+
+JavaScript must be:
+
+* minimal;
+* understandable;
+* modular;
+* progressively enhancing;
+* limited to frontend behavior.
+
+JavaScript may implement:
+
+* mobile navigation;
+* dropdowns;
+* accordions;
+* modal behavior;
+* password visibility;
+* upload previews;
+* simple client-side validation;
+* tabs;
+* frontend-only filtering when appropriate;
+* accessible interaction states.
+
+JavaScript must not:
+
+* reproduce backend business logic;
+* bypass backend validation;
+* replace authentication;
+* store sensitive data;
+* create fake backend behavior;
+* change permissions;
+* make assumptions about nonexistent APIs;
+* hide server errors;
+* submit altered field names or values.
+
+Core forms and essential content should remain usable without unnecessary JavaScript.
+
+---
+
+## 23. CSS rules
+
+Use the existing CSS architecture and design tokens.
+
+CSS must remain:
+
+* modular;
+* reusable;
+* readable;
+* consistently named;
+* understandable to the student.
+
+Avoid:
+
+* one massive unstructured stylesheet;
+* excessive inline styles;
+* duplicated component styles;
+* unnecessary `!important`;
+* random hardcoded colors;
+* unexplained magic numbers;
+* page-specific hacks that break other pages;
+* globally broad selectors that affect unrelated elements.
+
+Do not introduce a new CSS framework.
+
+Do not install Tailwind, Bootstrap, Sass, or other packages unless the student gives explicit permission.
+
+---
+
+## 24. Icons and images
+
+Use local frontend assets inside `static/img/`.
+
+Preferred icons:
+
+* clean local SVG icons;
+* one consistent icon style;
+* Lucide-style stroke icons when compatible.
+
+Do not:
+
+* use emojis as primary interface icons;
+* mix unrelated icon systems;
+* hotlink unreliable external images;
+* add low-quality AI-style illustrations;
+* add cyberpunk or blueprint graphics;
+* add decorative assets that conflict with the design system.
+
+Meaningful images require accurate alt text.
+
+Decorative images should use empty alt text or appropriate accessibility handling.
+
+---
+
+## 25. Package and dependency restrictions
+
+Codex must not:
+
+* install packages;
+* modify Python dependencies;
+* modify `requirements.txt`;
+* modify package-lock files;
+* introduce Node build systems;
+* introduce React;
+* introduce Vue;
+* introduce Angular;
+* introduce a SPA architecture;
+* introduce external UI frameworks;
+* introduce new runtime dependencies.
+
+Use the existing Django template, CSS, and JavaScript setup.
+
+If a dependency appears necessary, stop and explain why before making changes.
+
+---
+
+## 26. Forbidden project changes
+
+Codex must not:
+
+* run migrations;
+* create migrations;
+* modify the database;
+* seed the database;
+* delete database records;
+* create Django apps;
+* rename Django apps;
+* redesign project architecture;
+* add APIs;
+* add AI features;
+* add payment systems;
+* add email-confirmation systems;
+* add multilingual systems;
+* add WebSockets;
+* add background jobs;
+* add unrequested features;
+* create commits;
+* push to Git;
+* modify Git configuration;
+* expose secrets;
+* modify environment variables;
+* create production deployment configuration;
+* write backend code merely to make frontend work.
+
+---
+
+## 27. Command restrictions
+
+Codex may run only safe, non-mutating checks relevant to frontend work.
+
+Allowed examples:
+
+* inspect files;
+* search project text;
+* review template references;
+* inspect Git diff;
+* run safe syntax or configuration checks;
+* run `python manage.py check` only when it does not require database changes;
+* inspect browser-console errors when browser tools are available.
+
+Codex must not run:
+
+* `makemigrations`;
+* `migrate`;
+* `flush`;
+* database seed commands;
+* destructive management commands;
+* package installation commands;
+* Git commit commands;
+* Git push commands;
+* commands that rewrite backend files;
+* tests that create or alter persistent project data without permission.
+
+When unsure whether a command is mutating, do not run it.
+
+---
+
+## 28. Task execution workflow
+
+For every frontend implementation task, Codex must follow this order.
+
+### Step 1 — Read instructions
+
+Read:
+
+* `AGENTS.md`;
+* `docs/FRONTEND_DESIGN_SYSTEM.md`;
+* relevant existing frontend files.
+
+### Step 2 — Inspect integration
+
+Inspect relevant backend files in read-only mode and identify:
+
+* routes;
+* URL names;
+* context variables;
+* form fields;
+* expected values;
+* validation errors;
+* authentication requirements;
+* role restrictions;
+* statuses;
+* redirects.
+
+### Step 3 — Inspect existing components
+
+Identify existing reusable:
+
+* layouts;
+* navigation;
+* cards;
+* buttons;
+* forms;
+* alerts;
+* badges;
+* modals;
+* empty states;
+* CSS tokens;
+* JavaScript helpers.
+
+### Step 4 — Implement directly
+
+Implement the complete supported frontend flow.
+
+Do not stop after producing a plan.
+
+Do not ask for approval for each frontend file.
+
+Do not make only cosmetic changes when the requested frontend flow requires multiple states or pages.
+
+### Step 5 — Preserve integration
+
+Confirm that:
+
+* form names remain unchanged;
+* URL names remain unchanged;
+* CSRF remains present;
+* backend errors remain visible;
+* backend values remain unchanged;
+* role conditions remain correct;
+* authentication navigation remains correct.
+
+### Step 6 — Test supported states
+
+Check applicable states:
+
+* default;
+* loading;
+* empty;
+* success;
+* warning;
+* error;
+* disabled;
+* mobile;
+* tablet;
+* desktop;
+* authenticated;
+* unauthenticated;
+* customer;
+* professional.
+
+### Step 7 — Review the diff
+
+Review all changed files.
+
+Confirm that no protected file was modified.
+
+Remove accidental unrelated edits.
+
+### Step 8 — Report accurately
+
+Provide a concise final report.
+
+Do not claim a check was completed unless it was actually executed.
+
+---
+
+## 29. Definition of done
+
+A frontend task is complete only when:
+
+* the requested frontend flow is fully implemented within the supported backend;
+* all work remains inside allowed directories;
+* the UstoHub design system is continued consistently;
+* no conflicting visual style is introduced;
+* real backend data is preserved;
+* Django integration is not broken;
+* form field names and submitted values are unchanged;
+* CSRF protection remains present;
+* field and non-field errors are visible;
+* existing URL names are used;
+* no broken routes are introduced;
+* authentication navigation is correct;
+* customer and professional UI respect roles;
+* empty states are implemented where required;
+* error and success states are implemented where required;
+* the layout is responsive from 360px to large desktop;
+* keyboard focus is visible;
+* no package was installed;
+* no migration was created or run;
+* no database change was made;
+* no protected backend file was modified;
+* no commit or push was performed.
+
+A visually attractive page that breaks backend integration is not complete.
+
+A working page that ignores the UstoHub design system is not complete.
+
+A desktop-only page is not complete.
+
+A page containing fake backend behavior is not complete.
+
+---
+
+## 30. Required final report
+
+At the end of every frontend task, Codex must report:
+
+### Files created
+
+List every created frontend file.
+
+### Files modified
+
+List every modified frontend file.
+
+### Files removed
+
+List every removed frontend file, or state that none were removed.
+
+### Frontend work completed
+
+List the pages, components, and UI states implemented.
+
+### Backend integration preserved
+
+Confirm which routes, fields, values, context variables, and role rules were preserved.
+
+### Checks executed
+
+List only checks that were actually run.
+
+### Limitations
+
+List anything that could not be completed because backend support does not yet exist.
+
+### Backend protection confirmation
+
+State explicitly:
+
+> No protected backend files were modified. No migrations were created or run. No database changes were made. No packages were installed. No commits or pushes were performed.
+
+If any part of this statement is not true, Codex must report the exact deviation instead of giving false confirmation.

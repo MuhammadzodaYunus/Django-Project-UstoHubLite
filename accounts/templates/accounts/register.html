@@ -130,13 +130,15 @@
                     {% endif %}
                 </div>
 
-                <div class="form-field {% if form.phone_number.errors %}form-field--error{% endif %}" data-field="phone_number">
+                <div class="form-field form-field--wide form-field--compact {% if form.phone_number.errors %}form-field--error{% endif %}" data-field="phone_number">
                     {{ form.phone_number.label_tag }}
                     <div class="control">
                         {{ form.phone_number }}
                     </div>
                     {% if form.phone_number.help_text %}
                         <div id="id_phone_number_help" class="field-hint">{{ form.phone_number.help_text|safe }}</div>
+                    {% else %}
+                        <p id="id_phone_number_help" class="field-hint">Optional account contact number.</p>
                     {% endif %}
                     {% if form.phone_number.errors %}
                         <ul id="id_phone_number_errors" class="field-errors">
@@ -147,37 +149,39 @@
                     {% endif %}
                 </div>
 
-                <div class="form-field {% if form.user_type.errors %}form-field--error{% endif %}" data-field="user_type">
-                    <label for="{{ form.user_type.id_for_label }}">I am joining as</label>
+                <div class="form-field form-field--wide {% if form.user_type.errors %}form-field--error{% endif %}" data-field="user_type">
+                    <span class="field-label" id="id_user_type_label">I am joining as</span>
                     <div class="role-select" data-role-picker>
-                        <div class="role-options" aria-label="Choose account role">
-                            <button class="role-option" type="button" data-role-value="customer">
-                                <span class="role-option__icon" aria-hidden="true">
-                                    <svg class="icon" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9Z"/></svg>
-                                </span>
-                                <span>
-                                    <strong>Customer</strong>
-                                    <small>Request and track repairs</small>
-                                </span>
-                            </button>
-                            <button class="role-option" type="button" data-role-value="master">
-                                <span class="role-option__icon" aria-hidden="true">
-                                    <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/></svg>
-                                </span>
-                                <span>
-                                    <strong>Professional</strong>
-                                    <small>Respond to repair requests</small>
-                                </span>
-                            </button>
-                        </div>
-
-                        <div class="control control--select role-select__native">
+                        <div class="role-options" role="radiogroup" aria-labelledby="id_user_type_label"{% if form.user_type.help_text or form.user_type.errors %} aria-describedby="{% if form.user_type.help_text %}id_user_type_help{% endif %}{% if form.user_type.errors %}{% if form.user_type.help_text %} {% endif %}id_user_type_errors{% endif %}"{% endif %}>
                             {% with selected=form.user_type.value|default:"customer" %}
-                                <select name="{{ form.user_type.name }}" id="{{ form.user_type.id_for_label }}">
-                                    {% for value,label in form.user_type.field.choices %}
-                                        <option value="{{ value }}"{% if selected == value %} selected{% endif %}>{% if value == "master" %}Professional{% else %}{{ label }}{% endif %}</option>
-                                    {% endfor %}
-                                </select>
+                                {% for value,label in form.user_type.field.choices %}
+                                    <label class="role-option" data-role-option>
+                                        <input
+                                            class="role-option__input"
+                                            type="radio"
+                                            name="{{ form.user_type.name }}"
+                                            id="{{ form.user_type.id_for_label }}_{{ forloop.counter }}"
+                                            value="{{ value }}"
+                                            data-role-value="{{ value }}"
+                                            {% if selected == value %}checked{% endif %}
+                                            {% if form.user_type.field.required %}required{% endif %}
+                                        >
+                                        <span class="role-option__icon" aria-hidden="true">
+                                            {% if value == "master" %}
+                                                <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/></svg>
+                                            {% else %}
+                                                <svg class="icon" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9Z"/></svg>
+                                            {% endif %}
+                                        </span>
+                                        <span class="role-option__content">
+                                            <strong>{% if value == "master" %}Professional{% else %}{{ label }}{% endif %}</strong>
+                                            <small>{% if value == "master" %}Respond to repair requests{% else %}Request and track repairs{% endif %}</small>
+                                        </span>
+                                        <span class="role-option__check" aria-hidden="true">
+                                            <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                                        </span>
+                                    </label>
+                                {% endfor %}
                             {% endwith %}
                         </div>
                     </div>

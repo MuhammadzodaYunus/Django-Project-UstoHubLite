@@ -1,3 +1,5 @@
+{% load static %}
+
 <section class="trust-band" aria-label="Marketplace confidence">
     <div class="container trust-grid">
         <div>
@@ -25,6 +27,29 @@
             <p class="eyebrow">Service categories</p>
             <h2 id="services-title">Coverage for everyday home repairs.</h2>
             <p>Start with the repair type, then add details, photos, preferred timing, and location when those tools are available in the account.</p>
+        </div>
+
+        <div class="service-photo-band" data-depth-scene aria-label="Repair service photography preview">
+            <figure class="service-photo-band__media" data-depth-layer="0.75">
+                <img
+                    src="{% static 'accounts/images/repair-professional-electrical.png' %}"
+                    width="1586"
+                    height="992"
+                    alt="Professional technician testing an electrical outlet in a bright home living space."
+                    loading="lazy"
+                    decoding="async"
+                >
+            </figure>
+            <div class="service-photo-band__content" data-depth-layer="1.15">
+                <span class="status-badge status-badge--info">Visual repair context</span>
+                <h3>Real home issues need clear evidence.</h3>
+                <p>UstoHub is structured for photos, repair descriptions, visit records, and status updates as the marketplace grows.</p>
+                <ul class="photo-feature-list">
+                    <li>Issue details stay attached to the request</li>
+                    <li>Professionals can understand scope faster</li>
+                    <li>Completed work can be documented clearly</li>
+                </ul>
+            </div>
         </div>
 
         <div class="category-grid">

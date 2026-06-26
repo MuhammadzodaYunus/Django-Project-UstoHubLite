@@ -1,0 +1,11 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.repair_list_view, name="repair_list"),
+    path('create/', views.repair_create_view, name="repair_create"),
+    path('<int:pk>/', views.repair_detail_view, name="repair_detail"),
+    path('<int:pk>/edit', views.repair_update_view, name="repair_update"),
+    path('<int:pk>/delete', views.repair_delete_view, name="repair_delete"),
+]
+

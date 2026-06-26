@@ -57,10 +57,22 @@
     grid-column: 1 / -1;
 }
 
-.form-field label {
+.form-field--compact .control,
+.form-field--compact .field-hint,
+.form-field--compact .field-errors {
+    max-width: 420px;
+}
+
+.form-field label,
+.field-label {
     color: var(--color-navy);
     font-size: 0.9rem;
     font-weight: 800;
+}
+
+.field-label {
+    display: inline-flex;
+    align-items: center;
 }
 
 .required-mark {
@@ -196,28 +208,35 @@
 }
 
 .role-options {
-    display: none;
-}
-
-.js .role-options {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: 12px;
 }
 
 .role-option {
+    position: relative;
     display: grid;
-    grid-template-columns: 36px minmax(0, 1fr);
+    grid-template-columns: 40px minmax(0, 1fr);
     align-items: center;
-    min-height: 68px;
-    padding: 10px;
-    gap: 10px;
+    min-height: 92px;
+    padding: 14px 48px 14px 14px;
+    gap: 12px;
     color: var(--color-text);
+    cursor: pointer;
     text-align: left;
     background: #ffffff;
     border: 1px solid var(--color-border-strong);
     border-radius: var(--radius-sm);
     transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.role-option__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .role-option strong,
@@ -226,52 +245,109 @@
 }
 
 .role-option strong {
-    font-size: 0.92rem;
+    color: var(--color-navy);
+    font-size: 0.96rem;
     font-weight: 800;
+    overflow-wrap: anywhere;
 }
 
 .role-option small {
-    margin-top: 2px;
+    margin-top: 4px;
     color: var(--color-text-soft);
-    font-size: 0.76rem;
-    line-height: 1.25;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
 }
 
 .role-option:hover,
-.role-option:focus-visible,
-.role-option.is-selected {
-    background: #FFF7ED;
-    border-color: var(--color-orange);
-    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+.role-option:focus-within {
+    background: #F8FAFC;
+    border-color: var(--color-navy);
+}
+
+.role-option:focus-within {
+    box-shadow: var(--focus-ring);
 }
 
 .role-option:hover {
     transform: translateY(-1px);
 }
 
+.role-option.is-selected,
+.role-option:has(.role-option__input:checked) {
+    background: #FFF7ED;
+    border-color: var(--color-orange);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+.form-field--error .role-option {
+    border-color: #FCA5A5;
+}
+
+.form-field--error .role-option.is-selected,
+.form-field--error .role-option:has(.role-option__input:checked) {
+    border-color: var(--color-orange);
+}
+
+.role-option:active,
+.role-option.is-pressed {
+    transform: translateY(1px) scale(0.99);
+}
+
 .role-option__icon {
     display: inline-grid;
     place-items: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     color: var(--color-navy);
     background: #F1F5F9;
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-xs);
+    transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
-.role-option.is-selected .role-option__icon {
+.role-option__icon .icon {
+    width: 21px;
+    height: 21px;
+}
+
+.role-option.is-selected .role-option__icon,
+.role-option:has(.role-option__input:checked) .role-option__icon {
     color: #ffffff;
     background: var(--color-orange);
+    border-color: var(--color-orange);
 }
 
-.js .role-select__native {
+.role-option__content {
+    min-width: 0;
+}
+
+.role-option__check {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
+    top: 14px;
+    right: 14px;
+    display: inline-grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    color: transparent;
+    background: #ffffff;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 50%;
+    transition: color 160ms ease, background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.role-option__check .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.role-option.is-selected .role-option__check,
+.role-option:has(.role-option__input:checked) .role-option__check {
+    color: #ffffff;
+    background: var(--color-orange);
+    border-color: var(--color-orange);
+    transform: scale(1.04);
 }
 
 .password-control input {
@@ -294,9 +370,15 @@
 }
 
 .password-toggle:hover,
-.password-toggle:focus-visible {
+.password-toggle:focus-visible,
+.password-toggle[aria-pressed="true"] {
     color: var(--color-navy);
     background: #F1F5F9;
+}
+
+.password-toggle:active,
+.password-toggle.is-pressed {
+    transform: translateY(1px) scale(0.96);
 }
 
 .password-toggle .icon {
@@ -483,6 +565,11 @@
 .js .code-slots span.is-filled {
     border-color: var(--color-orange);
     box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.14);
+}
+
+.code-input-shell:focus-within .code-slots span {
+    border-color: var(--color-orange);
+    box-shadow: var(--focus-ring);
 }
 
 .js .verification-control {
