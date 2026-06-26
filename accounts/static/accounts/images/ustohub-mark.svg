@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+    <title id="title">UstoHub mark</title>
+    <desc id="desc">Compact UstoHub icon mark with roof, U, and wrench negative space.</desc>
+    <defs>
+        <linearGradient id="markBlue" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#7ee7ff"/>
+            <stop offset="0.52" stop-color="#2e7bff"/>
+            <stop offset="1" stop-color="#1264ff"/>
+        </linearGradient>
+        <linearGradient id="markAmber" x1="18" y1="8" x2="46" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffe2a8"/>
+            <stop offset="1" stop-color="#ffb84d"/>
+        </linearGradient>
+        <mask id="markToolCutout">
+            <rect width="64" height="64" fill="#fff"/>
+            <path fill="#000" d="M40.5 25.4a8 8 0 0 1 9.1-9.1l-4.4 4.4 4 4 4.4-4.4a8 8 0 0 1-10.1 10.1L29.6 44.3a3 3 0 0 1-4.2-4.2l15.1-14.7Z"/>
+        </mask>
+    </defs>
+    <rect x="3" y="3" width="58" height="58" rx="10" fill="#080c12" stroke="#7ee7ff" stroke-opacity=".34" stroke-width="2"/>
+    <path d="M14 27 32 13l18 14" fill="none" stroke="url(#markAmber)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 25v17c0 11 5.6 17 14 17s14-6 14-17V25H35.8v16.4c0 4.5-1.2 6.8-3.8 6.8s-3.8-2.3-3.8-6.8V25H18Z" fill="url(#markBlue)" mask="url(#markToolCutout)"/>
+    <path d="m50 50 4.3 4.3-4.3 4.3-4.3-4.3L50 50Z" fill="url(#markAmber)"/>
+</svg>
