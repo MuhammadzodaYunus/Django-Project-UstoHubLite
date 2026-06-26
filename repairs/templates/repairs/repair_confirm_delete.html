@@ -1,0 +1,75 @@
+{% extends "accounts/base.html" %}
+
+{% block title %}Delete Repair Request | UstoHub{% endblock %}
+{% block body_class %}page-repair-delete{% endblock %}
+{% block auth_label %}Delete repair request{% endblock %}
+{% block hero_eyebrow %}Repair request deletion{% endblock %}
+{% block hero_title %}Delete Repair Request?{% endblock %}
+{% block hero_text %}This confirmation protects your repair history from accidental deletion. Review the selected request before permanently removing it.{% endblock %}
+{% block hero_actions %}
+    <a class="btn btn--secondary" href="{% url 'repair_detail' repair.pk %}">Cancel and Return</a>
+{% endblock %}
+{% block hero_support %}
+    <div class="repair-delete-warning" role="note" aria-label="Permanent deletion warning">
+        <span class="icon-tile icon-tile--danger" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        </span>
+        <div>
+            <span class="status-badge status-badge--danger">Permanent Action</span>
+            <h2>This request will be removed.</h2>
+            <p>Deletion cannot be undone. If you still need this repair record, return to the request details instead.</p>
+        </div>
+    </div>
+{% endblock %}
+{% block product_sections %}{% endblock %}
+
+{% block content %}
+<article class="auth-card repair-delete-card" aria-labelledby="delete-repair-title">
+    <header class="auth-card__header repair-delete-card__header">
+        <span class="status-badge status-badge--danger">Delete Request</span>
+        <h2 id="delete-repair-title">Delete Repair Request?</h2>
+        <p>This will permanently remove the repair request from your account.</p>
+    </header>
+
+    <section class="repair-delete-record" aria-labelledby="delete-record-title">
+        <p class="repair-detail-label">Request selected for deletion</p>
+        <h3 id="delete-record-title">{{ repair.title }}</h3>
+
+        <dl class="repair-delete-summary">
+            <div>
+                <dt>Category</dt>
+                <dd>{{ repair.get_category_display }}</dd>
+            </div>
+            <div>
+                <dt>Status</dt>
+                <dd>{{ repair.get_status_display }}</dd>
+            </div>
+            <div>
+                <dt>Urgency</dt>
+                <dd>{{ repair.get_urgency_display }}</dd>
+            </div>
+            <div>
+                <dt>Address</dt>
+                <dd>{{ repair.address }}</dd>
+            </div>
+        </dl>
+    </section>
+
+    <form class="auth-form repair-delete-form" method="post" data-auth-form>
+        {% csrf_token %}
+
+        <div class="repair-delete-alert" role="alert">
+            <strong>Deletion is permanent.</strong>
+            <p>After you delete this request, UstoHub will no longer show it in your repair request list.</p>
+        </div>
+
+        <div class="form-actions repair-delete-actions">
+            <button class="btn btn--danger auth-submit" type="submit" data-submit-button>
+                <span class="btn__label">Delete Request</span>
+                <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+            <a class="btn btn--secondary" href="{% url 'repair_detail' repair.pk %}">Cancel</a>
+        </div>
+    </form>
+</article>
+{% endblock %}
