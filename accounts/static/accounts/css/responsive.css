@@ -154,6 +154,10 @@
         grid-template-columns: 1fr;
     }
 
+    .repair-filter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .section-heading--sticky {
         position: static;
     }
@@ -196,6 +200,8 @@
     .final-cta__inner,
     .pro-panel,
     .form-actions,
+    .repair-filter-panel__header,
+    .repair-filter-actions,
     .repair-list-heading,
     .repair-request-card__header,
     .repair-detail-title-row,
@@ -209,6 +215,7 @@
     .pro-panel .btn,
     .form-actions .btn,
     .form-actions .auth-submit,
+    .repair-filter-actions .btn,
     .repair-detail-actions .btn,
     .repair-request-card__action {
         width: 100%;
@@ -218,6 +225,7 @@
     .trust-grid,
     .category-grid,
     .field-grid,
+    .repair-filter-grid,
     .repair-list-summary,
     .repair-meta-grid,
     .repair-detail-summary,
@@ -313,6 +321,7 @@
     .category-card,
     .process-list li,
     .repair-guidance__item,
+    .repair-filter-panel,
     .repair-request-card,
     .repair-detail-summary,
     .repair-detail-title-row,

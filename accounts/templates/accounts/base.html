@@ -42,7 +42,7 @@
 
                     <div class="site-nav__actions">
                         {% if request.user.is_authenticated %}
-                        <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
+                        <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
                             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M3 13h8V3H3v10Zm10 8h8V3h-8v18ZM3 21h8v-6H3v6Z"/>
                             </svg>
