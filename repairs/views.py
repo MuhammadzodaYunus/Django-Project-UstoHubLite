@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import RepairRequest
 from .forms import RepairRequestForm
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 
 @login_required
 def repair_create_view(request):
@@ -93,3 +94,20 @@ def professional_request_list_view(request):
     
     repairs = RepairRequest.objects.filter(status='open').order_by('-created_at')
     return render(request, 'repairs/professional_request_list.html', {'repairs': repairs})
+
+
+@login_required
+@require_POST
+def professional_accept_request_view(request, pk):
+    if request.user.user_type != 'master':
+        return redirect('repair_list')
+
+    repair = get_object_or_404(RepairRequest, pk=pk, status="open", assigned_master__isnull=True)
+
+    if repair:
+        repair.assigned_master = request.user
+        repair.status = "in_progress"
+        repair.save()
+        return redirect('professional_request_list')
+    
+        
