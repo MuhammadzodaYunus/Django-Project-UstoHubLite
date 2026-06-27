@@ -14,7 +14,7 @@
 
     <header class="site-header" data-site-header>
         <nav class="site-nav container" aria-label="Primary navigation">
-            <a class="brand" href="{% url 'register' %}" aria-label="UstoHub home">
+            <a class="brand" href="{% url 'home' %}" aria-label="UstoHub home">
                 <span class="brand__mark" aria-hidden="true">
                     <img src="{% static 'accounts/images/ustohub-mark.svg' %}" width="40" height="40" alt="">
                 </span>
@@ -34,15 +34,16 @@
                 <div class="site-nav__panel" id="primary-navigation" data-nav-panel>
                     <div class="site-nav__links">
                         {% if request.user.is_authenticated and request.user.user_type == "master" %}
-                            <a href="{% url 'register' %}#services">Services</a>
-                            <a href="{% url 'register' %}#how-it-works">How It Works</a>
-                            <a href="{% url 'register' %}#for-professionals">For Professionals</a>
+                            <a href="{% url 'home' %}"{% if current_route == 'home' %} class="is-active" aria-current="page"{% endif %}>Home</a>
+                            <a href="{% url 'home' %}#how-it-works">How It Works</a>
+                            <a href="{% url 'home' %}#services">Categories</a>
+                            <a href="{% url 'home' %}#professionals">For Professionals</a>
                         {% else %}
-                            <a href="{% url 'register' %}#services">Services</a>
-                            <a href="{% url 'register' %}#how-it-works">How It Works</a>
-                            <a href="{% url 'register' %}#professionals">Find Professionals</a>
-                            <a href="{% url 'register' %}#warranty">Warranty</a>
-                            <a href="{% url 'register' %}#for-professionals">For Professionals</a>
+                            <a href="{% url 'home' %}"{% if current_route == 'home' %} class="is-active" aria-current="page"{% endif %}>Home</a>
+                            <a href="{% url 'home' %}#how-it-works">How It Works</a>
+                            <a href="{% url 'home' %}#services">Categories</a>
+                            <a href="{% url 'home' %}#customers">For Customers</a>
+                            <a href="{% url 'home' %}#professionals">For Professionals</a>
                         {% endif %}
                     </div>
 
@@ -101,9 +102,9 @@
         <section class="hero-section" aria-labelledby="hero-title">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow">{% block hero_eyebrow %}Trusted home repair, managed from start to finish{% endblock %}</p>
-                    <h1 id="hero-title">{% block hero_title %}Solve home problems with verified professionals.{% endblock %}</h1>
-                    <p class="hero-copy__text">{% block hero_text %}Describe the issue, upload photos or video, compare offers, and book a trusted professional all in one place.{% endblock %}</p>
+                    <p class="eyebrow">{% block hero_eyebrow %}Trusted home repair workflow{% endblock %}</p>
+                    <h1 id="hero-title">{% block hero_title %}Solve home problems with organized repair requests.{% endblock %}</h1>
+                    <p class="hero-copy__text">{% block hero_text %}Describe the issue, choose a category and urgency, and keep the request status connected to your account.{% endblock %}</p>
 
                     <div class="hero-actions">
                         {% block hero_actions %}
@@ -116,7 +117,7 @@
                             {% else %}
                                 <a class="btn btn--primary" href="{% url 'repair_create' %}">Post a Repair Request</a>
                             {% endif %}
-                            <a class="btn btn--secondary" href="{% url 'register' %}#how-it-works">How UstoHub Works</a>
+                            <a class="btn btn--secondary" href="{% url 'home' %}#how-it-works">How UstoHub Works</a>
                         {% endblock %}
                     </div>
 
@@ -124,19 +125,19 @@
                         <ul class="trust-strip" aria-label="UstoHub trust indicators">
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
-                                Verified professionals
+                                Role-based workflow
                             </li>
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg>
-                                Transparent offers
+                                Professional queue
                             </li>
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-                                Repair warranty
+                                Status tracking
                             </li>
                         </ul>
 
-                        <div class="repair-photo-showcase" data-depth-scene aria-label="Repair visit photo preview">
+                        <div class="repair-photo-showcase" data-depth-scene aria-label="Repair request photo preview">
                             <figure class="repair-photo-card" data-depth-layer="0.85">
                                 <img
                                     src="{% static 'accounts/images/repair-professional-kitchen.png' %}"
@@ -147,22 +148,22 @@
                                     decoding="async"
                                 >
                                 <figcaption>
-                                    <span>Photo-ready repair context</span>
-                                    <strong>Issue, location, and professional visit evidence stay connected.</strong>
+                                    <span>Repair request context</span>
+                                    <strong>Issue, location, and status details stay connected to the request.</strong>
                                 </figcaption>
                             </figure>
                             <div class="photo-signal photo-signal--top" data-depth-layer="1.25">
-                                <span class="status-badge status-badge--success">Verified visit</span>
+                                <span class="status-badge status-badge--success">Saved request</span>
                                 <p>Clear visual context for the repair record.</p>
                             </div>
                             <div class="repair-proof-rail" data-depth-layer="0.55" aria-label="Repair evidence highlights">
                                 <span>
                                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                                    Verified visit
+                                    Customer-owned record
                                 </span>
                                 <span>
                                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
-                                    Before-and-after ready
+                                    Professional workflow
                                 </span>
                             </div>
                         </div>
@@ -170,13 +171,13 @@
                         <div class="workflow-preview" aria-label="Repair request workflow preview">
                             <div class="workflow-preview__header">
                                 <span class="status-badge status-badge--info">Request preview</span>
-                                <span class="workflow-preview__meta">4-step booking path</span>
+                                <span class="workflow-preview__meta">4-step repair path</span>
                             </div>
                             <ol class="workflow-steps">
                                 <li><span>1</span>Describe the problem</li>
-                                <li><span>2</span>Add visual evidence</li>
-                                <li><span>3</span>Compare verified offers</li>
-                                <li><span>4</span>Book and track the repair</li>
+                                <li><span>2</span>Choose category and urgency</li>
+                                <li><span>3</span>Professional accepts work</li>
+                                <li><span>4</span>Track completion status</li>
                             </ol>
                         </div>
                     {% endblock %}
@@ -196,7 +197,7 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a class="brand brand--footer" href="{% url 'register' %}" aria-label="UstoHub home">
+                <a class="brand brand--footer" href="{% url 'home' %}" aria-label="UstoHub home">
                     <span class="brand__mark" aria-hidden="true">
                         <img src="{% static 'accounts/images/ustohub-mark.svg' %}" width="40" height="40" alt="">
                     </span>
@@ -205,14 +206,15 @@
                         <span>Repair marketplace</span>
                     </span>
                 </a>
-                <p>UstoHub helps customers manage repair requests, compare trusted professionals, and keep service history in one practical account.</p>
+                <p>UstoHub helps customers create repair requests and helps professionals manage open, assigned, and completed work.</p>
             </div>
 
             <div class="footer-links" aria-label="Footer navigation">
-                <a href="{% url 'register' %}#services">Services</a>
-                <a href="{% url 'register' %}#how-it-works">How It Works</a>
-                <a href="{% url 'register' %}#warranty">Warranty</a>
-                <a href="{% url 'register' %}#for-professionals">For Professionals</a>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'home' %}#how-it-works">How It Works</a>
+                <a href="{% url 'home' %}#services">Categories</a>
+                <a href="{% url 'home' %}#customers">For Customers</a>
+                <a href="{% url 'home' %}#professionals">For Professionals</a>
             </div>
 
             <div class="footer-account">

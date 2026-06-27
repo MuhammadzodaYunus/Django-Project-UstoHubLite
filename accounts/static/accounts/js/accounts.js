@@ -182,13 +182,24 @@
             ".pro-panel",
             ".final-cta__inner",
             ".summary-card",
+            ".home-command-steps li",
+            ".home-hero-proof__image",
+            ".home-proof-card",
+            ".home-problem-card",
+            ".home-process-card",
+            ".home-role-card",
+            ".home-principle-card",
+            ".home-final-cta__inner",
             ".repair-guidance__item",
+            ".repair-live-brief",
+            ".repair-live-brief__grid div",
             ".repair-list-summary",
             ".repair-request-card",
             ".professional-request-card",
             ".repair-detail-summary",
             ".repair-detail-meta-grid div",
             ".repair-detail-section",
+            ".repair-status-track__item",
             ".repair-photo-card",
             ".photo-signal",
             ".repair-proof-rail span",
@@ -325,7 +336,19 @@
             ".final-cta__inner",
             ".auth-card",
             ".summary-card",
+            ".home-command-steps li",
+            ".home-hero-proof",
+            ".home-hero-proof__image",
+            ".home-proof-card",
+            ".home-problem-card",
+            ".home-process-card",
+            ".home-role-card",
+            ".home-category-card",
+            ".home-principle-card",
+            ".home-final-cta__inner",
             ".repair-guidance__item",
+            ".repair-live-brief",
+            ".repair-live-brief__grid div",
             ".repair-list-summary",
             ".repair-list-heading",
             ".repair-request-card",
@@ -333,6 +356,7 @@
             ".repair-detail-summary",
             ".repair-detail-meta-grid div",
             ".repair-detail-section",
+            ".repair-status-track__item",
             ".repair-photo-showcase",
             ".repair-photo-card",
             ".photo-signal",
@@ -693,6 +717,60 @@
         });
     };
 
+    var enhanceRepairBrief = function () {
+        document.querySelectorAll("[data-repair-brief]").forEach(function (brief) {
+            var card = brief.closest(".repair-card") || document;
+            var titleInput = card.querySelector("input[name='title']");
+            var categorySelect = card.querySelector("select[name='category']");
+            var urgencySelect = card.querySelector("select[name='urgency']");
+            var addressInput = card.querySelector("input[name='address']");
+            var titleTarget = brief.querySelector("[data-repair-brief-title]");
+            var categoryTarget = brief.querySelector("[data-repair-brief-category]");
+            var urgencyTarget = brief.querySelector("[data-repair-brief-urgency]");
+            var addressTarget = brief.querySelector("[data-repair-brief-address]");
+
+            var getSelectedText = function (select, fallback) {
+                if (!select || select.selectedIndex < 0) {
+                    return fallback;
+                }
+
+                var option = select.options[select.selectedIndex];
+                var text = option ? option.textContent.trim() : "";
+
+                return text || fallback;
+            };
+
+            var sync = function () {
+                if (titleTarget) {
+                    titleTarget.textContent = titleInput && titleInput.value.trim() ? titleInput.value.trim() : "Untitled repair request";
+                }
+
+                if (categoryTarget) {
+                    categoryTarget.textContent = getSelectedText(categorySelect, "Choose a service category");
+                }
+
+                if (urgencyTarget) {
+                    urgencyTarget.textContent = getSelectedText(urgencySelect, "Set urgency");
+                }
+
+                if (addressTarget) {
+                    addressTarget.textContent = addressInput && addressInput.value.trim() ? addressInput.value.trim() : "Add the service address";
+                }
+            };
+
+            [titleInput, categorySelect, urgencySelect, addressInput].forEach(function (control) {
+                if (!control) {
+                    return;
+                }
+
+                control.addEventListener("input", sync);
+                control.addEventListener("change", sync);
+            });
+
+            sync();
+        });
+    };
+
     enhanceHeader();
     enhanceScrollProgress();
     enhanceHashNavigation();
@@ -705,4 +783,5 @@
     enhanceRolePicker();
     enhanceCodeInputs();
     enhanceForms();
+    enhanceRepairBrief();
 }());

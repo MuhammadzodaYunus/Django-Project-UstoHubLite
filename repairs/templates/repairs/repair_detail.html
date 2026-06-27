@@ -63,6 +63,68 @@
         </div>
     </dl>
 
+    <section class="repair-detail-section repair-status-tracker" aria-labelledby="repair-status-title">
+        <div class="repair-detail-section__heading">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h5l3-8 3 16 3-8h2"/></svg>
+            <h3 id="repair-status-title">Status timeline</h3>
+        </div>
+
+        <div class="repair-status-tracker__summary">
+            <div class="repair-status-tracker__badge">
+                <span class="repair-status-tracker__label">Current status</span>
+                <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
+                    {{ repair.get_status_display }}
+                </span>
+                <p>Status values come from the saved repair request record.</p>
+            </div>
+            <div class="repair-status-tracker__professional">
+                <span class="repair-status-tracker__label">Professional</span>
+                {% if repair.assigned_master %}
+                    <strong>{{ repair.assigned_master.username }}</strong>
+                    <p>This request is assigned to a professional account.</p>
+                {% else %}
+                    <strong>Not assigned yet</strong>
+                    <p>A professional assignment will appear here after the request is accepted.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <ol class="repair-status-track" aria-label="Repair request status timeline">
+            <li class="repair-status-track__item is-complete">
+                <span class="repair-status-track__dot" aria-hidden="true"></span>
+                <div class="repair-status-track__content">
+                    <strong>Request submitted</strong>
+                    <p>The repair request was saved to your account.</p>
+                    <span class="repair-status-track__state">Complete</span>
+                </div>
+            </li>
+            <li class="repair-status-track__item {% if repair.status == 'open' %}is-active{% elif repair.status == 'in_progress' or repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
+                <span class="repair-status-track__dot" aria-hidden="true"></span>
+                <div class="repair-status-track__content">
+                    <strong>Professional review</strong>
+                    <p>The request is available for professional review while it remains open.</p>
+                    <span class="repair-status-track__state">{% if repair.status == 'open' %}Current{% elif repair.status == 'in_progress' or repair.status == 'completed' %}Complete{% elif repair.status == 'cancelled' %}Cancelled{% else %}Pending{% endif %}</span>
+                </div>
+            </li>
+            <li class="repair-status-track__item {% if repair.status == 'in_progress' %}is-active{% elif repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
+                <span class="repair-status-track__dot" aria-hidden="true"></span>
+                <div class="repair-status-track__content">
+                    <strong>Work in progress</strong>
+                    <p>An accepted request moves into active professional work.</p>
+                    <span class="repair-status-track__state">{% if repair.status == 'in_progress' %}Current{% elif repair.status == 'completed' %}Complete{% elif repair.status == 'cancelled' %}Cancelled{% else %}Pending{% endif %}</span>
+                </div>
+            </li>
+            <li class="repair-status-track__item {% if repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
+                <span class="repair-status-track__dot" aria-hidden="true"></span>
+                <div class="repair-status-track__content">
+                    <strong>Completion record</strong>
+                    <p>Completed repairs are kept with the saved request details.</p>
+                    <span class="repair-status-track__state">{% if repair.status == 'completed' %}Complete{% elif repair.status == 'cancelled' %}Cancelled{% else %}Pending{% endif %}</span>
+                </div>
+            </li>
+        </ol>
+    </section>
+
     <section class="repair-detail-section" aria-labelledby="repair-detail-description-title">
         <div class="repair-detail-section__heading">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16M4 12h12M4 19h8"/></svg>

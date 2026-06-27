@@ -16,6 +16,11 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .home-process-grid,
+  .home-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .site-nav__links a {
     padding-inline: 9px;
     font-size: 0.88rem;
@@ -165,7 +170,8 @@
   .feature-grid,
   .feature-grid--reverse,
   .warranty-grid,
-  .service-photo-band {
+  .service-photo-band,
+  .home-section-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
@@ -193,6 +199,15 @@
 
   .category-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-process-grid,
+  .home-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-process-card::after {
+    display: none;
   }
 
   .footer-grid {
@@ -223,6 +238,8 @@
 
   .hero-actions,
   .final-cta__inner,
+  .home-final-cta__inner,
+  .home-final-cta__actions,
   .pro-panel,
   .form-actions,
   .repair-filter-panel__header,
@@ -239,6 +256,8 @@
 
   .hero-actions .btn,
   .final-cta__inner .btn,
+  .home-final-cta__actions,
+  .home-final-cta__actions .btn,
   .pro-panel .btn,
   .form-actions .btn,
   .form-actions .auth-submit,
@@ -256,7 +275,11 @@
   .workflow-steps,
   .trust-grid,
   .category-grid,
+  .home-process-grid,
+  .home-role-grid,
+  .home-category-grid,
   .field-grid,
+  .repair-live-brief__grid,
   .repair-filter-grid,
   .repair-list-summary,
   .repair-meta-grid,
@@ -289,6 +312,7 @@
 
   .section-heading h2,
   .final-cta h2,
+  .home-final-cta h2,
   .pro-panel h2,
   .warranty-grid h2 {
     font-size: 2rem;
@@ -303,8 +327,19 @@
   }
 
   .final-cta__inner,
+  .home-final-cta__inner,
   .pro-panel {
     padding: 24px;
+  }
+
+  .home-hero-proof {
+    display: grid;
+    gap: 10px;
+  }
+
+  .home-proof-card {
+    position: static;
+    max-width: none;
   }
 }
 
@@ -350,6 +385,12 @@
 
   .workflow-preview,
   .repair-photo-showcase,
+  .home-command-panel,
+  .home-proof-card,
+  .home-problem-card,
+  .home-process-card,
+  .home-role-card,
+  .home-principle-card,
   .empty-state,
   .category-card,
   .process-list li,

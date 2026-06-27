@@ -53,11 +53,32 @@
         <span class="status-badge status-badge--info">{% if form.instance.pk %}Existing Repair Request{% else %}New Repair Request{% endif %}</span>
         <h2 id="repair-form-title">{% if form.instance.pk %}Edit request details.{% else %}Create request details.{% endif %}</h2>
         {% if form.instance.pk %}
-            <p>Update the saved fields below. All required fields are marked, and backend validation will confirm the changes before saving.</p>
+            <p>Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving.</p>
         {% else %}
             <p>All required fields are marked. UstoHub will review the request details before saving them.</p>
         {% endif %}
     </header>
+
+    <aside class="repair-live-brief" data-repair-brief aria-labelledby="repair-live-brief-title" aria-live="polite">
+        <div>
+            <span class="repair-live-brief__label">Live request brief</span>
+            <h3 id="repair-live-brief-title" data-repair-brief-title>Untitled repair request</h3>
+        </div>
+        <dl class="repair-live-brief__grid">
+            <div>
+                <dt>Category</dt>
+                <dd data-repair-brief-category>Choose a service category</dd>
+            </div>
+            <div>
+                <dt>Urgency</dt>
+                <dd data-repair-brief-urgency>Set urgency</dd>
+            </div>
+            <div>
+                <dt>Address</dt>
+                <dd data-repair-brief-address>Add the service address</dd>
+            </div>
+        </dl>
+    </aside>
 
     <form class="auth-form repair-form" method="post" novalidate data-auth-form>
         {% csrf_token %}
