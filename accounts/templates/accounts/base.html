@@ -42,12 +42,27 @@
 
                     <div class="site-nav__actions">
                         {% if request.user.is_authenticated %}
-                        <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
-                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                <path d="M3 13h8V3H3v10Zm10 8h8V3h-8v18ZM3 21h8v-6H3v6Z"/>
-                            </svg>
-                            Dashboard
-                        </a>
+                        {% if request.user.user_type == "master" %}
+                            <a class="nav-dashboard{% if current_route == 'professional_request_list' %} is-active{% endif %}" href="{% url 'professional_request_list' %}"{% if current_route == 'professional_request_list' %} aria-current="page"{% endif %}>
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/>
+                                </svg>
+                                Open Requests
+                            </a>
+                            <a class="nav-dashboard{% if current_route == 'professional_assigned_request_list' %} is-active{% endif %}" href="{% url 'professional_assigned_request_list' %}"{% if current_route == 'professional_assigned_request_list' %} aria-current="page"{% endif %}>
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M4 7h16M4 12h10M4 17h7"/>
+                                </svg>
+                                My Accepted Requests
+                            </a>
+                        {% else %}
+                            <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M3 13h8V3H3v10Zm10 8h8V3h-8v18ZM3 21h8v-6H3v6Z"/>
+                                </svg>
+                                Dashboard
+                            </a>
+                        {% endif %}
                         <span class="user-chip" title="{{ request.user.username }}">
                             <span class="user-chip__avatar" aria-hidden="true">{{ request.user.username|first|upper }}</span>
                             <span class="user-chip__name">{{ request.user.username }}</span>
@@ -79,7 +94,11 @@
                     <div class="hero-actions">
                         {% block hero_actions %}
                             {% if request.user.is_authenticated %}
-                                <a class="btn btn--primary" href="{% url 'repair_list' %}">Open Dashboard</a>
+                                {% if request.user.user_type == "master" %}
+                                    <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Open Requests</a>
+                                {% else %}
+                                    <a class="btn btn--primary" href="{% url 'repair_list' %}">Open Dashboard</a>
+                                {% endif %}
                             {% else %}
                                 <a class="btn btn--primary" href="{% url 'repair_create' %}">Post a Repair Request</a>
                             {% endif %}

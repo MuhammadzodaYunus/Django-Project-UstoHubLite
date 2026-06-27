@@ -104,11 +104,10 @@ def professional_accept_request_view(request, pk):
 
     repair = get_object_or_404(RepairRequest, pk=pk, status="open", assigned_master__isnull=True)
 
-    if repair:
-        repair.assigned_master = request.user
-        repair.status = "in_progress"
-        repair.save()
-        return redirect('professional_request_list')
+    repair.assigned_master = request.user
+    repair.status = "in_progress"
+    repair.save()
+    return redirect('professional_assigned_request_list')
     
         
 
