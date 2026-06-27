@@ -1,367 +1,229 @@
-{% extends "accounts/base.html" %} {% block title %}My Repair Requests |
-UstoHub{% endblock %} {% block body_class %}page-repair-list{% endblock %} {%
-block auth_label %}Repair request overview{% endblock %} {% block hero_eyebrow
-%}Customer repair dashboard{% endblock %} {% block hero_title %}Track your
-repair requests in one place.{% endblock %} {% block hero_text %}Review the
-repair problems you have submitted, check their current status, and start a new
-request when something else needs attention.{% endblock %} {% block hero_actions
-%}
-<a class="btn btn--primary" href="{% url 'repair_create' %}"
-  >Post a Repair Request</a
->
-{% endblock %} {% block hero_support %}
-<div class="repair-list-summary" aria-label="Repair request summary">
-  <div class="repair-list-summary__metric">
-    {% with total=repairs|length %}
-    <strong>{{ total }}</strong>
-    <span>visible request{{ total|pluralize }}</span>
-    {% endwith %}
-  </div>
-  <div class="repair-list-summary__copy">
-    <h2>Requests are private to your account.</h2>
-    {% if query or selected_category or selected_urgency or selected_status %}
-    <p>
-      Only matching repair requests connected to your signed-in customer account
-      are shown here.
-    </p>
-    {% else %}
-    <p>
-      Only repair requests connected to your signed-in customer account are
-      shown here.
-    </p>
-    {% endif %}
-  </div>
-</div>
-{% endblock %} {% block content %}
-<article
-  class="auth-card repair-overview-card"
-  aria-labelledby="repair-overview-title"
->
-  <header class="auth-card__header">
-    <span class="status-badge status-badge--info">My Requests</span>
-    <h2 id="repair-overview-title">Repair request overview.</h2>
-    {% if repairs %} {% with total=repairs|length %}
-    <p>You have {{ total }} visible repair request{{ total|pluralize }}.</p>
-    {% endwith %} {% elif query or selected_category or selected_urgency or
-    selected_status %}
-    <p>No repair requests match the current search and filters.</p>
-    {% else %}
-    <p>No repair requests are active in your account yet.</p>
-    {% endif %}
-  </header>
-  <a class="btn btn--primary auth-submit" href="{% url 'repair_create' %}"
-    >Create Repair Request</a
-  >
-</article>
-{% endblock %} {% block product_sections %}
-<section
-  class="section repair-list-section"
-  aria-labelledby="repair-list-title"
->
-  <div class="container">
-    <header class="repair-list-heading">
-      <div>
-        <p class="eyebrow">Repair activity</p>
-        <h2 id="repair-list-title">Submitted requests.</h2>
-        <p>
-          Search and filter saved request details from your account. Status,
-          urgency, and category values come directly from UstoHub.
-        </p>
-      </div>
-      {% if repairs or query or selected_category or selected_urgency or
-      selected_status %} {% with total=repairs|length %}
-      <p class="repair-list-count">
-        {{ total }} request{{ total|pluralize }} shown
-      </p>
-      {% endwith %} {% endif %}
-    </header>
+{% extends "accounts/base.html" %}
 
-    <section class="repair-filter-panel" aria-labelledby="repair-filter-title">
-      <header class="repair-filter-panel__header">
-        <div>
-          <h3 id="repair-filter-title">Find repair requests.</h3>
-          <p>
-            Search by title or narrow the list by category, urgency, and status.
-          </p>
+{% block title %}My Repair Requests | UstoHub{% endblock %}
+{% block body_class %}page-repair-list{% endblock %}
+{% block auth_label %}Repair request overview{% endblock %}
+{% block hero_eyebrow %}Customer repair dashboard{% endblock %}
+{% block hero_title %}Track your repair requests in one place.{% endblock %}
+{% block hero_text %}Review the repair problems you have submitted, check their current status, and start a new request when something else needs attention.{% endblock %}
+{% block hero_actions %}
+    <a class="btn btn--primary" href="{% url 'repair_create' %}">Post a Repair Request</a>
+{% endblock %}
+{% block hero_support %}
+    <div class="repair-list-summary" aria-label="Repair request summary">
+        <div class="repair-list-summary__metric">
+            {% with total=repairs|length %}
+                <strong>{{ total }}</strong>
+                <span>visible request{{ total|pluralize }}</span>
+            {% endwith %}
         </div>
-        {% if query or selected_category or selected_urgency or selected_status
-        %}
-        <span class="status-badge status-badge--info">Filters Active</span>
+        <div class="repair-list-summary__copy">
+            <h2>Requests are private to your account.</h2>
+            {% if query or selected_category or selected_urgency or selected_status %}
+                <p>Only matching repair requests connected to your signed-in customer account are shown here.</p>
+            {% else %}
+                <p>Only repair requests connected to your signed-in customer account are shown here.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<article class="auth-card repair-overview-card" aria-labelledby="repair-overview-title">
+    <header class="auth-card__header">
+        <span class="status-badge status-badge--info">My Requests</span>
+        <h2 id="repair-overview-title">Repair request overview.</h2>
+        {% if repairs %}
+            {% with total=repairs|length %}
+                <p>You have {{ total }} visible repair request{{ total|pluralize }}.</p>
+            {% endwith %}
+        {% elif query or selected_category or selected_urgency or selected_status %}
+            <p>No repair requests match the current search and filters.</p>
+        {% else %}
+            <p>No repair requests are active in your account yet.</p>
         {% endif %}
-      </header>
+    </header>
+    <a class="btn btn--primary auth-submit" href="{% url 'repair_create' %}">Create Repair Request</a>
+</article>
+{% endblock %}
 
-      <form
-        class="repair-filter-form"
-        method="get"
-        action="{% url 'repair_list' %}"
-        role="search"
-      >
-        <div class="repair-filter-grid">
-          <div class="form-field repair-filter-field">
-            <label for="repair-search-query">Search by title</label>
-            <div class="control">
-              <input
-                id="repair-search-query"
-                type="search"
-                name="q"
-                value="{{ query }}"
-                autocomplete="off"
-                aria-describedby="repair-search-query-help"
-                placeholder="Search repair titles"
-              />
+{% block product_sections %}
+<section class="section repair-list-section" aria-labelledby="repair-list-title">
+    <div class="container">
+        <header class="repair-list-heading">
+            <div>
+                <p class="eyebrow">Repair activity</p>
+                <h2 id="repair-list-title">Submitted requests.</h2>
+                <p>Search and filter saved request details from your account. Status, urgency, and category values come directly from UstoHub.</p>
             </div>
-            <p id="repair-search-query-help" class="field-hint">
-              Search saved repair request titles.
-            </p>
-          </div>
+            {% if repairs or query or selected_category or selected_urgency or selected_status %}
+                {% with total=repairs|length %}
+                    <p class="repair-list-count">{{ total }} request{{ total|pluralize }} shown</p>
+                {% endwith %}
+            {% endif %}
+        </header>
 
-          <div class="form-field repair-filter-field">
-            <label for="repair-filter-category">Category</label>
-            <div class="control control--select">
-              <select id="repair-filter-category" name="category">
-                <option value="">All categories</option>
-                {% for value, label in category_choices %}
-                <option
-                  value="{{ value }}"
-                  {%
-                  if
-                  selected_category=""
-                  ="value"
-                  %}
-                  selected{%
-                  endif
-                  %}
-                >
-                  {{ label }}
-                </option>
+        <section class="repair-filter-panel" aria-labelledby="repair-filter-title">
+            <header class="repair-filter-panel__header">
+                <div>
+                    <h3 id="repair-filter-title">Find repair requests.</h3>
+                    <p>Search by title or narrow the list by category, urgency, and status.</p>
+                </div>
+                {% if query or selected_category or selected_urgency or selected_status %}
+                    <span class="status-badge status-badge--info">Filters Active</span>
+                {% endif %}
+            </header>
+
+            <form class="repair-filter-form" method="get" action="{% url 'repair_list' %}" role="search">
+                <div class="repair-filter-grid">
+                    <div class="form-field repair-filter-field">
+                        <label for="repair-search-query">Search by title</label>
+                        <div class="control">
+                            <input id="repair-search-query" type="search" name="q" value="{{ query }}" autocomplete="off" aria-describedby="repair-search-query-help" placeholder="Search repair titles">
+                        </div>
+                        <p id="repair-search-query-help" class="field-hint">Search saved repair request titles.</p>
+                    </div>
+
+                    <div class="form-field repair-filter-field">
+                        <label for="repair-filter-category">Category</label>
+                        <div class="control control--select">
+                            <select id="repair-filter-category" name="category">
+                                <option value="">All categories</option>
+                                {% for value, label in category_choices %}
+                                    <option value="{{ value }}"{% if selected_category == value %} selected{% endif %}>{{ label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-field repair-filter-field">
+                        <label for="repair-filter-urgency">Urgency</label>
+                        <div class="control control--select">
+                            <select id="repair-filter-urgency" name="urgency">
+                                <option value="">All urgency levels</option>
+                                {% for value, label in urgency_choices %}
+                                    <option value="{{ value }}"{% if selected_urgency == value %} selected{% endif %}>{{ label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-field repair-filter-field">
+                        <label for="repair-filter-status">Status</label>
+                        <div class="control control--select">
+                            <select id="repair-filter-status" name="status">
+                                <option value="">All statuses</option>
+                                {% for value, label in status_choices %}
+                                    <option value="{{ value }}"{% if selected_status == value %} selected{% endif %}>{{ label }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="repair-filter-actions">
+                    <button class="btn btn--primary" type="submit">Apply Filters</button>
+                    <a class="btn btn--secondary" href="{% url 'repair_list' %}">Clear Filters</a>
+                </div>
+            </form>
+
+            {% if query or selected_category or selected_urgency or selected_status %}
+                <div class="repair-active-filters" aria-label="Active filters">
+                    <p>Active filters</p>
+                    <div class="repair-active-filters__list">
+                        {% if query %}
+                            <span class="request-chip">Search: {{ query }}</span>
+                        {% endif %}
+                        {% if selected_category %}
+                            <span class="request-chip">Category: {% for value, label in category_choices %}{% if selected_category == value %}{{ label }}{% endif %}{% endfor %}</span>
+                        {% endif %}
+                        {% if selected_urgency %}
+                            <span class="request-chip">Urgency: {% for value, label in urgency_choices %}{% if selected_urgency == value %}{{ label }}{% endif %}{% endfor %}</span>
+                        {% endif %}
+                        {% if selected_status %}
+                            <span class="request-chip">Status: {% for value, label in status_choices %}{% if selected_status == value %}{{ label }}{% endif %}{% endfor %}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </section>
+
+        {% if repairs %}
+            <div class="repair-request-grid" role="list">
+                {% for repair in repairs %}
+                    <article class="repair-request-card" role="listitem" aria-labelledby="repair-{{ forloop.counter }}-title">
+                        <div class="repair-request-card__header">
+                            <div>
+                                <p class="repair-request-card__eyebrow">Repair Request</p>
+                                <h3 id="repair-{{ forloop.counter }}-title">{{ repair.title }}</h3>
+                            </div>
+                            <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
+                                Status: {{ repair.get_status_display }}
+                            </span>
+                        </div>
+
+                        <p class="repair-request-card__description">{{ repair.description|truncatewords:32 }}</p>
+
+                        <dl class="repair-meta-grid">
+                            <div>
+                                <dt>Category</dt>
+                                <dd>
+                                    <span class="request-chip">{{ repair.get_category_display }}</span>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Urgency</dt>
+                                <dd>
+                                    <span class="request-chip {% if repair.urgency == 'high' %}request-chip--danger{% elif repair.urgency == 'medium' %}request-chip--warning{% else %}request-chip--success{% endif %}">
+                                        {{ repair.get_urgency_display }}
+                                    </span>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Created</dt>
+                                <dd>{{ repair.created_at|date:"M j, Y" }}</dd>
+                            </div>
+                            <div>
+                                <dt>Updated</dt>
+                                <dd>{{ repair.updated_at|date:"M j, Y" }}</dd>
+                            </div>
+                        </dl>
+
+                        <div class="repair-request-address">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z"/><path d="M12 10.5h.01"/></svg>
+                            <span>{{ repair.address }}</span>
+                        </div>
+
+                        <div class="repair-request-card__footer">
+                            <a class="btn btn--secondary repair-request-card__action" href="{% url 'repair_detail' repair.pk %}" aria-label="View details for {{ repair.title }}">
+                                View Details
+                            </a>
+                        </div>
+                    </article>
                 {% endfor %}
-              </select>
             </div>
-          </div>
-
-          <div class="form-field repair-filter-field">
-            <label for="repair-filter-urgency">Urgency</label>
-            <div class="control control--select">
-              <select id="repair-filter-urgency" name="urgency">
-                <option value="">All urgency levels</option>
-                {% for value, label in urgency_choices %}
-                <option
-                  value="{{ value }}"
-                  {%
-                  if
-                  selected_urgency=""
-                  ="value"
-                  %}
-                  selected{%
-                  endif
-                  %}
-                >
-                  {{ label }}
-                </option>
-                {% endfor %}
-              </select>
-            </div>
-          </div>
-
-          <div class="form-field repair-filter-field">
-            <label for="repair-filter-status">Status</label>
-            <div class="control control--select">
-              <select id="repair-filter-status" name="status">
-                <option value="">All statuses</option>
-                {% for value, label in status_choices %}
-                <option
-                  value="{{ value }}"
-                  {%
-                  if
-                  selected_status=""
-                  ="value"
-                  %}
-                  selected{%
-                  endif
-                  %}
-                >
-                  {{ label }}
-                </option>
-                {% endfor %}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="repair-filter-actions">
-          <button class="btn btn--primary" type="submit">Apply Filters</button>
-          <a class="btn btn--secondary" href="{% url 'repair_list' %}"
-            >Clear Filters</a
-          >
-        </div>
-      </form>
-
-      {% if query or selected_category or selected_urgency or selected_status %}
-      <div class="repair-active-filters" aria-label="Active filters">
-        <p>Active filters</p>
-        <div class="repair-active-filters__list">
-          {% if query %}
-          <span class="request-chip">Search: {{ query }}</span>
-          {% endif %} {% if selected_category %}
-          <span class="request-chip"
-            >Category: {% for value, label in category_choices %}{% if
-            selected_category == value %}{{ label }}{% endif %}{% endfor
-            %}</span
-          >
-          {% endif %} {% if selected_urgency %}
-          <span class="request-chip"
-            >Urgency: {% for value, label in urgency_choices %}{% if
-            selected_urgency == value %}{{ label }}{% endif %}{% endfor %}</span
-          >
-          {% endif %} {% if selected_status %}
-          <span class="request-chip"
-            >Status: {% for value, label in status_choices %}{% if
-            selected_status == value %}{{ label }}{% endif %}{% endfor %}</span
-          >
-          {% endif %}
-        </div>
-      </div>
-      {% endif %}
-    </section>
-
-    {% if repairs %}
-    <div class="repair-request-grid" role="list">
-      {% for repair in repairs %}
-      <article
-        class="repair-request-card"
-        role="listitem"
-        aria-labelledby="repair-{{ forloop.counter }}-title"
-      >
-        <div class="repair-request-card__header">
-          <div>
-            <p class="repair-request-card__eyebrow">Repair Request</p>
-            <h3 id="repair-{{ forloop.counter }}-title">{{ repair.title }}</h3>
-          </div>
-          <span
-            class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}"
-          >
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"
-              />
-            </svg>
-            Status: {{ repair.get_status_display }}
-          </span>
-        </div>
-
-        <p class="repair-request-card__description">
-          {{ repair.description|truncatewords:32 }}
-        </p>
-
-        <dl class="repair-meta-grid">
-          <div>
-            <dt>Category</dt>
-            <dd>
-              <span class="request-chip"
-                >{{ repair.get_category_display }}</span
-              >
-            </dd>
-          </div>
-          <div>
-            <dt>Urgency</dt>
-            <dd>
-              <span
-                class="request-chip {% if repair.urgency == 'high' %}request-chip--danger{% elif repair.urgency == 'medium' %}request-chip--warning{% else %}request-chip--success{% endif %}"
-              >
-                {{ repair.get_urgency_display }}
-              </span>
-            </dd>
-          </div>
-          <div>
-            <dt>Created</dt>
-            <dd>{{ repair.created_at|date:"M j, Y" }}</dd>
-          </div>
-          <div>
-            <dt>Updated</dt>
-            <dd>{{ repair.updated_at|date:"M j, Y" }}</dd>
-          </div>
-        </dl>
-
-        <div
-          class="repair-request-card__status-panel"
-          aria-label="Assigned professional status"
-        >
-          <div class="repair-request-card__status-detail">
-            <span class="repair-request-card__status-label"
-              >Assigned Professional</span
-            >
-            <span class="repair-request-card__status-value">
-              {% if repair.assigned_master %} {{ repair.assigned_master.username
-              }} {% else %} Not assigned yet {% endif %}
-            </span>
-          </div>
-        </div>
-
-        <div class="repair-request-address">
-          <svg
-            class="icon"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z" />
-            <path d="M12 10.5h.01" />
-          </svg>
-          <span>{{ repair.address }}</span>
-        </div>
-
-        <div class="repair-request-card__footer">
-          <a
-            class="btn btn--secondary repair-request-card__action"
-            href="{% url 'repair_detail' repair.pk %}"
-            aria-label="View details for {{ repair.title }}"
-          >
-            View Details
-          </a>
-        </div>
-      </article>
-      {% endfor %}
+        {% else %}
+            {% if query or selected_category or selected_urgency or selected_status %}
+                <div class="empty-state repair-empty-state repair-empty-state--filtered">
+                    <span class="empty-state__icon" aria-hidden="true">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M10 18a8 8 0 1 1 5.7-2.3L21 21"/><path d="M8 10h4M10 8v4"/></svg>
+                    </span>
+                    <h3>No matching repair requests.</h3>
+                    <p>No repair requests match the current search or filters. Clear the filters to return to your full request list.</p>
+                    <a class="btn btn--secondary" href="{% url 'repair_list' %}">Clear Filters</a>
+                </div>
+            {% else %}
+                <div class="empty-state repair-empty-state">
+                    <span class="empty-state__icon" aria-hidden="true">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18"/></svg>
+                    </span>
+                    <h3>No repair requests yet.</h3>
+                    <p>Create your first repair request when something at home needs professional attention.</p>
+                    <a class="btn btn--primary" href="{% url 'repair_create' %}">Post a Repair Request</a>
+                </div>
+            {% endif %}
+        {% endif %}
     </div>
-    {% else %} {% if query or selected_category or selected_urgency or
-    selected_status %}
-    <div class="empty-state repair-empty-state repair-empty-state--filtered">
-      <span class="empty-state__icon" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24">
-          <path d="M10 18a8 8 0 1 1 5.7-2.3L21 21" />
-          <path d="M8 10h4M10 8v4" />
-        </svg>
-      </span>
-      <h3>No matching repair requests.</h3>
-      <p>
-        No repair requests match the current search or filters. Clear the
-        filters to return to your full request list.
-      </p>
-      <a class="btn btn--secondary" href="{% url 'repair_list' %}"
-        >Clear Filters</a
-      >
-    </div>
-    {% else %}
-    <div class="empty-state repair-empty-state">
-      <span class="empty-state__icon" aria-hidden="true">
-        <svg class="icon" viewBox="0 0 24 24">
-          <path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18" />
-        </svg>
-      </span>
-      <h3>No repair requests yet.</h3>
-      <p>
-        Create your first repair request when something at home needs
-        professional attention.
-      </p>
-      <a class="btn btn--primary" href="{% url 'repair_create' %}"
-        >Post a Repair Request</a
-      >
-    </div>
-    {% endif %} {% endif %}
-  </div>
 </section>
 {% endblock %}
