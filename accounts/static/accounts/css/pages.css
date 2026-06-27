@@ -1569,3 +1569,43 @@
 .repair-delete-alert p {
   margin: 0;
 }
+
+/* Home page: keep problem card text in the content column */
+.page-home .home-problem-card {
+  grid-template-columns: 44px minmax(0, 1fr);
+  column-gap: 16px;
+  row-gap: 6px;
+}
+
+.page-home .home-problem-card .icon-tile {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.page-home .home-problem-card h3,
+.page-home .home-problem-card p {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.page-home .home-problem-card p {
+  max-width: 62ch;
+  margin-top: 4px;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .page-home .home-problem-card {
+    grid-template-columns: 1fr;
+  }
+
+  .page-home .home-problem-card .icon-tile,
+  .page-home .home-problem-card h3,
+  .page-home .home-problem-card p {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
