@@ -111,3 +111,14 @@ def professional_accept_request_view(request, pk):
         return redirect('professional_request_list')
     
         
+
+@login_required
+def professional_assigned_request_list_view(request):
+    if request.user.user_type != 'master':
+        return redirect('repair_list')
+    
+    repairs = RepairRequest.objects.filter(
+        assigned_master=request.user, 
+        status='in_progress').order_by('-created_at')
+
+    return render(request, 'repairs/professional_assigned_request_list.html', {'repairs': repairs})
