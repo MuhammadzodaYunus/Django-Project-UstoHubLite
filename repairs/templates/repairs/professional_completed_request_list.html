@@ -1,74 +1,74 @@
 {% extends "accounts/base.html" %}
 
-{% block title %}My Accepted Requests | UstoHub{% endblock %}
-{% block body_class %}page-professional-requests page-professional-assigned{% endblock %}
-{% block auth_label %}Professional accepted repair requests{% endblock %}
-{% block hero_eyebrow %}Professional work queue{% endblock %}
-{% block hero_title %}My Accepted Requests{% endblock %}
-{% block hero_text %}Track active repair requests assigned to you after accepting them from the professional open request queue.{% endblock %}
+{% block title %}Completed Requests | UstoHub{% endblock %}
+{% block body_class %}page-professional-requests page-professional-completed{% endblock %}
+{% block auth_label %}Professional completed repair requests{% endblock %}
+{% block hero_eyebrow %}Professional work history{% endblock %}
+{% block hero_title %}Completed Requests{% endblock %}
+{% block hero_text %}Review finished repair requests completed by your professional account, with customer-safe work history details.{% endblock %}
 {% block hero_actions %}
-    <a class="btn btn--secondary" href="{% url 'professional_request_list' %}">Browse Open Requests</a>
+    <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">View Active Requests</a>
 {% endblock %}
 {% block hero_support %}
-    <div class="repair-list-summary professional-request-summary" aria-label="Assigned repair request summary">
+    <div class="repair-list-summary professional-request-summary" aria-label="Completed repair request summary">
         <div class="repair-list-summary__metric">
             {% with total=repairs|length %}
                 <strong>{{ total }}</strong>
-                <span>accepted request{{ total|pluralize }}</span>
+                <span>completed request{{ total|pluralize }}</span>
             {% endwith %}
         </div>
         <div class="repair-list-summary__copy">
-            <h2>Accepted work in progress.</h2>
+            <h2>Finished work history.</h2>
             {% if repairs %}
-                <p>These repair requests are assigned to your professional account and remain in progress.</p>
+                <p>These repair requests were completed by your professional account and are ordered by latest update.</p>
             {% else %}
-                <p>You do not have assigned in-progress repair requests right now.</p>
+                <p>You have not completed any repair requests yet.</p>
             {% endif %}
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-<article class="auth-card professional-queue-card" aria-labelledby="professional-assigned-title">
+<article class="auth-card professional-queue-card" aria-labelledby="professional-completed-title">
     <header class="auth-card__header">
-        <span class="status-badge status-badge--warning">In Progress</span>
-        <h2 id="professional-assigned-title">Assigned work overview.</h2>
+        <span class="status-badge status-badge--success">Completed</span>
+        <h2 id="professional-completed-title">Completed work overview.</h2>
         {% if repairs %}
             {% with total=repairs|length %}
-                <p>{{ total }} accepted repair request{{ total|pluralize }} are currently assigned to you.</p>
+                <p>{{ total }} completed repair request{{ total|pluralize }} are saved in your professional work history.</p>
             {% endwith %}
         {% else %}
-            <p>Accepted customer requests will appear here after you use the open request queue.</p>
+            <p>Completed requests will appear here after active work is marked as completed.</p>
         {% endif %}
     </header>
 
     <div class="professional-queue-note">
-        <span class="icon-tile" aria-hidden="true">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
+        <span class="icon-tile icon-tile--success" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
         </span>
-        <p>Only requests assigned to your professional account are shown on this page.</p>
+        <p>This page shows only completed repair requests assigned to your professional account. Customer private contact details are not displayed.</p>
     </div>
 </article>
 {% endblock %}
 
 {% block product_sections %}
-<section class="section repair-list-section professional-request-section" aria-labelledby="professional-assigned-list-title">
+<section class="section repair-list-section professional-request-section" aria-labelledby="professional-completed-list-title">
     <div class="container">
         <nav class="professional-work-switcher" aria-label="Professional repair request views">
             <a href="{% url 'professional_request_list' %}">Open Requests</a>
-            <a href="{% url 'professional_assigned_request_list' %}" aria-current="page">My Accepted Requests</a>
-            <a href="{% url 'professional_completed_request_list' %}">Completed Requests</a>
+            <a href="{% url 'professional_assigned_request_list' %}">My Accepted Requests</a>
+            <a href="{% url 'professional_completed_request_list' %}" aria-current="page">Completed Requests</a>
         </nav>
 
         <header class="repair-list-heading">
             <div>
-                <p class="eyebrow">Accepted work</p>
-                <h2 id="professional-assigned-list-title">My Accepted Requests.</h2>
-                <p>Review the active repair requests that have been accepted by your professional account.</p>
+                <p class="eyebrow">Completed work</p>
+                <h2 id="professional-completed-list-title">Finished repair requests.</h2>
+                <p>Review finished work records with essential request details, customer-safe labels, and the latest update date.</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}
-                    <p class="repair-list-count">{{ total }} request{{ total|pluralize }} accepted</p>
+                    <p class="repair-list-count">{{ total }} request{{ total|pluralize }} completed</p>
                 {% endwith %}
             {% endif %}
         </header>
@@ -76,14 +76,14 @@
         {% if repairs %}
             <div class="professional-request-grid" role="list">
                 {% for repair in repairs %}
-                    <article class="professional-request-card" role="listitem" aria-labelledby="assigned-repair-{{ forloop.counter }}-title">
+                    <article class="professional-request-card" role="listitem" aria-labelledby="completed-repair-{{ forloop.counter }}-title">
                         <div class="professional-request-card__header">
                             <div>
-                                <p class="repair-request-card__eyebrow">Assigned Repair Request</p>
-                                <h3 id="assigned-repair-{{ forloop.counter }}-title">{{ repair.title }}</h3>
+                                <p class="repair-request-card__eyebrow">Completed Repair Request</p>
+                                <h3 id="completed-repair-{{ forloop.counter }}-title">{{ repair.title }}</h3>
                             </div>
-                            <span class="status-badge status-badge--warning">
-                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
+                            <span class="status-badge status-badge--success">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
                                 Status: {{ repair.get_status_display }}
                             </span>
                         </div>
@@ -125,24 +125,17 @@
                                 </div>
                             {% endif %}
                         </div>
-
-                        <div class="professional-request-card__footer">
-                            <form class="professional-complete-form" method="post" action="{% url 'professional_complete_request' repair.pk %}" aria-label="Mark repair request {{ repair.title }} as completed">
-                                {% csrf_token %}
-                                <button class="btn btn--success professional-request-card__action" type="submit">Mark as Completed</button>
-                            </form>
-                        </div>
                     </article>
                 {% endfor %}
             </div>
         {% else %}
             <div class="empty-state repair-empty-state professional-empty-state">
                 <span class="empty-state__icon" aria-hidden="true">
-                    <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
                 </span>
-                <h3>No accepted repair requests.</h3>
-                <p>You have not accepted any open repair requests yet. Browse the professional queue when you are ready to take active work.</p>
-                <a class="btn btn--secondary" href="{% url 'professional_request_list' %}">Browse Open Requests</a>
+                <h3>No completed repair requests.</h3>
+                <p>You have not completed any assigned repair requests yet. Active requests can be reviewed from your accepted work queue.</p>
+                <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">View Active Requests</a>
             </div>
         {% endif %}
     </div>

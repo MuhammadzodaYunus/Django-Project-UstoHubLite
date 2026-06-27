@@ -62,6 +62,12 @@
                                     </svg>
                                     Accepted
                                 </a>
+                                <a class="professional-nav__link{% if current_route == 'professional_completed_request_list' %} is-active{% endif %}" href="{% url 'professional_completed_request_list' %}"{% if current_route == 'professional_completed_request_list' %} aria-current="page"{% endif %} aria-label="Completed Requests">
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M20 6 9 17l-5-5"/>
+                                    </svg>
+                                    Completed
+                                </a>
                             </div>
                         {% else %}
                             <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>

@@ -243,7 +243,7 @@
             });
         });
 
-        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .professional-nav__link, .nav-toggle, .password-toggle, .role-option").forEach(function (control) {
+        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .professional-nav__link, .professional-work-switcher a, .nav-toggle, .password-toggle, .role-option").forEach(function (control) {
             var press = function () {
                 control.classList.add("is-pressed");
             };

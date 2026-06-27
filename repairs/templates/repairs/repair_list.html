@@ -190,6 +190,19 @@
                             </div>
                         </dl>
 
+                        <div class="repair-request-card__status-panel" aria-label="Assigned professional status">
+                            <div class="repair-request-card__status-detail">
+                                <span class="repair-request-card__status-label">Assigned Professional</span>
+                                <span class="repair-request-card__status-value">
+                                    {% if repair.assigned_master %}
+                                        {{ repair.assigned_master.username }}
+                                    {% else %}
+                                        Not assigned yet
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </div>
+
                         <div class="repair-request-address">
                             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z"/><path d="M12 10.5h.01"/></svg>
                             <span>{{ repair.address }}</span>

@@ -63,6 +63,90 @@
         </div>
     </dl>
 
+    <section class="repair-detail-section repair-status-tracker" aria-labelledby="repair-status-tracker-title">
+        <div class="repair-detail-section__heading">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
+            <h3 id="repair-status-tracker-title">Current Status</h3>
+        </div>
+
+        <div class="repair-status-tracker__summary">
+            <div class="repair-status-tracker__badge">
+                <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
+                    {{ repair.get_status_display }}
+                </span>
+                {% if repair.status == 'cancelled' %}
+                    <p>This request was cancelled and no longer continues through the normal repair workflow.</p>
+                {% elif repair.status == 'completed' %}
+                    <p>The repair request has reached the completed stage and the work record is settled.</p>
+                {% elif repair.status == 'in_progress' %}
+                    <p>The request is actively in progress with a professional assigned to the work.</p>
+                {% else %}
+                    <p>The request is open and waiting for a professional to accept it.</p>
+                {% endif %}
+            </div>
+
+            <div class="repair-status-tracker__professional">
+                <span class="repair-status-tracker__label">Assigned Professional</span>
+                {% if repair.assigned_master %}
+                    <strong>{{ repair.assigned_master.username }}</strong>
+                    <p>Work is connected to this professional account.</p>
+                {% else %}
+                    <strong>Not assigned yet</strong>
+                    <p>No professional has accepted the request yet.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if repair.status == 'cancelled' %}
+            <div class="repair-status-track repair-status-track--cancelled" aria-label="Repair request lifecycle">
+                <div class="repair-status-track__item is-complete">
+                    <span class="repair-status-track__dot" aria-hidden="true"></span>
+                    <div class="repair-status-track__content">
+                        <strong>Request posted</strong>
+                        <p>Submitted on {{ repair.created_at|date:"M j, Y" }}.</p>
+                        <span class="repair-status-track__state">Completed</span>
+                    </div>
+                </div>
+                <div class="repair-status-track__item is-cancelled" aria-current="step">
+                    <span class="repair-status-track__dot" aria-hidden="true"></span>
+                    <div class="repair-status-track__content">
+                        <strong>Cancelled</strong>
+                        <p>This request was cancelled and did not continue to the next work stages.</p>
+                        <span class="repair-status-track__state">Cancelled</span>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <ol class="repair-status-track" aria-label="Repair request progress timeline">
+                <li class="repair-status-track__item {% if repair.status == 'open' %}is-active{% else %}is-complete{% endif %}">
+                    <span class="repair-status-track__dot" aria-hidden="true"></span>
+                    <div class="repair-status-track__content">
+                        <strong>Request posted</strong>
+                        <p>Submitted on {{ repair.created_at|date:"M j, Y" }}.</p>
+                        <span class="repair-status-track__state">{% if repair.status == 'open' %}Active now{% else %}Completed{% endif %}</span>
+                    </div>
+                </li>
+                <li class="repair-status-track__item {% if repair.status == 'in_progress' %}is-active{% elif repair.status == 'completed' %}is-complete{% else %}is-pending{% endif %}">
+                    <span class="repair-status-track__dot" aria-hidden="true"></span>
+                    <div class="repair-status-track__content">
+                        <strong>Professional accepted</strong>
+                        <p>{% if repair.assigned_master %}The request has been accepted by {{ repair.assigned_master.username }}.{% else %}A professional must accept the request before work can begin.{% endif %}</p>
+                        <span class="repair-status-track__state">{% if repair.status == 'in_progress' %}Active now{% elif repair.status == 'completed' %}Completed{% else %}Pending{% endif %}</span>
+                    </div>
+                </li>
+                <li class="repair-status-track__item {% if repair.status == 'completed' %}is-complete{% else %}is-pending{% endif %}">
+                    <span class="repair-status-track__dot" aria-hidden="true"></span>
+                    <div class="repair-status-track__content">
+                        <strong>Work completed</strong>
+                        <p>{% if repair.status == 'completed' %}The work record is completed and the request is settled.{% else %}This step is pending until the professional marks the request as complete.{% endif %}</p>
+                        <span class="repair-status-track__state">{% if repair.status == 'completed' %}Completed{% else %}Pending{% endif %}</span>
+                    </div>
+                </li>
+            </ol>
+        {% endif %}
+    </section>
+
     <section class="repair-detail-section" aria-labelledby="repair-detail-description-title">
         <div class="repair-detail-section__heading">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16M4 12h12M4 19h8"/></svg>
