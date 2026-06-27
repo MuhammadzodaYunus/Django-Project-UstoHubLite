@@ -135,3 +135,20 @@ def professional_complete_request_view(request, pk):
     repair.save()
 
     return redirect("professional_assigned_request_list")
+
+
+@login_required
+def professional_completed_request_list_view(request):
+    if request.user.user_type != "master":
+        return redirect("repair_list")
+
+    repairs = RepairRequest.objects.filter(
+        assigned_master=request.user,
+        status="completed",
+    ).order_by("-updated_at")
+
+    return render(
+        request,
+        "repairs/professional_completed_request_list.html",
+        {"repairs": repairs},
+    )

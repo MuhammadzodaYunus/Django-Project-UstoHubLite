@@ -124,6 +124,13 @@
                                 </div>
                             {% endif %}
                         </div>
+
+                        <div class="professional-request-card__footer">
+                            <form class="professional-complete-form" method="post" action="{% url 'professional_complete_request' repair.pk %}" aria-label="Mark repair request {{ repair.title }} as completed">
+                                {% csrf_token %}
+                                <button class="btn btn--success professional-request-card__action" type="submit">Mark as Completed</button>
+                            </form>
+                        </div>
                     </article>
                 {% endfor %}
             </div>

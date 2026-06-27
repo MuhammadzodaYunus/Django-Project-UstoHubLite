@@ -185,6 +185,7 @@
             ".repair-guidance__item",
             ".repair-list-summary",
             ".repair-request-card",
+            ".professional-request-card",
             ".repair-detail-summary",
             ".repair-detail-meta-grid div",
             ".repair-detail-section",
@@ -242,7 +243,7 @@
             });
         });
 
-        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .nav-toggle, .password-toggle, .role-option").forEach(function (control) {
+        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .professional-nav__link, .nav-toggle, .password-toggle, .role-option").forEach(function (control) {
             var press = function () {
                 control.classList.add("is-pressed");
             };
@@ -328,6 +329,7 @@
             ".repair-list-summary",
             ".repair-list-heading",
             ".repair-request-card",
+            ".professional-request-card",
             ".repair-detail-summary",
             ".repair-detail-meta-grid div",
             ".repair-detail-section",

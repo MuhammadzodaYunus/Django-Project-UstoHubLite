@@ -9,6 +9,8 @@ urlpatterns = [
     path('<int:pk>/delete/', views.repair_delete_view, name="repair_delete"),
     path('professional/requests/', views.professional_request_list_view, name='professional_request_list'),
     path("<int:pk>/accept/", views.professional_accept_request_view, name="professional_accept_request"),
-    path('professional/assigned/', views.professional_assigned_request_list_view, name='professional_assigned_request_list')
+    path('professional/assigned/', views.professional_assigned_request_list_view, name='professional_assigned_request_list'),
+    path("<int:pk>/complete/", views.professional_complete_request_view, name="professional_complete_request"),
+    path("professional/completed/",views.professional_completed_request_list_view,name="professional_completed_request_list",),
 ]
 

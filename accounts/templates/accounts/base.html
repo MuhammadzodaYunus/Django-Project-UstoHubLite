@@ -33,28 +33,36 @@
             {% with current_route=request.resolver_match.url_name %}
                 <div class="site-nav__panel" id="primary-navigation" data-nav-panel>
                     <div class="site-nav__links">
-                        <a href="{% url 'register' %}#services">Services</a>
-                        <a href="{% url 'register' %}#how-it-works">How It Works</a>
-                        <a href="{% url 'register' %}#professionals">Find Professionals</a>
-                        <a href="{% url 'register' %}#warranty">Warranty</a>
-                        <a href="{% url 'register' %}#for-professionals">For Professionals</a>
+                        {% if request.user.is_authenticated and request.user.user_type == "master" %}
+                            <a href="{% url 'register' %}#services">Services</a>
+                            <a href="{% url 'register' %}#how-it-works">How It Works</a>
+                            <a href="{% url 'register' %}#for-professionals">For Professionals</a>
+                        {% else %}
+                            <a href="{% url 'register' %}#services">Services</a>
+                            <a href="{% url 'register' %}#how-it-works">How It Works</a>
+                            <a href="{% url 'register' %}#professionals">Find Professionals</a>
+                            <a href="{% url 'register' %}#warranty">Warranty</a>
+                            <a href="{% url 'register' %}#for-professionals">For Professionals</a>
+                        {% endif %}
                     </div>
 
                     <div class="site-nav__actions">
                         {% if request.user.is_authenticated %}
                         {% if request.user.user_type == "master" %}
-                            <a class="nav-dashboard{% if current_route == 'professional_request_list' %} is-active{% endif %}" href="{% url 'professional_request_list' %}"{% if current_route == 'professional_request_list' %} aria-current="page"{% endif %}>
-                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/>
-                                </svg>
-                                Open Requests
-                            </a>
-                            <a class="nav-dashboard{% if current_route == 'professional_assigned_request_list' %} is-active{% endif %}" href="{% url 'professional_assigned_request_list' %}"{% if current_route == 'professional_assigned_request_list' %} aria-current="page"{% endif %}>
-                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M4 7h16M4 12h10M4 17h7"/>
-                                </svg>
-                                My Accepted Requests
-                            </a>
+                            <div class="professional-nav" aria-label="Professional workspace navigation">
+                                <a class="professional-nav__link{% if current_route == 'professional_request_list' %} is-active{% endif %}" href="{% url 'professional_request_list' %}"{% if current_route == 'professional_request_list' %} aria-current="page"{% endif %} aria-label="Open Requests">
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/>
+                                    </svg>
+                                    Open
+                                </a>
+                                <a class="professional-nav__link{% if current_route == 'professional_assigned_request_list' %} is-active{% endif %}" href="{% url 'professional_assigned_request_list' %}"{% if current_route == 'professional_assigned_request_list' %} aria-current="page"{% endif %} aria-label="My Accepted Requests">
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M4 7h16M4 12h10M4 17h7"/>
+                                    </svg>
+                                    Accepted
+                                </a>
+                            </div>
                         {% else %}
                             <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">

@@ -21,6 +21,19 @@
         font-size: 0.88rem;
     }
 
+    .site-nav__panel {
+        gap: 16px;
+    }
+
+    .site-nav__actions {
+        gap: 8px;
+    }
+
+    .professional-nav__link {
+        padding-inline: 10px;
+        font-size: 0.86rem;
+    }
+
     .page-register .role-options {
         grid-template-columns: 1fr;
     }
@@ -110,8 +123,15 @@
         flex-direction: column;
     }
 
+    .professional-nav {
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+    }
+
     .site-nav__links a,
     .nav-dashboard,
+    .professional-nav__link,
     .site-nav__actions .btn,
     .site-nav__actions .logout-form,
     .site-nav__actions .logout-form button {
@@ -222,6 +242,7 @@
     .repair-detail-actions .btn,
     .repair-request-card__action,
     .professional-accept-form,
+    .professional-complete-form,
     .professional-request-card__action,
     .professional-work-switcher,
     .professional-work-switcher a {
