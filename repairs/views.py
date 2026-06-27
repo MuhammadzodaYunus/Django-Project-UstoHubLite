@@ -121,3 +121,17 @@ def professional_assigned_request_list_view(request):
         status='in_progress').order_by('-created_at')
 
     return render(request, 'repairs/professional_assigned_request_list.html', {'repairs': repairs})
+
+
+@login_required
+@require_POST
+def professional_complete_request_view(request, pk):
+    if request.user.user_type != 'master':
+        return redirect('repair_list')
+    
+    repair = get_object_or_404(RepairRequest, pk=pk, assigned_master = request.user, status='in_progress')
+
+    repair.status='completed'
+    repair.save()
+
+    return redirect("professional_assigned_request_list")
