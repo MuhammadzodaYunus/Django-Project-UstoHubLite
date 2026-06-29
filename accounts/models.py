@@ -12,6 +12,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20, blank=True)
     user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES, default='customer')
+    is_master_approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.username

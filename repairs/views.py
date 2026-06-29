@@ -89,7 +89,7 @@ def repair_delete_view(request, pk):
 
 @login_required
 def professional_request_list_view(request):
-    if request.user.user_type != 'master':
+    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
         return redirect('repair_list')
     
     repairs = RepairRequest.objects.filter(status='open').order_by('-created_at')
@@ -99,7 +99,7 @@ def professional_request_list_view(request):
 @login_required
 @require_POST
 def professional_accept_request_view(request, pk):
-    if request.user.user_type != 'master':
+    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
         return redirect('repair_list')
 
     repair = get_object_or_404(RepairRequest, pk=pk, status="open", assigned_master__isnull=True)
@@ -113,7 +113,7 @@ def professional_accept_request_view(request, pk):
 
 @login_required
 def professional_assigned_request_list_view(request):
-    if request.user.user_type != 'master':
+    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
         return redirect('repair_list')
     
     repairs = RepairRequest.objects.filter(
@@ -126,7 +126,7 @@ def professional_assigned_request_list_view(request):
 @login_required
 @require_POST
 def professional_complete_request_view(request, pk):
-    if request.user.user_type != 'master':
+    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
         return redirect('repair_list')
     
     repair = get_object_or_404(RepairRequest, pk=pk, assigned_master = request.user, status='in_progress')
@@ -139,7 +139,7 @@ def professional_complete_request_view(request, pk):
 
 @login_required
 def professional_completed_request_list_view(request):
-    if request.user.user_type != "master":
+    if request.user.user_type != "master" or not request.user.is_master_approved == True:
         return redirect("repair_list")
 
     repairs = RepairRequest.objects.filter(

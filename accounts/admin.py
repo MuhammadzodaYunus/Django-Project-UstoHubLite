@@ -6,14 +6,14 @@ from .models import User
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
 
-    list_display = ['username', 'email', 'phone_number', 'user_type', 'is_staff', 'is_active']
+    list_display = ['username', 'email', 'phone_number', 'user_type', 'is_master_approved', 'is_staff', 'is_active']
     search_fields = ['username', 'email', 'phone_number']
-    list_filter = ['user_type', 'is_staff', 'is_active']
+    list_filter = ['user_type', 'is_master_approved', 'is_staff', 'is_active']
 
     fieldsets =  UserAdmin.fieldsets + (
         (
             "UstoHub information",
-            {"fields": ('phone_number', 'user_type',)},
+            {"fields": ('phone_number', 'user_type', 'is_master_approved',)},
         ),
     )
 
@@ -21,6 +21,6 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets =  UserAdmin.add_fieldsets + (
         (
             "UstoHub information",
-            {"fields": ('email', 'phone_number', 'user_type',)},
+            {"fields": ('email', 'phone_number', 'user_type', 'is_master_approved',)},
         ),
     )
