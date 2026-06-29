@@ -54,7 +54,9 @@ def verify_email_view(request):
 
                 verification.delete()
                 request.session.pop("pending_verification_user_id", None)
-                return redirect('login')
+
+                login(request, user)
+                return redirect('home')
 
     else:
         form = EmailVerificationForm()
@@ -69,7 +71,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('register')
+            return redirect('home')
 
     else:
         form = UserLoginForm()
