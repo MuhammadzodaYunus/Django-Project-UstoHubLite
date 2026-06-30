@@ -33,7 +33,7 @@
             {% with current_route=request.resolver_match.url_name %}
                 <div class="site-nav__panel" id="primary-navigation" data-nav-panel>
                     <div class="site-nav__links">
-                        {% if request.user.is_authenticated and request.user.user_type == "master" %}
+                        {% if request.user.is_authenticated and request.user.user_type == "master" and request.user.is_master_approved %}
                             <a href="{% url 'home' %}"{% if current_route == 'home' %} class="is-active" aria-current="page"{% endif %}>Home</a>
                             <a href="{% url 'home' %}#how-it-works">How It Works</a>
                             <a href="{% url 'home' %}#services">Categories</a>
@@ -49,7 +49,7 @@
 
                     <div class="site-nav__actions">
                         {% if request.user.is_authenticated %}
-                        {% if request.user.user_type == "master" %}
+                        {% if request.user.user_type == "master" and request.user.is_master_approved %}
                             <div class="professional-nav" aria-label="Professional workspace navigation">
                                 <a class="professional-nav__link{% if current_route == 'professional_request_list' %} is-active{% endif %}" href="{% url 'professional_request_list' %}"{% if current_route == 'professional_request_list' %} aria-current="page"{% endif %} aria-label="Open Requests">
                                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -70,6 +70,11 @@
                                     Completed
                                 </a>
                             </div>
+                        {% elif request.user.user_type == "master" %}
+                            <a class="nav-pending-status{% if current_route == 'approval_pending' %} is-active{% endif %}" href="{% url 'approval_pending' %}"{% if current_route == 'approval_pending' %} aria-current="page"{% endif %}>
+                                <span class="approval-status-dot" aria-hidden="true"></span>
+                                Pending approval
+                            </a>
                         {% else %}
                             <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -109,8 +114,10 @@
                     <div class="hero-actions">
                         {% block hero_actions %}
                             {% if request.user.is_authenticated %}
-                                {% if request.user.user_type == "master" %}
+                                {% if request.user.user_type == "master" and request.user.is_master_approved %}
                                     <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Open Requests</a>
+                                {% elif request.user.user_type == "master" %}
+                                    <a class="btn btn--primary" href="{% url 'approval_pending' %}">View Approval Status</a>
                                 {% else %}
                                     <a class="btn btn--primary" href="{% url 'repair_list' %}">Open Dashboard</a>
                                 {% endif %}

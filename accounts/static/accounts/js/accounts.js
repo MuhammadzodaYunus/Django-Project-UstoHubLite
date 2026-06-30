@@ -204,7 +204,11 @@
             ".photo-signal",
             ".repair-proof-rail span",
             ".service-photo-band__media",
-            ".service-photo-band__content"
+            ".service-photo-band__content",
+            ".approval-signal",
+            ".approval-hero-metric",
+            ".approval-status-card",
+            ".approval-trust-card"
         ].join(", ");
 
         document.querySelectorAll(surfaceSelector).forEach(function (surface) {
@@ -254,7 +258,7 @@
             });
         });
 
-        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .professional-nav__link, .professional-work-switcher a, .nav-toggle, .password-toggle, .role-option").forEach(function (control) {
+        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .nav-pending-status, .professional-nav__link, .professional-work-switcher a, .nav-toggle, .password-toggle, .role-option").forEach(function (control) {
             var press = function () {
                 control.classList.add("is-pressed");
             };
@@ -363,7 +367,13 @@
             ".repair-proof-rail",
             ".service-photo-band",
             ".service-photo-band__media",
-            ".service-photo-band__content"
+            ".service-photo-band__content",
+            ".approval-signal-board",
+            ".approval-signal",
+            ".approval-hero-metric",
+            ".approval-status-card",
+            ".approval-timeline__item",
+            ".approval-trust-card"
         ].join(", ");
 
         var items = Array.prototype.slice.call(document.querySelectorAll(revealSelector));
@@ -771,6 +781,40 @@
         });
     };
 
+    var enhanceApprovalTimeline = function () {
+        document.querySelectorAll("[data-approval-timeline]").forEach(function (timeline) {
+            var items = Array.prototype.slice.call(timeline.querySelectorAll("[data-approval-step]"));
+
+            if (!items.length || !window.PointerEvent) {
+                return;
+            }
+
+            var clearHighlight = function () {
+                items.forEach(function (item) {
+                    item.classList.remove("is-highlighted");
+                });
+            };
+
+            var setHighlight = function (target) {
+                items.forEach(function (item) {
+                    item.classList.toggle("is-highlighted", item === target);
+                });
+            };
+
+            items.forEach(function (item) {
+                item.addEventListener("pointerenter", function () {
+                    setHighlight(item);
+                });
+
+                item.addEventListener("pointerleave", clearHighlight);
+
+                item.addEventListener("click", function () {
+                    setHighlight(item);
+                });
+            });
+        });
+    };
+
     enhanceHeader();
     enhanceScrollProgress();
     enhanceHashNavigation();
@@ -784,4 +828,5 @@
     enhanceCodeInputs();
     enhanceForms();
     enhanceRepairBrief();
+    enhanceApprovalTimeline();
 }());

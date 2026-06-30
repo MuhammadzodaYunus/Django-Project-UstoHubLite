@@ -8,8 +8,10 @@
 {% block hero_text %}{% if request.user.is_authenticated %}Continue managing repair requests, professional offers, bookings, warranty records, and account details.{% else %}Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details.{% endif %}{% endblock %}
 {% block hero_actions %}
     {% if request.user.is_authenticated %}
-        {% if request.user.user_type == "master" %}
+        {% if request.user.user_type == "master" and request.user.is_master_approved %}
             <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Open Professional Queue</a>
+        {% elif request.user.user_type == "master" %}
+            <a class="btn btn--primary" href="{% url 'approval_pending' %}">View Approval Status</a>
         {% else %}
             <a class="btn btn--primary" href="{% url 'repair_list' %}">Open Dashboard</a>
         {% endif %}
@@ -28,8 +30,10 @@
         <h2 id="signed-in-title">You are already logged in.</h2>
         <p>Continue to your UstoHub overview or log out from the header when you are finished.</p>
     </header>
-    {% if request.user.user_type == "master" %}
+    {% if request.user.user_type == "master" and request.user.is_master_approved %}
         <a class="btn btn--primary auth-submit" href="{% url 'professional_request_list' %}">Open Professional Queue</a>
+    {% elif request.user.user_type == "master" %}
+        <a class="btn btn--primary auth-submit" href="{% url 'approval_pending' %}">View Approval Status</a>
     {% else %}
         <a class="btn btn--primary auth-submit" href="{% url 'repair_list' %}">Open Dashboard</a>
     {% endif %}

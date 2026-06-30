@@ -10,15 +10,17 @@
         <header class="auth-card__header">
             <span class="status-badge status-badge--success">Signed in</span>
             <h2 id="dashboard-title">Welcome back, {{ request.user.username }}.</h2>
-            {% if request.user.user_type == "master" %}
+            {% if request.user.user_type == "master" and request.user.is_master_approved %}
                 <p>Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available.</p>
+            {% elif request.user.user_type == "master" %}
+                <p>Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests.</p>
             {% else %}
                 <p>Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available.</p>
             {% endif %}
         </header>
 
         <div class="dashboard-overview" aria-label="Account overview">
-            {% if request.user.user_type == "master" %}
+            {% if request.user.user_type == "master" and request.user.is_master_approved %}
                 <div class="summary-card">
                     <span class="summary-card__label">New requests</span>
                     <strong>0</strong>
@@ -33,6 +35,22 @@
                     <span class="summary-card__label">Reviews</span>
                     <strong>0</strong>
                     <p>Customer reviews will appear after completed work.</p>
+                </div>
+            {% elif request.user.user_type == "master" %}
+                <div class="summary-card">
+                    <span class="summary-card__label">Account status</span>
+                    <strong>Pending</strong>
+                    <p>Pending admin review.</p>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-card__label">Professional access</span>
+                    <strong>Locked</strong>
+                    <p>Available after approval.</p>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-card__label">Request queue</span>
+                    <strong>Hidden</strong>
+                    <p>Hidden until approval is complete.</p>
                 </div>
             {% else %}
                 <div class="summary-card">
@@ -57,9 +75,13 @@
             <span class="empty-state__icon" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18"/></svg>
             </span>
-            {% if request.user.user_type == "master" %}
+            {% if request.user.user_type == "master" and request.user.is_master_approved %}
                 <h3>No professional activity yet.</h3>
                 <p>Requests, jobs, customer messages, and reviews will show here when marketplace activity starts.</p>
+            {% elif request.user.user_type == "master" %}
+                <h3>Professional approval is pending.</h3>
+                <p>Admin approval is required before you can access Professional queue actions.</p>
+                <a class="btn btn--secondary" href="{% url 'approval_pending' %}">View Approval Status</a>
             {% else %}
                 <h3>No repair activity yet.</h3>
                 <p>Your requests, bookings, repair status, warranties, and reviews will show here when activity starts.</p>

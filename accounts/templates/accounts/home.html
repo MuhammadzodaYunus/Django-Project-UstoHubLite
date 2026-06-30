@@ -9,9 +9,12 @@
 {% block hero_text %}UstoHub Lite gives customers a clear place to post repair requests and gives professionals a focused queue for accepting, tracking, and completing work.{% endblock %}
 {% block hero_actions %}
     {% if request.user.is_authenticated %}
-        {% if request.user.user_type == "master" %}
+        {% if request.user.user_type == "master" and request.user.is_master_approved %}
             <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Browse Open Requests</a>
             <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">My Assigned Requests</a>
+        {% elif request.user.user_type == "master" %}
+            <a class="btn btn--primary" href="{% url 'approval_pending' %}">View Approval Status</a>
+            <a class="btn btn--secondary" href="{% url 'home' %}#how-it-works">How UstoHub Works</a>
         {% else %}
             <a class="btn btn--primary" href="{% url 'repair_create' %}">Post a Repair Request</a>
             <a class="btn btn--secondary" href="{% url 'repair_list' %}">My Repair Requests</a>
@@ -58,7 +61,7 @@
 {% block content %}
 <article class="auth-card home-command-panel" aria-labelledby="home-command-title">
     {% if request.user.is_authenticated %}
-        {% if request.user.user_type == "master" %}
+        {% if request.user.user_type == "master" and request.user.is_master_approved %}
             <header class="auth-card__header">
                 <span class="status-badge status-badge--info">Professional account</span>
                 <h2 id="home-command-title">Your work queue starts with open requests.</h2>
@@ -74,6 +77,23 @@
             <div class="form-actions">
                 <a class="btn btn--primary auth-submit" href="{% url 'professional_request_list' %}">Browse Open Requests</a>
                 <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">My Assigned Requests</a>
+            </div>
+        {% elif request.user.user_type == "master" %}
+            <header class="auth-card__header">
+                <span class="status-badge status-badge--warning">Pending Review</span>
+                <h2 id="home-command-title">Your Professional account is waiting for admin approval.</h2>
+                <p>After approval, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs.</p>
+            </header>
+
+            <ol class="home-command-steps" aria-label="Professional approval workflow">
+                <li><span>1</span>Account created</li>
+                <li><span>2</span>Admin review</li>
+                <li><span>3</span>Professional access activated</li>
+            </ol>
+
+            <div class="form-actions">
+                <a class="btn btn--primary auth-submit" href="{% url 'approval_pending' %}">View Approval Status</a>
+                <a class="btn btn--secondary" href="{% url 'home' %}#how-it-works">How It Works</a>
             </div>
         {% else %}
             <header class="auth-card__header">
@@ -226,8 +246,10 @@
                     <li>View Assigned Requests</li>
                     <li>Review Completed Requests</li>
                 </ul>
-                {% if request.user.is_authenticated and request.user.user_type == "master" %}
+                {% if request.user.is_authenticated and request.user.user_type == "master" and request.user.is_master_approved %}
                     <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Browse Open Requests</a>
+                {% elif request.user.is_authenticated and request.user.user_type == "master" %}
+                    <a class="btn btn--secondary" href="{% url 'approval_pending' %}">Pending approval</a>
                 {% elif not request.user.is_authenticated %}
                     <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">Join as a Professional</a>
                 {% endif %}
@@ -325,10 +347,13 @@
         </div>
         <div class="home-final-cta__actions">
             {% if request.user.is_authenticated %}
-                {% if request.user.user_type == "master" %}
+                {% if request.user.user_type == "master" and request.user.is_master_approved %}
                     <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Browse Open Requests</a>
                     <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">My Assigned Requests</a>
                     <a class="btn btn--secondary" href="{% url 'professional_completed_request_list' %}">Completed Requests</a>
+                {% elif request.user.user_type == "master" %}
+                    <a class="btn btn--primary" href="{% url 'approval_pending' %}">View Approval Status</a>
+                    <a class="btn btn--secondary" href="{% url 'home' %}#professionals">Professional workflow</a>
                 {% else %}
                     <a class="btn btn--primary" href="{% url 'repair_create' %}">Post a Repair Request</a>
                     <a class="btn btn--secondary" href="{% url 'repair_list' %}">My Repair Requests</a>

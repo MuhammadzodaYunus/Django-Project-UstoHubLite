@@ -140,6 +140,7 @@
 
   .site-nav__links a,
   .nav-dashboard,
+  .nav-pending-status,
   .professional-nav__link,
   .site-nav__actions .btn,
   .site-nav__actions .logout-form,
@@ -206,6 +207,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .approval-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .home-process-card::after {
     display: none;
   }
@@ -261,6 +266,8 @@
   .pro-panel .btn,
   .form-actions .btn,
   .form-actions .auth-submit,
+  .approval-card-actions .approval-logout-form,
+  .approval-card-actions .approval-logout-form .btn,
   .repair-filter-actions .btn,
   .repair-detail-actions .btn,
   .repair-request-card__action,
@@ -278,6 +285,8 @@
   .home-process-grid,
   .home-role-grid,
   .home-category-grid,
+  .approval-hero-grid,
+  .approval-trust-grid,
   .field-grid,
   .repair-live-brief__grid,
   .repair-filter-grid,
@@ -300,6 +309,14 @@
   .auth-card {
     width: 100%;
     padding: 22px;
+  }
+
+  .approval-status-card {
+    padding: 24px;
+  }
+
+  .approval-signal-board {
+    padding: 18px;
   }
 
   .auth-card__header h2 {
@@ -385,6 +402,9 @@
 
   .workflow-preview,
   .repair-photo-showcase,
+  .approval-signal-board,
+  .approval-status-card,
+  .approval-trust-card,
   .home-command-panel,
   .home-proof-card,
   .home-problem-card,
@@ -417,6 +437,25 @@
 
   .repair-photo-card img {
     height: 280px;
+  }
+
+  .approval-signal,
+  .approval-hero-metric {
+    padding: 14px;
+  }
+
+  .approval-timeline__item {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .approval-timeline__marker {
+    width: 38px;
+    height: 38px;
+  }
+
+  .approval-timeline__item::before {
+    left: 18px;
   }
 
   .service-photo-band__media {
