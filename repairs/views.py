@@ -4,22 +4,46 @@ from .forms import RepairRequestForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 
+def is_customer(user):
+    if user.user_type == 'customer':
+        return True
+    
+def is_approved_master(user):
+    if user.user_type == 'master' and user.is_master_approved == True:
+        return True
+
 @login_required
 def repair_create_view(request):
-    if request.method == 'POST':
-        form = RepairRequestForm(request.POST)
-        if form.is_valid():
-            repair = form.save(commit=False)
-            repair.customer = request.user
-            repair.save()
-            return redirect('repair_list')
-    else:
-        form = RepairRequestForm()
+
+    if is_customer(request.user):
+        if request.method == 'POST':
+            form = RepairRequestForm(request.POST)
+            if form.is_valid():
+                repair = form.save(commit=False)
+                repair.customer = request.user
+                repair.save()
+                return redirect('repair_list')
+        else:
+            form = RepairRequestForm()
+        
+        return render(request, 'repairs/repair_form.html', {'form': form})
     
-    return render(request, 'repairs/repair_form.html', {'form': form})
+    else:
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        
+        return redirect('home')
+
 
 @login_required
 def repair_list_view(request):
+
+    if not is_customer(request.user):
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        else:
+            return redirect('home')
+
     repairs = RepairRequest.objects.filter(customer=request.user).order_by("-created_at")
 
     query = request.GET.get('q', "").strip()
@@ -55,12 +79,26 @@ def repair_list_view(request):
 
 @login_required
 def repair_detail_view(request, pk):
+
+    if not is_customer(request.user):
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        else:
+            return redirect('home')
+
     repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user)
 
     return render(request, 'repairs/repair_detail.html', {'repair': repair})
 
 @login_required
 def repair_update_view(request, pk):
+
+    if not is_customer(request.user):
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        else:
+            return redirect('home')
+        
     repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user)
 
     if request.method == 'POST':
@@ -77,6 +115,14 @@ def repair_update_view(request, pk):
 
 @login_required
 def repair_delete_view(request, pk):
+
+    if not is_customer(request.user):
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        else:
+            return redirect('home')
+        
+
     repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user)
 
     if request.method == 'POST':
@@ -89,8 +135,8 @@ def repair_delete_view(request, pk):
 
 @login_required
 def professional_request_list_view(request):
-    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
-        return redirect('repair_list')
+    if not is_approved_master(request.user):
+        return redirect('home')
     
     repairs = RepairRequest.objects.filter(status='open').order_by('-created_at')
     return render(request, 'repairs/professional_request_list.html', {'repairs': repairs})
@@ -99,8 +145,8 @@ def professional_request_list_view(request):
 @login_required
 @require_POST
 def professional_accept_request_view(request, pk):
-    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
-        return redirect('repair_list')
+    if not is_approved_master(request.user):
+        return redirect('home')
 
     repair = get_object_or_404(RepairRequest, pk=pk, status="open", assigned_master__isnull=True)
 
@@ -113,8 +159,8 @@ def professional_accept_request_view(request, pk):
 
 @login_required
 def professional_assigned_request_list_view(request):
-    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
-        return redirect('repair_list')
+    if not is_approved_master(request.user):
+        return redirect('home')
     
     repairs = RepairRequest.objects.filter(
         assigned_master=request.user, 
@@ -126,8 +172,8 @@ def professional_assigned_request_list_view(request):
 @login_required
 @require_POST
 def professional_complete_request_view(request, pk):
-    if request.user.user_type != 'master' or not request.user.is_master_approved == True:
-        return redirect('repair_list')
+    if not is_approved_master(request.user):
+        return redirect('home')
     
     repair = get_object_or_404(RepairRequest, pk=pk, assigned_master = request.user, status='in_progress')
 
@@ -139,8 +185,8 @@ def professional_complete_request_view(request, pk):
 
 @login_required
 def professional_completed_request_list_view(request):
-    if request.user.user_type != "master" or not request.user.is_master_approved == True:
-        return redirect("repair_list")
+    if not is_approved_master(request.user):
+        return redirect('home')
 
     repairs = RepairRequest.objects.filter(
         assigned_master=request.user,

@@ -4,6 +4,24 @@ from .services import send_verification_code
 from .models import User, EmailVerificationCode
 from django.utils import timezone
 from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
+
+def is_customer(user):
+    if user.user_type == 'customer':
+        return True
+    
+def is_approved_master(user):
+    if user.user_type == 'master' and user.is_master_approved == True:
+        return True
+
+@login_required
+def pending_approval_view(request):
+    if is_customer(request.user):
+        return redirect('repair_list')
+    elif is_approved_master(request.user):
+        return redirect('professional_request_list')
+    elif request.user.user_type == 'master' and not is_approved_master(request.user):
+        return render(request, 'accounts/approval_pending.html')
 
 
 def register_view(request):
@@ -56,8 +74,13 @@ def verify_email_view(request):
                 request.session.pop("pending_verification_user_id", None)
 
                 login(request, user)
-                return redirect('home')
-
+                if is_customer(request.user):
+                    return redirect('repair_list')
+                elif is_approved_master(request.user):
+                    return redirect('professional_request_list')
+                elif request.user.user_type == 'master' and not is_approved_master(request.user):
+                    return redirect('approval_pending')
+                            
     else:
         form = EmailVerificationForm()
 
@@ -65,13 +88,19 @@ def verify_email_view(request):
 
 
 def login_view(request):
+    
     if request.method == 'POST':
         form = UserLoginForm(request=request, data=request.POST)
 
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('home')
+            if is_customer(request.user):
+                return redirect('repair_list')
+            elif is_approved_master(request.user):
+                return redirect('professional_request_list')
+            elif request.user.user_type == 'master' and not is_approved_master(request.user):
+                return redirect('approval_pending')
 
     else:
         form = UserLoginForm()
