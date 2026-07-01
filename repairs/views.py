@@ -139,7 +139,8 @@ def professional_request_list_view(request):
     if not is_approved_master(request.user):
         return redirect('home')
     
-    repairs = RepairRequest.objects.filter(status='open').order_by('-created_at')
+    repairs = RepairRequest.objects.filter(status='open', assigned_master=None).order_by('-created_at')
+
     return render(request, 'repairs/professional_request_list.html', {'repairs': repairs})
 
 
