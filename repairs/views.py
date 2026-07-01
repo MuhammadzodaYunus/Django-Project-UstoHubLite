@@ -16,6 +16,7 @@ def repair_create_view(request):
                 repair = form.save(commit=False)
                 repair.customer = request.user
                 repair.save()
+                messages.success(request, 'Repair request created successfully.')
                 return redirect('repair_list')
         else:
             form = RepairRequestForm()
@@ -37,7 +38,7 @@ def repair_list_view(request):
             return redirect('professional_request_list')
         else:
             return redirect('home')
-
+        
     repairs = RepairRequest.objects.filter(customer=request.user).order_by("-created_at")
 
     query = request.GET.get('q', "").strip()
@@ -100,6 +101,7 @@ def repair_update_view(request, pk):
             form = RepairRequestForm(request.POST, instance=repair)
             if form.is_valid():
                 form.save()
+                messages.success(request, 'Repair request updated successfully.')
                 return redirect('repair_detail', pk=repair.pk)
         
         else:
@@ -127,6 +129,7 @@ def repair_delete_view(request, pk):
     if repair.status == 'open' and repair.assigned_master is None:
         if request.method == 'POST':
             repair.delete()
+            messages.success(request, 'Repair request deleted successfully.')
             return redirect('repair_list')
         
         else:
@@ -158,6 +161,7 @@ def professional_accept_request_view(request, pk):
     repair.assigned_master = request.user
     repair.status = "in_progress"
     repair.save()
+    messages.success(request, 'Repair request accepted successfully.')
     return redirect('professional_assigned_request_list')
     
         
@@ -184,6 +188,7 @@ def professional_complete_request_view(request, pk):
 
     repair.status='completed'
     repair.save()
+    messages.success(request, 'Repair request marked as completed.')
 
     return redirect("professional_assigned_request_list")
 
@@ -203,3 +208,4 @@ def professional_completed_request_list_view(request):
         "repairs/professional_completed_request_list.html",
         {"repairs": repairs},
     )
+
