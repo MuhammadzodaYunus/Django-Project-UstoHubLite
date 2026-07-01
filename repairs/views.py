@@ -3,14 +3,7 @@ from .models import RepairRequest
 from .forms import RepairRequestForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
-
-def is_customer(user):
-    if user.user_type == 'customer':
-        return True
-    
-def is_approved_master(user):
-    if user.user_type == 'master' and user.is_master_approved == True:
-        return True
+from accounts.permissions import is_customer, is_approved_master
 
 @login_required
 def repair_create_view(request):

@@ -5,14 +5,8 @@ from .models import User, EmailVerificationCode
 from django.utils import timezone
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
+from accounts.permissions import is_customer, is_approved_master
 
-def is_customer(user):
-    if user.user_type == 'customer':
-        return True
-    
-def is_approved_master(user):
-    if user.user_type == 'master' and user.is_master_approved == True:
-        return True
 
 @login_required
 def pending_approval_view(request):
@@ -22,6 +16,8 @@ def pending_approval_view(request):
         return redirect('professional_request_list')
     elif request.user.user_type == 'master' and not is_approved_master(request.user):
         return render(request, 'accounts/approval_pending.html')
+    else:
+        return redirect('home')
 
 
 def register_view(request):
