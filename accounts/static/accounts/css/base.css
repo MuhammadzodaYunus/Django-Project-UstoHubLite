@@ -7,7 +7,7 @@
 html {
     min-width: 320px;
     min-height: 100%;
-    color-scheme: light;
+    color-scheme: light dark;
     scroll-behavior: smooth;
 }
 

@@ -4,6 +4,8 @@
     var root = document.documentElement;
     var body = document.body;
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var themeStorageKey = "ustohub-theme";
+    var themeMedia = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
     root.classList.add("js");
 
@@ -26,6 +28,116 @@
             input.focus({ preventScroll: true });
         } catch (error) {
             input.focus();
+        }
+    };
+
+    var readStoredTheme = function () {
+        try {
+            var stored = window.localStorage.getItem(themeStorageKey);
+
+            return stored === "dark" || stored === "light" ? stored : null;
+        } catch (error) {
+            return null;
+        }
+    };
+
+    var writeStoredTheme = function (theme) {
+        try {
+            window.localStorage.setItem(themeStorageKey, theme);
+        } catch (error) {
+            return;
+        }
+    };
+
+    var getSystemTheme = function () {
+        return themeMedia && themeMedia.matches ? "dark" : "light";
+    };
+
+    var getCurrentTheme = function () {
+        var current = root.dataset.theme;
+
+        if (current === "dark" || current === "light") {
+            return current;
+        }
+
+        return readStoredTheme() || getSystemTheme();
+    };
+
+    var syncThemeControls = function (theme) {
+        var nextTheme = theme === "dark" ? "light" : "dark";
+        var label = theme === "dark" ? "Dark" : "Light";
+        var metaThemeColor = document.querySelector("[data-theme-color]");
+
+        root.style.colorScheme = theme;
+
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute("content", theme === "dark" ? "#08111E" : "#0B1F33");
+        }
+
+        document.querySelectorAll("[data-theme-toggle]").forEach(function (toggle) {
+            toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+            toggle.setAttribute("aria-label", "Switch to " + nextTheme + " theme");
+        });
+
+        document.querySelectorAll("[data-theme-label]").forEach(function (item) {
+            item.textContent = label;
+        });
+    };
+
+    var setTheme = function (theme, shouldPersist) {
+        if (theme !== "dark" && theme !== "light") {
+            theme = "light";
+        }
+
+        root.dataset.theme = theme;
+        syncThemeControls(theme);
+
+        if (shouldPersist) {
+            writeStoredTheme(theme);
+        }
+    };
+
+    var enhanceThemeToggle = function () {
+        var toggles = Array.prototype.slice.call(document.querySelectorAll("[data-theme-toggle]"));
+
+        setTheme(getCurrentTheme(), false);
+
+        if (!toggles.length) {
+            return;
+        }
+
+        var beginThemeTransition = function () {
+            if (reduceMotion) {
+                return;
+            }
+
+            body.classList.add("theme-is-changing");
+            window.setTimeout(function () {
+                body.classList.remove("theme-is-changing");
+            }, 260);
+        };
+
+        toggles.forEach(function (toggle) {
+            toggle.addEventListener("click", function () {
+                var nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
+
+                beginThemeTransition();
+                setTheme(nextTheme, true);
+            });
+        });
+
+        if (themeMedia) {
+            var syncSystemTheme = function () {
+                if (!readStoredTheme()) {
+                    setTheme(getSystemTheme(), false);
+                }
+            };
+
+            if (themeMedia.addEventListener) {
+                themeMedia.addEventListener("change", syncSystemTheme);
+            } else if (themeMedia.addListener) {
+                themeMedia.addListener(syncSystemTheme);
+            }
         }
     };
 
@@ -258,7 +370,7 @@
             });
         });
 
-        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .nav-pending-status, .professional-nav__link, .professional-work-switcher a, .nav-toggle, .password-toggle, .role-option").forEach(function (control) {
+        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .nav-pending-status, .professional-nav__link, .professional-work-switcher a, .nav-toggle, .theme-toggle, .password-toggle, .role-option").forEach(function (control) {
             var press = function () {
                 control.classList.add("is-pressed");
             };
@@ -815,6 +927,7 @@
         });
     };
 
+    enhanceThemeToggle();
     enhanceHeader();
     enhanceScrollProgress();
     enhanceHashNavigation();

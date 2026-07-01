@@ -4,9 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0B1F33">
+    <meta name="theme-color" content="#0B1F33" data-theme-color>
     <title>{% block title %}UstoHub{% endblock %}</title>
     <link rel="icon" href="{% static 'accounts/images/ustohub-mark.svg' %}" type="image/svg+xml">
+    <script>
+        (function () {
+            var storageKey = "ustohub-theme";
+            var fallback = "light";
+            var theme = fallback;
+
+            try {
+                var stored = window.localStorage.getItem(storageKey);
+                var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+                if (stored === "light" || stored === "dark") {
+                    theme = stored;
+                } else if (systemDark) {
+                    theme = "dark";
+                }
+
+                document.documentElement.dataset.theme = theme;
+                document.documentElement.style.colorScheme = theme;
+            } catch (error) {
+                document.documentElement.dataset.theme = fallback;
+            }
+        }());
+    </script>
     <link rel="stylesheet" href="{% static 'accounts/css/accounts.css' %}">
 </head>
 <body class="site-body {% block body_class %}{% endblock %}">
@@ -48,6 +71,18 @@
                     </div>
 
                     <div class="site-nav__actions">
+                        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
+                            <span class="theme-toggle__track" aria-hidden="true">
+                                <span class="theme-toggle__icon theme-toggle__icon--sun">
+                                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M4 12H2M22 12h-2M4.93 19.07l-1.41 1.41M20.48 3.52l-1.41 1.41"/><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
+                                </span>
+                                <span class="theme-toggle__icon theme-toggle__icon--moon">
+                                    <svg class="icon" viewBox="0 0 24 24"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
+                                </span>
+                                <span class="theme-toggle__knob"></span>
+                            </span>
+                            <span class="theme-toggle__label" data-theme-label>Theme</span>
+                        </button>
                         {% if request.user.is_authenticated %}
                         {% if request.user.user_type == "master" and request.user.is_master_approved %}
                             <div class="professional-nav" aria-label="Professional workspace navigation">
