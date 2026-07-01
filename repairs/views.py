@@ -94,16 +94,20 @@ def repair_update_view(request, pk):
         
     repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user)
 
-    if request.method == 'POST':
-        form = RepairRequestForm(request.POST, instance=repair)
-        if form.is_valid():
-            form.save()
-            return redirect('repair_detail', pk=repair.pk)
+    if repair.status == 'open' and repair.assigned_master is None:
+        if request.method == 'POST':
+            form = RepairRequestForm(request.POST, instance=repair)
+            if form.is_valid():
+                form.save()
+                return redirect('repair_detail', pk=repair.pk)
+        
+        else:
+            form = RepairRequestForm(instance=repair)
+
+        return render(request, 'repairs/repair_form.html', {'form': form})
     
     else:
-        form = RepairRequestForm(instance=repair)
-
-    return render(request, 'repairs/repair_form.html', {'form': form})
+        return redirect('repair_detail', pk=repair.pk)
 
 
 @login_required
@@ -118,12 +122,16 @@ def repair_delete_view(request, pk):
 
     repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user)
 
-    if request.method == 'POST':
-        repair.delete()
-        return redirect('repair_list')
-    
+    if repair.status == 'open' and repair.assigned_master is None:
+        if request.method == 'POST':
+            repair.delete()
+            return redirect('repair_list')
+        
+        else:
+            return render(request, 'repairs/repair_confirm_delete.html', {'repair': repair})
+        
     else:
-        return render(request, 'repairs/repair_confirm_delete.html', {'repair': repair})
+        return redirect('repair_detail', pk=repair.pk)
     
 
 @login_required
