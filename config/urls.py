@@ -20,6 +20,7 @@ from config.views import home_view
 
 urlpatterns = [
     path("", home_view, name="home"),
+    path("i18n/", include("django.conf.urls.i18n")),
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls")),
     path("repairs/", include("repairs.urls")),

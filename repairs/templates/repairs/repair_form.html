@@ -1,31 +1,32 @@
 {% extends "accounts/base.html" %}
+{% load i18n %}
 
-{% block title %}{% if form.instance.pk %}Edit Repair Request{% else %}Post a Repair Request{% endif %} | UstoHub{% endblock %}
+{% block title %}{% if form.instance.pk %}{% trans "Edit Repair Request" %}{% else %}{% trans "Post a Repair Request" %}{% endif %} | UstoHub{% endblock %}
 {% block body_class %}page-repair-form {% if form.instance.pk %}page-repair-edit{% else %}page-repair-create{% endif %}{% endblock %}
-{% block auth_label %}{% if form.instance.pk %}Edit a repair request{% else %}Create a repair request{% endif %}{% endblock %}
-{% block hero_eyebrow %}{% if form.instance.pk %}Repair request update{% else %}Repair request{% endif %}{% endblock %}
-{% block hero_title %}{% if form.instance.pk %}Edit Repair Request{% else %}Post a Repair Request{% endif %}{% endblock %}
-{% block hero_text %}{% if form.instance.pk %}Update the saved repair details for this request while keeping ownership and status managed by UstoHub.{% else %}Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account.{% endif %}{% endblock %}
+{% block auth_label %}{% if form.instance.pk %}{% trans "Edit a repair request" %}{% else %}{% trans "Create a repair request" %}{% endif %}{% endblock %}
+{% block hero_eyebrow %}{% if form.instance.pk %}{% trans "Repair request update" %}{% else %}{% trans "Repair request" %}{% endif %}{% endblock %}
+{% block hero_title %}{% if form.instance.pk %}{% trans "Edit Repair Request" %}{% else %}{% trans "Post a Repair Request" %}{% endif %}{% endblock %}
+{% block hero_text %}{% if form.instance.pk %}{% trans "Update the saved repair details for this request while keeping ownership and status managed by UstoHub." %}{% else %}{% trans "Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account." %}{% endif %}{% endblock %}
 {% block hero_actions %}
     {% if form.instance.pk %}
-        <a class="btn btn--secondary" href="{% url 'repair_detail' form.instance.pk %}">Back to Request Details</a>
+        <a class="btn btn--secondary" href="{% url 'repair_detail' form.instance.pk %}">{% trans "Back to Request Details" %}</a>
     {% else %}
-        <a class="btn btn--secondary" href="{% url 'repair_list' %}">Back to My Requests</a>
+        <a class="btn btn--secondary" href="{% url 'repair_list' %}">{% trans "Back to My Requests" %}</a>
     {% endif %}
 {% endblock %}
 {% block hero_support %}
-    <div class="repair-guidance" aria-label="Request guidance">
+    <div class="repair-guidance" aria-label="{% trans 'Request guidance' %}">
         <div class="repair-guidance__item">
             <span class="icon-tile" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16M4 12h12M4 19h8"/></svg>
             </span>
             <div>
                 {% if form.instance.pk %}
-                    <h2>Update only what changed.</h2>
-                    <p>Adjust the title, description, category, urgency, or address so the request stays accurate.</p>
+                    <h2>{% trans "Update only what changed." %}</h2>
+                    <p>{% trans "Adjust the title, description, category, urgency, or address so the request stays accurate." %}</p>
                 {% else %}
-                    <h2>Keep it specific.</h2>
-                    <p>Use the title and description to explain what happened, where the issue is, and what you have already checked.</p>
+                    <h2>{% trans "Keep it specific." %}</h2>
+                    <p>{% trans "Use the title and description to explain what happened, where the issue is, and what you have already checked." %}</p>
                 {% endif %}
             </div>
         </div>
@@ -35,11 +36,11 @@
             </span>
             <div>
                 {% if form.instance.pk %}
-                    <h2>Status stays protected.</h2>
-                    <p>Customer ownership and request status remain managed by UstoHub while you save the updated details.</p>
+                    <h2>{% trans "Status stays protected." %}</h2>
+                    <p>{% trans "Customer ownership and request status remain managed by UstoHub while you save the updated details." %}</p>
                 {% else %}
-                    <h2>Account protected.</h2>
-                    <p>Your account and request status are handled by UstoHub, so you only need to submit the repair details.</p>
+                    <h2>{% trans "Account protected." %}</h2>
+                    <p>{% trans "Your account and request status are handled by UstoHub, so you only need to submit the repair details." %}</p>
                 {% endif %}
             </div>
         </div>
@@ -50,32 +51,32 @@
 {% block content %}
 <article class="auth-card repair-card" aria-labelledby="repair-form-title">
     <header class="auth-card__header">
-        <span class="status-badge status-badge--info">{% if form.instance.pk %}Existing Repair Request{% else %}New Repair Request{% endif %}</span>
-        <h2 id="repair-form-title">{% if form.instance.pk %}Edit request details.{% else %}Create request details.{% endif %}</h2>
+        <span class="status-badge status-badge--info">{% if form.instance.pk %}{% trans "Existing Repair Request" %}{% else %}{% trans "New Repair Request" %}{% endif %}</span>
+        <h2 id="repair-form-title">{% if form.instance.pk %}{% trans "Edit request details." %}{% else %}{% trans "Create request details." %}{% endif %}</h2>
         {% if form.instance.pk %}
-            <p>Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving.</p>
+            <p>{% trans "Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving." %}</p>
         {% else %}
-            <p>All required fields are marked. UstoHub will review the request details before saving them.</p>
+            <p>{% trans "All required fields are marked. UstoHub will review the request details before saving them." %}</p>
         {% endif %}
     </header>
 
     <aside class="repair-live-brief" data-repair-brief aria-labelledby="repair-live-brief-title" aria-live="polite">
         <div>
-            <span class="repair-live-brief__label">Live request brief</span>
-            <h3 id="repair-live-brief-title" data-repair-brief-title>Untitled repair request</h3>
+            <span class="repair-live-brief__label">{% trans "Live request brief" %}</span>
+            <h3 id="repair-live-brief-title" data-repair-brief-title data-empty-text="{% trans 'Untitled repair request' %}">{% trans "Untitled repair request" %}</h3>
         </div>
         <dl class="repair-live-brief__grid">
             <div>
-                <dt>Category</dt>
-                <dd data-repair-brief-category>Choose a service category</dd>
+                <dt>{% trans "Category" %}</dt>
+                <dd data-repair-brief-category data-empty-text="{% trans 'Choose a service category' %}">{% trans "Choose a service category" %}</dd>
             </div>
             <div>
-                <dt>Urgency</dt>
-                <dd data-repair-brief-urgency>Set urgency</dd>
+                <dt>{% trans "Urgency" %}</dt>
+                <dd data-repair-brief-urgency data-empty-text="{% trans 'Set urgency' %}">{% trans "Set urgency" %}</dd>
             </div>
             <div>
-                <dt>Address</dt>
-                <dd data-repair-brief-address>Add the service address</dd>
+                <dt>{% trans "Address" %}</dt>
+                <dd data-repair-brief-address data-empty-text="{% trans 'Add the service address' %}">{% trans "Add the service address" %}</dd>
             </div>
         </dl>
     </aside>
@@ -86,7 +87,7 @@
 
         {% if form.non_field_errors %}
             <div class="form-alert" role="alert">
-                <strong>The request needs attention.</strong>
+                <strong>{% trans "The request needs attention." %}</strong>
                 <ul>
                     {% for error in form.non_field_errors %}
                         <li>{{ error }}</li>
@@ -98,16 +99,16 @@
         <div class="field-stack">
             <div class="form-field {% if form.title.errors %}form-field--error{% endif %}" data-field="title">
                 <label for="{{ form.title.id_for_label }}">
-                    Repair title
+                    {% trans "Repair title" %}
                     {% if form.title.field.required %}
                         <span class="required-mark" aria-hidden="true">*</span>
-                        <span class="sr-only">required</span>
+                        <span class="sr-only">{% trans "required" %}</span>
                     {% endif %}
                 </label>
                 <div class="control">
                     {{ form.title }}
                 </div>
-                <p id="id_title_help" class="field-hint">A short summary such as "Kitchen sink is leaking."</p>
+                <p id="id_title_help" class="field-hint">{% trans 'A short summary such as "Kitchen sink is leaking."' %}</p>
                 {% if form.title.errors %}
                     <ul id="id_title_errors" class="field-errors">
                         {% for error in form.title.errors %}
@@ -119,16 +120,16 @@
 
             <div class="form-field form-field--textarea {% if form.description.errors %}form-field--error{% endif %}" data-field="description">
                 <label for="{{ form.description.id_for_label }}">
-                    Problem description
+                    {% trans "Problem description" %}
                     {% if form.description.field.required %}
                         <span class="required-mark" aria-hidden="true">*</span>
-                        <span class="sr-only">required</span>
+                        <span class="sr-only">{% trans "required" %}</span>
                     {% endif %}
                 </label>
                 <div class="control">
                     {{ form.description }}
                 </div>
-                <p id="id_description_help" class="field-hint">Include symptoms, timing, affected room, and any safety concerns.</p>
+                <p id="id_description_help" class="field-hint">{% trans "Include symptoms, timing, affected room, and any safety concerns." %}</p>
                 {% if form.description.errors %}
                     <ul id="id_description_errors" class="field-errors">
                         {% for error in form.description.errors %}
@@ -141,16 +142,22 @@
             <div class="field-grid repair-form__choices">
                 <div class="form-field {% if form.category.errors %}form-field--error{% endif %}" data-field="category">
                     <label for="{{ form.category.id_for_label }}">
-                        Service category
+                        {% trans "Service category" %}
                         {% if form.category.field.required %}
                             <span class="required-mark" aria-hidden="true">*</span>
-                            <span class="sr-only">required</span>
+                            <span class="sr-only">{% trans "required" %}</span>
                         {% endif %}
                     </label>
                     <div class="control control--select">
-                        {{ form.category }}
+                        {% with selected=form.category.value|default:"other" %}
+                            <select name="{{ form.category.html_name }}" id="{{ form.category.id_for_label }}"{% if form.category.field.required %} required{% endif %}>
+                                {% for value, label in form.category.field.choices %}
+                                    <option value="{{ value }}"{% if selected == value %} selected{% endif %}>{% trans label %}</option>
+                                {% endfor %}
+                            </select>
+                        {% endwith %}
                     </div>
-                    <p id="id_category_help" class="field-hint">Choose the closest repair area.</p>
+                    <p id="id_category_help" class="field-hint">{% trans "Choose the closest repair area." %}</p>
                     {% if form.category.errors %}
                         <ul id="id_category_errors" class="field-errors">
                             {% for error in form.category.errors %}
@@ -162,16 +169,22 @@
 
                 <div class="form-field {% if form.urgency.errors %}form-field--error{% endif %}" data-field="urgency">
                     <label for="{{ form.urgency.id_for_label }}">
-                        Urgency
+                        {% trans "Urgency" %}
                         {% if form.urgency.field.required %}
                             <span class="required-mark" aria-hidden="true">*</span>
-                            <span class="sr-only">required</span>
+                            <span class="sr-only">{% trans "required" %}</span>
                         {% endif %}
                     </label>
                     <div class="control control--select">
-                        {{ form.urgency }}
+                        {% with selected=form.urgency.value|default:"medium" %}
+                            <select name="{{ form.urgency.html_name }}" id="{{ form.urgency.id_for_label }}"{% if form.urgency.field.required %} required{% endif %}>
+                                {% for value, label in form.urgency.field.choices %}
+                                    <option value="{{ value }}"{% if selected == value %} selected{% endif %}>{% trans label %}</option>
+                                {% endfor %}
+                            </select>
+                        {% endwith %}
                     </div>
-                    <p id="id_urgency_help" class="field-hint">Set how quickly the issue should be reviewed.</p>
+                    <p id="id_urgency_help" class="field-hint">{% trans "Set how quickly the issue should be reviewed." %}</p>
                     {% if form.urgency.errors %}
                         <ul id="id_urgency_errors" class="field-errors">
                             {% for error in form.urgency.errors %}
@@ -184,16 +197,16 @@
 
             <div class="form-field {% if form.address.errors %}form-field--error{% endif %}" data-field="address">
                 <label for="{{ form.address.id_for_label }}">
-                    Service address
+                    {% trans "Service address" %}
                     {% if form.address.field.required %}
                         <span class="required-mark" aria-hidden="true">*</span>
-                        <span class="sr-only">required</span>
+                        <span class="sr-only">{% trans "required" %}</span>
                     {% endif %}
                 </label>
                 <div class="control">
                     {{ form.address }}
                 </div>
-                <p id="id_address_help" class="field-hint">Enter the address where the repair is needed.</p>
+                <p id="id_address_help" class="field-hint">{% trans "Enter the address where the repair is needed." %}</p>
                 {% if form.address.errors %}
                     <ul id="id_address_errors" class="field-errors">
                         {% for error in form.address.errors %}
@@ -207,21 +220,21 @@
         <p class="trust-note">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
             {% if form.instance.pk %}
-                UstoHub keeps this request linked to your account and preserves system-managed status details automatically.
+                {% trans "UstoHub keeps this request linked to your account and preserves system-managed status details automatically." %}
             {% else %}
-                UstoHub links this request to your signed-in account and sets the request status automatically.
+                {% trans "UstoHub links this request to your signed-in account and sets the request status automatically." %}
             {% endif %}
         </p>
 
         <div class="form-actions">
             <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
-                <span class="btn__label">{% if form.instance.pk %}Save Changes{% else %}Post Repair Request{% endif %}</span>
+                <span class="btn__label">{% if form.instance.pk %}{% trans "Save Changes" %}{% else %}{% trans "Post Repair Request" %}{% endif %}</span>
                 <span class="btn__spinner" aria-hidden="true"></span>
             </button>
             {% if form.instance.pk %}
-                <a class="btn btn--secondary" href="{% url 'repair_detail' form.instance.pk %}">Back to Request Details</a>
+                <a class="btn btn--secondary" href="{% url 'repair_detail' form.instance.pk %}">{% trans "Back to Request Details" %}</a>
             {% else %}
-                <a class="btn btn--secondary" href="{% url 'repair_list' %}">Cancel</a>
+                <a class="btn btn--secondary" href="{% url 'repair_list' %}">{% trans "Cancel" %}</a>
             {% endif %}
         </div>
     </form>

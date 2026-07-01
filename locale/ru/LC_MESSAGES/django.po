@@ -1,0 +1,1804 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UstoHub Lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 00:00+0000\n"
+"PO-Revision-Date: 2026-07-01 00:00+0000\n"
+"Last-Translator: UstoHub Lite\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "4-step repair path"
+msgstr "4-этапный путь ремонта"
+
+msgid "A clear path from issue to completed repair."
+msgstr "Понятный путь от проблемы до завершенного ремонта."
+
+msgid "A customer can save the title, description, category, urgency, and address for each repair request."
+msgstr "Клиент может сохранить название, описание, категорию, срочность и адрес для каждой заявки на ремонт."
+
+msgid "A practical workspace for trusted service providers."
+msgstr "Практичное рабочее пространство для надежных специалистов."
+
+msgid "A professional account can view open requests and accept available work from the queue."
+msgstr "Аккаунт специалиста может просматривать открытые заявки и принимать доступную работу из очереди."
+
+msgid "A professional assignment will appear here after the request is accepted."
+msgstr "Назначенный специалист появится здесь после принятия заявки."
+
+msgid "A serious MVP should be honest about what it does."
+msgstr "Серьезный MVP должен честно показывать, что он умеет."
+
+msgid "A short summary such as \"Kitchen sink is leaking.\""
+msgstr "Короткое описание, например «Протекает кухонная раковина»."
+
+msgid "A simple repair workflow with real account roles."
+msgstr "Простой ремонтный процесс с реальными ролями аккаунтов."
+
+msgid "Accept Request"
+msgstr "Принять заявку"
+
+msgid "Accept and complete repair work."
+msgstr "Принимайте и завершайте ремонтные работы."
+
+msgid "Accept repair request %(title)s"
+msgstr "Принять заявку на ремонт %(title)s"
+
+msgid "Accept suitable work"
+msgstr "Принимайте подходящую работу"
+
+msgid "Accepted"
+msgstr "Принято"
+
+msgid "Accepted customer requests will appear here after you use the open request queue."
+msgstr "Принятые заявки клиентов появятся здесь после использования очереди открытых заявок."
+
+msgid "Accepted work"
+msgstr "Принятая работа"
+
+msgid "Accepted work in progress."
+msgstr "Принятая работа в процессе."
+
+msgid "Accessible interface standard"
+msgstr "Стандарт доступного интерфейса"
+
+msgid "Account"
+msgstr "Аккаунт"
+
+msgid "Account created"
+msgstr "Аккаунт создан"
+
+msgid "Account details need attention."
+msgstr "Данные аккаунта требуют внимания."
+
+msgid "Account for service history"
+msgstr "Аккаунт для истории обслуживания"
+
+msgid "Account options"
+msgstr "Параметры аккаунта"
+
+msgid "Account overview"
+msgstr "Обзор аккаунта"
+
+msgid "Account ownership"
+msgstr "Владение аккаунтом"
+
+msgid "Account progress"
+msgstr "Прогресс аккаунта"
+
+msgid "Account protected."
+msgstr "Аккаунт защищен."
+
+msgid "Account setup"
+msgstr "Настройка аккаунта"
+
+msgid "Account status"
+msgstr "Статус аккаунта"
+
+msgid "Account verification"
+msgstr "Подтверждение аккаунта"
+
+msgid "Account verification helps keep repair requests and professional activity secure."
+msgstr "Подтверждение аккаунта помогает защищать заявки на ремонт и действия специалистов."
+
+msgid "Active filters"
+msgstr "Активные фильтры"
+
+msgid "Active jobs"
+msgstr "Активные работы"
+
+msgid "Active requests"
+msgstr "Активные заявки"
+
+msgid "Add photos or video."
+msgstr "Добавьте фото или видео."
+
+msgid "Add the service address"
+msgstr "Добавьте адрес обслуживания"
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Adjust the title, description, category, urgency, or address so the request stays accurate."
+msgstr "Измените название, описание, категорию, срочность или адрес, чтобы заявка оставалась точной."
+
+msgid "Admin approval is required before you can access Professional queue actions."
+msgstr "Для доступа к действиям очереди специалиста требуется одобрение администратора."
+
+msgid "Admin review"
+msgstr "Проверка администратором"
+
+msgid "Admin review adds a calm checkpoint before Professionals begin accepting work."
+msgstr "Проверка администратором добавляет надежный контроль перед тем, как специалисты начнут принимать работу."
+
+msgid "After approval, you can accept Repair Requests from customers."
+msgstr "После одобрения вы сможете принимать заявки на ремонт от клиентов."
+
+msgid "After approval, you will be able to accept repair requests."
+msgstr "После одобрения вы сможете принимать заявки на ремонт."
+
+msgid "After approval, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
+msgstr "После одобрения вы сможете просматривать открытые заявки, принимать подходящую работу и управлять принятыми задачами."
+
+msgid "After you delete this request, UstoHub will no longer show it in your repair request list."
+msgstr "После удаления UstoHub больше не будет показывать эту заявку в вашем списке заявок."
+
+msgid "All categories"
+msgstr "Все категории"
+
+msgid "All required fields are marked. UstoHub will review the request details before saving them."
+msgstr "Все обязательные поля отмечены. UstoHub проверит детали заявки перед сохранением."
+
+msgid "All statuses"
+msgstr "Все статусы"
+
+msgid "All urgency levels"
+msgstr "Все уровни срочности"
+
+msgid "Already have an account?"
+msgstr "Уже есть аккаунт?"
+
+msgid "An accepted request moves into active professional work."
+msgstr "Принятая заявка переходит в активную работу специалиста."
+
+msgid "An admin reviews the account before Professional access is activated."
+msgstr "Администратор проверяет аккаунт перед включением доступа специалиста."
+
+msgid "Appliance"
+msgstr "Бытовая техника"
+
+msgid "Appliance Repair"
+msgstr "Ремонт техники"
+
+msgid "Apply Filters"
+msgstr "Применить фильтры"
+
+msgid "Approval helps keep the marketplace dependable."
+msgstr "Одобрение помогает сохранять маркетплейс надежным."
+
+msgid "Approval protects customers and keeps professional access controlled."
+msgstr "Одобрение защищает клиентов и контролирует доступ специалистов."
+
+msgid "Approved Professionals get the right request queue and workspace actions."
+msgstr "Одобренные специалисты получают нужную очередь заявок и действия рабочего пространства."
+
+msgid "Are professional offers available now?"
+msgstr "Доступны ли сейчас предложения специалистов?"
+
+msgid "Assembly, fixes, mounting, and furniture-related service work."
+msgstr "Сборка, исправления, монтаж и работы, связанные с мебелью."
+
+msgid "Assembly, mounting, adjustments, and safe installation."
+msgstr "Сборка, монтаж, регулировка и безопасная установка."
+
+msgid "Assigned Repair Request"
+msgstr "Назначенная заявка на ремонт"
+
+msgid "Assigned repair request summary"
+msgstr "Сводка назначенной заявки на ремонт"
+
+msgid "Assigned work overview."
+msgstr "Обзор назначенной работы."
+
+msgid "Available after approval"
+msgstr "Доступно после одобрения"
+
+msgid "Available after approval."
+msgstr "Доступно после одобрения."
+
+msgid "Available customer requests."
+msgstr "Доступные заявки клиентов."
+
+msgid "Available requests"
+msgstr "Доступные заявки"
+
+msgid "Back to Home"
+msgstr "На главную"
+
+msgid "Back to My Requests"
+msgstr "Назад к моим заявкам"
+
+msgid "Back to Request Details"
+msgstr "Назад к деталям заявки"
+
+msgid "Back to log in"
+msgstr "Назад ко входу"
+
+msgid "Better service quality"
+msgstr "Лучшее качество сервиса"
+
+msgid "Book and track the repair."
+msgstr "Бронируйте и отслеживайте ремонт."
+
+msgid "Booking"
+msgstr "Бронирование"
+
+msgid "Bring your next home repair into one organized flow."
+msgstr "Переведите следующий домашний ремонт в один организованный процесс."
+
+msgid "Browse Open Requests"
+msgstr "Просмотреть открытые заявки"
+
+msgid "Browse open requests"
+msgstr "Просматривайте открытые заявки"
+
+msgid "Built around the service types available today."
+msgstr "Построено вокруг доступных сейчас типов услуг."
+
+msgid "Built for dependable home repair."
+msgstr "Создано для надежного домашнего ремонта."
+
+msgid "Can I create a customer or professional account?"
+msgstr "Можно создать аккаунт клиента или специалиста?"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Cancel and Return"
+msgstr "Отменить и вернуться"
+
+msgid "Cancelled"
+msgstr "Отменено"
+
+msgid "Categories"
+msgstr "Категории"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Category, urgency, address, and timestamps come from the saved repair request record."
+msgstr "Категория, срочность, адрес и даты берутся из сохраненной записи заявки на ремонт."
+
+msgid "Choose Customer or Professional"
+msgstr "Выберите клиента или специалиста"
+
+msgid "Choose a service category"
+msgstr "Выберите категорию услуги"
+
+msgid "Choose category and urgency"
+msgstr "Выберите категорию и срочность"
+
+msgid "Choose the closest repair area."
+msgstr "Выберите наиболее подходящее направление ремонта."
+
+msgid "Choose the right account for your repair work."
+msgstr "Выберите правильный аккаунт для вашей ремонтной работы."
+
+msgid "Cleaner workflow"
+msgstr "Более чистый процесс"
+
+msgid "Cleaning"
+msgstr "Уборка"
+
+msgid "Clear Filters"
+msgstr "Сбросить фильтры"
+
+msgid "Clear visual context for the repair record."
+msgstr "Понятный визуальный контекст для записи ремонта."
+
+msgid "Compare price, availability, service details, and customer feedback."
+msgstr "Сравнивайте цену, доступность, детали услуги и отзывы клиентов."
+
+msgid "Complete"
+msgstr "Завершено"
+
+msgid "Complete request"
+msgstr "Завершить заявку"
+
+msgid "Completed"
+msgstr "Завершено"
+
+msgid "Completed Repair Request"
+msgstr "Завершенная заявка на ремонт"
+
+msgid "Completed Requests"
+msgstr "Завершенные заявки"
+
+msgid "Completed repair request summary"
+msgstr "Сводка завершенной заявки на ремонт"
+
+msgid "Completed repairs are kept with the saved request details."
+msgstr "Завершенные ремонты сохраняются вместе с деталями заявки."
+
+msgid "Completed requests will appear here after active work is marked as completed."
+msgstr "Завершенные заявки появятся здесь после отметки активной работы как завершенной."
+
+msgid "Completed work"
+msgstr "Завершенная работа"
+
+msgid "Completed work can be documented clearly"
+msgstr "Завершенную работу можно понятно документировать"
+
+msgid "Completed work overview."
+msgstr "Обзор завершенной работы."
+
+msgid "Completion confirmation and review history"
+msgstr "Подтверждение завершения и история отзывов"
+
+msgid "Completion record"
+msgstr "Запись о завершении"
+
+msgid "Confirm completion, keep warranty information, and help future customers choose well."
+msgstr "Подтверждайте завершение, храните гарантийную информацию и помогайте будущим клиентам выбирать лучше."
+
+msgid "Confirm delete"
+msgstr "Подтвердить удаление"
+
+msgid "Confirm your email before repair activity begins."
+msgstr "Подтвердите email перед началом ремонтной активности."
+
+msgid "Continue managing repair requests, professional offers, bookings, warranty records, and account details."
+msgstr "Продолжайте управлять заявками, предложениями специалистов, бронированиями, гарантиями и данными аккаунта."
+
+msgid "Continue to your UstoHub overview or log out from the header when you are finished."
+msgstr "Перейдите к обзору UstoHub или выйдите из шапки сайта, когда закончите."
+
+msgid "Coverage for everyday home repairs."
+msgstr "Покрытие повседневного домашнего ремонта."
+
+msgid "Create Customer Account"
+msgstr "Создать аккаунт клиента"
+
+msgid "Create Repair Request"
+msgstr "Создать заявку на ремонт"
+
+msgid "Create a UstoHub account"
+msgstr "Создать аккаунт UstoHub"
+
+msgid "Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account."
+msgstr "Создайте понятную заявку с проблемой, категорией услуги, срочностью и адресом. UstoHub привяжет ее к вашему аккаунту."
+
+msgid "Create a repair request"
+msgstr "Создать заявку на ремонт"
+
+msgid "Create a repair request with the problem, category, urgency, and address, then review it from your request list."
+msgstr "Создайте заявку с проблемой, категорией, срочностью и адресом, затем просмотрите ее в списке заявок."
+
+msgid "Create account"
+msgstr "Создать аккаунт"
+
+msgid "Create an account"
+msgstr "Создать аккаунт"
+
+msgid "Create and review repair requests."
+msgstr "Создавайте и просматривайте заявки на ремонт."
+
+msgid "Create request details."
+msgstr "Создайте детали заявки."
+
+msgid "Create your first repair request when something at home needs professional attention."
+msgstr "Создайте первую заявку, когда домашней проблеме нужно внимание специалиста."
+
+msgid "Create your repair profile."
+msgstr "Создайте свой ремонтный профиль."
+
+msgid "Created"
+msgstr "Создано"
+
+msgid "Current"
+msgstr "Текущий"
+
+msgid "Current status"
+msgstr "Текущий статус"
+
+msgid "Customer"
+msgstr "Клиент"
+
+msgid "Customer account"
+msgstr "Аккаунт клиента"
+
+msgid "Customer contact details stay private here. Use the visible request information to understand the work scope. Accepted requests move to your assigned work queue."
+msgstr "Контактные данные клиента здесь остаются приватными. Используйте видимую информацию заявки, чтобы понять объем работы. Принятые заявки переходят в вашу назначенную очередь."
+
+msgid "Customer feedback"
+msgstr "Отзывы клиентов"
+
+msgid "Customer ownership and request status remain managed by UstoHub while you save the updated details."
+msgstr "Владение клиента и статус заявки остаются под управлением UstoHub, пока вы сохраняете обновленные данные."
+
+msgid "Customer posts a Repair Request"
+msgstr "Клиент публикует заявку на ремонт"
+
+msgid "Customer protection"
+msgstr "Защита клиента"
+
+msgid "Customer repair dashboard"
+msgstr "Панель заявок клиента"
+
+msgid "Customer repair requests."
+msgstr "Заявки клиентов на ремонт."
+
+msgid "Customer reviews will appear after completed work."
+msgstr "Отзывы клиентов появятся после завершенной работы."
+
+msgid "Customer tracks progress"
+msgstr "Клиент отслеживает прогресс"
+
+msgid "Customer workflow"
+msgstr "Процесс клиента"
+
+msgid "Customer-owned record"
+msgstr "Запись клиента"
+
+msgid "Customer: %(username)s"
+msgstr "Клиент: %(username)s"
+
+msgid "Customers and professionals see different actions based on their account role."
+msgstr "Клиенты и специалисты видят разные действия в зависимости от роли аккаунта."
+
+msgid "Customers can create repair requests and keep their request list tied to their account."
+msgstr "Клиенты могут создавать заявки и хранить список заявок в своем аккаунте."
+
+msgid "Customers create repair requests. Professionals use a separate work queue to accept and complete open requests."
+msgstr "Клиенты создают заявки. Специалисты используют отдельную рабочую очередь для принятия и завершения открытых заявок."
+
+msgid "Customers describe the issue. Professionals accept open work. Status stays visible until completion."
+msgstr "Клиенты описывают проблему. Специалисты принимают открытую работу. Статус остается видимым до завершения."
+
+msgid "Customers need one place to describe a problem and see what happened next. Professionals need a clean queue instead of scattered messages and unclear job status."
+msgstr "Клиентам нужно одно место, чтобы описать проблему и видеть дальнейшие шаги. Специалистам нужна чистая очередь вместо разрозненных сообщений и неясного статуса работы."
+
+msgid "Dark"
+msgstr "Темная"
+
+msgid "Dashboard"
+msgstr "Панель"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete Repair Request"
+msgstr "Удалить заявку на ремонт"
+
+msgid "Delete Repair Request?"
+msgstr "Удалить заявку на ремонт?"
+
+msgid "Delete Request"
+msgstr "Удалить заявку"
+
+msgid "Delete repair request"
+msgstr "Удалить заявку на ремонт"
+
+msgid "Delete repair request %(title)s"
+msgstr "Удалить заявку на ремонт %(title)s"
+
+msgid "Deletion cannot be undone. If you still need this repair record, return to the request details instead."
+msgstr "Удаление нельзя отменить. Если эта запись ремонта еще нужна, вернитесь к деталям заявки."
+
+msgid "Deletion is permanent."
+msgstr "Удаление необратимо."
+
+msgid "Describe the issue, choose a category and urgency, and keep the request status connected to your account."
+msgstr "Опишите проблему, выберите категорию и срочность, и держите статус заявки связанным с аккаунтом."
+
+msgid "Describe the problem"
+msgstr "Опишите проблему"
+
+msgid "Describe the problem."
+msgstr "Опишите проблему."
+
+msgid "Describe the repair"
+msgstr "Опишите ремонт"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Diagnostics and repairs for essential home appliances."
+msgstr "Диагностика и ремонт основных бытовых приборов."
+
+msgid "Each card shows request details for professional review without exposing private customer contact information."
+msgstr "Каждая карточка показывает детали заявки для просмотра специалистом без раскрытия личных контактов клиента."
+
+msgid "Edit Repair Request"
+msgstr "Редактировать заявку на ремонт"
+
+msgid "Edit Request"
+msgstr "Редактировать заявку"
+
+msgid "Edit a repair request"
+msgstr "Редактировать заявку на ремонт"
+
+msgid "Edit repair request %(title)s"
+msgstr "Редактировать заявку на ремонт %(title)s"
+
+msgid "Edit request details."
+msgstr "Редактируйте детали заявки."
+
+msgid "Electrical"
+msgstr "Электрика"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Email checkpoint"
+msgstr "Проверка email"
+
+msgid "Email verification helps keep repair requests and service activity connected to the correct account."
+msgstr "Подтверждение email помогает связать заявки и сервисную активность с правильным аккаунтом."
+
+msgid "Empty state"
+msgstr "Пустое состояние"
+
+msgid "English"
+msgstr "Английский"
+
+msgid "Enter the address where the repair is needed."
+msgstr "Введите адрес, где нужен ремонт."
+
+msgid "Enter the six-digit code sent to your inbox so your account can be activated securely."
+msgstr "Введите шестизначный код из почты, чтобы безопасно активировать аккаунт."
+
+msgid "Enter the six-digit code."
+msgstr "Введите шестизначный код."
+
+msgid "Enter verification code"
+msgstr "Введите код подтверждения"
+
+msgid "Every serious repair needs a record."
+msgstr "Каждому серьезному ремонту нужна запись."
+
+msgid "Existing Repair Request"
+msgstr "Существующая заявка на ремонт"
+
+msgid "Filters Active"
+msgstr "Фильтры активны"
+
+msgid "Find repair requests."
+msgstr "Найти заявки на ремонт."
+
+msgid "Finished repair requests."
+msgstr "Завершенные заявки на ремонт."
+
+msgid "Finished work history."
+msgstr "История завершенной работы."
+
+msgid "Footer navigation"
+msgstr "Навигация подвала"
+
+msgid "For Customers"
+msgstr "Для клиентов"
+
+msgid "For Professionals"
+msgstr "Для специалистов"
+
+msgid "For professionals"
+msgstr "Для специалистов"
+
+msgid "Frequently asked questions."
+msgstr "Частые вопросы."
+
+msgid "Full description"
+msgstr "Полное описание"
+
+msgid "Furniture"
+msgstr "Мебель"
+
+msgid "Furniture Assembly"
+msgstr "Сборка мебели"
+
+msgid "General Maintenance"
+msgstr "Общее обслуживание"
+
+msgid "General repair requests that do not fit the main categories."
+msgstr "Общие заявки на ремонт, которые не подходят основным категориям."
+
+msgid "Heating and Cooling"
+msgstr "Отопление и охлаждение"
+
+msgid "Hidden"
+msgstr "Скрыто"
+
+msgid "Hidden until approval is complete."
+msgstr "Скрыто до завершения одобрения."
+
+msgid "Hide password"
+msgstr "Скрыть пароль"
+
+msgid "Hide password confirmation"
+msgstr "Скрыть подтверждение пароля"
+
+msgid "High"
+msgstr "Высокая"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Home Repair Marketplace"
+msgstr "Маркетплейс домашнего ремонта"
+
+msgid "Home repair marketplace MVP"
+msgstr "MVP маркетплейса домашнего ремонта"
+
+msgid "Home repair needs more than a phone call and guesswork."
+msgstr "Домашнему ремонту нужно больше, чем звонок и догадки."
+
+msgid "How It Works"
+msgstr "Как это работает"
+
+msgid "How UstoHub Works"
+msgstr "Как работает UstoHub"
+
+msgid "How it works"
+msgstr "Как это работает"
+
+msgid "I am joining as"
+msgstr "Я регистрируюсь как"
+
+msgid "In Progress"
+msgstr "В работе"
+
+msgid "In progress"
+msgstr "В работе"
+
+msgid "Include symptoms, timing, affected room, and any safety concerns."
+msgstr "Укажите признаки, время, помещение и возможные риски безопасности."
+
+msgid "Interior painting, touch-ups, surface preparation, and finish work."
+msgstr "Покраска интерьера, подкраска, подготовка поверхности и отделочные работы."
+
+msgid "Issue description and supporting media"
+msgstr "Описание проблемы и материалы"
+
+msgid "Issue details stay attached to the request"
+msgstr "Детали проблемы остаются привязанными к заявке"
+
+msgid "Issue, location, and status details stay connected to the request."
+msgstr "Проблема, место и статус остаются связаны с заявкой."
+
+msgid "Join as a Professional"
+msgstr "Зарегистрироваться как специалист"
+
+msgid "Join as a customer or professional. We will send a verification code to your email."
+msgstr "Зарегистрируйтесь как клиент или специалист. Мы отправим код подтверждения на ваш email."
+
+msgid "Keep it specific."
+msgstr "Пишите конкретно."
+
+msgid "Keep the visit, scope, status, and completion record attached to one account."
+msgstr "Храните визит, объем работ, статус и запись о завершении в одном аккаунте."
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Leaks, drains, faucets, and water-related repair requests."
+msgstr "Протечки, сливы, краны и заявки, связанные с водой."
+
+msgid "Leaks, faucets, drains, water pressure, and emergency fixes."
+msgstr "Протечки, краны, сливы, давление воды и срочные исправления."
+
+msgid "Light"
+msgstr "Светлая"
+
+msgid "Live request brief"
+msgstr "Краткая сводка заявки"
+
+msgid "Locked"
+msgstr "Заблокировано"
+
+msgid "Log in"
+msgstr "Войти"
+
+msgid "Log in securely"
+msgstr "Безопасный вход"
+
+msgid "Log in to UstoHub"
+msgstr "Войти в UstoHub"
+
+msgid "Log in to UstoHub."
+msgstr "Войдите в UstoHub."
+
+msgid "Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details."
+msgstr "Войдите, чтобы продолжить управлять заявками, предложениями специалистов, бронированиями, гарантиями и данными аккаунта."
+
+msgid "Log out"
+msgstr "Выйти"
+
+msgid "Login was not successful."
+msgstr "Войти не удалось."
+
+msgid "Low"
+msgstr "Низкая"
+
+msgid "Manage repair requests from first issue to completed work."
+msgstr "Управляйте заявками от первой проблемы до завершенной работы."
+
+msgid "Mark as Completed"
+msgstr "Отметить как завершенную"
+
+msgid "Mark completed when finished"
+msgstr "Отметить завершенным после окончания"
+
+msgid "Mark repair request %(title)s as completed"
+msgstr "Отметить заявку %(title)s как завершенную"
+
+msgid "Marketplace confidence"
+msgstr "Доверие к маркетплейсу"
+
+msgid "Marketplace problems UstoHub Lite solves"
+msgstr "Проблемы маркетплейса, которые решает UstoHub Lite"
+
+msgid "Master"
+msgstr "Мастер"
+
+msgid "Medium"
+msgstr "Средняя"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "My Accepted Requests"
+msgstr "Мои принятые заявки"
+
+msgid "My Accepted Requests."
+msgstr "Мои принятые заявки."
+
+msgid "My Assigned Requests"
+msgstr "Мои назначенные заявки"
+
+msgid "My Repair Requests"
+msgstr "Мои заявки на ремонт"
+
+msgid "My Requests"
+msgstr "Мои заявки"
+
+msgid "My requests"
+msgstr "Мои заявки"
+
+msgid "New Repair Request"
+msgstr "Новая заявка на ремонт"
+
+msgid "New requests"
+msgstr "Новые заявки"
+
+msgid "New to UstoHub?"
+msgstr "Впервые в UstoHub?"
+
+msgid "Newest open repair requests are shown first, with customer-safe details for professional review."
+msgstr "Сначала показаны новые открытые заявки с безопасными для клиента деталями для просмотра специалистом."
+
+msgid "No accepted repair requests."
+msgstr "Принятых заявок на ремонт нет."
+
+msgid "No active repair requests yet."
+msgstr "Активных заявок пока нет."
+
+msgid "No available repair requests yet."
+msgstr "Доступных заявок пока нет."
+
+msgid "No completed repair requests."
+msgstr "Завершенных заявок на ремонт нет."
+
+msgid "No customer reviews yet."
+msgstr "Отзывов клиентов пока нет."
+
+msgid "No matching repair requests."
+msgstr "Подходящих заявок нет."
+
+msgid "No open customer repair requests are available right now."
+msgstr "Сейчас нет открытых заявок клиентов."
+
+msgid "No open repair requests."
+msgstr "Открытых заявок на ремонт нет."
+
+msgid "No open requests are waiting in the professional queue at the moment."
+msgstr "Сейчас в очереди специалиста нет открытых заявок."
+
+msgid "No professional activity yet."
+msgstr "Профессиональной активности пока нет."
+
+msgid "No professional profiles are published yet."
+msgstr "Профили специалистов пока не опубликованы."
+
+msgid "No repair activity yet."
+msgstr "Активности по ремонту пока нет."
+
+msgid "No repair requests are active in your account yet."
+msgstr "В вашем аккаунте пока нет активных заявок."
+
+msgid "No repair requests match the current search and filters."
+msgstr "Нет заявок, соответствующих текущему поиску и фильтрам."
+
+msgid "No repair requests match the current search or filters. Clear the filters to return to your full request list."
+msgstr "Нет заявок по текущему поиску или фильтрам. Очистите фильтры, чтобы вернуться к полному списку."
+
+msgid "No repair requests yet."
+msgstr "Заявок на ремонт пока нет."
+
+msgid "No requests found"
+msgstr "Заявки не найдены"
+
+msgid "Not assigned yet"
+msgstr "Еще не назначено"
+
+msgid "Notifications"
+msgstr "Уведомления"
+
+msgid "Offer"
+msgstr "Предложение"
+
+msgid "Offer comparison and booking summary"
+msgstr "Сравнение предложений и сводка бронирования"
+
+msgid "Offers"
+msgstr "Предложения"
+
+msgid "One product, two focused workspaces."
+msgstr "Один продукт, два сфокусированных рабочих пространства."
+
+msgid "Only matching repair requests connected to your signed-in customer account are shown here."
+msgstr "Здесь показаны только подходящие заявки, связанные с вашим аккаунтом клиента."
+
+msgid "Only repair requests connected to your signed-in customer account are shown here."
+msgstr "Здесь показаны только заявки, связанные с вашим аккаунтом клиента."
+
+msgid "Only requests assigned to your professional account are shown on this page."
+msgstr "На этой странице показаны только заявки, назначенные вашему аккаунту специалиста."
+
+msgid "Open"
+msgstr "Открыто"
+
+msgid "Open Dashboard"
+msgstr "Открыть панель"
+
+msgid "Open Professional Queue"
+msgstr "Открыть очередь специалиста"
+
+msgid "Open Repair Request"
+msgstr "Открытая заявка на ремонт"
+
+msgid "Open Repair Requests"
+msgstr "Открытые заявки на ремонт"
+
+msgid "Open Requests"
+msgstr "Открытые заявки"
+
+msgid "Open repair request summary"
+msgstr "Сводка открытой заявки на ремонт"
+
+msgid "Open saved request details"
+msgstr "Открыть сохраненные детали заявки"
+
+msgid "Open work overview."
+msgstr "Обзор открытой работы."
+
+msgid "Open, In Progress, Completed, and Cancelled states keep the repair record understandable."
+msgstr "Статусы «Открыто», «В процессе», «Завершено» и «Отменено» делают запись ремонта понятной."
+
+msgid "Optional account contact number."
+msgstr "Необязательный контактный номер аккаунта."
+
+msgid "Other"
+msgstr "Другое"
+
+msgid "Painting"
+msgstr "Покраска"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+msgid "Password requirements"
+msgstr "Требования к паролю"
+
+msgid "Pending"
+msgstr "Ожидает"
+
+msgid "Pending Review"
+msgstr "На рассмотрении"
+
+msgid "Pending admin review."
+msgstr "Ожидает проверки администратора."
+
+msgid "Pending approval"
+msgstr "Ожидает одобрения"
+
+msgid "Permanent Action"
+msgstr "Необратимое действие"
+
+msgid "Permanent deletion warning"
+msgstr "Предупреждение о безвозвратном удалении"
+
+msgid "Phone number"
+msgstr "Номер телефона"
+
+msgid "Please wait until an administrator approves your account."
+msgstr "Пожалуйста, дождитесь одобрения аккаунта администратором."
+
+msgid "Plumbing"
+msgstr "Сантехника"
+
+msgid "Post Repair Request"
+msgstr "Создать заявку на ремонт"
+
+msgid "Post a Repair Request"
+msgstr "Создать заявку на ремонт"
+
+msgid "Post the issue and keep its status clear."
+msgstr "Опубликуйте проблему и сохраняйте понятный статус."
+
+msgid "Post-repair cleanup, deep cleaning, and move-ready spaces."
+msgstr "Уборка после ремонта, глубокая очистка и подготовка помещений к переезду."
+
+msgid "Primary navigation"
+msgstr "Основная навигация"
+
+msgid "Problem description"
+msgstr "Описание проблемы"
+
+msgid "Professional"
+msgstr "Специалист"
+
+msgid "Professional Queue"
+msgstr "Очередь специалиста"
+
+msgid "Professional accepted repair requests"
+msgstr "Принятые заявки специалиста"
+
+msgid "Professional accepts the request"
+msgstr "Специалист принимает заявку"
+
+msgid "Professional accepts work"
+msgstr "Специалист принимает работу"
+
+msgid "Professional access"
+msgstr "Доступ специалиста"
+
+msgid "Professional access activated"
+msgstr "Доступ специалиста активирован"
+
+msgid "Professional access is reviewed before customer Repair Requests can be accepted. This keeps the workflow safer, clearer, and more trustworthy for everyone."
+msgstr "Доступ специалиста проверяется до принятия клиентских заявок. Это делает процесс безопаснее, понятнее и надежнее для всех."
+
+msgid "Professional account"
+msgstr "Аккаунт специалиста"
+
+msgid "Professional account approval status"
+msgstr "Статус одобрения аккаунта специалиста"
+
+msgid "Professional account pending approval"
+msgstr "Профессиональный аккаунт ожидает одобрения"
+
+msgid "Professional account review"
+msgstr "Проверка аккаунта специалиста"
+
+msgid "Professional accounts can review open requests, accept work, and manage assigned requests."
+msgstr "Аккаунты специалистов могут просматривать открытые заявки, принимать работу и управлять назначенными заявками."
+
+msgid "Professional approval is pending."
+msgstr "Одобрение специалиста ожидается."
+
+msgid "Professional approval pending"
+msgstr "Одобрение специалиста ожидается"
+
+msgid "Professional approval status summary"
+msgstr "Сводка статуса одобрения специалиста"
+
+msgid "Professional approval steps"
+msgstr "Шаги одобрения специалиста"
+
+msgid "Professional approval workflow"
+msgstr "Процесс одобрения специалиста"
+
+msgid "Professional cards are structured to show verification, service type, rating, availability, completed work, and warranty details when real profile data is available."
+msgstr "Карточки специалистов подготовлены для отображения проверки, типа услуги, рейтинга, доступности, завершенных работ и гарантий, когда реальные профили будут доступны."
+
+msgid "Professional completed repair requests"
+msgstr "Завершенные заявки специалиста"
+
+msgid "Professional offers will appear here."
+msgstr "Предложения специалистов появятся здесь."
+
+msgid "Professional open repair requests"
+msgstr "Открытые заявки для специалиста"
+
+msgid "Professional queue"
+msgstr "Очередь специалиста"
+
+msgid "Professional repair request views"
+msgstr "Разделы заявок специалиста"
+
+msgid "Professional repairing a kitchen cabinet area in a bright home."
+msgstr "Специалист ремонтирует зону кухонного шкафа в светлом доме."
+
+msgid "Professional review"
+msgstr "Проверка специалистом"
+
+msgid "Professional technician testing an electrical outlet in a bright home living space."
+msgstr "Специалист проверяет электрическую розетку в светлой жилой комнате."
+
+msgid "Professional work history"
+msgstr "История работы специалиста"
+
+msgid "Professional work queue"
+msgstr "Рабочая очередь специалиста"
+
+msgid "Professional workflow"
+msgstr "Процесс специалиста"
+
+msgid "Professional workspace navigation"
+msgstr "Навигация рабочего пространства специалиста"
+
+msgid "Customer workspace navigation"
+msgstr "Навигация рабочего пространства клиента"
+
+msgid "Professionals can browse open requests, accept available work, and mark assigned work completed."
+msgstr "Специалисты могут просматривать открытые заявки, принимать доступную работу и отмечать назначенную работу завершенной."
+
+msgid "Professionals can understand scope faster"
+msgstr "Специалисты быстрее понимают объем работ"
+
+msgid "Professionals can use the same account system today, with the interface prepared for requests, offers, schedules, jobs, reviews, and service history as the marketplace grows."
+msgstr "Специалисты уже могут использовать эту систему аккаунтов, а интерфейс подготовлен для заявок, предложений, расписаний, работ, отзывов и истории обслуживания по мере роста маркетплейса."
+
+msgid "Professionals get a clear pipeline."
+msgstr "Специалисты получают понятный рабочий поток."
+
+msgid "Profiles designed for confident comparison."
+msgstr "Профили для уверенного сравнения."
+
+msgid "Protected session"
+msgstr "Защищенная сессия"
+
+msgid "Quality-control checklist"
+msgstr "Контрольный список качества"
+
+msgid "Questions"
+msgstr "Вопросы"
+
+msgid "Ready"
+msgstr "Готово"
+
+msgid "Ready to manage a repair?"
+msgstr "Готовы управлять ремонтом?"
+
+msgid "Ready when the repair is real"
+msgstr "Готово, когда ремонт становится реальным"
+
+msgid "Real home issues need clear evidence."
+msgstr "Реальным домашним проблемам нужны понятные доказательства."
+
+msgid "Real repair requests"
+msgstr "Реальные заявки на ремонт"
+
+msgid "Real request ownership"
+msgstr "Реальная принадлежность заявки"
+
+msgid "Receive verified offers."
+msgstr "Получайте проверенные предложения."
+
+msgid "Repair Request"
+msgstr "Заявка на ремонт"
+
+msgid "Repair Requests"
+msgstr "Заявки на ремонт"
+
+msgid "Repair Requests are shown to Professional accounts only after admin approval."
+msgstr "Заявки на ремонт показываются аккаунтам специалистов только после одобрения администратора."
+
+msgid "Repair activity"
+msgstr "Активность ремонта"
+
+msgid "Repair categories"
+msgstr "Категории ремонта"
+
+msgid "Repair evidence highlights"
+msgstr "Ключевые данные ремонта"
+
+msgid "Repair marketplace"
+msgstr "Маркетплейс ремонта"
+
+msgid "Repair marketplace workflow preview"
+msgstr "Предпросмотр процесса маркетплейса ремонта"
+
+msgid "Repair professional fixing a kitchen sink cabinet in a bright home workspace."
+msgstr "Специалист ремонтирует шкаф под кухонной раковиной в светлом домашнем пространстве."
+
+msgid "Repair request"
+msgstr "Заявка на ремонт"
+
+msgid "Repair request context"
+msgstr "Контекст заявки на ремонт"
+
+msgid "Repair request deletion"
+msgstr "Удаление заявки на ремонт"
+
+msgid "Repair request detail"
+msgstr "Детали заявки на ремонт"
+
+msgid "Repair request overview"
+msgstr "Обзор заявки на ремонт"
+
+msgid "Repair request overview."
+msgstr "Обзор заявки на ремонт."
+
+msgid "Repair request photo preview"
+msgstr "Предпросмотр фото заявки"
+
+msgid "Repair request status summary"
+msgstr "Сводка статуса заявки на ремонт"
+
+msgid "Repair request status timeline"
+msgstr "Лента статуса заявки на ремонт"
+
+msgid "Repair request summary"
+msgstr "Сводка заявки на ремонт"
+
+msgid "Repair request update"
+msgstr "Обновление заявки на ремонт"
+
+msgid "Repair request workflow preview"
+msgstr "Предпросмотр процесса заявки на ремонт"
+
+msgid "Repair requests are connected to the customer account that created them."
+msgstr "Заявки на ремонт связаны с аккаунтом клиента, который их создал."
+
+msgid "Repair requests for essential home appliances."
+msgstr "Заявки на ремонт основных бытовых приборов."
+
+msgid "Repair service photography preview"
+msgstr "Предпросмотр фото ремонтной услуги"
+
+msgid "Repair title"
+msgstr "Заголовок заявки"
+
+msgid "Repair workflow stages"
+msgstr "Этапы ремонтного процесса"
+
+msgid "Request and track repairs"
+msgstr "Запрашивайте и отслеживайте ремонт"
+
+msgid "Request flow"
+msgstr "Процесс заявки"
+
+msgid "Request guidance"
+msgstr "Подсказки по заявке"
+
+msgid "Request information stays connected."
+msgstr "Информация заявки остается связанной."
+
+msgid "Request intake"
+msgstr "Прием заявки"
+
+msgid "Request preview"
+msgstr "Предпросмотр заявки"
+
+msgid "Request queue"
+msgstr "Очередь заявок"
+
+msgid "Request record."
+msgstr "Запись заявки."
+
+msgid "Request repair"
+msgstr "Заказать ремонт"
+
+msgid "Request selected for deletion"
+msgstr "Заявка выбрана для удаления"
+
+msgid "Request status labels make progress readable without relying on color alone."
+msgstr "Метки статуса делают прогресс понятным без опоры только на цвет."
+
+msgid "Request submitted"
+msgstr "Заявка отправлена"
+
+msgid "Request title"
+msgstr "Название заявки"
+
+msgid "Requests are private to your account."
+msgstr "Заявки приватны для вашего аккаунта."
+
+msgid "Requests become organized records."
+msgstr "Заявки становятся организованными записями."
+
+msgid "Requests, jobs, customer messages, and reviews will show here when marketplace activity starts."
+msgstr "Заявки, работы, сообщения клиентов и отзывы появятся здесь, когда начнется активность маркетплейса."
+
+msgid "Required before professional access"
+msgstr "Требуется перед доступом специалиста"
+
+msgid "Respond to repair requests"
+msgstr "Отвечайте на заявки на ремонт"
+
+msgid "Return to your repair workspace."
+msgstr "Вернитесь в свое рабочее пространство ремонта."
+
+msgid "Review"
+msgstr "Отзыв"
+
+msgid "Review Completed Requests"
+msgstr "Просмотреть завершенные заявки"
+
+msgid "Review available customer repair requests that are currently open and ready for professional attention."
+msgstr "Просматривайте доступные заявки клиентов, которые сейчас открыты и готовы к вниманию специалиста."
+
+msgid "Review customer repair requests, accept work that fits your service, and move active jobs toward completion."
+msgstr "Просматривайте заявки клиентов, принимайте подходящую работу и доводите активные задачи до завершения."
+
+msgid "Review finished repair requests completed by your professional account, with customer-safe work history details."
+msgstr "Просматривайте завершенные заявки вашего аккаунта специалиста с безопасными для клиента деталями истории работ."
+
+msgid "Review finished work records with essential request details, customer-safe labels, and the latest update date."
+msgstr "Просматривайте записи завершенной работы с основными деталями заявки, безопасными метками и датой последнего обновления."
+
+msgid "Review the active repair requests that have been accepted by your professional account."
+msgstr "Просматривайте активные заявки, принятые вашим аккаунтом специалиста."
+
+msgid "Review the repair problems you have submitted, check their current status, and start a new request when something else needs attention."
+msgstr "Просматривайте отправленные проблемы, проверяйте их текущий статус и создавайте новую заявку, когда нужно."
+
+msgid "Review the saved repair details, service location, and current request status for this account-owned request."
+msgstr "Просматривайте сохраненные детали ремонта, адрес услуги и текущий статус этой заявки вашего аккаунта."
+
+msgid "Review the work."
+msgstr "Проверьте работу."
+
+msgid "Reviews"
+msgstr "Отзывы"
+
+msgid "Reviews should prove real work, not decorate the page."
+msgstr "Отзывы должны подтверждать реальную работу, а не украшать страницу."
+
+msgid "Reviews will appear after completed repair work is available in UstoHub."
+msgstr "Отзывы появятся после появления завершенных ремонтных работ в UstoHub."
+
+msgid "Role-based marketplace"
+msgstr "Маркетплейс с ролями"
+
+msgid "Role-based workflow"
+msgstr "Процесс на основе ролей"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+msgid "Save the request"
+msgstr "Сохранить заявку"
+
+msgid "Saved Repair Request"
+msgstr "Сохраненная заявка на ремонт"
+
+msgid "Saved request"
+msgstr "Сохраненная заявка"
+
+msgid "Search and filter saved request details from your account. Status, urgency, and category values come directly from UstoHub."
+msgstr "Ищите и фильтруйте сохраненные детали заявок из аккаунта. Статус, срочность и категория берутся напрямую из UstoHub."
+
+msgid "Search by title"
+msgstr "Поиск по названию"
+
+msgid "Search by title or narrow the list by category, urgency, and status."
+msgstr "Ищите по названию или сужайте список по категории, срочности и статусу."
+
+msgid "Search repair titles"
+msgstr "Искать названия заявок"
+
+msgid "Search saved repair request titles."
+msgstr "Искать по названиям сохраненных заявок."
+
+msgid "Search: %(query)s"
+msgstr "Поиск: %(query)s"
+
+msgid "Seasonal service, troubleshooting, and comfort checks."
+msgstr "Сезонное обслуживание, поиск неисправностей и проверки комфорта."
+
+msgid "Secure access keeps account activity tied to the right customer or professional."
+msgstr "Безопасный доступ связывает активность аккаунта с правильным клиентом или специалистом."
+
+msgid "Secure account access"
+msgstr "Безопасный доступ к аккаунту"
+
+msgid "Service"
+msgstr "Услуга"
+
+msgid "Service address"
+msgstr "Адрес услуги"
+
+msgid "Service categories"
+msgstr "Категории услуг"
+
+msgid "Service category"
+msgstr "Категория услуги"
+
+msgid "Set how quickly the issue should be reviewed."
+msgstr "Укажите, как быстро нужно рассмотреть проблему."
+
+msgid "Set urgency"
+msgstr "Укажите срочность"
+
+msgid "Show password"
+msgstr "Показать пароль"
+
+msgid "Show password confirmation"
+msgstr "Показать подтверждение пароля"
+
+msgid "Signed in"
+msgstr "Выполнен вход"
+
+msgid "Signed in as <strong>%(username)s</strong>"
+msgstr "Вход выполнен как <strong>%(username)s</strong>"
+
+msgid "Simple MVP flow"
+msgstr "Простой MVP-процесс"
+
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+msgid "Small fixes, inspections, routine improvements, and urgent help."
+msgstr "Мелкие исправления, осмотры, плановые улучшения и срочная помощь."
+
+msgid "Solve home problems with organized repair requests."
+msgstr "Решайте домашние проблемы через организованные заявки на ремонт."
+
+msgid "Start here"
+msgstr "Начните здесь"
+
+msgid "Start with an account"
+msgstr "Начните с аккаунта"
+
+msgid "Start with the repair type, then add details, photos, preferred timing, and location when those tools are available in the account."
+msgstr "Начните с типа ремонта, затем добавьте детали, фото, удобное время и место, когда эти инструменты станут доступны в аккаунте."
+
+msgid "Start with the workflow your account supports."
+msgstr "Начните с процесса, который поддерживает ваш аккаунт."
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Status stays protected."
+msgstr "Статус остается защищенным."
+
+msgid "Status stays visible."
+msgstr "Статус остается видимым."
+
+msgid "Status timeline"
+msgstr "Лента статуса"
+
+msgid "Status tracking"
+msgstr "Отслеживание статуса"
+
+msgid "Status values come from the saved repair request record."
+msgstr "Значения статуса берутся из сохраненной записи заявки."
+
+msgid "Submit"
+msgstr "Отправить"
+
+msgid "Submitted requests."
+msgstr "Отправленные заявки."
+
+msgid "Switch to dark theme"
+msgstr "Переключить на темную тему"
+
+msgid "Switch to light theme"
+msgstr "Переключить на светлую тему"
+
+msgid "Switches, outlets, lighting, and electrical repair concerns."
+msgstr "Выключатели, розетки, освещение и вопросы электроремонта."
+
+msgid "Switches, outlets, lighting, wiring checks, and safety issues."
+msgstr "Выключатели, розетки, освещение, проверка проводки и вопросы безопасности."
+
+msgid "Tajik"
+msgstr "Таджикский"
+
+msgid "Tell UstoHub what happened, where it happened, and how urgent it feels."
+msgstr "Расскажите UstoHub, что произошло, где это произошло и насколько срочно это выглядит."
+
+msgid "Thanks for joining UstoHub as a Professional. An admin needs to approve your account before you can accept customer Repair Requests."
+msgstr "Спасибо, что присоединились к UstoHub как специалист. Администратор должен одобрить аккаунт, прежде чем вы сможете принимать заявки клиентов."
+
+msgid "The current repair request form supports these categories, so the homepage keeps the service promise accurate."
+msgstr "Текущая форма заявки поддерживает эти категории, поэтому главная страница сохраняет точное обещание сервиса."
+
+msgid "The customer describes the issue, chooses a category, sets urgency, and adds the service address."
+msgstr "Клиент описывает проблему, выбирает категорию, задает срочность и добавляет адрес услуги."
+
+msgid "The interface is prepared for offers and bookings. Real offer data will appear when those marketplace features are connected."
+msgstr "Интерфейс подготовлен для предложений и бронирований. Реальные данные предложений появятся после подключения этих функций маркетплейса."
+
+msgid "The interface is ready for a full marketplace flow while staying compatible with the current account and verification steps."
+msgstr "Интерфейс готов к полному процессу маркетплейса и остается совместимым с текущими шагами аккаунта и подтверждения."
+
+msgid "The product focuses on request creation, acceptance, assigned work, and completion."
+msgstr "Продукт сосредоточен на создании заявок, принятии, назначенной работе и завершении."
+
+msgid "The professional marks accepted work completed, and the record stays in the completed queue."
+msgstr "Специалист отмечает принятую работу завершенной, и запись остается в очереди завершенных."
+
+msgid "The repair problem"
+msgstr "Проблема ремонта"
+
+msgid "The repair request was saved to your account."
+msgstr "Заявка на ремонт сохранена в вашем аккаунте."
+
+msgid "The request is available for professional review while it remains open."
+msgstr "Заявка доступна для просмотра специалистами, пока она открыта."
+
+msgid "The request needs attention."
+msgstr "Заявка требует внимания."
+
+msgid "The request status shows whether the repair is open, in progress, completed, or cancelled."
+msgstr "Статус заявки показывает, открыт ремонт, в процессе, завершен или отменен."
+
+msgid "Theme"
+msgstr "Тема"
+
+msgid "There are no customer repair requests available for professional review right now. New open requests will appear here when customers submit them."
+msgstr "Сейчас нет клиентских заявок для просмотра специалистом. Новые открытые заявки появятся здесь после отправки клиентами."
+
+msgid "These are the details currently saved for this repair request."
+msgstr "Это текущие сохраненные детали этой заявки на ремонт."
+
+msgid "These repair requests are assigned to your professional account and remain in progress."
+msgstr "Эти заявки назначены вашему аккаунту специалиста и остаются в процессе."
+
+msgid "These repair requests were completed by your professional account and are ordered by latest update."
+msgstr "Эти заявки завершены вашим аккаунтом специалиста и отсортированы по последнему обновлению."
+
+msgid "This approval step keeps customer Repair Requests available only to reviewed Professional accounts."
+msgstr "Этот шаг одобрения делает заявки клиентов доступными только проверенным аккаунтам специалистов."
+
+msgid "This confirmation protects your repair history from accidental deletion. Review the selected request before permanently removing it."
+msgstr "Это подтверждение защищает историю ремонта от случайного удаления. Проверьте выбранную заявку перед окончательным удалением."
+
+msgid "This page shows only completed repair requests assigned to your professional account. Customer private contact details are not displayed."
+msgstr "Эта страница показывает только завершенные заявки, назначенные вашему аккаунту специалиста. Личные контакты клиента не отображаются."
+
+msgid "This request is assigned to a professional account."
+msgstr "Эта заявка назначена аккаунту специалиста."
+
+msgid "This request will be removed."
+msgstr "Эта заявка будет удалена."
+
+msgid "This will permanently remove the repair request from your account."
+msgstr "Это навсегда удалит заявку на ремонт из вашего аккаунта."
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "Toggle color theme"
+msgstr "Переключить цветовую тему"
+
+msgid "Track active repair requests assigned to you after accepting them from the professional open request queue."
+msgstr "Отслеживайте активные заявки, назначенные вам после принятия из очереди открытых заявок специалиста."
+
+msgid "Track completion status"
+msgstr "Отслеживайте статус завершения"
+
+msgid "Track status updates"
+msgstr "Отслеживайте обновления статуса"
+
+msgid "Track your repair requests in one place."
+msgstr "Отслеживайте заявки на ремонт в одном месте."
+
+msgid "Trust and product principles"
+msgstr "Доверие и принципы продукта"
+
+msgid "Trust and service quality"
+msgstr "Доверие и качество сервиса"
+
+msgid "Trusted home repair workflow"
+msgstr "Надежный процесс домашнего ремонта"
+
+msgid "Untitled repair request"
+msgstr "Заявка на ремонт без названия"
+
+msgid "Update only what changed."
+msgstr "Обновите только то, что изменилось."
+
+msgid "Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving."
+msgstr "Обновите сохраненные поля ниже. Все обязательные поля отмечены, и UstoHub подтвердит изменения перед сохранением."
+
+msgid "Update the saved repair details for this request while keeping ownership and status managed by UstoHub."
+msgstr "Обновите сохраненные детали ремонта, сохраняя владение и статус под управлением UstoHub."
+
+msgid "Updated"
+msgstr "Обновлено"
+
+msgid "Urgency"
+msgstr "Срочность"
+
+msgid "Use numbers only. Paste is supported."
+msgstr "Используйте только цифры. Вставка поддерживается."
+
+msgid "Use the role-based workflow"
+msgstr "Используйте процесс на основе ролей"
+
+msgid "Use the title and description to explain what happened, where the issue is, and what you have already checked."
+msgstr "Используйте название и описание, чтобы объяснить, что произошло, где проблема и что вы уже проверили."
+
+msgid "Use the username and password connected to your verified account."
+msgstr "Используйте имя пользователя и пароль, связанные с подтвержденным аккаунтом."
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "UstoHub Lite focuses on the core marketplace path already supported by the project."
+msgstr "UstoHub Lite сосредоточен на основном пути маркетплейса, который уже поддерживается проектом."
+
+msgid "UstoHub Lite gives customers a clear place to post repair requests and gives professionals a focused queue for accepting, tracking, and completing work."
+msgstr "UstoHub Lite дает клиентам понятное место для публикации заявок, а специалистам — сфокусированную очередь для принятия, отслеживания и завершения работы."
+
+msgid "UstoHub Lite presents the supported marketplace workflow clearly and leaves room to grow without pretending unfinished features already exist."
+msgstr "UstoHub Lite понятно показывает поддерживаемый процесс маркетплейса и оставляет место для роста, не выдавая незавершенные функции за готовые."
+
+msgid "UstoHub Lite product principles"
+msgstr "Принципы продукта UstoHub Lite"
+
+msgid "UstoHub Lite separates customer actions from professional actions so each user sees the workflow meant for them."
+msgstr "UstoHub Lite разделяет действия клиентов и специалистов, чтобы каждый пользователь видел нужный ему процесс."
+
+msgid "UstoHub account panel"
+msgstr "Панель аккаунта UstoHub"
+
+msgid "UstoHub dashboard access"
+msgstr "Доступ к панели UstoHub"
+
+msgid "UstoHub helps customers create repair requests and helps professionals manage open, assigned, and completed work."
+msgstr "UstoHub помогает клиентам создавать заявки и помогает специалистам управлять открытой, назначенной и завершенной работой."
+
+msgid "UstoHub home"
+msgstr "Главная UstoHub"
+
+msgid "UstoHub is structured for before-and-after evidence, confirmed scope, completion status, and warranty details so the customer and professional can stay aligned."
+msgstr "UstoHub подготовлен для доказательств «до и после», подтвержденного объема, статуса завершения и гарантий, чтобы клиент и специалист оставались согласованными."
+
+msgid "UstoHub is structured for photos, repair descriptions, visit records, and status updates as the marketplace grows."
+msgstr "UstoHub подготовлен для фото, описаний ремонта, записей визитов и обновлений статуса по мере роста маркетплейса."
+
+msgid "UstoHub keeps this request linked to your account and preserves system-managed status details automatically."
+msgstr "UstoHub связывает эту заявку с вашим аккаунтом и автоматически сохраняет управляемые системой детали статуса."
+
+msgid "UstoHub links this request to your signed-in account and sets the request status automatically."
+msgstr "UstoHub связывает эту заявку с вашим аккаунтом и автоматически задает статус."
+
+msgid "UstoHub repair marketplace start panel"
+msgstr "Стартовая панель маркетплейса ремонта UstoHub"
+
+msgid "UstoHub trust indicators"
+msgstr "Индикаторы доверия UstoHub"
+
+msgid "Verification code"
+msgstr "Код подтверждения"
+
+msgid "Verification needs attention."
+msgstr "Подтверждение требует внимания."
+
+msgid "Verification protects your account before repair requests or professional work can begin."
+msgstr "Подтверждение защищает ваш аккаунт до начала заявок или профессиональной работы."
+
+msgid "Verified"
+msgstr "Проверено"
+
+msgid "Verified account before request activity"
+msgstr "Подтвержденный аккаунт перед активностью заявок"
+
+msgid "Verified professionals"
+msgstr "Проверенные специалисты"
+
+msgid "Verified profile cards will appear here after professionals are available through the account flow."
+msgstr "Проверенные карточки профилей появятся здесь, когда специалисты будут доступны через процесс аккаунтов."
+
+msgid "Verified reviews will appear only after completed repair work is available in UstoHub."
+msgstr "Проверенные отзывы появятся только после появления завершенной ремонтной работы в UstoHub."
+
+msgid "Verify"
+msgstr "Проверка"
+
+msgid "Verify email"
+msgstr "Подтвердить email"
+
+msgid "Verify your UstoHub email"
+msgstr "Подтвердите email UstoHub"
+
+msgid "View Active Requests"
+msgstr "Открыть активные заявки"
+
+msgid "View Approval Status"
+msgstr "Посмотреть статус одобрения"
+
+msgid "View Assigned Requests"
+msgstr "Просмотреть назначенные заявки"
+
+msgid "View Details"
+msgstr "Подробнее"
+
+msgid "View My Repair Requests"
+msgstr "Мои заявки на ремонт"
+
+msgid "View details for %(title)s"
+msgstr "Посмотреть детали %(title)s"
+
+msgid "Visual evidence helps professionals understand scope before they respond."
+msgstr "Визуальные доказательства помогают специалистам понять объем до ответа."
+
+msgid "Visual repair context"
+msgstr "Визуальный контекст ремонта"
+
+msgid "Warranties"
+msgstr "Гарантии"
+
+msgid "Warranty"
+msgstr "Гарантия"
+
+msgid "Warranty and safety"
+msgstr "Гарантия и безопасность"
+
+msgid "Warranty records will appear after completed repairs."
+msgstr "Гарантийные записи появятся после завершенных ремонтов."
+
+msgid "We sent it to <strong>%(email)s</strong>."
+msgstr "Мы отправили его на <strong>%(email)s</strong>."
+
+msgid "Welcome back, %(username)s."
+msgstr "С возвращением, %(username)s."
+
+msgid "Why do I need email verification?"
+msgstr "Зачем нужно подтверждение email?"
+
+msgid "Work in progress"
+msgstr "Работа в процессе"
+
+msgid "Work is completed"
+msgstr "Работа завершена"
+
+msgid "Yes. Choose Customer or Professional during registration to open the workspace that matches your role."
+msgstr "Да. Выберите клиента или специалиста при регистрации, чтобы открыть пространство под вашу роль."
+
+msgid "You are already logged in."
+msgstr "Вы уже вошли."
+
+msgid "You do not have assigned in-progress repair requests right now."
+msgstr "Сейчас у вас нет назначенных заявок в процессе."
+
+msgid "You have not accepted any open repair requests yet. Browse the professional queue when you are ready to take active work."
+msgstr "Вы еще не приняли открытые заявки. Просмотрите очередь специалиста, когда будете готовы взять работу."
+
+msgid "You have not completed any assigned repair requests yet. Active requests can be reviewed from your accepted work queue."
+msgstr "Вы еще не завершили назначенные заявки. Активные заявки можно просмотреть в очереди принятых работ."
+
+msgid "You have not completed any repair requests yet."
+msgstr "Вы еще не завершили заявки на ремонт."
+
+msgid "Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests."
+msgstr "Ваш аккаунт специалиста ожидает одобрения администратора. После одобрения вы сможете принимать заявки на ремонт."
+
+msgid "Your Professional account is registered and signed in."
+msgstr "Ваш аккаунт специалиста зарегистрирован, вход выполнен."
+
+msgid "Your Professional account is waiting for admin approval."
+msgstr "Ваш аккаунт специалиста ожидает одобрения администратора."
+
+msgid "Your Professional workspace is almost ready."
+msgstr "Ваше рабочее пространство специалиста почти готово."
+
+msgid "Your account and request status are handled by UstoHub, so you only need to submit the repair details."
+msgstr "Ваш аккаунт и статус заявки обрабатываются UstoHub, поэтому вам нужно только отправить детали ремонта."
+
+msgid "Your account has been created successfully. Once an admin approves it, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
+msgstr "Ваш аккаунт успешно создан. После одобрения администратора вы сможете просматривать открытые заявки, принимать подходящую работу и управлять принятыми задачами."
+
+msgid "Your booked work will appear here."
+msgstr "Ваши забронированные работы появятся здесь."
+
+msgid "Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available."
+msgstr "Ваше пространство клиента готово собирать заявки, предложения, бронирования, гарантии и отзывы по мере доступности этих инструментов."
+
+msgid "Your professional account is pending admin approval."
+msgstr "Ваш профессиональный аккаунт ожидает одобрения администратора."
+
+msgid "Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available."
+msgstr "Ваше пространство специалиста готово для заявок, предложений, бронирований и истории услуг по мере доступности этих инструментов."
+
+msgid "Your repair workspace is ready."
+msgstr "Ваше рабочее пространство ремонта готово."
+
+msgid "Your requests, bookings, repair status, warranties, and reviews will show here when activity starts."
+msgstr "Ваши заявки, бронирования, статусы ремонта, гарантии и отзывы появятся здесь после начала активности."
+
+msgid "Your work queue starts with open requests."
+msgstr "Ваша рабочая очередь начинается с открытых заявок."
+
+msgid "required"
+msgstr "обязательно"
+
+msgid "You have %(total)s visible repair request."
+msgid_plural "You have %(total)s visible repair requests."
+msgstr[0] "У вас %(total)s видимая заявка на ремонт."
+msgstr[1] "У вас %(total)s видимые заявки на ремонт."
+msgstr[2] "У вас %(total)s видимых заявок на ремонт."
+
+msgid "accepted request"
+msgid_plural "accepted requests"
+msgstr[0] "принятая заявка"
+msgstr[1] "принятые заявки"
+msgstr[2] "принятых заявок"
+
+msgid "completed request"
+msgid_plural "completed requests"
+msgstr[0] "завершенная заявка"
+msgstr[1] "завершенные заявки"
+msgstr[2] "завершенных заявок"
+
+msgid "open request"
+msgid_plural "open requests"
+msgstr[0] "открытая заявка"
+msgstr[1] "открытые заявки"
+msgstr[2] "открытых заявок"
+
+msgid "visible request"
+msgid_plural "visible requests"
+msgstr[0] "видимая заявка"
+msgstr[1] "видимые заявки"
+msgstr[2] "видимых заявок"
+
+msgid "%(total)s accepted repair request is currently assigned to you."
+msgid_plural "%(total)s accepted repair requests are currently assigned to you."
+msgstr[0] "%(total)s принятая заявка сейчас назначена вам."
+msgstr[1] "%(total)s принятые заявки сейчас назначены вам."
+msgstr[2] "%(total)s принятых заявок сейчас назначены вам."
+
+msgid "%(total)s completed repair request is saved in your professional work history."
+msgid_plural "%(total)s completed repair requests are saved in your professional work history."
+msgstr[0] "%(total)s завершенная заявка сохранена в вашей истории работы специалиста."
+msgstr[1] "%(total)s завершенные заявки сохранены в вашей истории работы специалиста."
+msgstr[2] "%(total)s завершенных заявок сохранены в вашей истории работы специалиста."
+
+msgid "%(total)s open repair request can be reviewed from this professional workspace."
+msgid_plural "%(total)s open repair requests can be reviewed from this professional workspace."
+msgstr[0] "%(total)s открытую заявку можно просмотреть из этого рабочего пространства специалиста."
+msgstr[1] "%(total)s открытые заявки можно просмотреть из этого рабочего пространства специалиста."
+msgstr[2] "%(total)s открытых заявок можно просмотреть из этого рабочего пространства специалиста."
+
+msgid "%(total)s request accepted"
+msgid_plural "%(total)s requests accepted"
+msgstr[0] "Принята %(total)s заявка"
+msgstr[1] "Приняты %(total)s заявки"
+msgstr[2] "Принято %(total)s заявок"
+
+msgid "%(total)s request completed"
+msgid_plural "%(total)s requests completed"
+msgstr[0] "Завершена %(total)s заявка"
+msgstr[1] "Завершены %(total)s заявки"
+msgstr[2] "Завершено %(total)s заявок"
+
+msgid "%(total)s request shown"
+msgid_plural "%(total)s requests shown"
+msgstr[0] "Показана %(total)s заявка"
+msgstr[1] "Показаны %(total)s заявки"
+msgstr[2] "Показано %(total)s заявок"
+
+msgid "%(total)s request visible"
+msgid_plural "%(total)s requests visible"
+msgstr[0] "Видима %(total)s заявка"
+msgstr[1] "Видимы %(total)s заявки"
+msgstr[2] "Видимо %(total)s заявок"

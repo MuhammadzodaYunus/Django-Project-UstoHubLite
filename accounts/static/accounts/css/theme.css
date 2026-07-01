@@ -194,7 +194,8 @@ html[data-theme="dark"] .brand__text span {
 }
 
 html[data-theme="dark"] .site-nav__panel,
-html[data-theme="dark"] .nav-toggle {
+html[data-theme="dark"] .nav-toggle,
+html[data-theme="dark"] .language-switcher {
     background: var(--theme-overlay-strong);
     border-color: var(--color-border);
 }
@@ -208,52 +209,69 @@ html[data-theme="dark"] .nav-toggle[aria-expanded="true"] {
 }
 
 html[data-theme="dark"] .site-nav__links a,
-html[data-theme="dark"] .nav-dashboard {
+html[data-theme="dark"] .language-switcher button {
     color: var(--color-text-soft);
 }
 
 html[data-theme="dark"] .site-nav__links a:hover,
 html[data-theme="dark"] .site-nav__links a:focus-visible,
 html[data-theme="dark"] .site-nav__links a.is-active,
-html[data-theme="dark"] .site-nav__links a[aria-current="location"],
-html[data-theme="dark"] .site-nav__links a.is-section-current,
-html[data-theme="dark"] .nav-dashboard:hover,
-html[data-theme="dark"] .nav-dashboard:focus-visible,
-html[data-theme="dark"] .nav-dashboard.is-active,
-html[data-theme="dark"] .nav-dashboard[aria-current="page"] {
+html[data-theme="dark"] .site-nav__links a[aria-current="page"],
+html[data-theme="dark"] .site-nav__links a.is-section-current {
     color: var(--color-navy);
     background: var(--theme-surface-soft);
     box-shadow: inset 0 0 0 1px var(--color-border);
 }
 
-html[data-theme="dark"] .professional-nav {
-    background: var(--theme-surface-muted);
-    border-color: var(--color-border);
-}
-
-html[data-theme="dark"] .professional-nav__link:hover,
-html[data-theme="dark"] .professional-nav__link:focus-visible {
+html[data-theme="dark"] .language-switcher button:hover,
+html[data-theme="dark"] .language-switcher button:focus-visible {
     color: var(--color-navy);
-    background: var(--theme-surface-elevated);
+    background: var(--theme-surface-soft);
 }
 
-html[data-theme="dark"] .professional-nav__link.is-active,
-html[data-theme="dark"] .professional-nav__link[aria-current="page"],
-html[data-theme="dark"] .professional-work-switcher a[aria-current="page"] {
+html[data-theme="dark"] .language-switcher button.is-active,
+html[data-theme="dark"] .language-switcher button[aria-current="true"] {
     color: #ffffff;
     background: var(--theme-brand);
 }
 
-html[data-theme="dark"] .professional-work-switcher a:hover,
-html[data-theme="dark"] .professional-work-switcher a:focus-visible {
-    color: var(--color-navy);
-    background: var(--theme-control-hover);
+html[data-theme="dark"] .workspace-bar {
+    background: rgba(8, 17, 30, 0.9);
+    border-top-color: var(--theme-line);
+    border-bottom-color: var(--theme-line);
 }
 
-html[data-theme="dark"] .nav-pending-status {
+html[data-theme="dark"] .workspace-nav {
+    background: var(--theme-surface-muted);
+    border-color: var(--color-border);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .workspace-nav__link {
+    color: var(--color-text-soft);
+}
+
+html[data-theme="dark"] .workspace-nav__link:hover,
+html[data-theme="dark"] .workspace-nav__link:focus-visible {
+    color: var(--color-navy);
+    background: var(--theme-surface-elevated);
+}
+
+html[data-theme="dark"] .workspace-nav__link.is-active,
+html[data-theme="dark"] .workspace-nav__link[aria-current="page"] {
+    color: #ffffff;
+    background: var(--theme-brand);
+}
+
+html[data-theme="dark"] .workspace-nav__link--primary.is-active,
+html[data-theme="dark"] .workspace-nav__link--primary[aria-current="page"] {
+    color: #071726;
+    background: var(--color-orange);
+}
+
+html[data-theme="dark"] .workspace-nav__link--warning {
     color: #FCD34D;
     background: var(--theme-warning-surface);
-    border-color: var(--theme-warning-border);
 }
 
 html[data-theme="dark"] .user-chip {
@@ -431,7 +449,6 @@ html[data-theme="dark"] :is(
     .repair-meta-grid div,
     .repair-request-card__status-panel,
     .professional-queue-note,
-    .professional-work-switcher,
     .professional-request-card,
     .professional-customer-chip,
     .repair-detail-summary,

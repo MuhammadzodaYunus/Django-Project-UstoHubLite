@@ -1,0 +1,1792 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UstoHub Lite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 00:00+0000\n"
+"PO-Revision-Date: 2026-07-01 00:00+0000\n"
+"Last-Translator: UstoHub Lite\n"
+"Language-Team: Tajik\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "4-step repair path"
+msgstr "4 қадами раванди таъмир"
+
+msgid "A clear path from issue to completed repair."
+msgstr "Роҳи равшан аз мушкил то таъмири анҷомшуда."
+
+msgid "A customer can save the title, description, category, urgency, and address for each repair request."
+msgstr "Муштарӣ метавонад барои ҳар дархости таъмир унвон, тавсиф, категория, таъҷилӣ ва суроғаро нигоҳ дорад."
+
+msgid "A practical workspace for trusted service providers."
+msgstr "Фазои кории амалӣ барои мутахассисони боэътимод."
+
+msgid "A professional account can view open requests and accept available work from the queue."
+msgstr "Ҳисоби мутахассис метавонад дархостҳои кушодаро бинад ва кори дастрасро аз навбат қабул кунад."
+
+msgid "A professional assignment will appear here after the request is accepted."
+msgstr "Пас аз қабул шудани дархост, таъйини мутахассис дар ин ҷо пайдо мешавад."
+
+msgid "A serious MVP should be honest about what it does."
+msgstr "MVP-и ҷиддӣ бояд рост нишон диҳад, ки чӣ кор карда метавонад."
+
+msgid "A short summary such as \"Kitchen sink is leaking.\""
+msgstr "Хулосаи кӯтоҳ, масалан «Раковинаи ошхона мечакад»."
+
+msgid "A simple repair workflow with real account roles."
+msgstr "Раванди соддаи таъмир бо нақшҳои воқеии ҳисоб."
+
+msgid "Accept Request"
+msgstr "Қабули дархост"
+
+msgid "Accept and complete repair work."
+msgstr "Кори таъмирро қабул ва анҷом диҳед."
+
+msgid "Accept repair request %(title)s"
+msgstr "Қабул кардани дархости таъмир %(title)s"
+
+msgid "Accept suitable work"
+msgstr "Кори мувофиқро қабул кунед"
+
+msgid "Accepted"
+msgstr "Қабулшуда"
+
+msgid "Accepted customer requests will appear here after you use the open request queue."
+msgstr "Пас аз истифодаи навбати дархостҳои кушода, дархостҳои қабулшудаи муштариён дар ин ҷо пайдо мешаванд."
+
+msgid "Accepted work"
+msgstr "Кори қабулшуда"
+
+msgid "Accepted work in progress."
+msgstr "Кори қабулшуда дар ҷараён аст."
+
+msgid "Accessible interface standard"
+msgstr "Стандарти интерфейси дастрас"
+
+msgid "Account"
+msgstr "Ҳисоб"
+
+msgid "Account created"
+msgstr "Ҳисоб эҷод шуд"
+
+msgid "Account details need attention."
+msgstr "Маълумоти ҳисоб ба диққат ниёз дорад."
+
+msgid "Account for service history"
+msgstr "Ҳисоб барои таърихи хизматрасонӣ"
+
+msgid "Account options"
+msgstr "Имконоти ҳисоб"
+
+msgid "Account overview"
+msgstr "Шарҳи ҳисоб"
+
+msgid "Account ownership"
+msgstr "Соҳибияти ҳисоб"
+
+msgid "Account progress"
+msgstr "Пешрафти ҳисоб"
+
+msgid "Account protected."
+msgstr "Ҳисоб ҳифз шудааст."
+
+msgid "Account setup"
+msgstr "Танзими ҳисоб"
+
+msgid "Account status"
+msgstr "Ҳолати ҳисоб"
+
+msgid "Account verification"
+msgstr "Тасдиқи ҳисоб"
+
+msgid "Account verification helps keep repair requests and professional activity secure."
+msgstr "Тасдиқи ҳисоб ба бехатар нигоҳ доштани дархостҳои таъмир ва фаъолияти мутахассисон кумак мекунад."
+
+msgid "Active filters"
+msgstr "Филтрҳои фаъол"
+
+msgid "Active jobs"
+msgstr "Корҳои фаъол"
+
+msgid "Active requests"
+msgstr "Дархостҳои фаъол"
+
+msgid "Add photos or video."
+msgstr "Аксҳо ё видеоро илова кунед."
+
+msgid "Add the service address"
+msgstr "Суроғаи хизматрасониро илова кунед"
+
+msgid "Address"
+msgstr "Суроға"
+
+msgid "Adjust the title, description, category, urgency, or address so the request stays accurate."
+msgstr "Унвон, тавсиф, категория, таъҷилӣ ё суроғаро ислоҳ кунед, то дархост дақиқ монад."
+
+msgid "Admin approval is required before you can access Professional queue actions."
+msgstr "Пеш аз дастрасӣ ба амалҳои навбати мутахассис, тасдиқи администратор лозим аст."
+
+msgid "Admin review"
+msgstr "Баррасии маъмур"
+
+msgid "Admin review adds a calm checkpoint before Professionals begin accepting work."
+msgstr "Санҷиши администратор пеш аз қабули кор аз ҷониби мутахассисон як нуқтаи назорати боэътимод медиҳад."
+
+msgid "After approval, you can accept Repair Requests from customers."
+msgstr "Пас аз тасдиқ шумо метавонед дархостҳои таъмири муштариёнро қабул кунед."
+
+msgid "After approval, you will be able to accept repair requests."
+msgstr "Пас аз тасдиқ шумо метавонед дархостҳои таъмирро қабул кунед."
+
+msgid "After approval, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
+msgstr "Пас аз тасдиқ шумо метавонед дархостҳои кушодаро бинед, кори мувофиқро қабул кунед ва корҳои қабулшударо идора намоед."
+
+msgid "After you delete this request, UstoHub will no longer show it in your repair request list."
+msgstr "Пас аз нест кардани ин дархост, UstoHub онро дигар дар рӯйхати дархостҳои таъмири шумо нишон намедиҳад."
+
+msgid "All categories"
+msgstr "Ҳама категорияҳо"
+
+msgid "All required fields are marked. UstoHub will review the request details before saving them."
+msgstr "Ҳама майдонҳои ҳатмӣ нишон дода шудаанд. UstoHub пеш аз нигоҳдорӣ тафсилоти дархостро месанҷад."
+
+msgid "All statuses"
+msgstr "Ҳама ҳолатҳо"
+
+msgid "All urgency levels"
+msgstr "Ҳама сатҳҳои фаврият"
+
+msgid "Already have an account?"
+msgstr "Аллакай ҳисоб доред?"
+
+msgid "An accepted request moves into active professional work."
+msgstr "Дархости қабулшуда ба кори фаъоли мутахассис мегузарад."
+
+msgid "An admin reviews the account before Professional access is activated."
+msgstr "Пеш аз фаъол шудани дастрасии мутахассис, администратор ҳисобро месанҷад."
+
+msgid "Appliance"
+msgstr "Таҷҳизоти хона"
+
+msgid "Appliance Repair"
+msgstr "Таъмири таҷҳизот"
+
+msgid "Apply Filters"
+msgstr "Истифодаи филтрҳо"
+
+msgid "Approval helps keep the marketplace dependable."
+msgstr "Тасдиқ ба боэътимод мондани бозор кумак мекунад."
+
+msgid "Approval protects customers and keeps professional access controlled."
+msgstr "Тасдиқ муштариёнро ҳифз мекунад ва дастрасии мутахассисонро назорат менамояд."
+
+msgid "Approved Professionals get the right request queue and workspace actions."
+msgstr "Мутахассисони тасдиқшуда навбати дурусти дархостҳо ва амалҳои фазои кориро мегиранд."
+
+msgid "Are professional offers available now?"
+msgstr "Оё ҳоло пешниҳодҳои мутахассисон дастрасанд?"
+
+msgid "Assembly, fixes, mounting, and furniture-related service work."
+msgstr "Ҷамъкунӣ, ислоҳ, насб ва корҳои марбут ба мебел."
+
+msgid "Assembly, mounting, adjustments, and safe installation."
+msgstr "Ҷамъкунӣ, насб, танзим ва гузоштани бехатар."
+
+msgid "Assigned Repair Request"
+msgstr "Дархости таъмири таъйиншуда"
+
+msgid "Assigned repair request summary"
+msgstr "Хулосаи дархости таъмири таъйиншуда"
+
+msgid "Assigned work overview."
+msgstr "Шарҳи кори таъйиншуда."
+
+msgid "Available after approval"
+msgstr "Пас аз тасдиқ дастрас аст"
+
+msgid "Available after approval."
+msgstr "Пас аз тасдиқ дастрас аст."
+
+msgid "Available customer requests."
+msgstr "Дархостҳои дастраси муштариён."
+
+msgid "Available requests"
+msgstr "Дархостҳои дастрас"
+
+msgid "Back to Home"
+msgstr "Бозгашт ба асосӣ"
+
+msgid "Back to My Requests"
+msgstr "Бозгашт ба дархостҳои ман"
+
+msgid "Back to Request Details"
+msgstr "Бозгашт ба тафсилоти дархост"
+
+msgid "Back to log in"
+msgstr "Бозгашт ба воридшавӣ"
+
+msgid "Better service quality"
+msgstr "Сифати беҳтари хизматрасонӣ"
+
+msgid "Book and track the repair."
+msgstr "Таъмирро фармоиш диҳед ва пайгирӣ кунед."
+
+msgid "Booking"
+msgstr "Фармоиш"
+
+msgid "Bring your next home repair into one organized flow."
+msgstr "Таъмири навбатии хонаатонро ба як раванди мураттаб ворид кунед."
+
+msgid "Browse Open Requests"
+msgstr "Дидани дархостҳои кушода"
+
+msgid "Browse open requests"
+msgstr "Дархостҳои кушодаро бинед"
+
+msgid "Built around the service types available today."
+msgstr "Бар асоси намудҳои хизматрасонии имрӯза сохта шудааст."
+
+msgid "Built for dependable home repair."
+msgstr "Барои таъмири боэътимоди хона сохта шудааст."
+
+msgid "Can I create a customer or professional account?"
+msgstr "Оё ман метавонам ҳисоби муштарӣ ё мутахассис созам?"
+
+msgid "Cancel"
+msgstr "Бекор кардан"
+
+msgid "Cancel and Return"
+msgstr "Бекор кардан ва баргаштан"
+
+msgid "Cancelled"
+msgstr "Бекоршуда"
+
+msgid "Categories"
+msgstr "Категорияҳо"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Category, urgency, address, and timestamps come from the saved repair request record."
+msgstr "Категория, таъҷилӣ, суроға ва вақтҳо аз сабти нигоҳдошташудаи дархости таъмир меоянд."
+
+msgid "Choose Customer or Professional"
+msgstr "Муштарӣ ё мутахассисро интихоб кунед"
+
+msgid "Choose a service category"
+msgstr "Категорияи хизматрасониро интихоб кунед"
+
+msgid "Choose category and urgency"
+msgstr "Категория ва таъҷилиро интихоб кунед"
+
+msgid "Choose the closest repair area."
+msgstr "Самти наздиктарини таъмирро интихоб кунед."
+
+msgid "Choose the right account for your repair work."
+msgstr "Ҳисоби дурустро барои кори таъмири худ интихоб кунед."
+
+msgid "Cleaner workflow"
+msgstr "Раванди тозатар"
+
+msgid "Cleaning"
+msgstr "Тозакунӣ"
+
+msgid "Clear Filters"
+msgstr "Тоза кардани филтрҳо"
+
+msgid "Clear visual context for the repair record."
+msgstr "Контексти равшани визуалӣ барои сабти таъмир."
+
+msgid "Compare price, availability, service details, and customer feedback."
+msgstr "Нарх, дастрасӣ, тафсилоти хизматрасонӣ ва фикри муштариёнро муқоиса кунед."
+
+msgid "Complete"
+msgstr "Анҷомшуда"
+
+msgid "Complete request"
+msgstr "Анҷом додани дархост"
+
+msgid "Completed"
+msgstr "Анҷомшуда"
+
+msgid "Completed Repair Request"
+msgstr "Дархости таъмири анҷомшуда"
+
+msgid "Completed Requests"
+msgstr "Дархостҳои анҷомшуда"
+
+msgid "Completed repair request summary"
+msgstr "Хулосаи дархости таъмири анҷомшуда"
+
+msgid "Completed repairs are kept with the saved request details."
+msgstr "Таъмирҳои анҷомшуда бо тафсилоти дархости нигоҳдошташуда мемонанд."
+
+msgid "Completed requests will appear here after active work is marked as completed."
+msgstr "Пас аз қайд шудани кори фаъол ҳамчун анҷомшуда, дархостҳои анҷомшуда дар ин ҷо пайдо мешаванд."
+
+msgid "Completed work"
+msgstr "Кори анҷомшуда"
+
+msgid "Completed work can be documented clearly"
+msgstr "Кори анҷомшударо метавон равшан ҳуҷҷатгузорӣ кард"
+
+msgid "Completed work overview."
+msgstr "Шарҳи кори анҷомшуда."
+
+msgid "Completion confirmation and review history"
+msgstr "Тасдиқи анҷом ва таърихи баррасиҳо"
+
+msgid "Completion record"
+msgstr "Сабти анҷом"
+
+msgid "Confirm completion, keep warranty information, and help future customers choose well."
+msgstr "Анҷомро тасдиқ кунед, маълумоти кафолатро нигоҳ доред ва ба муштариёни оянда барои интихоби беҳтар кумак кунед."
+
+msgid "Confirm delete"
+msgstr "Тасдиқи несткунӣ"
+
+msgid "Confirm your email before repair activity begins."
+msgstr "Пеш аз оғози фаъолияти таъмир email-и худро тасдиқ кунед."
+
+msgid "Continue managing repair requests, professional offers, bookings, warranty records, and account details."
+msgstr "Идоракунии дархостҳои таъмир, пешниҳодҳои мутахассисон, фармоишҳо, сабтҳои кафолат ва маълумоти ҳисобро идома диҳед."
+
+msgid "Continue to your UstoHub overview or log out from the header when you are finished."
+msgstr "Ба шарҳи UstoHub гузаред ё пас аз анҷом аз сарлавҳа бароед."
+
+msgid "Coverage for everyday home repairs."
+msgstr "Фарогирӣ барои таъмирҳои ҳаррӯзаи хона."
+
+msgid "Create Customer Account"
+msgstr "Эҷоди ҳисоби муштарӣ"
+
+msgid "Create Repair Request"
+msgstr "Эҷоди дархости таъмир"
+
+msgid "Create a UstoHub account"
+msgstr "Эҷоди ҳисоби UstoHub"
+
+msgid "Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account."
+msgstr "Дархости равшани таъмирро бо мушкил, категорияи хизматрасонӣ, таъҷилӣ ва суроға созед. UstoHub онро ба ҳисоби воридшудаи шумо мепайвандад."
+
+msgid "Create a repair request"
+msgstr "Эҷоди дархости таъмир"
+
+msgid "Create a repair request with the problem, category, urgency, and address, then review it from your request list."
+msgstr "Дархостро бо мушкил, категория, таъҷилӣ ва суроға созед, сипас онро аз рӯйхати дархостҳо бинед."
+
+msgid "Create account"
+msgstr "Эҷоди ҳисоб"
+
+msgid "Create an account"
+msgstr "Эҷоди ҳисоб"
+
+msgid "Create and review repair requests."
+msgstr "Дархостҳои таъмирро созед ва баррасӣ кунед."
+
+msgid "Create request details."
+msgstr "Тафсилоти дархостро созед."
+
+msgid "Create your first repair request when something at home needs professional attention."
+msgstr "Вақте чизе дар хона ба диққати мутахассис ниёз дорад, аввалин дархости таъмирро созед."
+
+msgid "Create your repair profile."
+msgstr "Профили таъмири худро созед."
+
+msgid "Created"
+msgstr "Эҷод шуд"
+
+msgid "Current"
+msgstr "Ҷорӣ"
+
+msgid "Current status"
+msgstr "Ҳолати ҷорӣ"
+
+msgid "Customer"
+msgstr "Муштарӣ"
+
+msgid "Customer account"
+msgstr "Ҳисоби муштарӣ"
+
+msgid "Customer contact details stay private here. Use the visible request information to understand the work scope. Accepted requests move to your assigned work queue."
+msgstr "Маълумоти тамоси муштарӣ дар ин ҷо махфӣ мемонад. Барои фаҳмидани ҳаҷми кор аз маълумоти намоёни дархост истифода баред. Дархостҳои қабулшуда ба навбати кори таъйиншудаи шумо мегузаранд."
+
+msgid "Customer feedback"
+msgstr "Фикри муштариён"
+
+msgid "Customer ownership and request status remain managed by UstoHub while you save the updated details."
+msgstr "Соҳибияти муштарӣ ва ҳолати дархост ҳангоми нигоҳдории тафсилоти навшуда аз ҷониби UstoHub идора мешаванд."
+
+msgid "Customer posts a Repair Request"
+msgstr "Муштарӣ дархости таъмир мефиристад"
+
+msgid "Customer protection"
+msgstr "Ҳифзи муштарӣ"
+
+msgid "Customer repair dashboard"
+msgstr "Панели таъмири муштарӣ"
+
+msgid "Customer repair requests."
+msgstr "Дархостҳои таъмири муштариён."
+
+msgid "Customer reviews will appear after completed work."
+msgstr "Пас аз кори анҷомшуда, баррасиҳои муштариён пайдо мешаванд."
+
+msgid "Customer tracks progress"
+msgstr "Муштарӣ пешрафтро пайгирӣ мекунад"
+
+msgid "Customer workflow"
+msgstr "Раванди муштарӣ"
+
+msgid "Customer-owned record"
+msgstr "Сабти марбут ба муштарӣ"
+
+msgid "Customer: %(username)s"
+msgstr "Муштарӣ: %(username)s"
+
+msgid "Customers and professionals see different actions based on their account role."
+msgstr "Муштариён ва мутахассисон вобаста ба нақши ҳисоб амалҳои гуногунро мебинанд."
+
+msgid "Customers can create repair requests and keep their request list tied to their account."
+msgstr "Муштариён метавонанд дархостҳои таъмир созанд ва рӯйхати дархостҳоро ба ҳисоби худ пайваст нигоҳ доранд."
+
+msgid "Customers create repair requests. Professionals use a separate work queue to accept and complete open requests."
+msgstr "Муштариён дархостҳои таъмир месозанд. Мутахассисон барои қабул ва анҷоми дархостҳои кушода навбати кории ҷудогонаро истифода мебаранд."
+
+msgid "Customers describe the issue. Professionals accept open work. Status stays visible until completion."
+msgstr "Муштариён мушкилро тавсиф мекунанд. Мутахассисон кори кушодаро қабул мекунанд. Ҳолат то анҷом намоён мемонад."
+
+msgid "Customers need one place to describe a problem and see what happened next. Professionals need a clean queue instead of scattered messages and unclear job status."
+msgstr "Муштариён ба як ҷой ниёз доранд, то мушкилро тавсиф кунанд ва қадамҳои баъдиро бинанд. Мутахассисон ба навбати тоза ниёз доранд, на паёмҳои пароканда ва ҳолати норавшани кор."
+
+msgid "Dark"
+msgstr "Торик"
+
+msgid "Dashboard"
+msgstr "Панел"
+
+msgid "Delete"
+msgstr "Нест кардан"
+
+msgid "Delete Repair Request"
+msgstr "Нест кардани дархости таъмир"
+
+msgid "Delete Repair Request?"
+msgstr "Дархости таъмир нест карда шавад?"
+
+msgid "Delete Request"
+msgstr "Нест кардани дархост"
+
+msgid "Delete repair request"
+msgstr "Нест кардани дархости таъмир"
+
+msgid "Delete repair request %(title)s"
+msgstr "Нест кардани дархости таъмир %(title)s"
+
+msgid "Deletion cannot be undone. If you still need this repair record, return to the request details instead."
+msgstr "Несткуниро баргардондан мумкин нест. Агар ин сабти таъмир ҳанӯз лозим бошад, ба тафсилоти дархост баргардед."
+
+msgid "Deletion is permanent."
+msgstr "Несткунӣ доимӣ аст."
+
+msgid "Describe the issue, choose a category and urgency, and keep the request status connected to your account."
+msgstr "Мушкилро тавсиф кунед, категория ва таъҷилиро интихоб намоед ва ҳолати дархостро ба ҳисоби худ пайваст нигоҳ доред."
+
+msgid "Describe the problem"
+msgstr "Мушкилро тавсиф кунед"
+
+msgid "Describe the problem."
+msgstr "Мушкилро тавсиф кунед."
+
+msgid "Describe the repair"
+msgstr "Таъмирро тавсиф кунед"
+
+msgid "Description"
+msgstr "Тавсиф"
+
+msgid "Diagnostics and repairs for essential home appliances."
+msgstr "Ташхис ва таъмири асбобҳои асосии хонагӣ."
+
+msgid "Each card shows request details for professional review without exposing private customer contact information."
+msgstr "Ҳар корт тафсилоти дархостро барои баррасии мутахассис нишон медиҳад, бе ошкор кардани маълумоти шахсии тамоси муштарӣ."
+
+msgid "Edit Repair Request"
+msgstr "Таҳрири дархости таъмир"
+
+msgid "Edit Request"
+msgstr "Таҳрири дархост"
+
+msgid "Edit a repair request"
+msgstr "Таҳрири дархости таъмир"
+
+msgid "Edit repair request %(title)s"
+msgstr "Таҳрири дархости таъмир %(title)s"
+
+msgid "Edit request details."
+msgstr "Тафсилоти дархостро таҳрир кунед."
+
+msgid "Electrical"
+msgstr "Барқ"
+
+msgid "Email"
+msgstr "Почтаи электронӣ"
+
+msgid "Email checkpoint"
+msgstr "Санҷиши email"
+
+msgid "Email verification helps keep repair requests and service activity connected to the correct account."
+msgstr "Тасдиқи email ба пайваст мондани дархостҳо ва фаъолияти хизматрасонӣ бо ҳисоби дуруст кумак мекунад."
+
+msgid "Empty state"
+msgstr "Ҳолати холӣ"
+
+msgid "English"
+msgstr "Англисӣ"
+
+msgid "Enter the address where the repair is needed."
+msgstr "Суроғаеро ворид кунед, ки таъмир дар он лозим аст."
+
+msgid "Enter the six-digit code sent to your inbox so your account can be activated securely."
+msgstr "Рамзи шашрақамаи ба почтаи шумо фиристодашударо ворид кунед, то ҳисоб бехатар фаъол шавад."
+
+msgid "Enter the six-digit code."
+msgstr "Рамзи шашрақамаро ворид кунед."
+
+msgid "Enter verification code"
+msgstr "Рамзи тасдиқро ворид кунед"
+
+msgid "Every serious repair needs a record."
+msgstr "Ҳар таъмири ҷиддӣ ба сабт ниёз дорад."
+
+msgid "Existing Repair Request"
+msgstr "Дархости таъмири мавҷуда"
+
+msgid "Filters Active"
+msgstr "Филтрҳо фаъоланд"
+
+msgid "Find repair requests."
+msgstr "Дархостҳои таъмирро ёбед."
+
+msgid "Finished repair requests."
+msgstr "Дархостҳои таъмири анҷомшуда."
+
+msgid "Finished work history."
+msgstr "Таърихи кори анҷомшуда."
+
+msgid "Footer navigation"
+msgstr "Навигатсияи поёнсаҳифа"
+
+msgid "For Customers"
+msgstr "Барои муштариён"
+
+msgid "For Professionals"
+msgstr "Барои мутахассисон"
+
+msgid "For professionals"
+msgstr "Барои мутахассисон"
+
+msgid "Frequently asked questions."
+msgstr "Саволҳои маъмул."
+
+msgid "Full description"
+msgstr "Тавсифи пурра"
+
+msgid "Furniture"
+msgstr "Мебел"
+
+msgid "Furniture Assembly"
+msgstr "Ҷамъкунии мебел"
+
+msgid "General Maintenance"
+msgstr "Нигоҳдории умумӣ"
+
+msgid "General repair requests that do not fit the main categories."
+msgstr "Дархостҳои умумии таъмир, ки ба категорияҳои асосӣ мувофиқ нестанд."
+
+msgid "Heating and Cooling"
+msgstr "Гармкунӣ ва хунуккунӣ"
+
+msgid "Hidden"
+msgstr "Пинҳон"
+
+msgid "Hidden until approval is complete."
+msgstr "То анҷоми тасдиқ пинҳон аст."
+
+msgid "Hide password"
+msgstr "Пинҳон кардани рамз"
+
+msgid "Hide password confirmation"
+msgstr "Пинҳон кардани тасдиқи рамз"
+
+msgid "High"
+msgstr "Баланд"
+
+msgid "Home"
+msgstr "Асосӣ"
+
+msgid "Home Repair Marketplace"
+msgstr "Бозори таъмири хона"
+
+msgid "Home repair marketplace MVP"
+msgstr "MVP-и бозори таъмири хона"
+
+msgid "Home repair needs more than a phone call and guesswork."
+msgstr "Таъмири хона танҳо ба занг ва тахмин ниёз надорад."
+
+msgid "How It Works"
+msgstr "Тарзи кор"
+
+msgid "How UstoHub Works"
+msgstr "Чӣ гуна UstoHub кор мекунад"
+
+msgid "How it works"
+msgstr "Тарзи кор"
+
+msgid "I am joining as"
+msgstr "Ман ҳамроҳ мешавам ҳамчун"
+
+msgid "In Progress"
+msgstr "Дар ҷараён"
+
+msgid "In progress"
+msgstr "Дар ҷараён"
+
+msgid "Include symptoms, timing, affected room, and any safety concerns."
+msgstr "Аломатҳо, вақт, ҳуҷраи таъсирдида ва ҳар гуна нигаронии бехатариро илова кунед."
+
+msgid "Interior painting, touch-ups, surface preparation, and finish work."
+msgstr "Рангкунии дохилӣ, ислоҳи ранг, омодасозии рӯй ва корҳои анҷомдиҳӣ."
+
+msgid "Issue description and supporting media"
+msgstr "Тавсифи мушкил ва маводи иловагӣ"
+
+msgid "Issue details stay attached to the request"
+msgstr "Тафсилоти мушкил ба дархост пайваст мемонад"
+
+msgid "Issue, location, and status details stay connected to the request."
+msgstr "Мушкил, макон ва ҳолат ба дархост пайваст мемонанд."
+
+msgid "Join as a Professional"
+msgstr "Ҳамчун мутахассис ҳамроҳ шавед"
+
+msgid "Join as a customer or professional. We will send a verification code to your email."
+msgstr "Ҳамчун муштарӣ ё мутахассис ҳамроҳ шавед. Мо рамзи тасдиқро ба email-и шумо мефиристем."
+
+msgid "Keep it specific."
+msgstr "Дақиқ нависед."
+
+msgid "Keep the visit, scope, status, and completion record attached to one account."
+msgstr "Боздид, ҳаҷми кор, ҳолат ва сабти анҷомро ба як ҳисоб пайваст нигоҳ доред."
+
+msgid "Language"
+msgstr "Забон"
+
+msgid "Leaks, drains, faucets, and water-related repair requests."
+msgstr "Чаккаҳо, қубурҳои обпарто, кранҳо ва дархостҳои марбут ба об."
+
+msgid "Leaks, faucets, drains, water pressure, and emergency fixes."
+msgstr "Чаккаҳо, кранҳо, обпартоҳо, фишори об ва ислоҳҳои фаврӣ."
+
+msgid "Light"
+msgstr "Равшан"
+
+msgid "Live request brief"
+msgstr "Хулосаи зиндаи дархост"
+
+msgid "Locked"
+msgstr "Қулфшуда"
+
+msgid "Log in"
+msgstr "Ворид шудан"
+
+msgid "Log in securely"
+msgstr "Воридшавии бехатар"
+
+msgid "Log in to UstoHub"
+msgstr "Ворид шудан ба UstoHub"
+
+msgid "Log in to UstoHub."
+msgstr "Ба UstoHub ворид шавед."
+
+msgid "Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details."
+msgstr "Ворид шавед, то идоракунии дархостҳо, пешниҳодҳои мутахассисон, фармоишҳо, кафолатҳо ва маълумоти ҳисобро идома диҳед."
+
+msgid "Log out"
+msgstr "Баромадан"
+
+msgid "Login was not successful."
+msgstr "Воридшавӣ муваффақ нашуд."
+
+msgid "Low"
+msgstr "Паст"
+
+msgid "Manage repair requests from first issue to completed work."
+msgstr "Дархостҳоро аз мушкили аввал то кори анҷомшуда идора кунед."
+
+msgid "Mark as Completed"
+msgstr "Ҳамчун анҷомшуда қайд кардан"
+
+msgid "Mark completed when finished"
+msgstr "Пас аз анҷом ҳамчун анҷомшуда қайд кунед"
+
+msgid "Mark repair request %(title)s as completed"
+msgstr "Дархости таъмир %(title)s-ро ҳамчун анҷомшуда қайд кунед"
+
+msgid "Marketplace confidence"
+msgstr "Эътимод ба бозор"
+
+msgid "Marketplace problems UstoHub Lite solves"
+msgstr "Мушкилоти бозор, ки UstoHub Lite ҳал мекунад"
+
+msgid "Master"
+msgstr "Усто"
+
+msgid "Medium"
+msgstr "Миёна"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "My Accepted Requests"
+msgstr "Дархостҳои қабулшудаи ман"
+
+msgid "My Accepted Requests."
+msgstr "Дархостҳои қабулшудаи ман."
+
+msgid "My Assigned Requests"
+msgstr "Дархостҳои таъиншудаи ман"
+
+msgid "My Repair Requests"
+msgstr "Дархостҳои таъмири ман"
+
+msgid "My Requests"
+msgstr "Дархостҳои ман"
+
+msgid "My requests"
+msgstr "Дархостҳои ман"
+
+msgid "New Repair Request"
+msgstr "Дархости нави таъмир"
+
+msgid "New requests"
+msgstr "Дархостҳои нав"
+
+msgid "New to UstoHub?"
+msgstr "Дар UstoHub нав ҳастед?"
+
+msgid "Newest open repair requests are shown first, with customer-safe details for professional review."
+msgstr "Аввал навтарин дархостҳои кушода бо тафсилоти бехатар барои муштарӣ нишон дода мешаванд."
+
+msgid "No accepted repair requests."
+msgstr "Дархости қабулшуда нест."
+
+msgid "No active repair requests yet."
+msgstr "Ҳанӯз дархости фаъоли таъмир нест."
+
+msgid "No available repair requests yet."
+msgstr "Ҳанӯз дархости дастрас нест."
+
+msgid "No completed repair requests."
+msgstr "Дархости анҷомшуда нест."
+
+msgid "No customer reviews yet."
+msgstr "Ҳанӯз баррасии муштариён нест."
+
+msgid "No matching repair requests."
+msgstr "Дархости мувофиқ нест."
+
+msgid "No open customer repair requests are available right now."
+msgstr "Ҳоло дархости кушодаи муштариён дастрас нест."
+
+msgid "No open repair requests."
+msgstr "Ҳоло дархости кушода нест."
+
+msgid "No open requests are waiting in the professional queue at the moment."
+msgstr "Ҳоло дар навбати мутахассис дархости кушода нест."
+
+msgid "No professional activity yet."
+msgstr "Ҳанӯз фаъолияти мутахассис нест."
+
+msgid "No professional profiles are published yet."
+msgstr "Ҳанӯз профили мутахассисон нашр нашудааст."
+
+msgid "No repair activity yet."
+msgstr "Ҳанӯз фаъолияти таъмир нест."
+
+msgid "No repair requests are active in your account yet."
+msgstr "Дар ҳисоби шумо ҳанӯз дархости фаъоли таъмир нест."
+
+msgid "No repair requests match the current search and filters."
+msgstr "Ягон дархост ба ҷустуҷӯ ва филтрҳои ҷорӣ мувофиқат намекунад."
+
+msgid "No repair requests match the current search or filters. Clear the filters to return to your full request list."
+msgstr "Ягон дархост ба ҷустуҷӯ ё филтрҳои ҷорӣ мувофиқат намекунад. Барои бозгашт ба рӯйхати пурра филтрҳоро тоза кунед."
+
+msgid "No repair requests yet."
+msgstr "Ҳоло дархости таъмир нест."
+
+msgid "No requests found"
+msgstr "Дархост ёфт нашуд"
+
+msgid "Not assigned yet"
+msgstr "Ҳанӯз таъйин нашудааст"
+
+msgid "Notifications"
+msgstr "Огоҳиҳо"
+
+msgid "Offer"
+msgstr "Пешниҳод"
+
+msgid "Offer comparison and booking summary"
+msgstr "Муқоисаи пешниҳодҳо ва хулосаи фармоиш"
+
+msgid "Offers"
+msgstr "Пешниҳодҳо"
+
+msgid "One product, two focused workspaces."
+msgstr "Як маҳсулот, ду фазои кории равонашуда."
+
+msgid "Only matching repair requests connected to your signed-in customer account are shown here."
+msgstr "Дар ин ҷо танҳо дархостҳои мувофиқе нишон дода мешаванд, ки ба ҳисоби муштарии воридшуда пайвастанд."
+
+msgid "Only repair requests connected to your signed-in customer account are shown here."
+msgstr "Дар ин ҷо танҳо дархостҳои таъмире нишон дода мешаванд, ки ба ҳисоби муштарии воридшудаи шумо пайвастанд."
+
+msgid "Only requests assigned to your professional account are shown on this page."
+msgstr "Дар ин саҳифа танҳо дархостҳое нишон дода мешаванд, ки ба ҳисоби мутахассиси шумо таъйин шудаанд."
+
+msgid "Open"
+msgstr "Кушода"
+
+msgid "Open Dashboard"
+msgstr "Кушодани панел"
+
+msgid "Open Professional Queue"
+msgstr "Кушодани навбати мутахассис"
+
+msgid "Open Repair Request"
+msgstr "Дархости таъмири кушода"
+
+msgid "Open Repair Requests"
+msgstr "Дархостҳои таъмири кушода"
+
+msgid "Open Requests"
+msgstr "Дархостҳои кушода"
+
+msgid "Open repair request summary"
+msgstr "Хулосаи дархости таъмири кушода"
+
+msgid "Open saved request details"
+msgstr "Кушодани тафсилоти нигоҳдошташудаи дархост"
+
+msgid "Open work overview."
+msgstr "Шарҳи кори кушода."
+
+msgid "Open, In Progress, Completed, and Cancelled states keep the repair record understandable."
+msgstr "Ҳолатҳои «Кушода», «Дар ҷараён», «Анҷомшуда» ва «Бекоршуда» сабти таъмирро фаҳмо нигоҳ медоранд."
+
+msgid "Optional account contact number."
+msgstr "Рақами тамоси ихтиёрии ҳисоб."
+
+msgid "Other"
+msgstr "Дигар"
+
+msgid "Painting"
+msgstr "Рангубор"
+
+msgid "Password"
+msgstr "Рамз"
+
+msgid "Password confirmation"
+msgstr "Тасдиқи рамз"
+
+msgid "Password requirements"
+msgstr "Талаботи парол"
+
+msgid "Pending"
+msgstr "Интизор"
+
+msgid "Pending Review"
+msgstr "Дар интизори баррасӣ"
+
+msgid "Pending admin review."
+msgstr "Интизори баррасии администратор."
+
+msgid "Pending approval"
+msgstr "Дар интизори тасдиқ"
+
+msgid "Permanent Action"
+msgstr "Амали доимӣ"
+
+msgid "Permanent deletion warning"
+msgstr "Огоҳии несткунии доимӣ"
+
+msgid "Phone number"
+msgstr "Рақами телефон"
+
+msgid "Please wait until an administrator approves your account."
+msgstr "Лутфан интизор шавед, то маъмур ҳисоби шуморо тасдиқ кунад."
+
+msgid "Plumbing"
+msgstr "Сантехника"
+
+msgid "Post Repair Request"
+msgstr "Эҷоди дархости таъмир"
+
+msgid "Post a Repair Request"
+msgstr "Эҷоди дархости таъмир"
+
+msgid "Post the issue and keep its status clear."
+msgstr "Мушкилро фиристед ва ҳолаташро равшан нигоҳ доред."
+
+msgid "Post-repair cleanup, deep cleaning, and move-ready spaces."
+msgstr "Тозакунии пас аз таъмир, тозакунии амиқ ва омода кардани ҷойҳо барои кӯчидан."
+
+msgid "Primary navigation"
+msgstr "Навигатсияи асосӣ"
+
+msgid "Problem description"
+msgstr "Тавсифи мушкил"
+
+msgid "Professional"
+msgstr "Мутахассис"
+
+msgid "Professional Queue"
+msgstr "Навбати мутахассис"
+
+msgid "Professional accepted repair requests"
+msgstr "Дархостҳои қабулшудаи мутахассис"
+
+msgid "Professional accepts the request"
+msgstr "Мутахассис дархостро қабул мекунад"
+
+msgid "Professional accepts work"
+msgstr "Мутахассис корро қабул мекунад"
+
+msgid "Professional access"
+msgstr "Дастрасии мутахассис"
+
+msgid "Professional access activated"
+msgstr "Дастрасии мутахассис фаъол шуд"
+
+msgid "Professional access is reviewed before customer Repair Requests can be accepted. This keeps the workflow safer, clearer, and more trustworthy for everyone."
+msgstr "Пеш аз қабули дархостҳои муштариён, дастрасии мутахассис санҷида мешавад. Ин равандро барои ҳама бехатар, равшан ва боэътимод мекунад."
+
+msgid "Professional account"
+msgstr "Ҳисоби мутахассис"
+
+msgid "Professional account approval status"
+msgstr "Ҳолати тасдиқи ҳисоби мутахассис"
+
+msgid "Professional account pending approval"
+msgstr "Ҳисоби касбӣ дар интизори тасдиқ аст"
+
+msgid "Professional account review"
+msgstr "Баррасии ҳисоби мутахассис"
+
+msgid "Professional accounts can review open requests, accept work, and manage assigned requests."
+msgstr "Ҳисобҳои мутахассисон метавонанд дархостҳои кушодаро бинанд, корро қабул кунанд ва дархостҳои таъйиншударо идора намоянд."
+
+msgid "Professional approval is pending."
+msgstr "Тасдиқи мутахассис дар интизор аст."
+
+msgid "Professional approval pending"
+msgstr "Тасдиқи мутахассис дар интизор аст"
+
+msgid "Professional approval status summary"
+msgstr "Хулосаи ҳолати тасдиқи мутахассис"
+
+msgid "Professional approval steps"
+msgstr "Қадамҳои тасдиқи мутахассис"
+
+msgid "Professional approval workflow"
+msgstr "Раванди тасдиқи мутахассис"
+
+msgid "Professional cards are structured to show verification, service type, rating, availability, completed work, and warranty details when real profile data is available."
+msgstr "Кортҳои мутахассисон барои нишон додани тасдиқ, навъи хизматрасонӣ, рейтинг, дастрасӣ, корҳои анҷомшуда ва кафолат ҳангоми дастрас шудани маълумоти воқеии профил омода шудаанд."
+
+msgid "Professional completed repair requests"
+msgstr "Дархостҳои таъмири анҷомшудаи мутахассис"
+
+msgid "Professional offers will appear here."
+msgstr "Пешниҳодҳои мутахассисон дар ин ҷо пайдо мешаванд."
+
+msgid "Professional open repair requests"
+msgstr "Дархостҳои таъмири кушода барои мутахассис"
+
+msgid "Professional queue"
+msgstr "Навбати мутахассис"
+
+msgid "Professional repair request views"
+msgstr "Намоишҳои дархостҳои таъмири мутахассис"
+
+msgid "Professional repairing a kitchen cabinet area in a bright home."
+msgstr "Мутахассис дар хонаи равшан қисми ҷевони ошхонаро таъмир мекунад."
+
+msgid "Professional review"
+msgstr "Баррасии мутахассис"
+
+msgid "Professional technician testing an electrical outlet in a bright home living space."
+msgstr "Мутахассис дар фазои равшани хона розеткаи барқиро месанҷад."
+
+msgid "Professional work history"
+msgstr "Таърихи кори мутахассис"
+
+msgid "Professional work queue"
+msgstr "Навбати кори мутахассис"
+
+msgid "Professional workflow"
+msgstr "Раванди мутахассис"
+
+msgid "Professional workspace navigation"
+msgstr "Навигатсияи фазои кории мутахассис"
+
+msgid "Customer workspace navigation"
+msgstr "Навигатсияи фазои кории муштарӣ"
+
+msgid "Professionals can browse open requests, accept available work, and mark assigned work completed."
+msgstr "Мутахассисон метавонанд дархостҳои кушодаро бинанд, кори дастрасро қабул кунанд ва кори таъйиншударо анҷомшуда қайд намоянд."
+
+msgid "Professionals can understand scope faster"
+msgstr "Мутахассисон ҳаҷми корро зудтар мефаҳманд"
+
+msgid "Professionals can use the same account system today, with the interface prepared for requests, offers, schedules, jobs, reviews, and service history as the marketplace grows."
+msgstr "Мутахассисон имрӯз метавонанд ҳамин системаи ҳисобро истифода баранд, дар ҳоле ки интерфейс барои дархостҳо, пешниҳодҳо, ҷадвалҳо, корҳо, баррасиҳо ва таърихи хизматрасонӣ ҳангоми рушди бозор омода аст."
+
+msgid "Professionals get a clear pipeline."
+msgstr "Мутахассисон раванди равшани кор мегиранд."
+
+msgid "Profiles designed for confident comparison."
+msgstr "Профилҳо барои муқоисаи боэътимод тарҳрезӣ шудаанд."
+
+msgid "Protected session"
+msgstr "Ҷаласаи муҳофизатшуда"
+
+msgid "Quality-control checklist"
+msgstr "Рӯйхати назорати сифат"
+
+msgid "Questions"
+msgstr "Саволҳо"
+
+msgid "Ready"
+msgstr "Омода"
+
+msgid "Ready to manage a repair?"
+msgstr "Омодаед таъмирро идора кунед?"
+
+msgid "Ready when the repair is real"
+msgstr "Омода, вақте таъмир воқеӣ мешавад"
+
+msgid "Real home issues need clear evidence."
+msgstr "Мушкилоти воқеии хона ба далели равшан ниёз доранд."
+
+msgid "Real repair requests"
+msgstr "Дархостҳои воқеии таъмир"
+
+msgid "Real request ownership"
+msgstr "Соҳибияти воқеии дархост"
+
+msgid "Receive verified offers."
+msgstr "Пешниҳодҳои тасдиқшударо гиред."
+
+msgid "Repair Request"
+msgstr "Дархости таъмир"
+
+msgid "Repair Requests"
+msgstr "Дархостҳои таъмир"
+
+msgid "Repair Requests are shown to Professional accounts only after admin approval."
+msgstr "Дархостҳои таъмир ба ҳисобҳои мутахассисон танҳо пас аз тасдиқи администратор нишон дода мешаванд."
+
+msgid "Repair activity"
+msgstr "Фаъолияти таъмир"
+
+msgid "Repair categories"
+msgstr "Категорияҳои таъмир"
+
+msgid "Repair evidence highlights"
+msgstr "Нишонаҳои далели таъмир"
+
+msgid "Repair marketplace"
+msgstr "Бозори таъмир"
+
+msgid "Repair marketplace workflow preview"
+msgstr "Пешнамоиши раванди бозори таъмир"
+
+msgid "Repair professional fixing a kitchen sink cabinet in a bright home workspace."
+msgstr "Мутахассис дар фазои равшани хона ҷевони зери раковинаи ошхонаро таъмир мекунад."
+
+msgid "Repair request"
+msgstr "Дархости таъмир"
+
+msgid "Repair request context"
+msgstr "Контексти дархости таъмир"
+
+msgid "Repair request deletion"
+msgstr "Несткунии дархости таъмир"
+
+msgid "Repair request detail"
+msgstr "Тафсилоти дархости таъмир"
+
+msgid "Repair request overview"
+msgstr "Шарҳи дархости таъмир"
+
+msgid "Repair request overview."
+msgstr "Шарҳи дархости таъмир."
+
+msgid "Repair request photo preview"
+msgstr "Пешнамоиши акси дархости таъмир"
+
+msgid "Repair request status summary"
+msgstr "Хулосаи ҳолати дархости таъмир"
+
+msgid "Repair request status timeline"
+msgstr "Ҷадвали ҳолати дархости таъмир"
+
+msgid "Repair request summary"
+msgstr "Хулосаи дархости таъмир"
+
+msgid "Repair request update"
+msgstr "Навсозии дархости таъмир"
+
+msgid "Repair request workflow preview"
+msgstr "Пешнамоиши раванди дархости таъмир"
+
+msgid "Repair requests are connected to the customer account that created them."
+msgstr "Дархостҳои таъмир ба ҳисоби муштарие пайвастанд, ки онҳоро сохтааст."
+
+msgid "Repair requests for essential home appliances."
+msgstr "Дархостҳои таъмир барои асбобҳои асосии хонагӣ."
+
+msgid "Repair service photography preview"
+msgstr "Пешнамоиши аксҳои хизматрасонии таъмир"
+
+msgid "Repair title"
+msgstr "Сарлавҳаи дархост"
+
+msgid "Repair workflow stages"
+msgstr "Марҳилаҳои раванди таъмир"
+
+msgid "Request and track repairs"
+msgstr "Таъмирҳоро дархост ва пайгирӣ кунед"
+
+msgid "Request flow"
+msgstr "Раванди дархост"
+
+msgid "Request guidance"
+msgstr "Роҳнамои дархост"
+
+msgid "Request information stays connected."
+msgstr "Маълумоти дархост пайваст мемонад."
+
+msgid "Request intake"
+msgstr "Қабули дархост"
+
+msgid "Request preview"
+msgstr "Пешнамоиши дархост"
+
+msgid "Request queue"
+msgstr "Навбати дархостҳо"
+
+msgid "Request record."
+msgstr "Сабти дархост."
+
+msgid "Request repair"
+msgstr "Дархости таъмир"
+
+msgid "Request selected for deletion"
+msgstr "Дархост барои несткунӣ интихоб шудааст"
+
+msgid "Request status labels make progress readable without relying on color alone."
+msgstr "Нишонҳои ҳолати дархост пешрафтро бе такя танҳо ба ранг фаҳмо мекунанд."
+
+msgid "Request submitted"
+msgstr "Дархост фиристода шуд"
+
+msgid "Request title"
+msgstr "Унвони дархост"
+
+msgid "Requests are private to your account."
+msgstr "Дархостҳо танҳо барои ҳисоби шумо хусусӣ мебошанд."
+
+msgid "Requests become organized records."
+msgstr "Дархостҳо ба сабтҳои мураттаб табдил меёбанд."
+
+msgid "Requests, jobs, customer messages, and reviews will show here when marketplace activity starts."
+msgstr "Вақте фаъолияти бозор оғоз мешавад, дархостҳо, корҳо, паёмҳои муштариён ва баррасиҳо дар ин ҷо пайдо мешаванд."
+
+msgid "Required before professional access"
+msgstr "Пеш аз дастрасии мутахассис зарур аст"
+
+msgid "Respond to repair requests"
+msgstr "Ба дархостҳои таъмир ҷавоб диҳед"
+
+msgid "Return to your repair workspace."
+msgstr "Ба фазои кории таъмири худ баргардед."
+
+msgid "Review"
+msgstr "Шарҳ"
+
+msgid "Review Completed Requests"
+msgstr "Дидани дархостҳои анҷомшуда"
+
+msgid "Review available customer repair requests that are currently open and ready for professional attention."
+msgstr "Дархостҳои дастраси муштариёнро бинед, ки ҳоло кушодаанд ва барои диққати мутахассис омодаанд."
+
+msgid "Review customer repair requests, accept work that fits your service, and move active jobs toward completion."
+msgstr "Дархостҳои таъмири муштариёнро бинед, кори мувофиқро қабул кунед ва корҳои фаъолро ба анҷом расонед."
+
+msgid "Review finished repair requests completed by your professional account, with customer-safe work history details."
+msgstr "Дархостҳои анҷомшудаи ҳисоби мутахассиси худро бо тафсилоти таърихи кор, ки барои муштарӣ бехатар аст, бинед."
+
+msgid "Review finished work records with essential request details, customer-safe labels, and the latest update date."
+msgstr "Сабтҳои кори анҷомшударо бо тафсилоти асосии дархост, нишонҳои бехатар барои муштарӣ ва санаи навсозии охирин бинед."
+
+msgid "Review the active repair requests that have been accepted by your professional account."
+msgstr "Дархостҳои фаъоли таъмирро, ки ҳисоби мутахассиси шумо қабул кардааст, бинед."
+
+msgid "Review the repair problems you have submitted, check their current status, and start a new request when something else needs attention."
+msgstr "Мушкилоти фиристодаатонро бинед, ҳолати ҷории онҳоро санҷед ва вақте чизи дигар ба диққат ниёз дорад, дархости нав оғоз кунед."
+
+msgid "Review the saved repair details, service location, and current request status for this account-owned request."
+msgstr "Тафсилоти нигоҳдошташудаи таъмир, макони хизматрасонӣ ва ҳолати ҷории ин дархости марбут ба ҳисобро бинед."
+
+msgid "Review the work."
+msgstr "Корро баррасӣ кунед."
+
+msgid "Reviews"
+msgstr "Шарҳҳо"
+
+msgid "Reviews should prove real work, not decorate the page."
+msgstr "Баррасиҳо бояд кори воқеиро исбот кунанд, на саҳифаро оро диҳанд."
+
+msgid "Reviews will appear after completed repair work is available in UstoHub."
+msgstr "Пас аз дастрас шудани кори анҷомшудаи таъмир дар UstoHub, баррасиҳо пайдо мешаванд."
+
+msgid "Role-based marketplace"
+msgstr "Бозори асосёфта ба нақшҳо"
+
+msgid "Role-based workflow"
+msgstr "Раванди асосёфта ба нақшҳо"
+
+msgid "Russian"
+msgstr "Русӣ"
+
+msgid "Save"
+msgstr "Нигоҳ доштан"
+
+msgid "Save Changes"
+msgstr "Нигоҳ доштани тағйирот"
+
+msgid "Save the request"
+msgstr "Дархостро нигоҳ доред"
+
+msgid "Saved Repair Request"
+msgstr "Дархости таъмири нигоҳдошташуда"
+
+msgid "Saved request"
+msgstr "Дархости нигоҳдошташуда"
+
+msgid "Search and filter saved request details from your account. Status, urgency, and category values come directly from UstoHub."
+msgstr "Тафсилоти дархостҳои нигоҳдошташударо аз ҳисоби худ ҷустуҷӯ ва филтр кунед. Ҳолат, таъҷилӣ ва категория мустақиман аз UstoHub меоянд."
+
+msgid "Search by title"
+msgstr "Ҷустуҷӯ аз рӯи сарлавҳа"
+
+msgid "Search by title or narrow the list by category, urgency, and status."
+msgstr "Бо унвон ҷустуҷӯ кунед ё рӯйхатро аз рӯи категория, таъҷилӣ ва ҳолат маҳдуд намоед."
+
+msgid "Search repair titles"
+msgstr "Ҷустуҷӯи сарлавҳаҳои дархост"
+
+msgid "Search saved repair request titles."
+msgstr "Ҷустуҷӯи унвонҳои дархостҳои таъмири нигоҳдошташуда."
+
+msgid "Search: %(query)s"
+msgstr "Ҷустуҷӯ: %(query)s"
+
+msgid "Seasonal service, troubleshooting, and comfort checks."
+msgstr "Хизматрасонии мавсимӣ, ёфтани нуқсонҳо ва санҷиши роҳат."
+
+msgid "Secure access keeps account activity tied to the right customer or professional."
+msgstr "Дастрасии бехатар фаъолияти ҳисобро ба муштарӣ ё мутахассиси дуруст мепайвандад."
+
+msgid "Secure account access"
+msgstr "Дастрасии бехатари ҳисоб"
+
+msgid "Service"
+msgstr "Хизматрасонӣ"
+
+msgid "Service address"
+msgstr "Суроғаи хизматрасонӣ"
+
+msgid "Service categories"
+msgstr "Категорияҳои хизматрасонӣ"
+
+msgid "Service category"
+msgstr "Категорияи хизматрасонӣ"
+
+msgid "Set how quickly the issue should be reviewed."
+msgstr "Муайян кунед, ки мушкил то чӣ андоза зуд баррасӣ шавад."
+
+msgid "Set urgency"
+msgstr "Таъҷилиро муайян кунед"
+
+msgid "Show password"
+msgstr "Нишон додани рамз"
+
+msgid "Show password confirmation"
+msgstr "Нишон додани тасдиқи рамз"
+
+msgid "Signed in"
+msgstr "Ворид шудед"
+
+msgid "Signed in as <strong>%(username)s</strong>"
+msgstr "Ҳамчун <strong>%(username)s</strong> ворид шудед"
+
+msgid "Simple MVP flow"
+msgstr "Раванди соддаи MVP"
+
+msgid "Skip to content"
+msgstr "Гузаштан ба мундариҷа"
+
+msgid "Small fixes, inspections, routine improvements, and urgent help."
+msgstr "Ислоҳҳои хурд, санҷишҳо, беҳбудиҳои оддӣ ва кумаки фаврӣ."
+
+msgid "Solve home problems with organized repair requests."
+msgstr "Мушкилоти хонаро бо дархостҳои мураттаби таъмир ҳал кунед."
+
+msgid "Start here"
+msgstr "Аз ин ҷо оғоз кунед"
+
+msgid "Start with an account"
+msgstr "Бо ҳисоб оғоз кунед"
+
+msgid "Start with the repair type, then add details, photos, preferred timing, and location when those tools are available in the account."
+msgstr "Аз навъи таъмир оғоз кунед, сипас вақте ин абзорҳо дар ҳисоб дастрас мешаванд, тафсилот, аксҳо, вақти муносиб ва маконро илова кунед."
+
+msgid "Start with the workflow your account supports."
+msgstr "Бо раванде оғоз кунед, ки ҳисоби шумо дастгирӣ мекунад."
+
+msgid "Status"
+msgstr "Ҳолат"
+
+msgid "Status stays protected."
+msgstr "Ҳолат ҳифзшуда мемонад."
+
+msgid "Status stays visible."
+msgstr "Ҳолат намоён мемонад."
+
+msgid "Status timeline"
+msgstr "Ҷадвали ҳолат"
+
+msgid "Status tracking"
+msgstr "Пайгирии ҳолат"
+
+msgid "Status values come from the saved repair request record."
+msgstr "Арзишҳои ҳолат аз сабти нигоҳдошташудаи дархости таъмир меоянд."
+
+msgid "Submit"
+msgstr "Фиристодан"
+
+msgid "Submitted requests."
+msgstr "Дархостҳои фиристодашуда."
+
+msgid "Switch to dark theme"
+msgstr "Гузариш ба мавзӯи торик"
+
+msgid "Switch to light theme"
+msgstr "Гузариш ба мавзӯи равшан"
+
+msgid "Switches, outlets, lighting, and electrical repair concerns."
+msgstr "Калидҳо, розеткаҳо, равшанӣ ва масъалаҳои таъмири барқ."
+
+msgid "Switches, outlets, lighting, wiring checks, and safety issues."
+msgstr "Калидҳо, розеткаҳо, равшанӣ, санҷиши ноқилҳо ва масъалаҳои бехатарӣ."
+
+msgid "Tajik"
+msgstr "Тоҷикӣ"
+
+msgid "Tell UstoHub what happened, where it happened, and how urgent it feels."
+msgstr "Ба UstoHub гӯед, ки чӣ шуд, дар куҷо шуд ва то чӣ андоза таъҷилӣ аст."
+
+msgid "Thanks for joining UstoHub as a Professional. An admin needs to approve your account before you can accept customer Repair Requests."
+msgstr "Ташаккур, ки ҳамчун мутахассис ба UstoHub ҳамроҳ шудед. Пеш аз қабули дархостҳои муштариён, администратор бояд ҳисоби шуморо тасдиқ кунад."
+
+msgid "The current repair request form supports these categories, so the homepage keeps the service promise accurate."
+msgstr "Шакли ҷории дархости таъмир ин категорияҳоро дастгирӣ мекунад, бинобар ин саҳифаи асосӣ ваъдаи хизматрасониро дақиқ нигоҳ медорад."
+
+msgid "The customer describes the issue, chooses a category, sets urgency, and adds the service address."
+msgstr "Муштарӣ мушкилро тавсиф мекунад, категорияро интихоб менамояд, таъҷилиро муайян мекунад ва суроғаи хизматрасониро илова мекунад."
+
+msgid "The interface is prepared for offers and bookings. Real offer data will appear when those marketplace features are connected."
+msgstr "Интерфейс барои пешниҳодҳо ва фармоишҳо омода аст. Вақте ин имкониятҳои бозор пайваст мешаванд, маълумоти воқеии пешниҳодҳо пайдо мешавад."
+
+msgid "The interface is ready for a full marketplace flow while staying compatible with the current account and verification steps."
+msgstr "Интерфейс барои раванди пурраи бозор омода аст ва ҳамзамон бо қадамҳои ҷории ҳисоб ва тасдиқ мувофиқ мемонад."
+
+msgid "The product focuses on request creation, acceptance, assigned work, and completion."
+msgstr "Маҳсулот ба эҷоди дархост, қабул, кори таъйиншуда ва анҷом равона шудааст."
+
+msgid "The professional marks accepted work completed, and the record stays in the completed queue."
+msgstr "Мутахассис кори қабулшударо анҷомшуда қайд мекунад ва сабт дар навбати анҷомшудаҳо мемонад."
+
+msgid "The repair problem"
+msgstr "Мушкили таъмир"
+
+msgid "The repair request was saved to your account."
+msgstr "Дархости таъмир дар ҳисоби шумо нигоҳ дошта шуд."
+
+msgid "The request is available for professional review while it remains open."
+msgstr "То вақте дархост кушода аст, он барои баррасии мутахассисон дастрас мебошад."
+
+msgid "The request needs attention."
+msgstr "Дархост ба диққат ниёз дорад."
+
+msgid "The request status shows whether the repair is open, in progress, completed, or cancelled."
+msgstr "Ҳолати дархост нишон медиҳад, ки таъмир кушода, дар ҷараён, анҷомшуда ё бекоршуда аст."
+
+msgid "Theme"
+msgstr "Мавзӯъ"
+
+msgid "There are no customer repair requests available for professional review right now. New open requests will appear here when customers submit them."
+msgstr "Ҳоло барои баррасии мутахассисон дархости муштариён дастрас нест. Вақте муштариён дархост мефиристанд, дархостҳои нави кушода дар ин ҷо пайдо мешаванд."
+
+msgid "These are the details currently saved for this repair request."
+msgstr "Инҳо тафсилоти ҳоло нигоҳдошташудаи ин дархости таъмир мебошанд."
+
+msgid "These repair requests are assigned to your professional account and remain in progress."
+msgstr "Ин дархостҳои таъмир ба ҳисоби мутахассиси шумо таъйин шудаанд ва дар ҷараён мемонанд."
+
+msgid "These repair requests were completed by your professional account and are ordered by latest update."
+msgstr "Ин дархостҳои таъмир аз ҷониби ҳисоби мутахассиси шумо анҷом шудаанд ва аз рӯи навсозии охирин тартиб дода шудаанд."
+
+msgid "This approval step keeps customer Repair Requests available only to reviewed Professional accounts."
+msgstr "Ин қадами тасдиқ дархостҳои муштариёнро танҳо барои ҳисобҳои санҷидашудаи мутахассисон дастрас мекунад."
+
+msgid "This confirmation protects your repair history from accidental deletion. Review the selected request before permanently removing it."
+msgstr "Ин тасдиқ таърихи таъмири шуморо аз несткунии тасодуфӣ ҳифз мекунад. Пеш аз несткунии доимӣ дархости интихобшударо баррасӣ кунед."
+
+msgid "This page shows only completed repair requests assigned to your professional account. Customer private contact details are not displayed."
+msgstr "Ин саҳифа танҳо дархостҳои анҷомшударо нишон медиҳад, ки ба ҳисоби мутахассиси шумо таъйин шудаанд. Маълумоти шахсии тамоси муштарӣ нишон дода намешавад."
+
+msgid "This request is assigned to a professional account."
+msgstr "Ин дархост ба ҳисоби мутахассис таъйин шудааст."
+
+msgid "This request will be removed."
+msgstr "Ин дархост нест карда мешавад."
+
+msgid "This will permanently remove the repair request from your account."
+msgstr "Ин дархости таъмирро аз ҳисоби шумо ба таври доимӣ нест мекунад."
+
+msgid "Title"
+msgstr "Сарлавҳа"
+
+msgid "Toggle color theme"
+msgstr "Иваз кардани мавзӯи ранг"
+
+msgid "Track active repair requests assigned to you after accepting them from the professional open request queue."
+msgstr "Дархостҳои фаъоли ба шумо таъйиншударо пас аз қабул аз навбати дархостҳои кушодаи мутахассис пайгирӣ кунед."
+
+msgid "Track completion status"
+msgstr "Ҳолати анҷомро пайгирӣ кунед"
+
+msgid "Track status updates"
+msgstr "Навсозиҳои ҳолатро пайгирӣ кунед"
+
+msgid "Track your repair requests in one place."
+msgstr "Дархостҳои таъмири худро дар як ҷо пайгирӣ кунед."
+
+msgid "Trust and product principles"
+msgstr "Эътимод ва принсипҳои маҳсулот"
+
+msgid "Trust and service quality"
+msgstr "Эътимод ва сифати хизматрасонӣ"
+
+msgid "Trusted home repair workflow"
+msgstr "Раванди боэътимоди таъмири хона"
+
+msgid "Untitled repair request"
+msgstr "Дархости таъмири беунвон"
+
+msgid "Update only what changed."
+msgstr "Танҳо он чизеро нав кунед, ки тағйир ёфтааст."
+
+msgid "Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving."
+msgstr "Майдонҳои нигоҳдошташудаи зерро нав кунед. Ҳама майдонҳои ҳатмӣ нишон дода шудаанд ва UstoHub пеш аз нигоҳдорӣ тағйиротро тасдиқ мекунад."
+
+msgid "Update the saved repair details for this request while keeping ownership and status managed by UstoHub."
+msgstr "Тафсилоти нигоҳдошташудаи таъмири ин дархостро нав кунед, дар ҳоле ки соҳибият ва ҳолат аз ҷониби UstoHub идора мешаванд."
+
+msgid "Updated"
+msgstr "Навсозӣ шуд"
+
+msgid "Urgency"
+msgstr "Фаврият"
+
+msgid "Use numbers only. Paste is supported."
+msgstr "Танҳо рақамҳоро истифода баред. Гузоштан дастгирӣ мешавад."
+
+msgid "Use the role-based workflow"
+msgstr "Раванди асосёфта ба нақшҳоро истифода баред"
+
+msgid "Use the title and description to explain what happened, where the issue is, and what you have already checked."
+msgstr "Унвон ва тавсифро истифода баред, то фаҳмонед, ки чӣ шуд, мушкил дар куҷост ва чӣ чизро аллакай санҷидед."
+
+msgid "Use the username and password connected to your verified account."
+msgstr "Номи корбар ва пароли марбут ба ҳисоби тасдиқшудаи худро истифода баред."
+
+msgid "Username"
+msgstr "Номи корбар"
+
+msgid "UstoHub Lite focuses on the core marketplace path already supported by the project."
+msgstr "UstoHub Lite ба роҳи асосии бозор равона аст, ки лоиҳа аллакай дастгирӣ мекунад."
+
+msgid "UstoHub Lite gives customers a clear place to post repair requests and gives professionals a focused queue for accepting, tracking, and completing work."
+msgstr "UstoHub Lite ба муштариён ҷои равшан барои фиристодани дархостҳо медиҳад ва ба мутахассисон навбати равонашуда барои қабул, пайгирӣ ва анҷоми кор медиҳад."
+
+msgid "UstoHub Lite presents the supported marketplace workflow clearly and leaves room to grow without pretending unfinished features already exist."
+msgstr "UstoHub Lite раванди дастгиришудаи бозорро равшан нишон медиҳад ва ҷой барои рушд мегузорад, бе вонамуд кардани имкониятҳои нотамом ҳамчун омода."
+
+msgid "UstoHub Lite product principles"
+msgstr "Принсипҳои маҳсулоти UstoHub Lite"
+
+msgid "UstoHub Lite separates customer actions from professional actions so each user sees the workflow meant for them."
+msgstr "UstoHub Lite амалҳои муштариёнро аз амалҳои мутахассисон ҷудо мекунад, то ҳар корбар раванди барои худ лозимро бинад."
+
+msgid "UstoHub account panel"
+msgstr "Панели ҳисоби UstoHub"
+
+msgid "UstoHub dashboard access"
+msgstr "Дастрасӣ ба панели UstoHub"
+
+msgid "UstoHub helps customers create repair requests and helps professionals manage open, assigned, and completed work."
+msgstr "UstoHub ба муштариён дар эҷоди дархостҳо ва ба мутахассисон дар идораи кори кушода, таъйиншуда ва анҷомшуда кумак мекунад."
+
+msgid "UstoHub home"
+msgstr "Саҳифаи асосии UstoHub"
+
+msgid "UstoHub is structured for before-and-after evidence, confirmed scope, completion status, and warranty details so the customer and professional can stay aligned."
+msgstr "UstoHub барои далелҳои пеш ва баъд, ҳаҷми тасдиқшуда, ҳолати анҷом ва тафсилоти кафолат сохта шудааст, то муштарӣ ва мутахассис ҳамоҳанг бимонанд."
+
+msgid "UstoHub is structured for photos, repair descriptions, visit records, and status updates as the marketplace grows."
+msgstr "UstoHub барои аксҳо, тавсифи таъмир, сабтҳои боздид ва навсозиҳои ҳолат ҳангоми рушди бозор сохта шудааст."
+
+msgid "UstoHub keeps this request linked to your account and preserves system-managed status details automatically."
+msgstr "UstoHub ин дархостро ба ҳисоби шумо пайваст нигоҳ медорад ва тафсилоти ҳолати идорашавандаи системаро худкор нигоҳ медорад."
+
+msgid "UstoHub links this request to your signed-in account and sets the request status automatically."
+msgstr "UstoHub ин дархостро ба ҳисоби воридшудаи шумо мепайвандад ва ҳолати дархостро худкор таъйин мекунад."
+
+msgid "UstoHub repair marketplace start panel"
+msgstr "Панели оғози бозори таъмири UstoHub"
+
+msgid "UstoHub trust indicators"
+msgstr "Нишондиҳандаҳои эътимоди UstoHub"
+
+msgid "Verification code"
+msgstr "Рамзи тасдиқ"
+
+msgid "Verification needs attention."
+msgstr "Тасдиқ ба диққат ниёз дорад."
+
+msgid "Verification protects your account before repair requests or professional work can begin."
+msgstr "Тасдиқ ҳисоби шуморо пеш аз оғози дархостҳо ё кори мутахассис ҳифз мекунад."
+
+msgid "Verified"
+msgstr "Тасдиқшуда"
+
+msgid "Verified account before request activity"
+msgstr "Ҳисоби тасдиқшуда пеш аз фаъолияти дархост"
+
+msgid "Verified professionals"
+msgstr "Мутахассисони тасдиқшуда"
+
+msgid "Verified profile cards will appear here after professionals are available through the account flow."
+msgstr "Кортҳои профили тасдиқшуда пас аз дастрас шудани мутахассисон тавассути раванди ҳисоб дар ин ҷо пайдо мешаванд."
+
+msgid "Verified reviews will appear only after completed repair work is available in UstoHub."
+msgstr "Баррасиҳои тасдиқшуда танҳо пас аз дастрас шудани кори анҷомшудаи таъмир дар UstoHub пайдо мешаванд."
+
+msgid "Verify"
+msgstr "Тасдиқ"
+
+msgid "Verify email"
+msgstr "Тасдиқи почтаи электронӣ"
+
+msgid "Verify your UstoHub email"
+msgstr "Email-и UstoHub-и худро тасдиқ кунед"
+
+msgid "View Active Requests"
+msgstr "Дидани дархостҳои фаъол"
+
+msgid "View Approval Status"
+msgstr "Дидани ҳолати тасдиқ"
+
+msgid "View Assigned Requests"
+msgstr "Дидани дархостҳои таъйиншуда"
+
+msgid "View Details"
+msgstr "Дидани тафсилот"
+
+msgid "View My Repair Requests"
+msgstr "Дидани дархостҳои таъмири ман"
+
+msgid "View details for %(title)s"
+msgstr "Дидани тафсилоти %(title)s"
+
+msgid "Visual evidence helps professionals understand scope before they respond."
+msgstr "Далелҳои визуалӣ ба мутахассисон пеш аз ҷавоб ҳаҷми корро фаҳмонда метавонанд."
+
+msgid "Visual repair context"
+msgstr "Контексти визуалии таъмир"
+
+msgid "Warranties"
+msgstr "Кафолатҳо"
+
+msgid "Warranty"
+msgstr "Кафолат"
+
+msgid "Warranty and safety"
+msgstr "Кафолат ва бехатарӣ"
+
+msgid "Warranty records will appear after completed repairs."
+msgstr "Сабтҳои кафолат пас аз таъмирҳои анҷомшуда пайдо мешаванд."
+
+msgid "We sent it to <strong>%(email)s</strong>."
+msgstr "Мо онро ба <strong>%(email)s</strong> фиристодем."
+
+msgid "Welcome back, %(username)s."
+msgstr "Хуш омадед, %(username)s."
+
+msgid "Why do I need email verification?"
+msgstr "Чаро тасдиқи email лозим аст?"
+
+msgid "Work in progress"
+msgstr "Кор дар ҷараён"
+
+msgid "Work is completed"
+msgstr "Кор анҷом ёфт"
+
+msgid "Yes. Choose Customer or Professional during registration to open the workspace that matches your role."
+msgstr "Бале. Ҳангоми бақайдгирӣ Муштарӣ ё Мутахассисро интихоб кунед, то фазои мувофиқи нақшатон кушода шавад."
+
+msgid "You are already logged in."
+msgstr "Шумо аллакай ворид шудаед."
+
+msgid "You do not have assigned in-progress repair requests right now."
+msgstr "Ҳоло шумо дархости таъйиншудаи дар ҷараён надоред."
+
+msgid "You have not accepted any open repair requests yet. Browse the professional queue when you are ready to take active work."
+msgstr "Шумо ҳанӯз ягон дархости кушодаро қабул накардаед. Вақте барои гирифтани кори фаъол омода ҳастед, навбати мутахассисро бинед."
+
+msgid "You have not completed any assigned repair requests yet. Active requests can be reviewed from your accepted work queue."
+msgstr "Шумо ҳанӯз ягон дархости таъйиншударо анҷом надодаед. Дархостҳои фаъолро аз навбати кори қабулшуда бинед."
+
+msgid "You have not completed any repair requests yet."
+msgstr "Шумо ҳанӯз ягон дархости таъмирро анҷом надодаед."
+
+msgid "Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests."
+msgstr "Ҳисоби мутахассиси шумо интизори тасдиқи администратор аст. Пас аз тасдиқ шумо метавонед дархостҳои таъмирро қабул кунед."
+
+msgid "Your Professional account is registered and signed in."
+msgstr "Ҳисоби мутахассиси шумо сабт шуд ва шумо ворид ҳастед."
+
+msgid "Your Professional account is waiting for admin approval."
+msgstr "Ҳисоби мутахассиси шумо интизори тасдиқи администратор аст."
+
+msgid "Your Professional workspace is almost ready."
+msgstr "Фазои кории мутахассиси шумо қариб омода аст."
+
+msgid "Your account and request status are handled by UstoHub, so you only need to submit the repair details."
+msgstr "Ҳисоб ва ҳолати дархости шумо аз ҷониби UstoHub идора мешаванд, бинобар ин шумо танҳо тафсилоти таъмирро мефиристед."
+
+msgid "Your account has been created successfully. Once an admin approves it, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
+msgstr "Ҳисоби шумо бомуваффақият сохта шуд. Пас аз тасдиқи администратор шумо метавонед дархостҳои кушодаро бинед, кори мувофиқро қабул кунед ва корҳои қабулшударо идора намоед."
+
+msgid "Your booked work will appear here."
+msgstr "Кори фармоишшудаи шумо дар ин ҷо пайдо мешавад."
+
+msgid "Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available."
+msgstr "Фазои кории муштарии шумо барои ҷамъоварии дархостҳо, пешниҳодҳо, фармоишҳо, кафолатҳо ва баррасиҳо ҳангоми дастрас шудани ин абзорҳо омода аст."
+
+msgid "Your professional account is pending admin approval."
+msgstr "Ҳисоби касбии шумо дар интизори тасдиқи маъмур аст."
+
+msgid "Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available."
+msgstr "Фазои кории мутахассиси шумо барои дархостҳо, пешниҳодҳо, фармоишҳо ва таърихи хизматрасонӣ ҳангоми дастрас шудани ин абзорҳо омода аст."
+
+msgid "Your repair workspace is ready."
+msgstr "Фазои кории таъмири шумо омода аст."
+
+msgid "Your requests, bookings, repair status, warranties, and reviews will show here when activity starts."
+msgstr "Дархостҳо, фармоишҳо, ҳолати таъмир, кафолатҳо ва баррасиҳои шумо пас аз оғози фаъолият дар ин ҷо пайдо мешаванд."
+
+msgid "Your work queue starts with open requests."
+msgstr "Навбати кори шумо аз дархостҳои кушода оғоз мешавад."
+
+msgid "required"
+msgstr "ҳатмӣ"
+
+msgid "You have %(total)s visible repair request."
+msgid_plural "You have %(total)s visible repair requests."
+msgstr[0] "Шумо %(total)s дархости таъмири намоён доред."
+msgstr[1] "Шумо %(total)s дархости таъмири намоён доред."
+
+msgid "accepted request"
+msgid_plural "accepted requests"
+msgstr[0] "дархости қабулшуда"
+msgstr[1] "дархостҳои қабулшуда"
+
+msgid "completed request"
+msgid_plural "completed requests"
+msgstr[0] "дархости анҷомшуда"
+msgstr[1] "дархостҳои анҷомшуда"
+
+msgid "open request"
+msgid_plural "open requests"
+msgstr[0] "дархости кушода"
+msgstr[1] "дархостҳои кушода"
+
+msgid "visible request"
+msgid_plural "visible requests"
+msgstr[0] "дархости намоён"
+msgstr[1] "дархостҳои намоён"
+
+msgid "%(total)s accepted repair request is currently assigned to you."
+msgid_plural "%(total)s accepted repair requests are currently assigned to you."
+msgstr[0] "%(total)s дархости қабулшуда ҳоло ба шумо таъйин шудааст."
+msgstr[1] "%(total)s дархости қабулшуда ҳоло ба шумо таъйин шудаанд."
+
+msgid "%(total)s completed repair request is saved in your professional work history."
+msgid_plural "%(total)s completed repair requests are saved in your professional work history."
+msgstr[0] "%(total)s дархости анҷомшуда дар таърихи кори мутахассиси шумо нигоҳ дошта шудааст."
+msgstr[1] "%(total)s дархости анҷомшуда дар таърихи кори мутахассиси шумо нигоҳ дошта шудаанд."
+
+msgid "%(total)s open repair request can be reviewed from this professional workspace."
+msgid_plural "%(total)s open repair requests can be reviewed from this professional workspace."
+msgstr[0] "%(total)s дархости кушодаро аз ин фазои кории мутахассис баррасӣ кардан мумкин аст."
+msgstr[1] "%(total)s дархости кушодаро аз ин фазои кории мутахассис баррасӣ кардан мумкин аст."
+
+msgid "%(total)s request accepted"
+msgid_plural "%(total)s requests accepted"
+msgstr[0] "%(total)s дархост қабул шуд"
+msgstr[1] "%(total)s дархост қабул шуд"
+
+msgid "%(total)s request completed"
+msgid_plural "%(total)s requests completed"
+msgstr[0] "%(total)s дархост анҷом шуд"
+msgstr[1] "%(total)s дархост анҷом шуд"
+
+msgid "%(total)s request shown"
+msgid_plural "%(total)s requests shown"
+msgstr[0] "%(total)s дархост нишон дода шуд"
+msgstr[1] "%(total)s дархост нишон дода шуд"
+
+msgid "%(total)s request visible"
+msgid_plural "%(total)s requests visible"
+msgstr[0] "%(total)s дархост намоён аст"
+msgstr[1] "%(total)s дархост намоён аст"

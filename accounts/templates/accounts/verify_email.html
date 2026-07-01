@@ -1,29 +1,30 @@
 {% extends "accounts/base.html" %}
+{% load i18n %}
 
-{% block title %}Verify email | UstoHub{% endblock %}
+{% block title %}{% trans "Verify email" %} | UstoHub{% endblock %}
 {% block body_class %}page-verify{% endblock %}
-{% block auth_label %}Verify your UstoHub email{% endblock %}
-{% block hero_eyebrow %}Account verification{% endblock %}
-{% block hero_title %}Confirm your email before repair activity begins.{% endblock %}
-{% block hero_text %}Enter the six-digit code sent to your inbox so your account can be activated securely.{% endblock %}
+{% block auth_label %}{% trans "Verify your UstoHub email" %}{% endblock %}
+{% block hero_eyebrow %}{% trans "Account verification" %}{% endblock %}
+{% block hero_title %}{% trans "Confirm your email before repair activity begins." %}{% endblock %}
+{% block hero_text %}{% trans "Enter the six-digit code sent to your inbox so your account can be activated securely." %}{% endblock %}
 {% block hero_actions %}
-    <a class="btn btn--primary" href="#account-panel">Enter verification code</a>
-    <a class="btn btn--secondary" href="{% url 'login' %}">Back to log in</a>
+    <a class="btn btn--primary" href="#account-panel">{% trans "Enter verification code" %}</a>
+    <a class="btn btn--secondary" href="{% url 'login' %}">{% trans "Back to log in" %}</a>
 {% endblock %}
 {% block product_sections %}{% endblock %}
 
 {% block content %}
 <article class="auth-card auth-card--verify" aria-labelledby="verify-title">
-    <ol class="flow-progress" aria-label="Account progress">
-        <li class="is-complete"><span>1</span>Account</li>
-        <li class="is-active"><span>2</span>Verify</li>
-        <li><span>3</span>Ready</li>
+    <ol class="flow-progress" aria-label="{% trans 'Account progress' %}">
+        <li class="is-complete"><span>1</span>{% trans "Account" %}</li>
+        <li class="is-active"><span>2</span>{% trans "Verify" %}</li>
+        <li><span>3</span>{% trans "Ready" %}</li>
     </ol>
 
     <header class="auth-card__header">
-        <span class="status-badge status-badge--warning">Email checkpoint</span>
-        <h2 id="verify-title">Enter the six-digit code.</h2>
-        <p>We sent it to <strong>{{ user.email }}</strong>.</p>
+        <span class="status-badge status-badge--warning">{% trans "Email checkpoint" %}</span>
+        <h2 id="verify-title">{% trans "Enter the six-digit code." %}</h2>
+        <p>{% blocktrans trimmed with email=user.email %}We sent it to <strong>{{ email }}</strong>.{% endblocktrans %}</p>
     </header>
 
     <form class="auth-form" method="post" novalidate data-auth-form>
@@ -32,7 +33,7 @@
 
         {% if form.non_field_errors %}
             <div class="form-alert" role="alert">
-                <strong>Verification needs attention.</strong>
+                <strong>{% trans "Verification needs attention." %}</strong>
                 <ul>
                     {% for error in form.non_field_errors %}
                         <li>{{ error }}</li>
@@ -42,7 +43,7 @@
         {% endif %}
 
         <div class="form-field form-field--code {% if form.code.errors %}form-field--error{% endif %}" data-field="code">
-            {{ form.code.label_tag }}
+            <label for="{{ form.code.id_for_label }}">{% trans "Verification code" %}</label>
             <div class="code-input-shell" data-code-shell>
                 <div class="code-slots" aria-hidden="true">
                     <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -51,7 +52,7 @@
                     {{ form.code }}
                 </div>
             </div>
-            <p id="id_code_help" class="field-hint">Use numbers only. Paste is supported.</p>
+            <p id="id_code_help" class="field-hint">{% trans "Use numbers only. Paste is supported." %}</p>
             {% if form.code.errors %}
                 <ul id="id_code_errors" class="field-errors">
                     {% for error in form.code.errors %}
@@ -63,11 +64,11 @@
 
         <p class="trust-note">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-            Verification protects your account before repair requests or professional work can begin.
+            {% trans "Verification protects your account before repair requests or professional work can begin." %}
         </p>
 
         <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
-            <span class="btn__label">Verify email</span>
+            <span class="btn__label">{% trans "Verify email" %}</span>
             <span class="btn__spinner" aria-hidden="true"></span>
         </button>
     </form>

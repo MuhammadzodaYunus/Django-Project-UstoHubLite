@@ -1,6 +1,7 @@
-{% load static %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!doctype html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE|default:'en' }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,45 +34,55 @@
     <link rel="stylesheet" href="{% static 'accounts/css/accounts.css' %}">
 </head>
 <body class="site-body {% block body_class %}{% endblock %}">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">{% trans "Skip to content" %}</a>
 
     <header class="site-header" data-site-header>
-        <nav class="site-nav container" aria-label="Primary navigation">
-            <a class="brand" href="{% url 'home' %}" aria-label="UstoHub home">
+        <nav class="site-nav container" aria-label="{% trans 'Primary navigation' %}">
+            <a class="brand" href="{% url 'home' %}" aria-label="{% trans 'UstoHub home' %}">
                 <span class="brand__mark" aria-hidden="true">
                     <img src="{% static 'accounts/images/ustohub-mark.svg' %}" width="40" height="40" alt="">
                 </span>
                 <span class="brand__text">
                     <strong>UstoHub</strong>
-                    <span>Repair marketplace</span>
+                    <span>{% trans "Repair marketplace" %}</span>
                 </span>
             </a>
 
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-navigation">
                 <span class="nav-toggle__line"></span>
                 <span class="nav-toggle__line"></span>
-                <span class="nav-toggle__label">Menu</span>
+                <span class="nav-toggle__label">{% trans "Menu" %}</span>
             </button>
 
             {% with current_route=request.resolver_match.url_name %}
                 <div class="site-nav__panel" id="primary-navigation" data-nav-panel>
                     <div class="site-nav__links">
                         {% if request.user.is_authenticated and request.user.user_type == "master" and request.user.is_master_approved %}
-                            <a href="{% url 'home' %}"{% if current_route == 'home' %} class="is-active" aria-current="page"{% endif %}>Home</a>
-                            <a href="{% url 'home' %}#how-it-works">How It Works</a>
-                            <a href="{% url 'home' %}#services">Categories</a>
-                            <a href="{% url 'home' %}#professionals">For Professionals</a>
+                            <a href="{% url 'home' %}"{% if current_route == 'home' %} class="is-active" aria-current="page"{% endif %}>{% trans "Home" %}</a>
+                            <a href="{% url 'home' %}#how-it-works">{% trans "How It Works" %}</a>
+                            <a href="{% url 'home' %}#services">{% trans "Categories" %}</a>
+                            <a href="{% url 'home' %}#professionals">{% trans "For Professionals" %}</a>
                         {% else %}
-                            <a href="{% url 'home' %}"{% if current_route == 'home' %} class="is-active" aria-current="page"{% endif %}>Home</a>
-                            <a href="{% url 'home' %}#how-it-works">How It Works</a>
-                            <a href="{% url 'home' %}#services">Categories</a>
-                            <a href="{% url 'home' %}#customers">For Customers</a>
-                            <a href="{% url 'home' %}#professionals">For Professionals</a>
+                            <a href="{% url 'home' %}"{% if current_route == 'home' %} class="is-active" aria-current="page"{% endif %}>{% trans "Home" %}</a>
+                            <a href="{% url 'home' %}#how-it-works">{% trans "How It Works" %}</a>
+                            <a href="{% url 'home' %}#services">{% trans "Categories" %}</a>
+                            <a href="{% url 'home' %}#customers">{% trans "For Customers" %}</a>
+                            <a href="{% url 'home' %}#professionals">{% trans "For Professionals" %}</a>
                         {% endif %}
                     </div>
 
                     <div class="site-nav__actions">
-                        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
+                        <button
+                            class="theme-toggle"
+                            type="button"
+                            data-theme-toggle
+                            data-theme-label-light="{% trans 'Light' %}"
+                            data-theme-label-dark="{% trans 'Dark' %}"
+                            data-theme-switch-light="{% trans 'Switch to light theme' %}"
+                            data-theme-switch-dark="{% trans 'Switch to dark theme' %}"
+                            aria-label="{% trans 'Toggle color theme' %}"
+                            aria-pressed="false"
+                        >
                             <span class="theme-toggle__track" aria-hidden="true">
                                 <span class="theme-toggle__icon theme-toggle__icon--sun">
                                     <svg class="icon" viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M4 12H2M22 12h-2M4.93 19.07l-1.41 1.41M20.48 3.52l-1.41 1.41"/><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
@@ -81,59 +92,87 @@
                                 </span>
                                 <span class="theme-toggle__knob"></span>
                             </span>
-                            <span class="theme-toggle__label" data-theme-label>Theme</span>
+                            <span class="theme-toggle__label" data-theme-label>{% trans "Theme" %}</span>
                         </button>
+                        <form class="language-switcher" action="{% url 'set_language' %}" method="post" aria-label="{% trans 'Language' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                            <button type="submit" name="language" value="en"{% if LANGUAGE_CODE == 'en' %} class="is-active" aria-current="true"{% endif %}>EN</button>
+                            <span aria-hidden="true">|</span>
+                            <button type="submit" name="language" value="ru"{% if LANGUAGE_CODE == 'ru' %} class="is-active" aria-current="true"{% endif %}>RU</button>
+                            <span aria-hidden="true">|</span>
+                            <button type="submit" name="language" value="tg"{% if LANGUAGE_CODE == 'tg' %} class="is-active" aria-current="true"{% endif %}>TG</button>
+                        </form>
                         {% if request.user.is_authenticated %}
-                        {% if request.user.user_type == "master" and request.user.is_master_approved %}
-                            <div class="professional-nav" aria-label="Professional workspace navigation">
-                                <a class="professional-nav__link{% if current_route == 'professional_request_list' %} is-active{% endif %}" href="{% url 'professional_request_list' %}"{% if current_route == 'professional_request_list' %} aria-current="page"{% endif %} aria-label="Open Requests">
-                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/>
-                                    </svg>
-                                    Open
-                                </a>
-                                <a class="professional-nav__link{% if current_route == 'professional_assigned_request_list' %} is-active{% endif %}" href="{% url 'professional_assigned_request_list' %}"{% if current_route == 'professional_assigned_request_list' %} aria-current="page"{% endif %} aria-label="My Accepted Requests">
-                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path d="M4 7h16M4 12h10M4 17h7"/>
-                                    </svg>
-                                    Accepted
-                                </a>
-                                <a class="professional-nav__link{% if current_route == 'professional_completed_request_list' %} is-active{% endif %}" href="{% url 'professional_completed_request_list' %}"{% if current_route == 'professional_completed_request_list' %} aria-current="page"{% endif %} aria-label="Completed Requests">
-                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path d="M20 6 9 17l-5-5"/>
-                                    </svg>
-                                    Completed
-                                </a>
-                            </div>
-                        {% elif request.user.user_type == "master" %}
-                            <a class="nav-pending-status{% if current_route == 'approval_pending' %} is-active{% endif %}" href="{% url 'approval_pending' %}"{% if current_route == 'approval_pending' %} aria-current="page"{% endif %}>
-                                <span class="approval-status-dot" aria-hidden="true"></span>
-                                Pending approval
-                            </a>
-                        {% else %}
-                            <a class="nav-dashboard{% if current_route == 'repair_list' or current_route == 'repair_create' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
-                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M3 13h8V3H3v10Zm10 8h8V3h-8v18ZM3 21h8v-6H3v6Z"/>
-                                </svg>
-                                Dashboard
-                            </a>
-                        {% endif %}
                         <span class="user-chip" title="{{ request.user.username }}">
                             <span class="user-chip__avatar" aria-hidden="true">{{ request.user.username|first|upper }}</span>
                             <span class="user-chip__name">{{ request.user.username }}</span>
                         </span>
                         <form class="logout-form" method="post" action="{% url 'logout' %}">
                             {% csrf_token %}
-                            <button class="btn btn--ghost" type="submit">Log out</button>
+                            <button class="btn btn--ghost" type="submit">{% trans "Log out" %}</button>
                         </form>
                         {% else %}
-                        <a class="btn btn--ghost{% if current_route == 'login' %} is-active{% endif %}" href="{% url 'login' %}"{% if current_route == 'login' %} aria-current="page"{% endif %}>Log in</a>
-                        <a class="btn btn--primary{% if current_route == 'register' %} is-active{% endif %}" href="{% url 'register' %}#account-panel"{% if current_route == 'register' %} aria-current="page"{% endif %}>Create account</a>
+                        <a class="btn btn--ghost{% if current_route == 'login' %} is-active{% endif %}" href="{% url 'login' %}"{% if current_route == 'login' %} aria-current="page"{% endif %}>{% trans "Log in" %}</a>
+                        <a class="btn btn--primary{% if current_route == 'register' %} is-active{% endif %}" href="{% url 'register' %}#account-panel"{% if current_route == 'register' %} aria-current="page"{% endif %}>{% trans "Create account" %}</a>
                         {% endif %}
                     </div>
                 </div>
             {% endwith %}
         </nav>
+
+        {% if request.user.is_authenticated %}
+            {% with current_route=request.resolver_match.url_name %}
+                <div class="workspace-bar">
+                    <div class="container workspace-bar__inner">
+                        {% if request.user.user_type == "master" and request.user.is_master_approved %}
+                            <nav class="workspace-nav" aria-label="{% trans 'Professional workspace navigation' %}">
+                                <a class="workspace-nav__link{% if current_route == 'professional_request_list' %} is-active{% endif %}" href="{% url 'professional_request_list' %}"{% if current_route == 'professional_request_list' %} aria-current="page"{% endif %}>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/>
+                                    </svg>
+                                    {% trans "Open Requests" %}
+                                </a>
+                                <a class="workspace-nav__link{% if current_route == 'professional_assigned_request_list' %} is-active{% endif %}" href="{% url 'professional_assigned_request_list' %}"{% if current_route == 'professional_assigned_request_list' %} aria-current="page"{% endif %}>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M4 7h16M4 12h10M4 17h7"/>
+                                    </svg>
+                                    {% trans "Accepted" %}
+                                </a>
+                                <a class="workspace-nav__link{% if current_route == 'professional_completed_request_list' %} is-active{% endif %}" href="{% url 'professional_completed_request_list' %}"{% if current_route == 'professional_completed_request_list' %} aria-current="page"{% endif %}>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M20 6 9 17l-5-5"/>
+                                    </svg>
+                                    {% trans "Completed" %}
+                                </a>
+                            </nav>
+                        {% elif request.user.user_type == "master" %}
+                            <nav class="workspace-nav" aria-label="{% trans 'Professional workspace navigation' %}">
+                                <a class="workspace-nav__link workspace-nav__link--warning{% if current_route == 'approval_pending' %} is-active{% endif %}" href="{% url 'approval_pending' %}"{% if current_route == 'approval_pending' %} aria-current="page"{% endif %}>
+                                    <span class="approval-status-dot" aria-hidden="true"></span>
+                                    {% trans "Pending approval" %}
+                                </a>
+                            </nav>
+                        {% else %}
+                            <nav class="workspace-nav" aria-label="{% trans 'Customer workspace navigation' %}">
+                                <a class="workspace-nav__link{% if current_route == 'repair_list' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M3 13h8V3H3v10Zm10 8h8V3h-8v18ZM3 21h8v-6H3v6Z"/>
+                                    </svg>
+                                    {% trans "My Requests" %}
+                                </a>
+                                <a class="workspace-nav__link workspace-nav__link--primary{% if current_route == 'repair_create' %} is-active{% endif %}" href="{% url 'repair_create' %}"{% if current_route == 'repair_create' %} aria-current="page"{% endif %}>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M12 5v14M5 12h14"/>
+                                    </svg>
+                                    {% trans "Post a Repair Request" %}
+                                </a>
+                            </nav>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endwith %}
+        {% endif %}
     </header>
 
     {% include "accounts/partials/messages.html" %}
@@ -142,90 +181,90 @@
         <section class="hero-section" aria-labelledby="hero-title">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow">{% block hero_eyebrow %}Trusted home repair workflow{% endblock %}</p>
-                    <h1 id="hero-title">{% block hero_title %}Solve home problems with organized repair requests.{% endblock %}</h1>
-                    <p class="hero-copy__text">{% block hero_text %}Describe the issue, choose a category and urgency, and keep the request status connected to your account.{% endblock %}</p>
+                    <p class="eyebrow">{% block hero_eyebrow %}{% trans "Trusted home repair workflow" %}{% endblock %}</p>
+                    <h1 id="hero-title">{% block hero_title %}{% trans "Solve home problems with organized repair requests." %}{% endblock %}</h1>
+                    <p class="hero-copy__text">{% block hero_text %}{% trans "Describe the issue, choose a category and urgency, and keep the request status connected to your account." %}{% endblock %}</p>
 
                     <div class="hero-actions">
                         {% block hero_actions %}
                             {% if request.user.is_authenticated %}
                                 {% if request.user.user_type == "master" and request.user.is_master_approved %}
-                                    <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Open Requests</a>
+                                    <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Open Requests" %}</a>
                                 {% elif request.user.user_type == "master" %}
-                                    <a class="btn btn--primary" href="{% url 'approval_pending' %}">View Approval Status</a>
+                                    <a class="btn btn--primary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
                                 {% else %}
-                                    <a class="btn btn--primary" href="{% url 'repair_list' %}">Open Dashboard</a>
+                                    <a class="btn btn--primary" href="{% url 'repair_list' %}">{% trans "Open Dashboard" %}</a>
                                 {% endif %}
                             {% else %}
-                                <a class="btn btn--primary" href="{% url 'repair_create' %}">Post a Repair Request</a>
+                                <a class="btn btn--primary" href="{% url 'repair_create' %}">{% trans "Post a Repair Request" %}</a>
                             {% endif %}
-                            <a class="btn btn--secondary" href="{% url 'home' %}#how-it-works">How UstoHub Works</a>
+                            <a class="btn btn--secondary" href="{% url 'home' %}#how-it-works">{% trans "How UstoHub Works" %}</a>
                         {% endblock %}
                     </div>
 
                     {% block hero_support %}
-                        <ul class="trust-strip" aria-label="UstoHub trust indicators">
+                        <ul class="trust-strip" aria-label="{% trans 'UstoHub trust indicators' %}">
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
-                                Role-based workflow
+                                {% trans "Role-based workflow" %}
                             </li>
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg>
-                                Professional queue
+                                {% trans "Professional queue" %}
                             </li>
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-                                Status tracking
+                                {% trans "Status tracking" %}
                             </li>
                         </ul>
 
-                        <div class="repair-photo-showcase" data-depth-scene aria-label="Repair request photo preview">
+                        <div class="repair-photo-showcase" data-depth-scene aria-label="{% trans 'Repair request photo preview' %}">
                             <figure class="repair-photo-card" data-depth-layer="0.85">
                                 <img
                                     src="{% static 'accounts/images/repair-professional-kitchen.png' %}"
                                     width="1586"
                                     height="992"
-                                    alt="Repair professional fixing a kitchen sink cabinet in a bright home workspace."
+                                    alt="{% trans 'Repair professional fixing a kitchen sink cabinet in a bright home workspace.' %}"
                                     loading="eager"
                                     decoding="async"
                                 >
                                 <figcaption>
-                                    <span>Repair request context</span>
-                                    <strong>Issue, location, and status details stay connected to the request.</strong>
+                                    <span>{% trans "Repair request context" %}</span>
+                                    <strong>{% trans "Issue, location, and status details stay connected to the request." %}</strong>
                                 </figcaption>
                             </figure>
                             <div class="photo-signal photo-signal--top" data-depth-layer="1.25">
-                                <span class="status-badge status-badge--success">Saved request</span>
-                                <p>Clear visual context for the repair record.</p>
+                                <span class="status-badge status-badge--success">{% trans "Saved request" %}</span>
+                                <p>{% trans "Clear visual context for the repair record." %}</p>
                             </div>
-                            <div class="repair-proof-rail" data-depth-layer="0.55" aria-label="Repair evidence highlights">
+                            <div class="repair-proof-rail" data-depth-layer="0.55" aria-label="{% trans 'Repair evidence highlights' %}">
                                 <span>
                                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                                    Customer-owned record
+                                    {% trans "Customer-owned record" %}
                                 </span>
                                 <span>
                                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
-                                    Professional workflow
+                                    {% trans "Professional workflow" %}
                                 </span>
                             </div>
                         </div>
 
-                        <div class="workflow-preview" aria-label="Repair request workflow preview">
+                        <div class="workflow-preview" aria-label="{% trans 'Repair request workflow preview' %}">
                             <div class="workflow-preview__header">
-                                <span class="status-badge status-badge--info">Request preview</span>
-                                <span class="workflow-preview__meta">4-step repair path</span>
+                                <span class="status-badge status-badge--info">{% trans "Request preview" %}</span>
+                                <span class="workflow-preview__meta">{% trans "4-step repair path" %}</span>
                             </div>
                             <ol class="workflow-steps">
-                                <li><span>1</span>Describe the problem</li>
-                                <li><span>2</span>Choose category and urgency</li>
-                                <li><span>3</span>Professional accepts work</li>
-                                <li><span>4</span>Track completion status</li>
+                                <li><span>1</span>{% trans "Describe the problem" %}</li>
+                                <li><span>2</span>{% trans "Choose category and urgency" %}</li>
+                                <li><span>3</span>{% trans "Professional accepts work" %}</li>
+                                <li><span>4</span>{% trans "Track completion status" %}</li>
                             </ol>
                         </div>
                     {% endblock %}
                 </div>
 
-                <div class="hero-panel" id="account-panel" aria-label="{% block auth_label %}UstoHub account panel{% endblock %}">
+                <div class="hero-panel" id="account-panel" aria-label="{% block auth_label %}{% trans 'UstoHub account panel' %}{% endblock %}">
                     {% block content %}{% endblock %}
                 </div>
             </div>
@@ -239,41 +278,41 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a class="brand brand--footer" href="{% url 'home' %}" aria-label="UstoHub home">
+                <a class="brand brand--footer" href="{% url 'home' %}" aria-label="{% trans 'UstoHub home' %}">
                     <span class="brand__mark" aria-hidden="true">
                         <img src="{% static 'accounts/images/ustohub-mark.svg' %}" width="40" height="40" alt="">
                     </span>
                     <span class="brand__text">
                         <strong>UstoHub</strong>
-                        <span>Repair marketplace</span>
+                        <span>{% trans "Repair marketplace" %}</span>
                     </span>
                 </a>
-                <p>UstoHub helps customers create repair requests and helps professionals manage open, assigned, and completed work.</p>
+                <p>{% trans "UstoHub helps customers create repair requests and helps professionals manage open, assigned, and completed work." %}</p>
             </div>
 
-            <div class="footer-links" aria-label="Footer navigation">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'home' %}#how-it-works">How It Works</a>
-                <a href="{% url 'home' %}#services">Categories</a>
-                <a href="{% url 'home' %}#customers">For Customers</a>
-                <a href="{% url 'home' %}#professionals">For Professionals</a>
+            <div class="footer-links" aria-label="{% trans 'Footer navigation' %}">
+                <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                <a href="{% url 'home' %}#how-it-works">{% trans "How It Works" %}</a>
+                <a href="{% url 'home' %}#services">{% trans "Categories" %}</a>
+                <a href="{% url 'home' %}#customers">{% trans "For Customers" %}</a>
+                <a href="{% url 'home' %}#professionals">{% trans "For Professionals" %}</a>
             </div>
 
             <div class="footer-account">
                 {% if request.user.is_authenticated %}
-                    <p>Signed in as <strong>{{ request.user.username }}</strong></p>
+                    <p>{% blocktrans trimmed with username=request.user.username %}Signed in as <strong>{{ username }}</strong>{% endblocktrans %}</p>
                     <form class="logout-form" method="post" action="{% url 'logout' %}">
                         {% csrf_token %}
-                        <button class="btn btn--footer" type="submit">Log out</button>
+                        <button class="btn btn--footer" type="submit">{% trans "Log out" %}</button>
                     </form>
                 {% else %}
-                    <p>Ready to manage a repair?</p>
-                    <a class="btn btn--footer" href="{% url 'register' %}#account-panel">Create account</a>
+                    <p>{% trans "Ready to manage a repair?" %}</p>
+                    <a class="btn btn--footer" href="{% url 'register' %}#account-panel">{% trans "Create account" %}</a>
                 {% endif %}
             </div>
         </div>
         <div class="container footer-bottom">
-            <span>&copy; {% now "Y" %} UstoHub. Built for dependable home repair.</span>
+            <span>&copy; {% now "Y" %} UstoHub. {% trans "Built for dependable home repair." %}</span>
         </div>
     </footer>
 

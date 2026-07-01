@@ -1,26 +1,27 @@
 {% extends "accounts/base.html" %}
+{% load i18n %}
 
-{% block title %}Open Repair Requests | UstoHub{% endblock %}
+{% block title %}{% trans "Open Repair Requests" %} | UstoHub{% endblock %}
 {% block body_class %}page-professional-requests{% endblock %}
-{% block auth_label %}Professional open repair requests{% endblock %}
-{% block hero_eyebrow %}Professional work queue{% endblock %}
-{% block hero_title %}Open Repair Requests{% endblock %}
-{% block hero_text %}Review available customer repair requests that are currently open and ready for professional attention.{% endblock %}
+{% block auth_label %}{% trans "Professional open repair requests" %}{% endblock %}
+{% block hero_eyebrow %}{% trans "Professional work queue" %}{% endblock %}
+{% block hero_title %}{% trans "Open Repair Requests" %}{% endblock %}
+{% block hero_text %}{% trans "Review available customer repair requests that are currently open and ready for professional attention." %}{% endblock %}
 {% block hero_actions %}{% endblock %}
 {% block hero_support %}
-    <div class="repair-list-summary professional-request-summary" aria-label="Open repair request summary">
+    <div class="repair-list-summary professional-request-summary" aria-label="{% trans 'Open repair request summary' %}">
         <div class="repair-list-summary__metric">
             {% with total=repairs|length %}
                 <strong>{{ total }}</strong>
-                <span>open request{{ total|pluralize }}</span>
+                <span>{% blocktrans count total=total %}open request{% plural %}open requests{% endblocktrans %}</span>
             {% endwith %}
         </div>
         <div class="repair-list-summary__copy">
-            <h2>Available customer requests.</h2>
+            <h2>{% trans "Available customer requests." %}</h2>
             {% if repairs %}
-                <p>Newest open repair requests are shown first, with customer-safe details for professional review.</p>
+                <p>{% trans "Newest open repair requests are shown first, with customer-safe details for professional review." %}</p>
             {% else %}
-                <p>No open customer repair requests are available right now.</p>
+                <p>{% trans "No open customer repair requests are available right now." %}</p>
             {% endif %}
         </div>
     </div>
@@ -29,14 +30,14 @@
 {% block content %}
 <article class="auth-card professional-queue-card" aria-labelledby="professional-queue-title">
     <header class="auth-card__header">
-        <span class="status-badge status-badge--info">Professional Queue</span>
-        <h2 id="professional-queue-title">Open work overview.</h2>
+        <span class="status-badge status-badge--info">{% trans "Professional Queue" %}</span>
+        <h2 id="professional-queue-title">{% trans "Open work overview." %}</h2>
         {% if repairs %}
             {% with total=repairs|length %}
-                <p>{{ total }} open repair request{{ total|pluralize }} can be reviewed from this professional workspace.</p>
+                <p>{% blocktrans count total=total %}{{ total }} open repair request can be reviewed from this professional workspace.{% plural %}{{ total }} open repair requests can be reviewed from this professional workspace.{% endblocktrans %}</p>
             {% endwith %}
         {% else %}
-            <p>No open requests are waiting in the professional queue at the moment.</p>
+            <p>{% trans "No open requests are waiting in the professional queue at the moment." %}</p>
         {% endif %}
     </header>
 
@@ -44,7 +45,7 @@
         <span class="icon-tile" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
         </span>
-        <p>Customer contact details stay private here. Use the visible request information to understand the work scope. Accepted requests move to your assigned work queue.</p>
+        <p>{% trans "Customer contact details stay private here. Use the visible request information to understand the work scope. Accepted requests move to your assigned work queue." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -52,21 +53,15 @@
 {% block product_sections %}
 <section class="section repair-list-section professional-request-section" aria-labelledby="professional-request-list-title">
     <div class="container">
-        <nav class="professional-work-switcher" aria-label="Professional repair request views">
-            <a href="{% url 'professional_request_list' %}" aria-current="page">Open Requests</a>
-            <a href="{% url 'professional_assigned_request_list' %}">My Accepted Requests</a>
-            <a href="{% url 'professional_completed_request_list' %}">Completed Requests</a>
-        </nav>
-
         <header class="repair-list-heading">
             <div>
-                <p class="eyebrow">Available requests</p>
-                <h2 id="professional-request-list-title">Customer repair requests.</h2>
-                <p>Each card shows request details for professional review without exposing private customer contact information.</p>
+                <p class="eyebrow">{% trans "Available requests" %}</p>
+                <h2 id="professional-request-list-title">{% trans "Customer repair requests." %}</h2>
+                <p>{% trans "Each card shows request details for professional review without exposing private customer contact information." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}
-                    <p class="repair-list-count">{{ total }} request{{ total|pluralize }} visible</p>
+                    <p class="repair-list-count">{% blocktrans count total=total %}{{ total }} request visible{% plural %}{{ total }} requests visible{% endblocktrans %}</p>
                 {% endwith %}
             {% endif %}
         </header>
@@ -77,12 +72,12 @@
                     <article class="professional-request-card" role="listitem" aria-labelledby="professional-repair-{{ forloop.counter }}-title">
                         <div class="professional-request-card__header">
                             <div>
-                                <p class="repair-request-card__eyebrow">Open Repair Request</p>
+                                <p class="repair-request-card__eyebrow">{% trans "Open Repair Request" %}</p>
                                 <h3 id="professional-repair-{{ forloop.counter }}-title">{{ repair.title }}</h3>
                             </div>
                             <span class="status-badge status-badge--info">
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
-                                Status: {{ repair.get_status_display }}
+                                {% trans "Status" %}: {% trans repair.get_status_display %}
                             </span>
                         </div>
 
@@ -90,23 +85,23 @@
 
                         <dl class="repair-meta-grid professional-request-meta">
                             <div>
-                                <dt>Category</dt>
-                                <dd><span class="request-chip">{{ repair.get_category_display }}</span></dd>
+                                <dt>{% trans "Category" %}</dt>
+                                <dd><span class="request-chip">{% trans repair.get_category_display %}</span></dd>
                             </div>
                             <div>
-                                <dt>Urgency</dt>
+                                <dt>{% trans "Urgency" %}</dt>
                                 <dd>
                                     <span class="request-chip {% if repair.urgency == 'high' %}request-chip--danger{% elif repair.urgency == 'medium' %}request-chip--warning{% else %}request-chip--success{% endif %}">
-                                        {{ repair.get_urgency_display }}
+                                        {% trans repair.get_urgency_display %}
                                     </span>
                                 </dd>
                             </div>
                             <div>
-                                <dt>Created</dt>
+                                <dt>{% trans "Created" %}</dt>
                                 <dd><time datetime="{{ repair.created_at|date:'c' }}">{{ repair.created_at|date:"M j, Y" }}</time></dd>
                             </div>
                             <div>
-                                <dt>Updated</dt>
+                                <dt>{% trans "Updated" %}</dt>
                                 <dd><time datetime="{{ repair.updated_at|date:'c' }}">{{ repair.updated_at|date:"M j, Y" }}</time></dd>
                             </div>
                         </dl>
@@ -119,15 +114,15 @@
                             {% if repair.customer %}
                                 <div class="professional-customer-chip">
                                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 21a8 8 0 0 0-16 0"/><path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
-                                    <span>Customer: {{ repair.customer.username }}</span>
+                                    <span>{% blocktrans trimmed with username=repair.customer.username %}Customer: {{ username }}{% endblocktrans %}</span>
                                 </div>
                             {% endif %}
                         </div>
 
                         <div class="professional-request-card__footer">
-                            <form class="professional-accept-form" method="post" action="{% url 'professional_accept_request' repair.pk %}" aria-label="Accept repair request {{ repair.title }}">
+                            <form class="professional-accept-form" method="post" action="{% url 'professional_accept_request' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Accept repair request {{ title }}{% endblocktrans %}">
                                 {% csrf_token %}
-                                <button class="btn btn--primary professional-request-card__action" type="submit">Accept Request</button>
+                                <button class="btn btn--primary professional-request-card__action" type="submit">{% trans "Accept Request" %}</button>
                             </form>
                         </div>
                     </article>
@@ -138,8 +133,8 @@
                 <span class="empty-state__icon" aria-hidden="true">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/></svg>
                 </span>
-                <h3>No open repair requests.</h3>
-                <p>There are no customer repair requests available for professional review right now. New open requests will appear here when customers submit them.</p>
+                <h3>{% trans "No open repair requests." %}</h3>
+                <p>{% trans "There are no customer repair requests available for professional review right now. New open requests will appear here when customers submit them." %}</p>
             </div>
         {% endif %}
     </div>

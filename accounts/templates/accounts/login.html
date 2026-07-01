@@ -1,24 +1,25 @@
 {% extends "accounts/base.html" %}
+{% load i18n %}
 
-{% block title %}{% if request.user.is_authenticated %}Dashboard | UstoHub{% else %}Log in | UstoHub{% endif %}{% endblock %}
+{% block title %}{% if request.user.is_authenticated %}{% trans "Dashboard" %} | UstoHub{% else %}{% trans "Log in" %} | UstoHub{% endif %}{% endblock %}
 {% block body_class %}page-login{% endblock %}
-{% block auth_label %}{% if request.user.is_authenticated %}UstoHub dashboard access{% else %}Log in to UstoHub{% endif %}{% endblock %}
-{% block hero_eyebrow %}{% if request.user.is_authenticated %}Signed in{% else %}Secure account access{% endif %}{% endblock %}
-{% block hero_title %}{% if request.user.is_authenticated %}Your repair workspace is ready.{% else %}Return to your repair workspace.{% endif %}{% endblock %}
-{% block hero_text %}{% if request.user.is_authenticated %}Continue managing repair requests, professional offers, bookings, warranty records, and account details.{% else %}Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details.{% endif %}{% endblock %}
+{% block auth_label %}{% if request.user.is_authenticated %}{% trans "UstoHub dashboard access" %}{% else %}{% trans "Log in to UstoHub" %}{% endif %}{% endblock %}
+{% block hero_eyebrow %}{% if request.user.is_authenticated %}{% trans "Signed in" %}{% else %}{% trans "Secure account access" %}{% endif %}{% endblock %}
+{% block hero_title %}{% if request.user.is_authenticated %}{% trans "Your repair workspace is ready." %}{% else %}{% trans "Return to your repair workspace." %}{% endif %}{% endblock %}
+{% block hero_text %}{% if request.user.is_authenticated %}{% trans "Continue managing repair requests, professional offers, bookings, warranty records, and account details." %}{% else %}{% trans "Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details." %}{% endif %}{% endblock %}
 {% block hero_actions %}
     {% if request.user.is_authenticated %}
         {% if request.user.user_type == "master" and request.user.is_master_approved %}
-            <a class="btn btn--primary" href="{% url 'professional_request_list' %}">Open Professional Queue</a>
+            <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Open Professional Queue" %}</a>
         {% elif request.user.user_type == "master" %}
-            <a class="btn btn--primary" href="{% url 'approval_pending' %}">View Approval Status</a>
+            <a class="btn btn--primary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
         {% else %}
-            <a class="btn btn--primary" href="{% url 'repair_list' %}">Open Dashboard</a>
+            <a class="btn btn--primary" href="{% url 'repair_list' %}">{% trans "Open Dashboard" %}</a>
         {% endif %}
-        <a class="btn btn--secondary" href="{% url 'home' %}#how-it-works">How UstoHub Works</a>
+        <a class="btn btn--secondary" href="{% url 'home' %}#how-it-works">{% trans "How UstoHub Works" %}</a>
     {% else %}
-        <a class="btn btn--primary" href="#account-panel">Log in securely</a>
-        <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">Create account</a>
+        <a class="btn btn--primary" href="#account-panel">{% trans "Log in securely" %}</a>
+        <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">{% trans "Create account" %}</a>
     {% endif %}
 {% endblock %}
 
@@ -26,24 +27,24 @@
 {% if request.user.is_authenticated %}
 <article class="auth-card auth-card--login" aria-labelledby="signed-in-title">
     <header class="auth-card__header">
-        <span class="status-badge status-badge--success">Signed in</span>
-        <h2 id="signed-in-title">You are already logged in.</h2>
-        <p>Continue to your UstoHub overview or log out from the header when you are finished.</p>
+        <span class="status-badge status-badge--success">{% trans "Signed in" %}</span>
+        <h2 id="signed-in-title">{% trans "You are already logged in." %}</h2>
+        <p>{% trans "Continue to your UstoHub overview or log out from the header when you are finished." %}</p>
     </header>
     {% if request.user.user_type == "master" and request.user.is_master_approved %}
-        <a class="btn btn--primary auth-submit" href="{% url 'professional_request_list' %}">Open Professional Queue</a>
+        <a class="btn btn--primary auth-submit" href="{% url 'professional_request_list' %}">{% trans "Open Professional Queue" %}</a>
     {% elif request.user.user_type == "master" %}
-        <a class="btn btn--primary auth-submit" href="{% url 'approval_pending' %}">View Approval Status</a>
+        <a class="btn btn--primary auth-submit" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
     {% else %}
-        <a class="btn btn--primary auth-submit" href="{% url 'repair_list' %}">Open Dashboard</a>
+        <a class="btn btn--primary auth-submit" href="{% url 'repair_list' %}">{% trans "Open Dashboard" %}</a>
     {% endif %}
 </article>
 {% else %}
 <article class="auth-card auth-card--login" aria-labelledby="login-title">
     <header class="auth-card__header">
-        <span class="status-badge status-badge--info">Protected session</span>
-        <h2 id="login-title">Log in to UstoHub.</h2>
-        <p>Use the username and password connected to your verified account.</p>
+        <span class="status-badge status-badge--info">{% trans "Protected session" %}</span>
+        <h2 id="login-title">{% trans "Log in to UstoHub." %}</h2>
+        <p>{% trans "Use the username and password connected to your verified account." %}</p>
     </header>
 
     <form class="auth-form" method="post" novalidate data-auth-form>
@@ -52,7 +53,7 @@
 
         {% if form.non_field_errors %}
             <div class="form-alert" role="alert">
-                <strong>Login was not successful.</strong>
+                <strong>{% trans "Login was not successful." %}</strong>
                 <ul>
                     {% for error in form.non_field_errors %}
                         <li>{{ error }}</li>
@@ -63,7 +64,7 @@
 
         <div class="field-stack">
             <div class="form-field {% if form.username.errors %}form-field--error{% endif %}" data-field="username">
-                {{ form.username.label_tag }}
+                <label for="{{ form.username.id_for_label }}">{% trans "Username" %}</label>
                 <div class="control">
                     {{ form.username }}
                 </div>
@@ -80,10 +81,10 @@
             </div>
 
             <div class="form-field form-field--password {% if form.password.errors %}form-field--error{% endif %}" data-field="password">
-                {{ form.password.label_tag }}
+                <label for="{{ form.password.id_for_label }}">{% trans "Password" %}</label>
                 <div class="control password-control">
                     {{ form.password }}
-                    <button class="password-toggle" type="button" data-password-toggle aria-label="Show password" aria-pressed="false">
+                    <button class="password-toggle" type="button" data-password-toggle data-label-show="{% trans 'Show password' %}" data-label-hide="{% trans 'Hide password' %}" aria-label="{% trans 'Show password' %}" aria-pressed="false">
                         <svg class="icon icon-show" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
                         <svg class="icon icon-hide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 3 18 18M10.6 10.6A3 3 0 0 0 13.4 13.4M9.9 4.2A10.8 10.8 0 0 1 12 4c6.5 0 10 8 10 8a18.4 18.4 0 0 1-3.2 4.3M6.6 6.6A17.5 17.5 0 0 0 2 12s3.5 8 10 8a10.8 10.8 0 0 0 5.4-1.5"/></svg>
                     </button>
@@ -103,16 +104,16 @@
 
         <p class="trust-note">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5V11Z"/></svg>
-            Secure access keeps account activity tied to the right customer or professional.
+            {% trans "Secure access keeps account activity tied to the right customer or professional." %}
         </p>
 
         <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
-            <span class="btn__label">Log in</span>
+            <span class="btn__label">{% trans "Log in" %}</span>
             <span class="btn__spinner" aria-hidden="true"></span>
         </button>
     </form>
 
-    <p class="auth-switch">New to UstoHub? <a href="{% url 'register' %}#account-panel">Create an account</a></p>
+    <p class="auth-switch">{% trans "New to UstoHub?" %} <a href="{% url 'register' %}#account-panel">{% trans "Create an account" %}</a></p>
 </article>
 {% endif %}
 {% endblock %}

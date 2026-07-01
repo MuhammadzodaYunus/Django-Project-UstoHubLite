@@ -1,72 +1,73 @@
 {% extends "accounts/base.html" %}
+{% load i18n %}
 
-{% block title %}Create account | UstoHub{% endblock %}
+{% block title %}{% trans "Create account" %} | UstoHub{% endblock %}
 {% block body_class %}page-register{% endblock %}
-{% block auth_label %}Create a UstoHub account{% endblock %}
+{% block auth_label %}{% trans "Create a UstoHub account" %}{% endblock %}
 
 {% block content %}
 {% if request.user.is_authenticated %}
     <article class="auth-card dashboard-card" aria-labelledby="dashboard-title">
         <header class="auth-card__header">
-            <span class="status-badge status-badge--success">Signed in</span>
-            <h2 id="dashboard-title">Welcome back, {{ request.user.username }}.</h2>
+            <span class="status-badge status-badge--success">{% trans "Signed in" %}</span>
+            <h2 id="dashboard-title">{% blocktrans trimmed with username=request.user.username %}Welcome back, {{ username }}.{% endblocktrans %}</h2>
             {% if request.user.user_type == "master" and request.user.is_master_approved %}
-                <p>Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available.</p>
+                <p>{% trans "Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available." %}</p>
             {% elif request.user.user_type == "master" %}
-                <p>Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests.</p>
+                <p>{% trans "Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests." %}</p>
             {% else %}
-                <p>Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available.</p>
+                <p>{% trans "Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available." %}</p>
             {% endif %}
         </header>
 
-        <div class="dashboard-overview" aria-label="Account overview">
+        <div class="dashboard-overview" aria-label="{% trans 'Account overview' %}">
             {% if request.user.user_type == "master" and request.user.is_master_approved %}
                 <div class="summary-card">
-                    <span class="summary-card__label">New requests</span>
+                    <span class="summary-card__label">{% trans "New requests" %}</span>
                     <strong>0</strong>
-                    <p>No available repair requests yet.</p>
+                    <p>{% trans "No available repair requests yet." %}</p>
                 </div>
                 <div class="summary-card">
-                    <span class="summary-card__label">Active jobs</span>
+                    <span class="summary-card__label">{% trans "Active jobs" %}</span>
                     <strong>0</strong>
-                    <p>Your booked work will appear here.</p>
+                    <p>{% trans "Your booked work will appear here." %}</p>
                 </div>
                 <div class="summary-card">
-                    <span class="summary-card__label">Reviews</span>
+                    <span class="summary-card__label">{% trans "Reviews" %}</span>
                     <strong>0</strong>
-                    <p>Customer reviews will appear after completed work.</p>
+                    <p>{% trans "Customer reviews will appear after completed work." %}</p>
                 </div>
             {% elif request.user.user_type == "master" %}
                 <div class="summary-card">
-                    <span class="summary-card__label">Account status</span>
-                    <strong>Pending</strong>
-                    <p>Pending admin review.</p>
+                    <span class="summary-card__label">{% trans "Account status" %}</span>
+                    <strong>{% trans "Pending" %}</strong>
+                    <p>{% trans "Pending admin review." %}</p>
                 </div>
                 <div class="summary-card">
-                    <span class="summary-card__label">Professional access</span>
-                    <strong>Locked</strong>
-                    <p>Available after approval.</p>
+                    <span class="summary-card__label">{% trans "Professional access" %}</span>
+                    <strong>{% trans "Locked" %}</strong>
+                    <p>{% trans "Available after approval." %}</p>
                 </div>
                 <div class="summary-card">
-                    <span class="summary-card__label">Request queue</span>
-                    <strong>Hidden</strong>
-                    <p>Hidden until approval is complete.</p>
+                    <span class="summary-card__label">{% trans "Request queue" %}</span>
+                    <strong>{% trans "Hidden" %}</strong>
+                    <p>{% trans "Hidden until approval is complete." %}</p>
                 </div>
             {% else %}
                 <div class="summary-card">
-                    <span class="summary-card__label">Active requests</span>
+                    <span class="summary-card__label">{% trans "Active requests" %}</span>
                     <strong>0</strong>
-                    <p>No active repair requests yet.</p>
+                    <p>{% trans "No active repair requests yet." %}</p>
                 </div>
                 <div class="summary-card">
-                    <span class="summary-card__label">Offers</span>
+                    <span class="summary-card__label">{% trans "Offers" %}</span>
                     <strong>0</strong>
-                    <p>Professional offers will appear here.</p>
+                    <p>{% trans "Professional offers will appear here." %}</p>
                 </div>
                 <div class="summary-card">
-                    <span class="summary-card__label">Warranties</span>
+                    <span class="summary-card__label">{% trans "Warranties" %}</span>
                     <strong>0</strong>
-                    <p>Warranty records will appear after completed repairs.</p>
+                    <p>{% trans "Warranty records will appear after completed repairs." %}</p>
                 </div>
             {% endif %}
         </div>
@@ -76,30 +77,30 @@
                 <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18"/></svg>
             </span>
             {% if request.user.user_type == "master" and request.user.is_master_approved %}
-                <h3>No professional activity yet.</h3>
-                <p>Requests, jobs, customer messages, and reviews will show here when marketplace activity starts.</p>
+                <h3>{% trans "No professional activity yet." %}</h3>
+                <p>{% trans "Requests, jobs, customer messages, and reviews will show here when marketplace activity starts." %}</p>
             {% elif request.user.user_type == "master" %}
-                <h3>Professional approval is pending.</h3>
-                <p>Admin approval is required before you can access Professional queue actions.</p>
-                <a class="btn btn--secondary" href="{% url 'approval_pending' %}">View Approval Status</a>
+                <h3>{% trans "Professional approval is pending." %}</h3>
+                <p>{% trans "Admin approval is required before you can access Professional queue actions." %}</p>
+                <a class="btn btn--secondary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
             {% else %}
-                <h3>No repair activity yet.</h3>
-                <p>Your requests, bookings, repair status, warranties, and reviews will show here when activity starts.</p>
+                <h3>{% trans "No repair activity yet." %}</h3>
+                <p>{% trans "Your requests, bookings, repair status, warranties, and reviews will show here when activity starts." %}</p>
             {% endif %}
         </div>
     </article>
 {% else %}
     <article class="auth-card" aria-labelledby="register-title">
-        <ol class="flow-progress" aria-label="Account progress">
-            <li class="is-active"><span>1</span>Account</li>
-            <li><span>2</span>Verify</li>
-            <li><span>3</span>Ready</li>
+        <ol class="flow-progress" aria-label="{% trans 'Account progress' %}">
+            <li class="is-active"><span>1</span>{% trans "Account" %}</li>
+            <li><span>2</span>{% trans "Verify" %}</li>
+            <li><span>3</span>{% trans "Ready" %}</li>
         </ol>
 
         <header class="auth-card__header">
-            <span class="status-badge status-badge--info">Account setup</span>
-            <h2 id="register-title">Create your repair profile.</h2>
-            <p>Join as a customer or professional. We will send a verification code to your email.</p>
+            <span class="status-badge status-badge--info">{% trans "Account setup" %}</span>
+            <h2 id="register-title">{% trans "Create your repair profile." %}</h2>
+            <p>{% trans "Join as a customer or professional. We will send a verification code to your email." %}</p>
         </header>
 
         <form class="auth-form" method="post" novalidate data-auth-form>
@@ -108,7 +109,7 @@
 
             {% if form.non_field_errors %}
                 <div class="form-alert" role="alert">
-                    <strong>Account details need attention.</strong>
+                    <strong>{% trans "Account details need attention." %}</strong>
                     <ul>
                         {% for error in form.non_field_errors %}
                             <li>{{ error }}</li>
@@ -119,7 +120,7 @@
 
             <div class="field-grid">
                 <div class="form-field {% if form.username.errors %}form-field--error{% endif %}" data-field="username">
-                    {{ form.username.label_tag }}
+                    <label for="{{ form.username.id_for_label }}">{% trans "Username" %}</label>
                     <div class="control">
                         {{ form.username }}
                     </div>
@@ -136,7 +137,7 @@
                 </div>
 
                 <div class="form-field {% if form.email.errors %}form-field--error{% endif %}" data-field="email">
-                    {{ form.email.label_tag }}
+                    <label for="{{ form.email.id_for_label }}">{% trans "Email" %}</label>
                     <div class="control">
                         {{ form.email }}
                     </div>
@@ -153,14 +154,14 @@
                 </div>
 
                 <div class="form-field form-field--wide form-field--compact {% if form.phone_number.errors %}form-field--error{% endif %}" data-field="phone_number">
-                    {{ form.phone_number.label_tag }}
+                    <label for="{{ form.phone_number.id_for_label }}">{% trans "Phone number" %}</label>
                     <div class="control">
                         {{ form.phone_number }}
                     </div>
                     {% if form.phone_number.help_text %}
                         <div id="id_phone_number_help" class="field-hint">{{ form.phone_number.help_text|safe }}</div>
                     {% else %}
-                        <p id="id_phone_number_help" class="field-hint">Optional account contact number.</p>
+                        <p id="id_phone_number_help" class="field-hint">{% trans "Optional account contact number." %}</p>
                     {% endif %}
                     {% if form.phone_number.errors %}
                         <ul id="id_phone_number_errors" class="field-errors">
@@ -172,7 +173,7 @@
                 </div>
 
                 <div class="form-field form-field--wide {% if form.user_type.errors %}form-field--error{% endif %}" data-field="user_type">
-                    <span class="field-label" id="id_user_type_label">I am joining as</span>
+                    <span class="field-label" id="id_user_type_label">{% trans "I am joining as" %}</span>
                     <div class="role-select" data-role-picker>
                         <div class="role-options" role="radiogroup" aria-labelledby="id_user_type_label"{% if form.user_type.help_text or form.user_type.errors %} aria-describedby="{% if form.user_type.help_text %}id_user_type_help{% endif %}{% if form.user_type.errors %}{% if form.user_type.help_text %} {% endif %}id_user_type_errors{% endif %}"{% endif %}>
                             {% with selected=form.user_type.value|default:"customer" %}
@@ -196,8 +197,8 @@
                                             {% endif %}
                                         </span>
                                         <span class="role-option__content">
-                                            <strong>{% if value == "master" %}Professional{% else %}{{ label }}{% endif %}</strong>
-                                            <small>{% if value == "master" %}Respond to repair requests{% else %}Request and track repairs{% endif %}</small>
+                                            <strong>{% if value == "master" %}{% trans "Professional" %}{% else %}{% trans label %}{% endif %}</strong>
+                                            <small>{% if value == "master" %}{% trans "Respond to repair requests" %}{% else %}{% trans "Request and track repairs" %}{% endif %}</small>
                                         </span>
                                         <span class="role-option__check" aria-hidden="true">
                                             <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
@@ -220,17 +221,17 @@
                 </div>
 
                 <div class="form-field form-field--wide form-field--password {% if form.password1.errors %}form-field--error{% endif %}" data-field="password1">
-                    {{ form.password1.label_tag }}
+                    <label for="{{ form.password1.id_for_label }}">{% trans "Password" %}</label>
                     <div class="control password-control">
                         {{ form.password1 }}
-                        <button class="password-toggle" type="button" data-password-toggle aria-label="Show password" aria-pressed="false">
+                        <button class="password-toggle" type="button" data-password-toggle data-label-show="{% trans 'Show password' %}" data-label-hide="{% trans 'Hide password' %}" aria-label="{% trans 'Show password' %}" aria-pressed="false">
                             <svg class="icon icon-show" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
                             <svg class="icon icon-hide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 3 18 18M10.6 10.6A3 3 0 0 0 13.4 13.4M9.9 4.2A10.8 10.8 0 0 1 12 4c6.5 0 10 8 10 8a18.4 18.4 0 0 1-3.2 4.3M6.6 6.6A17.5 17.5 0 0 0 2 12s3.5 8 10 8a10.8 10.8 0 0 0 5.4-1.5"/></svg>
                         </button>
                     </div>
                     {% if form.password1.help_text %}
                         <details class="password-requirements"{% if form.password1.errors %} open{% endif %}>
-                            <summary>Password requirements</summary>
+                            <summary>{% trans "Password requirements" %}</summary>
                             <div id="id_password1_help" class="field-hint">{{ form.password1.help_text|safe }}</div>
                         </details>
                     {% endif %}
@@ -244,10 +245,10 @@
                 </div>
 
                 <div class="form-field form-field--wide form-field--password {% if form.password2.errors %}form-field--error{% endif %}" data-field="password2">
-                    {{ form.password2.label_tag }}
+                    <label for="{{ form.password2.id_for_label }}">{% trans "Password confirmation" %}</label>
                     <div class="control password-control">
                         {{ form.password2 }}
-                        <button class="password-toggle" type="button" data-password-toggle aria-label="Show password confirmation" aria-pressed="false">
+                        <button class="password-toggle" type="button" data-password-toggle data-label-show="{% trans 'Show password confirmation' %}" data-label-hide="{% trans 'Hide password confirmation' %}" aria-label="{% trans 'Show password confirmation' %}" aria-pressed="false">
                             <svg class="icon icon-show" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
                             <svg class="icon icon-hide" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 3 18 18M10.6 10.6A3 3 0 0 0 13.4 13.4M9.9 4.2A10.8 10.8 0 0 1 12 4c6.5 0 10 8 10 8a18.4 18.4 0 0 1-3.2 4.3M6.6 6.6A17.5 17.5 0 0 0 2 12s3.5 8 10 8a10.8 10.8 0 0 0 5.4-1.5"/></svg>
                         </button>
@@ -267,16 +268,16 @@
 
             <p class="trust-note">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-                Account verification helps keep repair requests and professional activity secure.
+                {% trans "Account verification helps keep repair requests and professional activity secure." %}
             </p>
 
             <button class="btn btn--primary auth-submit" type="submit" data-submit-button>
-                <span class="btn__label">Create account</span>
+                <span class="btn__label">{% trans "Create account" %}</span>
                 <span class="btn__spinner" aria-hidden="true"></span>
             </button>
         </form>
 
-        <p class="auth-switch">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+        <p class="auth-switch">{% trans "Already have an account?" %} <a href="{% url 'login' %}">{% trans "Log in" %}</a></p>
     </article>
 {% endif %}
 {% endblock %}

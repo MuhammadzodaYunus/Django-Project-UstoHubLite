@@ -1,5 +1,7 @@
+{% load i18n %}
+
 {% if messages %}
-    <section class="message-region container" aria-label="Notifications">
+    <section class="message-region container" aria-label="{% trans 'Notifications' %}">
         {% for message in messages %}
             <div class="notice notice--{{ message.tags|default:'info' }}" role="status">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">

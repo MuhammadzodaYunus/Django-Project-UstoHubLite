@@ -4,6 +4,7 @@ from .forms import RepairRequestForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from accounts.permissions import is_customer, is_approved_master
+from django.contrib import messages
 
 @login_required
 def repair_create_view(request):
@@ -107,6 +108,7 @@ def repair_update_view(request, pk):
         return render(request, 'repairs/repair_form.html', {'form': form})
     
     else:
+        messages.error(request, 'This repair request cannot be edited because a professional has already accepted it or the work is completed.')
         return redirect('repair_detail', pk=repair.pk)
 
 
@@ -131,6 +133,7 @@ def repair_delete_view(request, pk):
             return render(request, 'repairs/repair_confirm_delete.html', {'repair': repair})
         
     else:
+        messages.error(request, 'This repair request cannot be deleted because a professional has already accepted it or the work is completed.')
         return redirect('repair_detail', pk=repair.pk)
     
 

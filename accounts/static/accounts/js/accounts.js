@@ -64,8 +64,6 @@
     };
 
     var syncThemeControls = function (theme) {
-        var nextTheme = theme === "dark" ? "light" : "dark";
-        var label = theme === "dark" ? "Dark" : "Light";
         var metaThemeColor = document.querySelector("[data-theme-color]");
 
         root.style.colorScheme = theme;
@@ -75,11 +73,19 @@
         }
 
         document.querySelectorAll("[data-theme-toggle]").forEach(function (toggle) {
+            var nextTheme = theme === "dark" ? "light" : "dark";
+            var switchLabel = nextTheme === "dark" ? toggle.dataset.themeSwitchDark : toggle.dataset.themeSwitchLight;
+
             toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-            toggle.setAttribute("aria-label", "Switch to " + nextTheme + " theme");
+            toggle.setAttribute("aria-label", switchLabel || ("Switch to " + nextTheme + " theme"));
         });
 
         document.querySelectorAll("[data-theme-label]").forEach(function (item) {
+            var toggle = item.closest("[data-theme-toggle]");
+            var label = theme === "dark"
+                ? (toggle && toggle.dataset.themeLabelDark) || "Dark"
+                : (toggle && toggle.dataset.themeLabelLight) || "Light";
+
             item.textContent = label;
         });
     };
@@ -370,7 +376,7 @@
             });
         });
 
-        document.querySelectorAll(".btn, .site-nav__links a, .nav-dashboard, .nav-pending-status, .professional-nav__link, .professional-work-switcher a, .nav-toggle, .theme-toggle, .password-toggle, .role-option").forEach(function (control) {
+        document.querySelectorAll(".btn, .site-nav__links a, .workspace-nav__link, .language-switcher button, .nav-toggle, .theme-toggle, .password-toggle, .role-option").forEach(function (control) {
             var press = function () {
                 control.classList.add("is-pressed");
             };
@@ -687,7 +693,7 @@
                 input.type = shouldShow ? "text" : "password";
                 button.classList.toggle("is-visible", shouldShow);
                 button.setAttribute("aria-pressed", shouldShow ? "true" : "false");
-                button.setAttribute("aria-label", shouldShow ? "Hide password" : "Show password");
+                button.setAttribute("aria-label", shouldShow ? (button.dataset.labelHide || "Hide password") : (button.dataset.labelShow || "Show password"));
                 focusInput(input);
             });
         });
@@ -864,19 +870,19 @@
 
             var sync = function () {
                 if (titleTarget) {
-                    titleTarget.textContent = titleInput && titleInput.value.trim() ? titleInput.value.trim() : "Untitled repair request";
+                    titleTarget.textContent = titleInput && titleInput.value.trim() ? titleInput.value.trim() : (titleTarget.dataset.emptyText || "Untitled repair request");
                 }
 
                 if (categoryTarget) {
-                    categoryTarget.textContent = getSelectedText(categorySelect, "Choose a service category");
+                    categoryTarget.textContent = getSelectedText(categorySelect, categoryTarget.dataset.emptyText || "Choose a service category");
                 }
 
                 if (urgencyTarget) {
-                    urgencyTarget.textContent = getSelectedText(urgencySelect, "Set urgency");
+                    urgencyTarget.textContent = getSelectedText(urgencySelect, urgencyTarget.dataset.emptyText || "Set urgency");
                 }
 
                 if (addressTarget) {
-                    addressTarget.textContent = addressInput && addressInput.value.trim() ? addressInput.value.trim() : "Add the service address";
+                    addressTarget.textContent = addressInput && addressInput.value.trim() ? addressInput.value.trim() : (addressTarget.dataset.emptyText || "Add the service address");
                 }
             };
 
