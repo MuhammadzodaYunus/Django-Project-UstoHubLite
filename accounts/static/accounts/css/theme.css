@@ -199,6 +199,14 @@ html[data-theme="dark"] .nav-toggle {
     border-color: var(--color-border);
 }
 
+html[data-theme="dark"] .nav-toggle:hover,
+html[data-theme="dark"] .nav-toggle:focus-visible,
+html[data-theme="dark"] .nav-toggle[aria-expanded="true"] {
+    color: var(--color-navy);
+    background: var(--theme-surface-soft);
+    border-color: var(--color-border-strong);
+}
+
 html[data-theme="dark"] .site-nav__links a,
 html[data-theme="dark"] .nav-dashboard {
     color: var(--color-text-soft);
@@ -234,6 +242,12 @@ html[data-theme="dark"] .professional-nav__link[aria-current="page"],
 html[data-theme="dark"] .professional-work-switcher a[aria-current="page"] {
     color: #ffffff;
     background: var(--theme-brand);
+}
+
+html[data-theme="dark"] .professional-work-switcher a:hover,
+html[data-theme="dark"] .professional-work-switcher a:focus-visible {
+    color: var(--color-navy);
+    background: var(--theme-control-hover);
 }
 
 html[data-theme="dark"] .nav-pending-status {
@@ -345,6 +359,13 @@ html[data-theme="dark"] .btn--footer {
     border-color: rgba(255, 255, 255, 0.24);
 }
 
+html[data-theme="dark"] .btn--footer:hover,
+html[data-theme="dark"] .btn--footer:focus-visible {
+    color: var(--color-navy);
+    background: var(--theme-control-hover);
+    border-color: var(--color-border-strong);
+}
+
 html[data-theme="dark"] .status-badge,
 html[data-theme="dark"] .request-chip {
     color: var(--color-text);
@@ -450,12 +471,65 @@ html[data-theme="dark"] :is(
     background: var(--theme-surface-muted);
 }
 
+html[data-theme="dark"] .workflow-preview {
+    --workflow-step-bg: var(--theme-surface-muted);
+    --workflow-step-bg-hover: var(--theme-surface-soft);
+    --workflow-step-border-hover: rgba(251, 146, 60, 0.42);
+    --workflow-step-shadow-hover: 0 16px 34px rgba(0, 0, 0, 0.26);
+    --workflow-step-number-ring: rgba(251, 146, 60, 0.34);
+    --workflow-step-number-shadow: 0 0 0 3px rgba(251, 146, 60, 0.08), 0 10px 20px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] .workflow-steps li {
+    color: var(--color-text);
+    background: var(--workflow-step-bg);
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .process-list {
+    --process-card-bg: var(--theme-surface-elevated);
+    --process-card-bg-hover: var(--theme-surface-soft);
+    --process-card-border-hover: rgba(251, 146, 60, 0.38);
+    --process-card-title: var(--color-text);
+    --process-card-text: var(--color-text-soft);
+    --process-card-number-ring: rgba(251, 146, 60, 0.34);
+    --process-card-number-shadow: 0 0 0 3px rgba(251, 146, 60, 0.08), 0 10px 20px rgba(0, 0, 0, 0.22);
+    --process-card-shadow-hover: 0 18px 38px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .process-list li {
+    color: var(--process-card-text);
+    background: var(--process-card-bg);
+    border-color: var(--color-border);
+}
+
 html[data-theme="dark"] .approval-signal--primary,
 html[data-theme="dark"] .category-card.hover-surface:hover,
 html[data-theme="dark"] .category-card.hover-surface.is-pointer-active,
+html[data-theme="dark"] .approval-trust-card.hover-surface:hover,
+html[data-theme="dark"] .approval-trust-card.hover-surface.is-pointer-active,
 html[data-theme="dark"] .home-principle-card,
 html[data-theme="dark"] .service-photo-band__content {
     background: linear-gradient(180deg, var(--theme-surface-elevated) 0%, var(--theme-surface) 100%);
+}
+
+html[data-theme="dark"] .trust-grid .hover-surface:hover,
+html[data-theme="dark"] .trust-grid .hover-surface.is-pointer-active {
+    background: var(--theme-surface-elevated);
+    border-color: rgba(74, 222, 128, 0.26);
+}
+
+html[data-theme="dark"] .repair-request-card.hover-surface:hover .repair-meta-grid div,
+html[data-theme="dark"] .repair-request-card.hover-surface.is-pointer-active .repair-meta-grid div,
+html[data-theme="dark"] .professional-request-card.hover-surface:hover .repair-meta-grid div,
+html[data-theme="dark"] .professional-request-card.hover-surface.is-pointer-active .repair-meta-grid div {
+    background: var(--theme-surface-muted);
+    border-color: var(--color-border-strong);
+}
+
+html[data-theme="dark"] .professional-request-card.hover-surface:hover h3,
+html[data-theme="dark"] .professional-request-card.hover-surface.is-pointer-active h3 {
+    color: var(--color-text);
 }
 
 html[data-theme="dark"] :is(.home-role-card__mark, .icon-tile, .empty-state__icon, .approval-hero-metric__icon) {
