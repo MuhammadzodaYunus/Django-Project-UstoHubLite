@@ -261,8 +261,8 @@ def customer_decline_master_view(request, pk):
     
     repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user, status='pending_customer', assigned_master__isnull=False)
 
-repair.assigned_master = None
-repair.status = 'open'
-repair.save()
-messages.success(request, 'Professional request declined. Your repair request iopen again.')
-return redirect('repair_detail', pk=repair.pk)
+    repair.assigned_master = None
+    repair.status = 'open'
+    repair.save()
+    messages.success(request, 'Professional request declined. Your repair request iopen again.')
+    return redirect('repair_detail', pk=repair.pk)
