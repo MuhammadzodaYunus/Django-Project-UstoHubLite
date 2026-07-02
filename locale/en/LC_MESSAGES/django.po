@@ -2436,6 +2436,90 @@ msgstr "Clear filters to return to your full request list."
 msgid "Create a request when something needs attention."
 msgstr "Create a request when something needs attention."
 
+#: accounts/templates/accounts/partials/messages.html:12
+msgid "We sent a verification code to your email."
+msgstr "We sent a verification code to your email."
+
+#: accounts/templates/accounts/partials/messages.html:14
+msgid "Your email was verified successfully."
+msgstr "Your email was verified successfully."
+
+#: accounts/templates/accounts/partials/messages.html:16
+msgid "Your professional account is waiting for admin approval."
+msgstr "Your professional account is waiting for admin approval."
+
+#: accounts/templates/accounts/partials/messages.html:18
+msgid "Signed in successfully."
+msgstr "Signed in successfully."
+
+#: accounts/templates/accounts/partials/messages.html:20
+msgid "Signed out successfully."
+msgstr "Signed out successfully."
+
+#: accounts/templates/accounts/partials/messages.html:22
+msgid "Repair request created successfully."
+msgstr "Repair request created successfully."
+
+#: accounts/templates/accounts/partials/messages.html:24
+msgid "Repair request updated successfully."
+msgstr "Repair request updated successfully."
+
+#: accounts/templates/accounts/partials/messages.html:26
+msgid "Repair request deleted successfully."
+msgstr "Repair request deleted successfully."
+
+#: accounts/templates/accounts/partials/messages.html:28
+msgid "Repair request cancelled successfully."
+msgstr "Repair request cancelled successfully."
+
+#: accounts/templates/accounts/partials/messages.html:30
+msgid "Repair request accepted successfully."
+msgstr "Repair request accepted successfully."
+
+#: accounts/templates/accounts/partials/messages.html:32
+msgid "Repair request marked as completed."
+msgstr "Repair request marked as completed."
+
+#: accounts/templates/accounts/partials/messages.html:34
+msgid ""
+"This repair request cannot be edited because a professional has already "
+"accepted it or the work is completed."
+msgstr ""
+"This repair request cannot be edited because a professional has already "
+"accepted it or the work is completed."
+
+#: accounts/templates/accounts/partials/messages.html:36
+msgid ""
+"This repair request cannot be deleted because a professional has already "
+"accepted it or the work is completed."
+msgstr ""
+"This repair request cannot be deleted because a professional has already "
+"accepted it or the work is completed."
+
+#: accounts/templates/accounts/partials/messages.html:38
+msgid ""
+"This repair request cannot be cancelled because a professional has already "
+"accepted it or the work is completed."
+msgstr ""
+"This repair request cannot be cancelled because a professional has already "
+"accepted it or the work is completed."
+
+#: repairs/templates/repairs/repair_detail.html:163
+msgid "Cancel repair request %(title)s"
+msgstr "Cancel repair request %(title)s"
+
+#: repairs/templates/repairs/repair_detail.html:165
+msgid "Cancel Request"
+msgstr "Cancel Request"
+
+#: repairs/templates/repairs/repair_detail.html:171
+msgid ""
+"This repair request can no longer be edited, deleted, or cancelled because a "
+"professional has already accepted it or the work is completed."
+msgstr ""
+"This repair request can no longer be edited, deleted, or cancelled because a "
+"professional has already accepted it or the work is completed."
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

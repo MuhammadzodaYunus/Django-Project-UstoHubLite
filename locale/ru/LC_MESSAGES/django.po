@@ -2467,6 +2467,90 @@ msgstr "Очистите фильтры, чтобы вернуться к пол
 msgid "Create a request when something needs attention."
 msgstr "Создайте заявку, когда что-то требует внимания."
 
+#: accounts/templates/accounts/partials/messages.html:12
+msgid "We sent a verification code to your email."
+msgstr "Мы отправили код подтверждения на вашу электронную почту."
+
+#: accounts/templates/accounts/partials/messages.html:14
+msgid "Your email was verified successfully."
+msgstr "Ваш адрес электронной почты успешно подтвержден."
+
+#: accounts/templates/accounts/partials/messages.html:16
+msgid "Your professional account is waiting for admin approval."
+msgstr "Ваш аккаунт специалиста ожидает одобрения администратора."
+
+#: accounts/templates/accounts/partials/messages.html:18
+msgid "Signed in successfully."
+msgstr "Вход выполнен успешно."
+
+#: accounts/templates/accounts/partials/messages.html:20
+msgid "Signed out successfully."
+msgstr "Вы успешно вышли из аккаунта."
+
+#: accounts/templates/accounts/partials/messages.html:22
+msgid "Repair request created successfully."
+msgstr "Заявка на ремонт успешно создана."
+
+#: accounts/templates/accounts/partials/messages.html:24
+msgid "Repair request updated successfully."
+msgstr "Заявка на ремонт успешно обновлена."
+
+#: accounts/templates/accounts/partials/messages.html:26
+msgid "Repair request deleted successfully."
+msgstr "Заявка на ремонт успешно удалена."
+
+#: accounts/templates/accounts/partials/messages.html:28
+msgid "Repair request cancelled successfully."
+msgstr "Заявка на ремонт успешно отменена."
+
+#: accounts/templates/accounts/partials/messages.html:30
+msgid "Repair request accepted successfully."
+msgstr "Заявка на ремонт успешно принята."
+
+#: accounts/templates/accounts/partials/messages.html:32
+msgid "Repair request marked as completed."
+msgstr "Заявка на ремонт отмечена как завершенная."
+
+#: accounts/templates/accounts/partials/messages.html:34
+msgid ""
+"This repair request cannot be edited because a professional has already "
+"accepted it or the work is completed."
+msgstr ""
+"Эту заявку нельзя редактировать, потому что специалист уже принял ее или "
+"работа завершена."
+
+#: accounts/templates/accounts/partials/messages.html:36
+msgid ""
+"This repair request cannot be deleted because a professional has already "
+"accepted it or the work is completed."
+msgstr ""
+"Эту заявку нельзя удалить, потому что специалист уже принял ее или работа "
+"завершена."
+
+#: accounts/templates/accounts/partials/messages.html:38
+msgid ""
+"This repair request cannot be cancelled because a professional has already "
+"accepted it or the work is completed."
+msgstr ""
+"Эту заявку нельзя отменить, потому что специалист уже принял ее или работа "
+"завершена."
+
+#: repairs/templates/repairs/repair_detail.html:163
+msgid "Cancel repair request %(title)s"
+msgstr "Отменить заявку на ремонт «%(title)s»"
+
+#: repairs/templates/repairs/repair_detail.html:165
+msgid "Cancel Request"
+msgstr "Отменить заявку"
+
+#: repairs/templates/repairs/repair_detail.html:171
+msgid ""
+"This repair request can no longer be edited, deleted, or cancelled because a "
+"professional has already accepted it or the work is completed."
+msgstr ""
+"Эту заявку на ремонт больше нельзя редактировать, удалять или отменять, "
+"потому что специалист уже принял ее или работа завершена."
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

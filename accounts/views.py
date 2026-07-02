@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from accounts.permissions import is_customer, is_approved_master
-
+from django.contrib import messages
 
 @login_required
 def pending_approval_view(request):
@@ -28,6 +28,7 @@ def register_view(request):
             user.is_active = False
             user.save()
             send_verification_code(user=user)
+            messages.info(request, "We sent a verification code to your email.")
             request.session["pending_verification_user_id"] = user.id
             return redirect('verify_email')
     else:
@@ -70,11 +71,14 @@ def verify_email_view(request):
                 request.session.pop("pending_verification_user_id", None)
 
                 login(request, user)
+                messages.success(request, "Your email was verified successfully.")
+
                 if is_customer(request.user):
                     return redirect('repair_list')
                 elif is_approved_master(request.user):
                     return redirect('professional_request_list')
                 elif request.user.user_type == 'master' and not is_approved_master(request.user):
+                    messages.info(request, "Your professional account is waiting for admin approval.")
                     return redirect('approval_pending')
                             
     else:
@@ -91,11 +95,13 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            messages.success(request, "Signed in successfully.")
             if is_customer(request.user):
                 return redirect('repair_list')
             elif is_approved_master(request.user):
                 return redirect('professional_request_list')
             elif request.user.user_type == 'master' and not is_approved_master(request.user):
+                messages.info(request, "Your professional account is waiting for admin approval.")
                 return redirect('approval_pending')
 
     else:
@@ -105,4 +111,5 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
+    messages.success(request, "Signed out successfully.")
     return redirect('login')

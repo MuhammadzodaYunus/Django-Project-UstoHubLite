@@ -147,14 +147,28 @@
         <address>{{ repair.address }}</address>
     </section>
 
-    <div class="repair-detail-actions">
-        <a class="btn btn--secondary repair-detail-edit-action" href="{% url 'repair_update' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Edit repair request {{ title }}{% endblocktrans %}">
-            {% trans "Edit Request" %}
-        </a>
-        <a class="btn btn--secondary repair-detail-delete-action" href="{% url 'repair_delete' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Delete repair request {{ title }}{% endblocktrans %}">
-            {% trans "Delete Request" %}
-        </a>
-        <a class="btn btn--secondary" href="{% url 'repair_list' %}">{% trans "Back to My Requests" %}</a>
-    </div>
+    {% if repair.status == "open" and not repair.assigned_master %}
+        <div class="repair-detail-actions">
+            <a class="btn btn--secondary repair-detail-edit-action" href="{% url 'repair_update' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Edit repair request {{ title }}{% endblocktrans %}">
+                {% trans "Edit Request" %}
+            </a>
+            <a class="btn btn--secondary repair-detail-delete-action" href="{% url 'repair_delete' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Delete repair request {{ title }}{% endblocktrans %}">
+                {% trans "Delete Request" %}
+            </a>
+            <form class="repair-detail-cancel-form" method="post" action="{% url 'repair_cancel' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Cancel repair request {{ title }}{% endblocktrans %}">
+                {% csrf_token %}
+                <button class="btn btn--danger repair-detail-cancel-action" type="submit">{% trans "Cancel Request" %}</button>
+            </form>
+            <a class="btn btn--secondary" href="{% url 'repair_list' %}">{% trans "Back to My Requests" %}</a>
+        </div>
+    {% else %}
+        <div class="trust-note repair-detail-locked-note" role="note">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
+            <span>{% trans "This repair request can no longer be edited, deleted, or cancelled because a professional has already accepted it or the work is completed." %}</span>
+        </div>
+        <div class="repair-detail-actions">
+            <a class="btn btn--secondary" href="{% url 'repair_list' %}">{% trans "Back to My Requests" %}</a>
+        </div>
+    {% endif %}
 </article>
 {% endblock %}

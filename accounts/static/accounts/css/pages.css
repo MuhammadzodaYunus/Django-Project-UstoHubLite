@@ -1817,6 +1817,19 @@
   gap: 10px;
 }
 
+.repair-detail-cancel-form {
+  display: flex;
+  margin: 0;
+}
+
+.repair-detail-locked-note {
+  margin-top: 20px;
+}
+
+.repair-detail-locked-note span {
+  line-height: 1.55;
+}
+
 .repair-detail-edit-action {
   border-color: var(--color-border-strong);
 }
