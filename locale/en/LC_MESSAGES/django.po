@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UstoHub Lite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-01 00:00+0000\n"
+"POT-Creation-Date: 2026-07-02 00:08+0000\n"
 "PO-Revision-Date: 2026-07-01 00:00+0000\n"
 "Last-Translator: UstoHub Lite\n"
 "Language-Team: English\n"
@@ -12,1781 +12,3153 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "4-step repair path"
-msgstr "4-step repair path"
-
-msgid "A clear path from issue to completed repair."
-msgstr "A clear path from issue to completed repair."
-
-msgid "A customer can save the title, description, category, urgency, and address for each repair request."
-msgstr "A customer can save the title, description, category, urgency, and address for each repair request."
-
-msgid "A practical workspace for trusted service providers."
-msgstr "A practical workspace for trusted service providers."
-
-msgid "A professional account can view open requests and accept available work from the queue."
-msgstr "A professional account can view open requests and accept available work from the queue."
-
-msgid "A professional assignment will appear here after the request is accepted."
-msgstr "A professional assignment will appear here after the request is accepted."
-
-msgid "A serious MVP should be honest about what it does."
-msgstr "A serious MVP should be honest about what it does."
-
-msgid "A short summary such as \"Kitchen sink is leaking.\""
-msgstr "A short summary such as \"Kitchen sink is leaking.\""
-
-msgid "A simple repair workflow with real account roles."
-msgstr "A simple repair workflow with real account roles."
-
-msgid "Accept Request"
-msgstr "Accept Request"
-
-msgid "Accept and complete repair work."
-msgstr "Accept and complete repair work."
-
-msgid "Accept repair request %(title)s"
-msgstr "Accept repair request %(title)s"
-
-msgid "Accept suitable work"
-msgstr "Accept suitable work"
-
-msgid "Accepted"
-msgstr "Accepted"
-
-msgid "Accepted customer requests will appear here after you use the open request queue."
-msgstr "Accepted customer requests will appear here after you use the open request queue."
-
-msgid "Accepted work"
-msgstr "Accepted work"
-
-msgid "Accepted work in progress."
-msgstr "Accepted work in progress."
-
-msgid "Accessible interface standard"
-msgstr "Accessible interface standard"
-
-msgid "Account"
-msgstr "Account"
-
-msgid "Account created"
-msgstr "Account created"
-
-msgid "Account details need attention."
-msgstr "Account details need attention."
-
-msgid "Account for service history"
-msgstr "Account for service history"
-
-msgid "Account options"
-msgstr "Account options"
-
-msgid "Account overview"
-msgstr "Account overview"
-
-msgid "Account ownership"
-msgstr "Account ownership"
-
-msgid "Account progress"
-msgstr "Account progress"
-
-msgid "Account protected."
-msgstr "Account protected."
-
-msgid "Account setup"
-msgstr "Account setup"
-
-msgid "Account status"
-msgstr "Account status"
-
-msgid "Account verification"
-msgstr "Account verification"
-
-msgid "Account verification helps keep repair requests and professional activity secure."
-msgstr "Account verification helps keep repair requests and professional activity secure."
-
-msgid "Active filters"
-msgstr "Active filters"
-
-msgid "Active jobs"
-msgstr "Active jobs"
-
-msgid "Active requests"
-msgstr "Active requests"
-
-msgid "Add photos or video."
-msgstr "Add photos or video."
-
-msgid "Add the service address"
-msgstr "Add the service address"
-
-msgid "Address"
-msgstr "Address"
-
-msgid "Adjust the title, description, category, urgency, or address so the request stays accurate."
-msgstr "Adjust the title, description, category, urgency, or address so the request stays accurate."
-
-msgid "Admin approval is required before you can access Professional queue actions."
-msgstr "Admin approval is required before you can access Professional queue actions."
-
-msgid "Admin review"
-msgstr "Admin review"
-
-msgid "Admin review adds a calm checkpoint before Professionals begin accepting work."
-msgstr "Admin review adds a calm checkpoint before Professionals begin accepting work."
-
-msgid "After approval, you can accept Repair Requests from customers."
-msgstr "After approval, you can accept Repair Requests from customers."
-
-msgid "After approval, you will be able to accept repair requests."
-msgstr "After approval, you will be able to accept repair requests."
-
-msgid "After approval, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
-msgstr "After approval, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
-
-msgid "After you delete this request, UstoHub will no longer show it in your repair request list."
-msgstr "After you delete this request, UstoHub will no longer show it in your repair request list."
-
-msgid "All categories"
-msgstr "All categories"
-
-msgid "All required fields are marked. UstoHub will review the request details before saving them."
-msgstr "All required fields are marked. UstoHub will review the request details before saving them."
-
-msgid "All statuses"
-msgstr "All statuses"
-
-msgid "All urgency levels"
-msgstr "All urgency levels"
-
-msgid "Already have an account?"
-msgstr "Already have an account?"
-
-msgid "An accepted request moves into active professional work."
-msgstr "An accepted request moves into active professional work."
-
-msgid "An admin reviews the account before Professional access is activated."
-msgstr "An admin reviews the account before Professional access is activated."
-
-msgid "Appliance"
-msgstr "Appliance"
-
-msgid "Appliance Repair"
-msgstr "Appliance Repair"
-
-msgid "Apply Filters"
-msgstr "Apply Filters"
-
-msgid "Approval helps keep the marketplace dependable."
-msgstr "Approval helps keep the marketplace dependable."
-
-msgid "Approval protects customers and keeps professional access controlled."
-msgstr "Approval protects customers and keeps professional access controlled."
-
-msgid "Approved Professionals get the right request queue and workspace actions."
-msgstr "Approved Professionals get the right request queue and workspace actions."
-
-msgid "Are professional offers available now?"
-msgstr "Are professional offers available now?"
-
-msgid "Assembly, fixes, mounting, and furniture-related service work."
-msgstr "Assembly, fixes, mounting, and furniture-related service work."
-
-msgid "Assembly, mounting, adjustments, and safe installation."
-msgstr "Assembly, mounting, adjustments, and safe installation."
-
-msgid "Assigned Repair Request"
-msgstr "Assigned Repair Request"
-
-msgid "Assigned repair request summary"
-msgstr "Assigned repair request summary"
-
-msgid "Assigned work overview."
-msgstr "Assigned work overview."
-
-msgid "Available after approval"
-msgstr "Available after approval"
-
-msgid "Available after approval."
-msgstr "Available after approval."
-
-msgid "Available customer requests."
-msgstr "Available customer requests."
-
-msgid "Available requests"
-msgstr "Available requests"
-
-msgid "Back to Home"
-msgstr "Back to Home"
-
-msgid "Back to My Requests"
-msgstr "Back to My Requests"
-
-msgid "Back to Request Details"
-msgstr "Back to Request Details"
-
-msgid "Back to log in"
-msgstr "Back to log in"
-
-msgid "Better service quality"
-msgstr "Better service quality"
-
-msgid "Book and track the repair."
-msgstr "Book and track the repair."
-
-msgid "Booking"
-msgstr "Booking"
-
-msgid "Bring your next home repair into one organized flow."
-msgstr "Bring your next home repair into one organized flow."
-
-msgid "Browse Open Requests"
-msgstr "Browse Open Requests"
-
-msgid "Browse open requests"
-msgstr "Browse open requests"
-
-msgid "Built around the service types available today."
-msgstr "Built around the service types available today."
-
-msgid "Built for dependable home repair."
-msgstr "Built for dependable home repair."
-
-msgid "Can I create a customer or professional account?"
-msgstr "Can I create a customer or professional account?"
-
-msgid "Cancel"
-msgstr "Cancel"
-
-msgid "Cancel and Return"
-msgstr "Cancel and Return"
-
-msgid "Cancelled"
-msgstr "Cancelled"
-
-msgid "Categories"
-msgstr "Categories"
-
-msgid "Category"
-msgstr "Category"
-
-msgid "Category, urgency, address, and timestamps come from the saved repair request record."
-msgstr "Category, urgency, address, and timestamps come from the saved repair request record."
-
-msgid "Choose Customer or Professional"
-msgstr "Choose Customer or Professional"
-
-msgid "Choose a service category"
-msgstr "Choose a service category"
-
-msgid "Choose category and urgency"
-msgstr "Choose category and urgency"
-
-msgid "Choose the closest repair area."
-msgstr "Choose the closest repair area."
-
-msgid "Choose the right account for your repair work."
-msgstr "Choose the right account for your repair work."
-
-msgid "Cleaner workflow"
-msgstr "Cleaner workflow"
-
-msgid "Cleaning"
-msgstr "Cleaning"
-
-msgid "Clear Filters"
-msgstr "Clear Filters"
-
-msgid "Clear visual context for the repair record."
-msgstr "Clear visual context for the repair record."
-
-msgid "Compare price, availability, service details, and customer feedback."
-msgstr "Compare price, availability, service details, and customer feedback."
-
-msgid "Complete"
-msgstr "Complete"
-
-msgid "Complete request"
-msgstr "Complete request"
-
-msgid "Completed"
-msgstr "Completed"
-
-msgid "Completed Repair Request"
-msgstr "Completed Repair Request"
-
-msgid "Completed Requests"
-msgstr "Completed Requests"
-
-msgid "Completed repair request summary"
-msgstr "Completed repair request summary"
-
-msgid "Completed repairs are kept with the saved request details."
-msgstr "Completed repairs are kept with the saved request details."
-
-msgid "Completed requests will appear here after active work is marked as completed."
-msgstr "Completed requests will appear here after active work is marked as completed."
-
-msgid "Completed work"
-msgstr "Completed work"
-
-msgid "Completed work can be documented clearly"
-msgstr "Completed work can be documented clearly"
-
-msgid "Completed work overview."
-msgstr "Completed work overview."
-
-msgid "Completion confirmation and review history"
-msgstr "Completion confirmation and review history"
-
-msgid "Completion record"
-msgstr "Completion record"
-
-msgid "Confirm completion, keep warranty information, and help future customers choose well."
-msgstr "Confirm completion, keep warranty information, and help future customers choose well."
-
-msgid "Confirm delete"
-msgstr "Confirm delete"
-
-msgid "Confirm your email before repair activity begins."
-msgstr "Confirm your email before repair activity begins."
-
-msgid "Continue managing repair requests, professional offers, bookings, warranty records, and account details."
-msgstr "Continue managing repair requests, professional offers, bookings, warranty records, and account details."
-
-msgid "Continue to your UstoHub overview or log out from the header when you are finished."
-msgstr "Continue to your UstoHub overview or log out from the header when you are finished."
-
-msgid "Coverage for everyday home repairs."
-msgstr "Coverage for everyday home repairs."
-
-msgid "Create Customer Account"
-msgstr "Create Customer Account"
-
-msgid "Create Repair Request"
-msgstr "Create Repair Request"
-
-msgid "Create a UstoHub account"
-msgstr "Create a UstoHub account"
-
-msgid "Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account."
-msgstr "Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account."
-
-msgid "Create a repair request"
-msgstr "Create a repair request"
-
-msgid "Create a repair request with the problem, category, urgency, and address, then review it from your request list."
-msgstr "Create a repair request with the problem, category, urgency, and address, then review it from your request list."
-
-msgid "Create account"
-msgstr "Create account"
-
-msgid "Create an account"
-msgstr "Create an account"
-
-msgid "Create and review repair requests."
-msgstr "Create and review repair requests."
-
-msgid "Create request details."
-msgstr "Create request details."
-
-msgid "Create your first repair request when something at home needs professional attention."
-msgstr "Create your first repair request when something at home needs professional attention."
-
-msgid "Create your repair profile."
-msgstr "Create your repair profile."
-
-msgid "Created"
-msgstr "Created"
-
-msgid "Current"
-msgstr "Current"
-
-msgid "Current status"
-msgstr "Current status"
-
-msgid "Customer"
-msgstr "Customer"
-
-msgid "Customer account"
-msgstr "Customer account"
-
-msgid "Customer contact details stay private here. Use the visible request information to understand the work scope. Accepted requests move to your assigned work queue."
-msgstr "Customer contact details stay private here. Use the visible request information to understand the work scope. Accepted requests move to your assigned work queue."
-
-msgid "Customer feedback"
-msgstr "Customer feedback"
-
-msgid "Customer ownership and request status remain managed by UstoHub while you save the updated details."
-msgstr "Customer ownership and request status remain managed by UstoHub while you save the updated details."
-
-msgid "Customer posts a Repair Request"
-msgstr "Customer posts a Repair Request"
-
-msgid "Customer protection"
-msgstr "Customer protection"
-
-msgid "Customer repair dashboard"
-msgstr "Customer repair dashboard"
-
-msgid "Customer repair requests."
-msgstr "Customer repair requests."
-
-msgid "Customer reviews will appear after completed work."
-msgstr "Customer reviews will appear after completed work."
-
-msgid "Customer tracks progress"
-msgstr "Customer tracks progress"
-
-msgid "Customer workflow"
-msgstr "Customer workflow"
-
-msgid "Customer-owned record"
-msgstr "Customer-owned record"
-
-msgid "Customer: %(username)s"
-msgstr "Customer: %(username)s"
-
-msgid "Customers and professionals see different actions based on their account role."
-msgstr "Customers and professionals see different actions based on their account role."
-
-msgid "Customers can create repair requests and keep their request list tied to their account."
-msgstr "Customers can create repair requests and keep their request list tied to their account."
-
-msgid "Customers create repair requests. Professionals use a separate work queue to accept and complete open requests."
-msgstr "Customers create repair requests. Professionals use a separate work queue to accept and complete open requests."
-
-msgid "Customers describe the issue. Professionals accept open work. Status stays visible until completion."
-msgstr "Customers describe the issue. Professionals accept open work. Status stays visible until completion."
-
-msgid "Customers need one place to describe a problem and see what happened next. Professionals need a clean queue instead of scattered messages and unclear job status."
-msgstr "Customers need one place to describe a problem and see what happened next. Professionals need a clean queue instead of scattered messages and unclear job status."
-
-msgid "Dark"
-msgstr "Dark"
-
-msgid "Dashboard"
-msgstr "Dashboard"
-
-msgid "Delete"
-msgstr "Delete"
-
-msgid "Delete Repair Request"
-msgstr "Delete Repair Request"
-
-msgid "Delete Repair Request?"
-msgstr "Delete Repair Request?"
-
-msgid "Delete Request"
-msgstr "Delete Request"
-
-msgid "Delete repair request"
-msgstr "Delete repair request"
-
-msgid "Delete repair request %(title)s"
-msgstr "Delete repair request %(title)s"
-
-msgid "Deletion cannot be undone. If you still need this repair record, return to the request details instead."
-msgstr "Deletion cannot be undone. If you still need this repair record, return to the request details instead."
-
-msgid "Deletion is permanent."
-msgstr "Deletion is permanent."
-
-msgid "Describe the issue, choose a category and urgency, and keep the request status connected to your account."
-msgstr "Describe the issue, choose a category and urgency, and keep the request status connected to your account."
-
-msgid "Describe the problem"
-msgstr "Describe the problem"
-
-msgid "Describe the problem."
-msgstr "Describe the problem."
-
-msgid "Describe the repair"
-msgstr "Describe the repair"
-
-msgid "Description"
-msgstr "Description"
-
-msgid "Diagnostics and repairs for essential home appliances."
-msgstr "Diagnostics and repairs for essential home appliances."
-
-msgid "Each card shows request details for professional review without exposing private customer contact information."
-msgstr "Each card shows request details for professional review without exposing private customer contact information."
-
-msgid "Edit Repair Request"
-msgstr "Edit Repair Request"
-
-msgid "Edit Request"
-msgstr "Edit Request"
-
-msgid "Edit a repair request"
-msgstr "Edit a repair request"
-
-msgid "Edit repair request %(title)s"
-msgstr "Edit repair request %(title)s"
-
-msgid "Edit request details."
-msgstr "Edit request details."
-
-msgid "Electrical"
-msgstr "Electrical"
-
-msgid "Email"
-msgstr "Email"
-
-msgid "Email checkpoint"
-msgstr "Email checkpoint"
-
-msgid "Email verification helps keep repair requests and service activity connected to the correct account."
-msgstr "Email verification helps keep repair requests and service activity connected to the correct account."
-
-msgid "Empty state"
-msgstr "Empty state"
-
-msgid "English"
-msgstr "English"
-
-msgid "Enter the address where the repair is needed."
-msgstr "Enter the address where the repair is needed."
-
-msgid "Enter the six-digit code sent to your inbox so your account can be activated securely."
-msgstr "Enter the six-digit code sent to your inbox so your account can be activated securely."
-
-msgid "Enter the six-digit code."
-msgstr "Enter the six-digit code."
-
-msgid "Enter verification code"
-msgstr "Enter verification code"
-
-msgid "Every serious repair needs a record."
-msgstr "Every serious repair needs a record."
-
-msgid "Existing Repair Request"
-msgstr "Existing Repair Request"
-
-msgid "Filters Active"
-msgstr "Filters Active"
-
-msgid "Find repair requests."
-msgstr "Find repair requests."
-
-msgid "Finished repair requests."
-msgstr "Finished repair requests."
-
-msgid "Finished work history."
-msgstr "Finished work history."
-
-msgid "Footer navigation"
-msgstr "Footer navigation"
-
-msgid "For Customers"
-msgstr "For Customers"
-
-msgid "For Professionals"
-msgstr "For Professionals"
-
-msgid "For professionals"
-msgstr "For professionals"
-
-msgid "Frequently asked questions."
-msgstr "Frequently asked questions."
-
-msgid "Full description"
-msgstr "Full description"
-
-msgid "Furniture"
-msgstr "Furniture"
-
-msgid "Furniture Assembly"
-msgstr "Furniture Assembly"
-
-msgid "General Maintenance"
-msgstr "General Maintenance"
-
-msgid "General repair requests that do not fit the main categories."
-msgstr "General repair requests that do not fit the main categories."
-
-msgid "Heating and Cooling"
-msgstr "Heating and Cooling"
-
-msgid "Hidden"
-msgstr "Hidden"
-
-msgid "Hidden until approval is complete."
-msgstr "Hidden until approval is complete."
-
-msgid "Hide password"
-msgstr "Hide password"
-
-msgid "Hide password confirmation"
-msgstr "Hide password confirmation"
-
-msgid "High"
-msgstr "High"
-
-msgid "Home"
-msgstr "Home"
-
-msgid "Home Repair Marketplace"
-msgstr "Home Repair Marketplace"
-
-msgid "Home repair marketplace MVP"
-msgstr "Home repair marketplace MVP"
-
-msgid "Home repair needs more than a phone call and guesswork."
-msgstr "Home repair needs more than a phone call and guesswork."
-
-msgid "How It Works"
-msgstr "How It Works"
-
-msgid "How UstoHub Works"
-msgstr "How UstoHub Works"
-
-msgid "How it works"
-msgstr "How it works"
-
-msgid "I am joining as"
-msgstr "I am joining as"
-
-msgid "In Progress"
-msgstr "In Progress"
-
-msgid "In progress"
-msgstr "In progress"
-
-msgid "Include symptoms, timing, affected room, and any safety concerns."
-msgstr "Include symptoms, timing, affected room, and any safety concerns."
-
-msgid "Interior painting, touch-ups, surface preparation, and finish work."
-msgstr "Interior painting, touch-ups, surface preparation, and finish work."
-
-msgid "Issue description and supporting media"
-msgstr "Issue description and supporting media"
-
-msgid "Issue details stay attached to the request"
-msgstr "Issue details stay attached to the request"
-
-msgid "Issue, location, and status details stay connected to the request."
-msgstr "Issue, location, and status details stay connected to the request."
-
-msgid "Join as a Professional"
-msgstr "Join as a Professional"
-
-msgid "Join as a customer or professional. We will send a verification code to your email."
-msgstr "Join as a customer or professional. We will send a verification code to your email."
-
-msgid "Keep it specific."
-msgstr "Keep it specific."
-
-msgid "Keep the visit, scope, status, and completion record attached to one account."
-msgstr "Keep the visit, scope, status, and completion record attached to one account."
-
-msgid "Language"
-msgstr "Language"
-
-msgid "Leaks, drains, faucets, and water-related repair requests."
-msgstr "Leaks, drains, faucets, and water-related repair requests."
-
-msgid "Leaks, faucets, drains, water pressure, and emergency fixes."
-msgstr "Leaks, faucets, drains, water pressure, and emergency fixes."
-
-msgid "Light"
-msgstr "Light"
-
-msgid "Live request brief"
-msgstr "Live request brief"
-
-msgid "Locked"
-msgstr "Locked"
-
-msgid "Log in"
-msgstr "Log in"
-
-msgid "Log in securely"
-msgstr "Log in securely"
-
-msgid "Log in to UstoHub"
-msgstr "Log in to UstoHub"
-
-msgid "Log in to UstoHub."
-msgstr "Log in to UstoHub."
-
-msgid "Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details."
-msgstr "Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details."
-
-msgid "Log out"
-msgstr "Log out"
-
-msgid "Login was not successful."
-msgstr "Login was not successful."
-
-msgid "Low"
-msgstr "Low"
-
-msgid "Manage repair requests from first issue to completed work."
-msgstr "Manage repair requests from first issue to completed work."
-
-msgid "Mark as Completed"
-msgstr "Mark as Completed"
-
-msgid "Mark completed when finished"
-msgstr "Mark completed when finished"
-
-msgid "Mark repair request %(title)s as completed"
-msgstr "Mark repair request %(title)s as completed"
-
-msgid "Marketplace confidence"
-msgstr "Marketplace confidence"
-
-msgid "Marketplace problems UstoHub Lite solves"
-msgstr "Marketplace problems UstoHub Lite solves"
-
-msgid "Master"
-msgstr "Master"
-
-msgid "Medium"
-msgstr "Medium"
-
-msgid "Menu"
-msgstr "Menu"
-
-msgid "My Accepted Requests"
-msgstr "My Accepted Requests"
-
-msgid "My Accepted Requests."
-msgstr "My Accepted Requests."
-
-msgid "My Assigned Requests"
-msgstr "My Assigned Requests"
-
-msgid "My Repair Requests"
-msgstr "My Repair Requests"
-
-msgid "My Requests"
-msgstr "My Requests"
-
-msgid "My requests"
-msgstr "My requests"
-
-msgid "New Repair Request"
-msgstr "New Repair Request"
-
-msgid "New requests"
-msgstr "New requests"
-
-msgid "New to UstoHub?"
-msgstr "New to UstoHub?"
-
-msgid "Newest open repair requests are shown first, with customer-safe details for professional review."
-msgstr "Newest open repair requests are shown first, with customer-safe details for professional review."
-
-msgid "No accepted repair requests."
-msgstr "No accepted repair requests."
-
-msgid "No active repair requests yet."
-msgstr "No active repair requests yet."
-
-msgid "No available repair requests yet."
-msgstr "No available repair requests yet."
-
-msgid "No completed repair requests."
-msgstr "No completed repair requests."
-
-msgid "No customer reviews yet."
-msgstr "No customer reviews yet."
-
-msgid "No matching repair requests."
-msgstr "No matching repair requests."
-
-msgid "No open customer repair requests are available right now."
-msgstr "No open customer repair requests are available right now."
-
-msgid "No open repair requests."
-msgstr "No open repair requests."
-
-msgid "No open requests are waiting in the professional queue at the moment."
-msgstr "No open requests are waiting in the professional queue at the moment."
-
-msgid "No professional activity yet."
-msgstr "No professional activity yet."
-
-msgid "No professional profiles are published yet."
-msgstr "No professional profiles are published yet."
-
-msgid "No repair activity yet."
-msgstr "No repair activity yet."
-
-msgid "No repair requests are active in your account yet."
-msgstr "No repair requests are active in your account yet."
-
-msgid "No repair requests match the current search and filters."
-msgstr "No repair requests match the current search and filters."
-
-msgid "No repair requests match the current search or filters. Clear the filters to return to your full request list."
-msgstr "No repair requests match the current search or filters. Clear the filters to return to your full request list."
-
-msgid "No repair requests yet."
-msgstr "No repair requests yet."
-
-msgid "No requests found"
-msgstr "No requests found"
-
-msgid "Not assigned yet"
-msgstr "Not assigned yet"
-
-msgid "Notifications"
-msgstr "Notifications"
-
-msgid "Offer"
-msgstr "Offer"
-
-msgid "Offer comparison and booking summary"
-msgstr "Offer comparison and booking summary"
-
-msgid "Offers"
-msgstr "Offers"
-
-msgid "One product, two focused workspaces."
-msgstr "One product, two focused workspaces."
-
-msgid "Only matching repair requests connected to your signed-in customer account are shown here."
-msgstr "Only matching repair requests connected to your signed-in customer account are shown here."
-
-msgid "Only repair requests connected to your signed-in customer account are shown here."
-msgstr "Only repair requests connected to your signed-in customer account are shown here."
-
-msgid "Only requests assigned to your professional account are shown on this page."
-msgstr "Only requests assigned to your professional account are shown on this page."
-
-msgid "Open"
-msgstr "Open"
-
-msgid "Open Dashboard"
-msgstr "Open Dashboard"
-
-msgid "Open Professional Queue"
-msgstr "Open Professional Queue"
-
-msgid "Open Repair Request"
-msgstr "Open Repair Request"
-
-msgid "Open Repair Requests"
-msgstr "Open Repair Requests"
-
-msgid "Open Requests"
-msgstr "Open Requests"
-
-msgid "Open repair request summary"
-msgstr "Open repair request summary"
-
-msgid "Open saved request details"
-msgstr "Open saved request details"
-
-msgid "Open work overview."
-msgstr "Open work overview."
-
-msgid "Open, In Progress, Completed, and Cancelled states keep the repair record understandable."
-msgstr "Open, In Progress, Completed, and Cancelled states keep the repair record understandable."
-
-msgid "Optional account contact number."
-msgstr "Optional account contact number."
-
-msgid "Other"
-msgstr "Other"
-
-msgid "Painting"
-msgstr "Painting"
-
-msgid "Password"
-msgstr "Password"
-
-msgid "Password confirmation"
-msgstr "Password confirmation"
-
-msgid "Password requirements"
-msgstr "Password requirements"
-
-msgid "Pending"
-msgstr "Pending"
-
-msgid "Pending Review"
-msgstr "Pending Review"
-
-msgid "Pending admin review."
-msgstr "Pending admin review."
-
-msgid "Pending approval"
-msgstr "Pending approval"
-
-msgid "Permanent Action"
-msgstr "Permanent Action"
-
-msgid "Permanent deletion warning"
-msgstr "Permanent deletion warning"
-
-msgid "Phone number"
-msgstr "Phone number"
-
-msgid "Please wait until an administrator approves your account."
-msgstr "Please wait until an administrator approves your account."
-
-msgid "Plumbing"
-msgstr "Plumbing"
-
-msgid "Post Repair Request"
-msgstr "Post Repair Request"
-
-msgid "Post a Repair Request"
-msgstr "Post a Repair Request"
-
-msgid "Post the issue and keep its status clear."
-msgstr "Post the issue and keep its status clear."
-
-msgid "Post-repair cleanup, deep cleaning, and move-ready spaces."
-msgstr "Post-repair cleanup, deep cleaning, and move-ready spaces."
-
-msgid "Primary navigation"
-msgstr "Primary navigation"
-
-msgid "Problem description"
-msgstr "Problem description"
-
-msgid "Professional"
-msgstr "Professional"
-
-msgid "Professional Queue"
-msgstr "Professional Queue"
-
-msgid "Professional accepted repair requests"
-msgstr "Professional accepted repair requests"
-
-msgid "Professional accepts the request"
-msgstr "Professional accepts the request"
-
-msgid "Professional accepts work"
-msgstr "Professional accepts work"
-
-msgid "Professional access"
-msgstr "Professional access"
-
-msgid "Professional access activated"
-msgstr "Professional access activated"
-
-msgid "Professional access is reviewed before customer Repair Requests can be accepted. This keeps the workflow safer, clearer, and more trustworthy for everyone."
-msgstr "Professional access is reviewed before customer Repair Requests can be accepted. This keeps the workflow safer, clearer, and more trustworthy for everyone."
-
-msgid "Professional account"
-msgstr "Professional account"
-
-msgid "Professional account approval status"
-msgstr "Professional account approval status"
-
-msgid "Professional account pending approval"
-msgstr "Professional account pending approval"
-
-msgid "Professional account review"
-msgstr "Professional account review"
-
-msgid "Professional accounts can review open requests, accept work, and manage assigned requests."
-msgstr "Professional accounts can review open requests, accept work, and manage assigned requests."
-
-msgid "Professional approval is pending."
-msgstr "Professional approval is pending."
-
+#: accounts/templates/accounts/approval_pending.html:4
 msgid "Professional approval pending"
 msgstr "Professional approval pending"
 
-msgid "Professional approval status summary"
-msgstr "Professional approval status summary"
-
-msgid "Professional approval steps"
-msgstr "Professional approval steps"
-
-msgid "Professional approval workflow"
-msgstr "Professional approval workflow"
-
-msgid "Professional cards are structured to show verification, service type, rating, availability, completed work, and warranty details when real profile data is available."
-msgstr "Professional cards are structured to show verification, service type, rating, availability, completed work, and warranty details when real profile data is available."
-
-msgid "Professional completed repair requests"
-msgstr "Professional completed repair requests"
-
-msgid "Professional offers will appear here."
-msgstr "Professional offers will appear here."
-
-msgid "Professional open repair requests"
-msgstr "Professional open repair requests"
-
-msgid "Professional queue"
-msgstr "Professional queue"
-
-msgid "Professional repair request views"
-msgstr "Professional repair request views"
-
-msgid "Professional repairing a kitchen cabinet area in a bright home."
-msgstr "Professional repairing a kitchen cabinet area in a bright home."
-
-msgid "Professional review"
-msgstr "Professional review"
-
-msgid "Professional technician testing an electrical outlet in a bright home living space."
-msgstr "Professional technician testing an electrical outlet in a bright home living space."
-
-msgid "Professional work history"
-msgstr "Professional work history"
-
-msgid "Professional work queue"
-msgstr "Professional work queue"
-
-msgid "Professional workflow"
-msgstr "Professional workflow"
-
-msgid "Professional workspace navigation"
-msgstr "Professional workspace navigation"
-
-msgid "Customer workspace navigation"
-msgstr "Customer workspace navigation"
-
-msgid "Professionals can browse open requests, accept available work, and mark assigned work completed."
-msgstr "Professionals can browse open requests, accept available work, and mark assigned work completed."
-
-msgid "Professionals can understand scope faster"
-msgstr "Professionals can understand scope faster"
-
-msgid "Professionals can use the same account system today, with the interface prepared for requests, offers, schedules, jobs, reviews, and service history as the marketplace grows."
-msgstr "Professionals can use the same account system today, with the interface prepared for requests, offers, schedules, jobs, reviews, and service history as the marketplace grows."
-
-msgid "Professionals get a clear pipeline."
-msgstr "Professionals get a clear pipeline."
-
-msgid "Profiles designed for confident comparison."
-msgstr "Profiles designed for confident comparison."
-
-msgid "Protected session"
-msgstr "Protected session"
-
-msgid "Quality-control checklist"
-msgstr "Quality-control checklist"
-
-msgid "Questions"
-msgstr "Questions"
-
-msgid "Ready"
-msgstr "Ready"
-
-msgid "Ready to manage a repair?"
-msgstr "Ready to manage a repair?"
-
-msgid "Ready when the repair is real"
-msgstr "Ready when the repair is real"
-
-msgid "Real home issues need clear evidence."
-msgstr "Real home issues need clear evidence."
-
-msgid "Real repair requests"
-msgstr "Real repair requests"
-
-msgid "Real request ownership"
-msgstr "Real request ownership"
-
-msgid "Receive verified offers."
-msgstr "Receive verified offers."
-
-msgid "Repair Request"
-msgstr "Repair Request"
-
-msgid "Repair Requests"
-msgstr "Repair Requests"
-
-msgid "Repair Requests are shown to Professional accounts only after admin approval."
-msgstr "Repair Requests are shown to Professional accounts only after admin approval."
-
-msgid "Repair activity"
-msgstr "Repair activity"
-
-msgid "Repair categories"
-msgstr "Repair categories"
-
-msgid "Repair evidence highlights"
-msgstr "Repair evidence highlights"
-
-msgid "Repair marketplace"
-msgstr "Repair marketplace"
-
-msgid "Repair marketplace workflow preview"
-msgstr "Repair marketplace workflow preview"
-
-msgid "Repair professional fixing a kitchen sink cabinet in a bright home workspace."
-msgstr "Repair professional fixing a kitchen sink cabinet in a bright home workspace."
-
-msgid "Repair request"
-msgstr "Repair request"
-
-msgid "Repair request context"
-msgstr "Repair request context"
-
-msgid "Repair request deletion"
-msgstr "Repair request deletion"
-
-msgid "Repair request detail"
-msgstr "Repair request detail"
-
-msgid "Repair request overview"
-msgstr "Repair request overview"
-
-msgid "Repair request overview."
-msgstr "Repair request overview."
-
-msgid "Repair request photo preview"
-msgstr "Repair request photo preview"
-
-msgid "Repair request status summary"
-msgstr "Repair request status summary"
-
-msgid "Repair request status timeline"
-msgstr "Repair request status timeline"
-
-msgid "Repair request summary"
-msgstr "Repair request summary"
-
-msgid "Repair request update"
-msgstr "Repair request update"
-
-msgid "Repair request workflow preview"
-msgstr "Repair request workflow preview"
-
-msgid "Repair requests are connected to the customer account that created them."
-msgstr "Repair requests are connected to the customer account that created them."
-
-msgid "Repair requests for essential home appliances."
-msgstr "Repair requests for essential home appliances."
-
-msgid "Repair service photography preview"
-msgstr "Repair service photography preview"
-
-msgid "Repair title"
-msgstr "Repair title"
-
-msgid "Repair workflow stages"
-msgstr "Repair workflow stages"
-
-msgid "Request and track repairs"
-msgstr "Request and track repairs"
-
-msgid "Request flow"
-msgstr "Request flow"
-
-msgid "Request guidance"
-msgstr "Request guidance"
-
-msgid "Request information stays connected."
-msgstr "Request information stays connected."
-
-msgid "Request intake"
-msgstr "Request intake"
-
-msgid "Request preview"
-msgstr "Request preview"
-
-msgid "Request queue"
-msgstr "Request queue"
-
-msgid "Request record."
-msgstr "Request record."
-
-msgid "Request repair"
-msgstr "Request repair"
-
-msgid "Request selected for deletion"
-msgstr "Request selected for deletion"
-
-msgid "Request status labels make progress readable without relying on color alone."
-msgstr "Request status labels make progress readable without relying on color alone."
-
-msgid "Request submitted"
-msgstr "Request submitted"
-
-msgid "Request title"
-msgstr "Request title"
-
-msgid "Requests are private to your account."
-msgstr "Requests are private to your account."
-
-msgid "Requests become organized records."
-msgstr "Requests become organized records."
-
-msgid "Requests, jobs, customer messages, and reviews will show here when marketplace activity starts."
-msgstr "Requests, jobs, customer messages, and reviews will show here when marketplace activity starts."
-
-msgid "Required before professional access"
-msgstr "Required before professional access"
-
-msgid "Respond to repair requests"
-msgstr "Respond to repair requests"
-
-msgid "Return to your repair workspace."
-msgstr "Return to your repair workspace."
-
-msgid "Review"
-msgstr "Review"
-
-msgid "Review Completed Requests"
-msgstr "Review Completed Requests"
-
-msgid "Review available customer repair requests that are currently open and ready for professional attention."
-msgstr "Review available customer repair requests that are currently open and ready for professional attention."
-
-msgid "Review customer repair requests, accept work that fits your service, and move active jobs toward completion."
-msgstr "Review customer repair requests, accept work that fits your service, and move active jobs toward completion."
-
-msgid "Review finished repair requests completed by your professional account, with customer-safe work history details."
-msgstr "Review finished repair requests completed by your professional account, with customer-safe work history details."
-
-msgid "Review finished work records with essential request details, customer-safe labels, and the latest update date."
-msgstr "Review finished work records with essential request details, customer-safe labels, and the latest update date."
-
-msgid "Review the active repair requests that have been accepted by your professional account."
-msgstr "Review the active repair requests that have been accepted by your professional account."
-
-msgid "Review the repair problems you have submitted, check their current status, and start a new request when something else needs attention."
-msgstr "Review the repair problems you have submitted, check their current status, and start a new request when something else needs attention."
-
-msgid "Review the saved repair details, service location, and current request status for this account-owned request."
-msgstr "Review the saved repair details, service location, and current request status for this account-owned request."
-
-msgid "Review the work."
-msgstr "Review the work."
-
-msgid "Reviews"
-msgstr "Reviews"
-
-msgid "Reviews should prove real work, not decorate the page."
-msgstr "Reviews should prove real work, not decorate the page."
-
-msgid "Reviews will appear after completed repair work is available in UstoHub."
-msgstr "Reviews will appear after completed repair work is available in UstoHub."
-
-msgid "Role-based marketplace"
-msgstr "Role-based marketplace"
-
-msgid "Role-based workflow"
-msgstr "Role-based workflow"
-
-msgid "Russian"
-msgstr "Russian"
-
-msgid "Save"
-msgstr "Save"
-
-msgid "Save Changes"
-msgstr "Save Changes"
-
-msgid "Save the request"
-msgstr "Save the request"
-
-msgid "Saved Repair Request"
-msgstr "Saved Repair Request"
-
-msgid "Saved request"
-msgstr "Saved request"
-
-msgid "Search and filter saved request details from your account. Status, urgency, and category values come directly from UstoHub."
-msgstr "Search and filter saved request details from your account. Status, urgency, and category values come directly from UstoHub."
-
-msgid "Search by title"
-msgstr "Search by title"
-
-msgid "Search by title or narrow the list by category, urgency, and status."
-msgstr "Search by title or narrow the list by category, urgency, and status."
-
-msgid "Search repair titles"
-msgstr "Search repair titles"
-
-msgid "Search saved repair request titles."
-msgstr "Search saved repair request titles."
-
-msgid "Search: %(query)s"
-msgstr "Search: %(query)s"
-
-msgid "Seasonal service, troubleshooting, and comfort checks."
-msgstr "Seasonal service, troubleshooting, and comfort checks."
-
-msgid "Secure access keeps account activity tied to the right customer or professional."
-msgstr "Secure access keeps account activity tied to the right customer or professional."
-
-msgid "Secure account access"
-msgstr "Secure account access"
-
-msgid "Service"
-msgstr "Service"
-
-msgid "Service address"
-msgstr "Service address"
-
-msgid "Service categories"
-msgstr "Service categories"
-
-msgid "Service category"
-msgstr "Service category"
-
-msgid "Set how quickly the issue should be reviewed."
-msgstr "Set how quickly the issue should be reviewed."
-
-msgid "Set urgency"
-msgstr "Set urgency"
-
-msgid "Show password"
-msgstr "Show password"
-
-msgid "Show password confirmation"
-msgstr "Show password confirmation"
-
-msgid "Signed in"
-msgstr "Signed in"
-
-msgid "Signed in as <strong>%(username)s</strong>"
-msgstr "Signed in as <strong>%(username)s</strong>"
-
-msgid "Simple MVP flow"
-msgstr "Simple MVP flow"
-
-msgid "Skip to content"
-msgstr "Skip to content"
-
-msgid "Small fixes, inspections, routine improvements, and urgent help."
-msgstr "Small fixes, inspections, routine improvements, and urgent help."
-
-msgid "Solve home problems with organized repair requests."
-msgstr "Solve home problems with organized repair requests."
-
-msgid "Start here"
-msgstr "Start here"
-
-msgid "Start with an account"
-msgstr "Start with an account"
-
-msgid "Start with the repair type, then add details, photos, preferred timing, and location when those tools are available in the account."
-msgstr "Start with the repair type, then add details, photos, preferred timing, and location when those tools are available in the account."
-
-msgid "Start with the workflow your account supports."
-msgstr "Start with the workflow your account supports."
-
-msgid "Status"
-msgstr "Status"
-
-msgid "Status stays protected."
-msgstr "Status stays protected."
-
-msgid "Status stays visible."
-msgstr "Status stays visible."
-
-msgid "Status timeline"
-msgstr "Status timeline"
-
-msgid "Status tracking"
-msgstr "Status tracking"
-
-msgid "Status values come from the saved repair request record."
-msgstr "Status values come from the saved repair request record."
-
-msgid "Submit"
-msgstr "Submit"
-
-msgid "Submitted requests."
-msgstr "Submitted requests."
-
-msgid "Switch to dark theme"
-msgstr "Switch to dark theme"
-
-msgid "Switch to light theme"
-msgstr "Switch to light theme"
-
-msgid "Switches, outlets, lighting, and electrical repair concerns."
-msgstr "Switches, outlets, lighting, and electrical repair concerns."
-
-msgid "Switches, outlets, lighting, wiring checks, and safety issues."
-msgstr "Switches, outlets, lighting, wiring checks, and safety issues."
-
-msgid "Tajik"
-msgstr "Tajik"
-
-msgid "Tell UstoHub what happened, where it happened, and how urgent it feels."
-msgstr "Tell UstoHub what happened, where it happened, and how urgent it feels."
-
-msgid "Thanks for joining UstoHub as a Professional. An admin needs to approve your account before you can accept customer Repair Requests."
-msgstr "Thanks for joining UstoHub as a Professional. An admin needs to approve your account before you can accept customer Repair Requests."
-
-msgid "The current repair request form supports these categories, so the homepage keeps the service promise accurate."
-msgstr "The current repair request form supports these categories, so the homepage keeps the service promise accurate."
-
-msgid "The customer describes the issue, chooses a category, sets urgency, and adds the service address."
-msgstr "The customer describes the issue, chooses a category, sets urgency, and adds the service address."
-
-msgid "The interface is prepared for offers and bookings. Real offer data will appear when those marketplace features are connected."
-msgstr "The interface is prepared for offers and bookings. Real offer data will appear when those marketplace features are connected."
-
-msgid "The interface is ready for a full marketplace flow while staying compatible with the current account and verification steps."
-msgstr "The interface is ready for a full marketplace flow while staying compatible with the current account and verification steps."
-
-msgid "The product focuses on request creation, acceptance, assigned work, and completion."
-msgstr "The product focuses on request creation, acceptance, assigned work, and completion."
-
-msgid "The professional marks accepted work completed, and the record stays in the completed queue."
-msgstr "The professional marks accepted work completed, and the record stays in the completed queue."
-
-msgid "The repair problem"
-msgstr "The repair problem"
-
-msgid "The repair request was saved to your account."
-msgstr "The repair request was saved to your account."
-
-msgid "The request is available for professional review while it remains open."
-msgstr "The request is available for professional review while it remains open."
-
-msgid "The request needs attention."
-msgstr "The request needs attention."
-
-msgid "The request status shows whether the repair is open, in progress, completed, or cancelled."
-msgstr "The request status shows whether the repair is open, in progress, completed, or cancelled."
-
-msgid "Theme"
-msgstr "Theme"
-
-msgid "There are no customer repair requests available for professional review right now. New open requests will appear here when customers submit them."
-msgstr "There are no customer repair requests available for professional review right now. New open requests will appear here when customers submit them."
-
-msgid "These are the details currently saved for this repair request."
-msgstr "These are the details currently saved for this repair request."
-
-msgid "These repair requests are assigned to your professional account and remain in progress."
-msgstr "These repair requests are assigned to your professional account and remain in progress."
-
-msgid "These repair requests were completed by your professional account and are ordered by latest update."
-msgstr "These repair requests were completed by your professional account and are ordered by latest update."
-
-msgid "This approval step keeps customer Repair Requests available only to reviewed Professional accounts."
-msgstr "This approval step keeps customer Repair Requests available only to reviewed Professional accounts."
-
-msgid "This confirmation protects your repair history from accidental deletion. Review the selected request before permanently removing it."
-msgstr "This confirmation protects your repair history from accidental deletion. Review the selected request before permanently removing it."
-
-msgid "This page shows only completed repair requests assigned to your professional account. Customer private contact details are not displayed."
-msgstr "This page shows only completed repair requests assigned to your professional account. Customer private contact details are not displayed."
-
-msgid "This request is assigned to a professional account."
-msgstr "This request is assigned to a professional account."
-
-msgid "This request will be removed."
-msgstr "This request will be removed."
-
-msgid "This will permanently remove the repair request from your account."
-msgstr "This will permanently remove the repair request from your account."
-
-msgid "Title"
-msgstr "Title"
-
-msgid "Toggle color theme"
-msgstr "Toggle color theme"
-
-msgid "Track active repair requests assigned to you after accepting them from the professional open request queue."
-msgstr "Track active repair requests assigned to you after accepting them from the professional open request queue."
-
-msgid "Track completion status"
-msgstr "Track completion status"
-
-msgid "Track status updates"
-msgstr "Track status updates"
-
-msgid "Track your repair requests in one place."
-msgstr "Track your repair requests in one place."
-
-msgid "Trust and product principles"
-msgstr "Trust and product principles"
-
-msgid "Trust and service quality"
-msgstr "Trust and service quality"
-
-msgid "Trusted home repair workflow"
-msgstr "Trusted home repair workflow"
-
-msgid "Untitled repair request"
-msgstr "Untitled repair request"
-
-msgid "Update only what changed."
-msgstr "Update only what changed."
-
-msgid "Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving."
-msgstr "Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving."
-
-msgid "Update the saved repair details for this request while keeping ownership and status managed by UstoHub."
-msgstr "Update the saved repair details for this request while keeping ownership and status managed by UstoHub."
-
-msgid "Updated"
-msgstr "Updated"
-
-msgid "Urgency"
-msgstr "Urgency"
-
-msgid "Use numbers only. Paste is supported."
-msgstr "Use numbers only. Paste is supported."
-
-msgid "Use the role-based workflow"
-msgstr "Use the role-based workflow"
-
-msgid "Use the title and description to explain what happened, where the issue is, and what you have already checked."
-msgstr "Use the title and description to explain what happened, where the issue is, and what you have already checked."
-
-msgid "Use the username and password connected to your verified account."
-msgstr "Use the username and password connected to your verified account."
-
-msgid "Username"
-msgstr "Username"
-
-msgid "UstoHub Lite focuses on the core marketplace path already supported by the project."
-msgstr "UstoHub Lite focuses on the core marketplace path already supported by the project."
-
-msgid "UstoHub Lite gives customers a clear place to post repair requests and gives professionals a focused queue for accepting, tracking, and completing work."
-msgstr "UstoHub Lite gives customers a clear place to post repair requests and gives professionals a focused queue for accepting, tracking, and completing work."
-
-msgid "UstoHub Lite presents the supported marketplace workflow clearly and leaves room to grow without pretending unfinished features already exist."
-msgstr "UstoHub Lite presents the supported marketplace workflow clearly and leaves room to grow without pretending unfinished features already exist."
-
-msgid "UstoHub Lite product principles"
-msgstr "UstoHub Lite product principles"
-
-msgid "UstoHub Lite separates customer actions from professional actions so each user sees the workflow meant for them."
-msgstr "UstoHub Lite separates customer actions from professional actions so each user sees the workflow meant for them."
-
-msgid "UstoHub account panel"
-msgstr "UstoHub account panel"
-
-msgid "UstoHub dashboard access"
-msgstr "UstoHub dashboard access"
-
-msgid "UstoHub helps customers create repair requests and helps professionals manage open, assigned, and completed work."
-msgstr "UstoHub helps customers create repair requests and helps professionals manage open, assigned, and completed work."
-
-msgid "UstoHub home"
-msgstr "UstoHub home"
-
-msgid "UstoHub is structured for before-and-after evidence, confirmed scope, completion status, and warranty details so the customer and professional can stay aligned."
-msgstr "UstoHub is structured for before-and-after evidence, confirmed scope, completion status, and warranty details so the customer and professional can stay aligned."
-
-msgid "UstoHub is structured for photos, repair descriptions, visit records, and status updates as the marketplace grows."
-msgstr "UstoHub is structured for photos, repair descriptions, visit records, and status updates as the marketplace grows."
-
-msgid "UstoHub keeps this request linked to your account and preserves system-managed status details automatically."
-msgstr "UstoHub keeps this request linked to your account and preserves system-managed status details automatically."
-
-msgid "UstoHub links this request to your signed-in account and sets the request status automatically."
-msgstr "UstoHub links this request to your signed-in account and sets the request status automatically."
-
-msgid "UstoHub repair marketplace start panel"
-msgstr "UstoHub repair marketplace start panel"
-
-msgid "UstoHub trust indicators"
-msgstr "UstoHub trust indicators"
-
-msgid "Verification code"
-msgstr "Verification code"
-
-msgid "Verification needs attention."
-msgstr "Verification needs attention."
-
-msgid "Verification protects your account before repair requests or professional work can begin."
-msgstr "Verification protects your account before repair requests or professional work can begin."
-
-msgid "Verified"
-msgstr "Verified"
-
-msgid "Verified account before request activity"
-msgstr "Verified account before request activity"
-
-msgid "Verified professionals"
-msgstr "Verified professionals"
-
-msgid "Verified profile cards will appear here after professionals are available through the account flow."
-msgstr "Verified profile cards will appear here after professionals are available through the account flow."
-
-msgid "Verified reviews will appear only after completed repair work is available in UstoHub."
-msgstr "Verified reviews will appear only after completed repair work is available in UstoHub."
-
-msgid "Verify"
-msgstr "Verify"
-
-msgid "Verify email"
-msgstr "Verify email"
-
-msgid "Verify your UstoHub email"
-msgstr "Verify your UstoHub email"
-
-msgid "View Active Requests"
-msgstr "View Active Requests"
-
-msgid "View Approval Status"
-msgstr "View Approval Status"
-
-msgid "View Assigned Requests"
-msgstr "View Assigned Requests"
-
-msgid "View Details"
-msgstr "View Details"
-
-msgid "View My Repair Requests"
-msgstr "View My Repair Requests"
-
-msgid "View details for %(title)s"
-msgstr "View details for %(title)s"
-
-msgid "Visual evidence helps professionals understand scope before they respond."
-msgstr "Visual evidence helps professionals understand scope before they respond."
-
-msgid "Visual repair context"
-msgstr "Visual repair context"
-
-msgid "Warranties"
-msgstr "Warranties"
-
-msgid "Warranty"
-msgstr "Warranty"
-
-msgid "Warranty and safety"
-msgstr "Warranty and safety"
-
-msgid "Warranty records will appear after completed repairs."
-msgstr "Warranty records will appear after completed repairs."
-
-msgid "We sent it to <strong>%(email)s</strong>."
-msgstr "We sent it to <strong>%(email)s</strong>."
-
-msgid "Welcome back, %(username)s."
-msgstr "Welcome back, %(username)s."
-
-msgid "Why do I need email verification?"
-msgstr "Why do I need email verification?"
-
-msgid "Work in progress"
-msgstr "Work in progress"
-
-msgid "Work is completed"
-msgstr "Work is completed"
-
-msgid "Yes. Choose Customer or Professional during registration to open the workspace that matches your role."
-msgstr "Yes. Choose Customer or Professional during registration to open the workspace that matches your role."
-
-msgid "You are already logged in."
-msgstr "You are already logged in."
-
-msgid "You do not have assigned in-progress repair requests right now."
-msgstr "You do not have assigned in-progress repair requests right now."
-
-msgid "You have not accepted any open repair requests yet. Browse the professional queue when you are ready to take active work."
-msgstr "You have not accepted any open repair requests yet. Browse the professional queue when you are ready to take active work."
-
-msgid "You have not completed any assigned repair requests yet. Active requests can be reviewed from your accepted work queue."
-msgstr "You have not completed any assigned repair requests yet. Active requests can be reviewed from your accepted work queue."
-
-msgid "You have not completed any repair requests yet."
-msgstr "You have not completed any repair requests yet."
-
-msgid "Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests."
-msgstr "Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests."
-
-msgid "Your Professional account is registered and signed in."
-msgstr "Your Professional account is registered and signed in."
-
-msgid "Your Professional account is waiting for admin approval."
-msgstr "Your Professional account is waiting for admin approval."
-
-msgid "Your Professional workspace is almost ready."
-msgstr "Your Professional workspace is almost ready."
-
-msgid "Your account and request status are handled by UstoHub, so you only need to submit the repair details."
-msgstr "Your account and request status are handled by UstoHub, so you only need to submit the repair details."
-
-msgid "Your account has been created successfully. Once an admin approves it, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
-msgstr "Your account has been created successfully. Once an admin approves it, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs."
-
-msgid "Your booked work will appear here."
-msgstr "Your booked work will appear here."
-
-msgid "Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available."
-msgstr "Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available."
-
+#: accounts/templates/accounts/approval_pending.html:6
+msgid "Professional account approval status"
+msgstr "Professional account approval status"
+
+#: accounts/templates/accounts/approval_pending.html:7
+msgid "Professional account review"
+msgstr "Professional account review"
+
+#: accounts/templates/accounts/approval_pending.html:8
 msgid "Your professional account is pending admin approval."
 msgstr "Your professional account is pending admin approval."
 
-msgid "Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available."
-msgstr "Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available."
+#: accounts/templates/accounts/approval_pending.html:9
+msgid "Approval is required before accepting customer Repair Requests."
+msgstr "Approval is required before accepting customer Repair Requests."
 
-msgid "Your repair workspace is ready."
-msgstr "Your repair workspace is ready."
+#: accounts/templates/accounts/approval_pending.html:12
+#: accounts/templates/accounts/approval_pending.html:98
+msgid "Back to Home"
+msgstr "Back to Home"
 
-msgid "Your requests, bookings, repair status, warranties, and reviews will show here when activity starts."
-msgstr "Your requests, bookings, repair status, warranties, and reviews will show here when activity starts."
+#: accounts/templates/accounts/approval_pending.html:15
+#: accounts/templates/accounts/approval_pending.html:101
+#: accounts/templates/accounts/base.html:118
+#: accounts/templates/accounts/base.html:311
+msgid "Log out"
+msgstr "Log out"
 
+#: accounts/templates/accounts/approval_pending.html:20
+msgid "Professional approval status summary"
+msgstr "Professional approval status summary"
+
+#: accounts/templates/accounts/approval_pending.html:24
+#: repairs/templates/repairs/repair_detail.html:87
+msgid "Current status"
+msgstr "Current status"
+
+#: accounts/templates/accounts/approval_pending.html:25
+#: accounts/templates/accounts/approval_pending.html:56
+#: accounts/templates/accounts/home.html:83
+msgid "Pending Review"
+msgstr "Pending Review"
+
+#: accounts/templates/accounts/approval_pending.html:33
+#: accounts/templates/accounts/approval_pending.html:77
+#: accounts/templates/accounts/home.html:90
+msgid "Admin review"
+msgstr "Admin review"
+
+#: accounts/templates/accounts/approval_pending.html:34
+msgid "Required"
+msgstr "Required"
+
+#: accounts/templates/accounts/approval_pending.html:40
+msgid "Repair Requests"
+msgstr "Repair Requests"
+
+#: accounts/templates/accounts/approval_pending.html:41
+msgid "After approval"
+msgstr "After approval"
+
+#: accounts/templates/accounts/approval_pending.html:46
+msgid "Customer requests unlock after review."
+msgstr "Customer requests unlock after review."
+
+#: accounts/templates/accounts/approval_pending.html:58
+msgid "Your Professional workspace is almost ready."
+msgstr "Your Professional workspace is almost ready."
+
+#: accounts/templates/accounts/approval_pending.html:59
+msgid "After approval, you can browse open requests and manage accepted work."
+msgstr "After approval, you can browse open requests and manage accepted work."
+
+#: accounts/templates/accounts/approval_pending.html:62
+msgid "Professional approval steps"
+msgstr "Professional approval steps"
+
+#: accounts/templates/accounts/approval_pending.html:68
+#: accounts/templates/accounts/home.html:89
+msgid "Account created"
+msgstr "Account created"
+
+#: accounts/templates/accounts/approval_pending.html:69
+msgid "Your account is registered."
+msgstr "Your account is registered."
+
+#: accounts/templates/accounts/approval_pending.html:78
+msgid "Access is being reviewed."
+msgstr "Access is being reviewed."
+
+#: accounts/templates/accounts/approval_pending.html:86
+#: accounts/templates/accounts/home.html:91
+msgid "Professional access activated"
+msgstr "Professional access activated"
+
+#: accounts/templates/accounts/approval_pending.html:87
+msgid "Open requests become available."
+msgstr "Open requests become available."
+
+#: accounts/templates/accounts/approval_pending.html:94
+msgid "Approval keeps customer requests controlled."
+msgstr "Approval keeps customer requests controlled."
+
+#: accounts/templates/accounts/approval_pending.html:111
+msgid "Trust and service quality"
+msgstr "Trust and service quality"
+
+#: accounts/templates/accounts/approval_pending.html:112
+msgid "Approval helps keep the marketplace dependable."
+msgstr "Approval helps keep the marketplace dependable."
+
+#: accounts/templates/accounts/approval_pending.html:113
+msgid ""
+"Reviewed access keeps the workflow clear for customers and professionals."
+msgstr "Reviewed access keeps the workflow clear for customers and professionals."
+
+#: accounts/templates/accounts/approval_pending.html:121
+msgid "Customer protection"
+msgstr "Customer protection"
+
+#: accounts/templates/accounts/approval_pending.html:122
+msgid "Open requests require approved access."
+msgstr "Open requests require approved access."
+
+#: accounts/templates/accounts/approval_pending.html:128
+msgid "Cleaner workflow"
+msgstr "Cleaner workflow"
+
+#: accounts/templates/accounts/approval_pending.html:129
+msgid "Approved professionals get the right queue."
+msgstr "Approved professionals get the right queue."
+
+#: accounts/templates/accounts/approval_pending.html:135
+msgid "Better service quality"
+msgstr "Better service quality"
+
+#: accounts/templates/accounts/approval_pending.html:136
+msgid "Review happens before accepting work."
+msgstr "Review happens before accepting work."
+
+#: accounts/templates/accounts/base.html:37
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: accounts/templates/accounts/base.html:40
+msgid "Primary navigation"
+msgstr "Primary navigation"
+
+#: accounts/templates/accounts/base.html:41
+#: accounts/templates/accounts/base.html:286
+msgid "UstoHub home"
+msgstr "UstoHub home"
+
+#: accounts/templates/accounts/base.html:47
+#: accounts/templates/accounts/base.html:292
+msgid "Repair marketplace"
+msgstr "Repair marketplace"
+
+#: accounts/templates/accounts/base.html:54
+msgid "Menu"
+msgstr "Menu"
+
+#: accounts/templates/accounts/base.html:61
+#: accounts/templates/accounts/base.html:66
+#: accounts/templates/accounts/base.html:299
+msgid "Home"
+msgstr "Home"
+
+#: accounts/templates/accounts/base.html:62
+#: accounts/templates/accounts/base.html:67
+#: accounts/templates/accounts/base.html:300
+#: accounts/templates/accounts/home.html:96
+msgid "How It Works"
+msgstr "How It Works"
+
+#: accounts/templates/accounts/base.html:63
+#: accounts/templates/accounts/base.html:68
+#: accounts/templates/accounts/base.html:301
+msgid "Categories"
+msgstr "Categories"
+
+#: accounts/templates/accounts/base.html:64
+#: accounts/templates/accounts/base.html:70
+#: accounts/templates/accounts/base.html:303
+msgid "For Professionals"
+msgstr "For Professionals"
+
+#: accounts/templates/accounts/base.html:69
+#: accounts/templates/accounts/base.html:302
+msgid "For Customers"
+msgstr "For Customers"
+
+#: accounts/templates/accounts/base.html:79
+#: accounts/templates/accounts/base.html:100
+msgid "Light"
+msgstr "Light"
+
+#: accounts/templates/accounts/base.html:80
+msgid "Dark"
+msgstr "Dark"
+
+#: accounts/templates/accounts/base.html:81
+msgid "Switch to dark theme"
+msgstr "Switch to dark theme"
+
+#: accounts/templates/accounts/base.html:82
+msgid "Switch to light theme"
+msgstr "Switch to light theme"
+
+#: accounts/templates/accounts/base.html:83
+msgid "Toggle color theme"
+msgstr "Toggle color theme"
+
+#: accounts/templates/accounts/base.html:102
+msgid "Language"
+msgstr "Language"
+
+#: accounts/templates/accounts/base.html:121
+#: accounts/templates/accounts/home.html:24
+#: accounts/templates/accounts/home.html:131
+#: accounts/templates/accounts/home.html:330
+#: accounts/templates/accounts/login.html:4
+#: accounts/templates/accounts/login.html:123
+#: accounts/templates/accounts/register.html:21
+#: accounts/templates/accounts/register.html:263
+msgid "Log in"
+msgstr "Log in"
+
+#: accounts/templates/accounts/base.html:122
+#: accounts/templates/accounts/base.html:315
+#: accounts/templates/accounts/home.html:23
+#: accounts/templates/accounts/home.html:130
+#: accounts/templates/accounts/home.html:329
+#: accounts/templates/accounts/login.html:22
+#: accounts/templates/accounts/register.html:4
+#: accounts/templates/accounts/register.html:20
+#: accounts/templates/accounts/register.html:258
+msgid "Create account"
+msgstr "Create account"
+
+#: accounts/templates/accounts/base.html:134
+#: accounts/templates/accounts/base.html:155
+msgid "Professional workspace navigation"
+msgstr "Professional workspace navigation"
+
+#: accounts/templates/accounts/base.html:139
+#: accounts/templates/accounts/base.html:197
+msgid "Open Requests"
+msgstr "Open Requests"
+
+#: accounts/templates/accounts/base.html:145
+msgid "Accepted"
+msgstr "Accepted"
+
+#: accounts/templates/accounts/base.html:151
+#: repairs/templates/repairs/professional_completed_request_list.html:35
+#: repairs/templates/repairs/repair_detail.html:127
+msgid "Completed"
+msgstr "Completed"
+
+#: accounts/templates/accounts/base.html:158
+#: accounts/templates/accounts/home.html:252
+msgid "Pending approval"
+msgstr "Pending approval"
+
+#: accounts/templates/accounts/base.html:162
+msgid "Customer workspace navigation"
+msgstr "Customer workspace navigation"
+
+#: accounts/templates/accounts/base.html:167
+#: accounts/templates/accounts/register.html:17
+#: repairs/templates/repairs/repair_list.html:35
+msgid "My Requests"
+msgstr "My Requests"
+
+#: accounts/templates/accounts/base.html:173
+#: accounts/templates/accounts/base.html:204
+#: accounts/templates/accounts/home.html:19
+#: accounts/templates/accounts/home.html:112
+#: accounts/templates/accounts/home.html:224
+#: accounts/templates/accounts/home.html:229
+#: accounts/templates/accounts/home.html:325
+#: accounts/templates/accounts/partials/marketplace_sections.html:261
+#: accounts/templates/accounts/register.html:71
+#: repairs/templates/repairs/repair_form.html:4
+#: repairs/templates/repairs/repair_form.html:8
+#: repairs/templates/repairs/repair_list.html:11
+#: repairs/templates/repairs/repair_list.html:224
+msgid "Post a Repair Request"
+msgstr "Post a Repair Request"
+
+#: accounts/templates/accounts/base.html:189
+msgid "Trusted home repair workflow"
+msgstr "Trusted home repair workflow"
+
+#: accounts/templates/accounts/base.html:190
+msgid "Solve home problems with organized repair requests."
+msgstr "Solve home problems with organized repair requests."
+
+#: accounts/templates/accounts/base.html:191
+msgid ""
+"Post clear repair requests, manage work by role, and track each status from "
+"one account."
+msgstr "Post clear repair requests, manage work by role, and track each status from one account."
+
+#: accounts/templates/accounts/base.html:199
+#: accounts/templates/accounts/home.html:16
+#: accounts/templates/accounts/home.html:95
+#: accounts/templates/accounts/home.html:322
+#: accounts/templates/accounts/login.html:15
+#: accounts/templates/accounts/login.html:49
+#: accounts/templates/accounts/register.html:15
+#: accounts/templates/accounts/register.html:67
+msgid "View Approval Status"
+msgstr "View Approval Status"
+
+#: accounts/templates/accounts/base.html:201
+#: accounts/templates/accounts/login.html:17
+#: accounts/templates/accounts/login.html:51
+msgid "Open Dashboard"
+msgstr "Open Dashboard"
+
+#: accounts/templates/accounts/base.html:206
+#: accounts/templates/accounts/home.html:17
+#: accounts/templates/accounts/login.html:19
+msgid "How UstoHub Works"
+msgstr "How UstoHub Works"
+
+#: accounts/templates/accounts/base.html:211
+msgid "UstoHub trust indicators"
+msgstr "UstoHub trust indicators"
+
+#: accounts/templates/accounts/base.html:214
+msgid "Customer requests"
+msgstr "Customer requests"
+
+#: accounts/templates/accounts/base.html:218
+#: accounts/templates/accounts/register.html:32
+msgid "Professional queue"
+msgstr "Professional queue"
+
+#: accounts/templates/accounts/base.html:222
+#: accounts/templates/accounts/home.html:39
+msgid "Status tracking"
+msgstr "Status tracking"
+
+#: accounts/templates/accounts/base.html:226
+msgid "Repair request photo preview"
+msgstr "Repair request photo preview"
+
+#: accounts/templates/accounts/base.html:232
+msgid ""
+"Repair professional fixing a kitchen sink cabinet in a bright home workspace."
+msgstr ""
+"Repair professional fixing a kitchen sink cabinet in a bright home workspace."
+
+#: accounts/templates/accounts/base.html:237
+msgid "Repair context"
+msgstr "Repair context"
+
+#: accounts/templates/accounts/base.html:238
+msgid "Issue, location, and status in one record."
+msgstr "Issue, location, and status in one record."
+
+#: accounts/templates/accounts/base.html:242
+msgid "Saved request"
+msgstr "Saved request"
+
+#: accounts/templates/accounts/base.html:243
+msgid "Issue details stay organized."
+msgstr "Issue details stay organized."
+
+#: accounts/templates/accounts/base.html:245
+msgid "Repair evidence highlights"
+msgstr "Repair evidence highlights"
+
+#: accounts/templates/accounts/base.html:248
+msgid "Customer-owned record"
+msgstr "Customer-owned record"
+
+#: accounts/templates/accounts/base.html:252
+#: accounts/templates/accounts/home.html:71
+#: accounts/templates/accounts/home.html:323
+msgid "Professional workflow"
+msgstr "Professional workflow"
+
+#: accounts/templates/accounts/base.html:257
+msgid "Repair request workflow preview"
+msgstr "Repair request workflow preview"
+
+#: accounts/templates/accounts/base.html:259
+msgid "Request preview"
+msgstr "Request preview"
+
+#: accounts/templates/accounts/base.html:260
+msgid "4-step repair path"
+msgstr "4-step repair path"
+
+#: accounts/templates/accounts/base.html:263
+msgid "Describe the problem"
+msgstr "Describe the problem"
+
+#: accounts/templates/accounts/base.html:264
+msgid "Choose category and urgency"
+msgstr "Choose category and urgency"
+
+#: accounts/templates/accounts/base.html:265
+msgid "Professional accepts work"
+msgstr "Professional accepts work"
+
+#: accounts/templates/accounts/base.html:266
+msgid "Track completion status"
+msgstr "Track completion status"
+
+#: accounts/templates/accounts/base.html:272
+msgid "UstoHub account panel"
+msgstr "UstoHub account panel"
+
+#: accounts/templates/accounts/base.html:295
+msgid ""
+"UstoHub helps customers create repair requests and helps professionals "
+"manage open, assigned, and completed work."
+msgstr ""
+"UstoHub helps customers create repair requests and helps professionals "
+"manage open, assigned, and completed work."
+
+#: accounts/templates/accounts/base.html:298
+msgid "Footer navigation"
+msgstr "Footer navigation"
+
+#: accounts/templates/accounts/base.html:308
+#, python-format
+msgid "Signed in as <strong>%(username)s</strong>"
+msgstr "Signed in as <strong>%(username)s</strong>"
+
+#: accounts/templates/accounts/base.html:314
+msgid "Ready to manage a repair?"
+msgstr "Ready to manage a repair?"
+
+#: accounts/templates/accounts/base.html:320
+msgid "Built for dependable home repair."
+msgstr "Built for dependable home repair."
+
+#: accounts/templates/accounts/home.html:4
+msgid "Home Repair Marketplace"
+msgstr "Home Repair Marketplace"
+
+#: accounts/templates/accounts/home.html:6
+msgid "UstoHub repair marketplace start panel"
+msgstr "UstoHub repair marketplace start panel"
+
+#: accounts/templates/accounts/home.html:7
+msgid "Home repair marketplace"
+msgstr "Home repair marketplace"
+
+#: accounts/templates/accounts/home.html:8
+msgid "Repair requests, clearly managed."
+msgstr "Repair requests, clearly managed."
+
+#: accounts/templates/accounts/home.html:9
+msgid ""
+"Customers post repair requests. Professionals review, accept, and complete "
+"the work."
+msgstr "Customers post repair requests. Professionals review, accept, and complete the work."
+
+#: accounts/templates/accounts/home.html:13
+#: accounts/templates/accounts/home.html:78
+#: accounts/templates/accounts/home.html:245
+#: accounts/templates/accounts/home.html:250
+#: accounts/templates/accounts/home.html:318
+#: repairs/templates/repairs/professional_assigned_request_list.html:11
+#: repairs/templates/repairs/professional_assigned_request_list.html:140
+msgid "Browse Open Requests"
+msgstr "Browse Open Requests"
+
+#: accounts/templates/accounts/home.html:14
+#: accounts/templates/accounts/home.html:79
+#: accounts/templates/accounts/home.html:319
+msgid "My Assigned Requests"
+msgstr "My Assigned Requests"
+
+#: accounts/templates/accounts/home.html:20
+#: accounts/templates/accounts/home.html:113
+#: accounts/templates/accounts/home.html:326
+#: repairs/templates/repairs/repair_list.html:4
+msgid "My Repair Requests"
+msgstr "My Repair Requests"
+
+#: accounts/templates/accounts/home.html:28
+msgid "UstoHub Lite product principles"
+msgstr "UstoHub Lite product principles"
+
+#: accounts/templates/accounts/home.html:31
+msgid "Real repair requests"
+msgstr "Real repair requests"
+
+#: accounts/templates/accounts/home.html:35
+msgid "Account ownership"
+msgstr "Account ownership"
+
+#: accounts/templates/accounts/home.html:43
+msgid "Repair marketplace workflow preview"
+msgstr "Repair marketplace workflow preview"
+
+#: accounts/templates/accounts/home.html:49
+msgid "Professional repairing a kitchen cabinet area in a bright home."
+msgstr "Professional repairing a kitchen cabinet area in a bright home."
+
+#: accounts/templates/accounts/home.html:55
+msgid "Request flow"
+msgstr "Request flow"
+
+#: accounts/templates/accounts/home.html:56
+msgid "Post, accept, track, complete."
+msgstr "Post, accept, track, complete."
+
+#: accounts/templates/accounts/home.html:66
+msgid "Professional account"
+msgstr "Professional account"
+
+#: accounts/templates/accounts/home.html:67
 msgid "Your work queue starts with open requests."
 msgstr "Your work queue starts with open requests."
 
-msgid "required"
-msgstr "required"
+#: accounts/templates/accounts/home.html:68
+msgid "Review open requests and accept suitable work."
+msgstr "Review open requests and accept suitable work."
 
-msgid "You have %(total)s visible repair request."
-msgid_plural "You have %(total)s visible repair requests."
-msgstr[0] "You have %(total)s visible repair request."
-msgstr[1] "You have %(total)s visible repair requests."
+#: accounts/templates/accounts/home.html:72
+msgid "Browse open requests"
+msgstr "Browse open requests"
 
+#: accounts/templates/accounts/home.html:73
+msgid "Accept suitable work"
+msgstr "Accept suitable work"
+
+#: accounts/templates/accounts/home.html:74
+msgid "Mark completed when finished"
+msgstr "Mark completed when finished"
+
+#: accounts/templates/accounts/home.html:84
+msgid "Your Professional account is waiting for admin approval."
+msgstr "Your Professional account is waiting for admin approval."
+
+#: accounts/templates/accounts/home.html:85
+msgid "After approval, your professional queue will open."
+msgstr "After approval, your professional queue will open."
+
+#: accounts/templates/accounts/home.html:88
+msgid "Professional approval workflow"
+msgstr "Professional approval workflow"
+
+#: accounts/templates/accounts/home.html:100
+msgid "Customer account"
+msgstr "Customer account"
+
+#: accounts/templates/accounts/home.html:101
+msgid "Post the issue and keep its status clear."
+msgstr "Post the issue and keep its status clear."
+
+#: accounts/templates/accounts/home.html:102
+msgid "Create a request, then track it from My Requests."
+msgstr "Create a request, then track it from My Requests."
+
+#: accounts/templates/accounts/home.html:105
+msgid "Customer workflow"
+msgstr "Customer workflow"
+
+#: accounts/templates/accounts/home.html:106
+msgid "Describe the repair"
+msgstr "Describe the repair"
+
+#: accounts/templates/accounts/home.html:107
+msgid "Save the request"
+msgstr "Save the request"
+
+#: accounts/templates/accounts/home.html:108
+msgid "Track status updates"
+msgstr "Track status updates"
+
+#: accounts/templates/accounts/home.html:118
+msgid "Start here"
+msgstr "Start here"
+
+#: accounts/templates/accounts/home.html:119
+msgid "Choose the right account for your repair work."
+msgstr "Choose the right account for your repair work."
+
+#: accounts/templates/accounts/home.html:120
+msgid "Customers request repairs. Professionals manage open work."
+msgstr "Customers request repairs. Professionals manage open work."
+
+#: accounts/templates/accounts/home.html:123
+msgid "Account options"
+msgstr "Account options"
+
+#: accounts/templates/accounts/home.html:124
+#: accounts/templates/accounts/login.html:128
+msgid "Create an account"
+msgstr "Create an account"
+
+#: accounts/templates/accounts/home.html:125
+msgid "Choose Customer or Professional"
+msgstr "Choose Customer or Professional"
+
+#: accounts/templates/accounts/home.html:126
+msgid "Use the role-based workflow"
+msgstr "Use the role-based workflow"
+
+#: accounts/templates/accounts/home.html:141
+msgid "The repair problem"
+msgstr "The repair problem"
+
+#: accounts/templates/accounts/home.html:142
+msgid "Home repair needs a clear record."
+msgstr "Home repair needs a clear record."
+
+#: accounts/templates/accounts/home.html:143
+msgid "One request keeps the issue, address, urgency, and status together."
+msgstr "One request keeps the issue, address, urgency, and status together."
+
+#: accounts/templates/accounts/home.html:146
+msgid "Marketplace problems UstoHub Lite solves"
+msgstr "Marketplace problems UstoHub Lite solves"
+
+#: accounts/templates/accounts/home.html:151
+msgid "Organized records"
+msgstr "Organized records"
+
+#: accounts/templates/accounts/home.html:152
+msgid "Title, description, category, urgency, and address stay together."
+msgstr "Title, description, category, urgency, and address stay together."
+
+#: accounts/templates/accounts/home.html:158
+msgid "Clear work queue"
+msgstr "Clear work queue"
+
+#: accounts/templates/accounts/home.html:159
+msgid "Professionals review open work and manage assigned requests."
+msgstr "Professionals review open work and manage assigned requests."
+
+#: accounts/templates/accounts/home.html:165
+msgid "Visible status"
+msgstr "Visible status"
+
+#: accounts/templates/accounts/home.html:166
+msgid "Open, In Progress, Completed, and Cancelled remain readable."
+msgstr "Open, In Progress, Completed, and Cancelled remain readable."
+
+#: accounts/templates/accounts/home.html:175
+#: accounts/templates/accounts/partials/marketplace_sections.html:119
+msgid "How it works"
+msgstr "How it works"
+
+#: accounts/templates/accounts/home.html:176
+msgid "A simple repair workflow."
+msgstr "A simple repair workflow."
+
+#: accounts/templates/accounts/home.html:177
+msgid "The current flow is direct and role-based."
+msgstr "The current flow is direct and role-based."
+
+#: accounts/templates/accounts/home.html:183
+msgid "Customer posts a Repair Request"
+msgstr "Customer posts a Repair Request"
+
+#: accounts/templates/accounts/home.html:184
+msgid "Describe the issue and service address."
+msgstr "Describe the issue and service address."
+
+#: accounts/templates/accounts/home.html:188
+msgid "Professional accepts the request"
+msgstr "Professional accepts the request"
+
+#: accounts/templates/accounts/home.html:189
+msgid "Accept suitable work from the queue."
+msgstr "Accept suitable work from the queue."
+
+#: accounts/templates/accounts/home.html:193
+msgid "Customer tracks progress"
+msgstr "Customer tracks progress"
+
+#: accounts/templates/accounts/home.html:194
+msgid "Follow the request status."
+msgstr "Follow the request status."
+
+#: accounts/templates/accounts/home.html:198
+msgid "Work is completed"
+msgstr "Work is completed"
+
+#: accounts/templates/accounts/home.html:199
+msgid "Completed work moves to history."
+msgstr "Completed work moves to history."
+
+#: accounts/templates/accounts/home.html:208
+msgid "Role-based marketplace"
+msgstr "Role-based marketplace"
+
+#: accounts/templates/accounts/home.html:209
+msgid "One product, two focused workspaces."
+msgstr "One product, two focused workspaces."
+
+#: accounts/templates/accounts/home.html:210
+msgid "Each role sees the actions it can use."
+msgstr "Each role sees the actions it can use."
+
+#: accounts/templates/accounts/home.html:216
+msgid "Customer"
+msgstr "Customer"
+
+#: accounts/templates/accounts/home.html:221
+msgid "Create and review repair requests."
+msgstr "Create and review repair requests."
+
+#: accounts/templates/accounts/home.html:222
+msgid "Customers post requests and review saved details."
+msgstr "Customers post requests and review saved details."
+
+#: accounts/templates/accounts/home.html:225
+msgid "View My Repair Requests"
+msgstr "View My Repair Requests"
+
+#: accounts/templates/accounts/home.html:226
+msgid "Open saved request details"
+msgstr "Open saved request details"
+
+#: accounts/templates/accounts/home.html:231
+msgid "Create Customer Account"
+msgstr "Create Customer Account"
+
+#: accounts/templates/accounts/home.html:237
+#: accounts/templates/accounts/register.html:183
+#: repairs/templates/repairs/repair_detail.html:34
+#: repairs/templates/repairs/repair_detail.html:93
+msgid "Professional"
+msgstr "Professional"
+
+#: accounts/templates/accounts/home.html:242
+msgid "Accept and complete repair work."
+msgstr "Accept and complete repair work."
+
+#: accounts/templates/accounts/home.html:243
+msgid "Professionals browse open work and complete assigned requests."
+msgstr "Professionals browse open work and complete assigned requests."
+
+#: accounts/templates/accounts/home.html:246
+msgid "View Assigned Requests"
+msgstr "View Assigned Requests"
+
+#: accounts/templates/accounts/home.html:247
+msgid "Review Completed Requests"
+msgstr "Review Completed Requests"
+
+#: accounts/templates/accounts/home.html:254
+#: accounts/templates/accounts/partials/marketplace_sections.html:227
+msgid "Join as a Professional"
+msgstr "Join as a Professional"
+
+#: accounts/templates/accounts/home.html:264
+msgid "Repair categories"
+msgstr "Repair categories"
+
+#: accounts/templates/accounts/home.html:265
+msgid "Service types available today."
+msgstr "Service types available today."
+
+#: accounts/templates/accounts/home.html:266
+msgid "Choose the closest category when posting a request."
+msgstr "Choose the closest category when posting a request."
+
+#: accounts/templates/accounts/home.html:274
+#: accounts/templates/accounts/partials/marketplace_sections.html:60
+msgid "Plumbing"
+msgstr "Plumbing"
+
+#: accounts/templates/accounts/home.html:275
+msgid "Leaks, drains, faucets, and water-related repair requests."
+msgstr "Leaks, drains, faucets, and water-related repair requests."
+
+#: accounts/templates/accounts/home.html:281
+#: accounts/templates/accounts/partials/marketplace_sections.html:67
+msgid "Electrical"
+msgstr "Electrical"
+
+#: accounts/templates/accounts/home.html:282
+msgid "Switches, outlets, lighting, and electrical repair concerns."
+msgstr "Switches, outlets, lighting, and electrical repair concerns."
+
+#: accounts/templates/accounts/home.html:288
+msgid "Appliance"
+msgstr "Appliance"
+
+#: accounts/templates/accounts/home.html:289
+msgid "Repair requests for essential home appliances."
+msgstr "Repair requests for essential home appliances."
+
+#: accounts/templates/accounts/home.html:295
+msgid "Furniture"
+msgstr "Furniture"
+
+#: accounts/templates/accounts/home.html:296
+msgid "Assembly, fixes, mounting, and furniture-related service work."
+msgstr "Assembly, fixes, mounting, and furniture-related service work."
+
+#: accounts/templates/accounts/home.html:302
+msgid "Other"
+msgstr "Other"
+
+#: accounts/templates/accounts/home.html:303
+msgid "General repair requests that do not fit the main categories."
+msgstr "General repair requests that do not fit the main categories."
+
+#: accounts/templates/accounts/home.html:312
+msgid "Ready when the repair is real"
+msgstr "Ready when the repair is real"
+
+#: accounts/templates/accounts/home.html:313
+msgid "Start with the right workspace."
+msgstr "Start with the right workspace."
+
+#: accounts/templates/accounts/home.html:320
+#: repairs/templates/repairs/professional_completed_request_list.html:4
+#: repairs/templates/repairs/professional_completed_request_list.html:8
+msgid "Completed Requests"
+msgstr "Completed Requests"
+
+#: accounts/templates/accounts/login.html:4
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: accounts/templates/accounts/login.html:6
+msgid "UstoHub dashboard access"
+msgstr "UstoHub dashboard access"
+
+#: accounts/templates/accounts/login.html:6
+msgid "Log in to UstoHub"
+msgstr "Log in to UstoHub"
+
+#: accounts/templates/accounts/login.html:7
+#: accounts/templates/accounts/login.html:42
+#: accounts/templates/accounts/register.html:45
+msgid "Signed in"
+msgstr "Signed in"
+
+#: accounts/templates/accounts/login.html:7
+msgid "Secure account access"
+msgstr "Secure account access"
+
+#: accounts/templates/accounts/login.html:8
+msgid "Your repair workspace is ready."
+msgstr "Your repair workspace is ready."
+
+#: accounts/templates/accounts/login.html:8
+msgid "Return to your repair workspace."
+msgstr "Return to your repair workspace."
+
+#: accounts/templates/accounts/login.html:9
+msgid "Continue to the workspace for your account role."
+msgstr "Continue to the workspace for your account role."
+
+#: accounts/templates/accounts/login.html:9
+msgid "Access your repair requests or professional work queue."
+msgstr "Access your repair requests or professional work queue."
+
+#: accounts/templates/accounts/login.html:13
+#: accounts/templates/accounts/login.html:47
+#: accounts/templates/accounts/register.html:13
+#: accounts/templates/accounts/register.html:63
+msgid "Open Professional Queue"
+msgstr "Open Professional Queue"
+
+#: accounts/templates/accounts/login.html:21
+msgid "Log in securely"
+msgstr "Log in securely"
+
+#: accounts/templates/accounts/login.html:26
+msgid "Login highlights"
+msgstr "Login highlights"
+
+#: accounts/templates/accounts/login.html:29
+msgid "Protected access"
+msgstr "Protected access"
+
+#: accounts/templates/accounts/login.html:33
+msgid "Role-based workspace"
+msgstr "Role-based workspace"
+
+#: accounts/templates/accounts/login.html:43
+msgid "You are already logged in."
+msgstr "You are already logged in."
+
+#: accounts/templates/accounts/login.html:44
+msgid ""
+"Continue to your UstoHub overview or log out from the header when you are "
+"finished."
+msgstr ""
+"Continue to your UstoHub overview or log out from the header when you are "
+"finished."
+
+#: accounts/templates/accounts/login.html:57
+msgid "Protected session"
+msgstr "Protected session"
+
+#: accounts/templates/accounts/login.html:58
+msgid "Log in to UstoHub."
+msgstr "Log in to UstoHub."
+
+#: accounts/templates/accounts/login.html:59
+msgid "Use the username and password connected to your verified account."
+msgstr "Use the username and password connected to your verified account."
+
+#: accounts/templates/accounts/login.html:68
+msgid "Login was not successful."
+msgstr "Login was not successful."
+
+#: accounts/templates/accounts/login.html:79
+#: accounts/templates/accounts/register.html:106
+msgid "Username"
+msgstr "Username"
+
+#: accounts/templates/accounts/login.html:96
+#: accounts/templates/accounts/register.html:207
+msgid "Password"
+msgstr "Password"
+
+#: accounts/templates/accounts/login.html:99
+#: accounts/templates/accounts/register.html:210
+msgid "Show password"
+msgstr "Show password"
+
+#: accounts/templates/accounts/login.html:99
+#: accounts/templates/accounts/register.html:210
+msgid "Hide password"
+msgstr "Hide password"
+
+#: accounts/templates/accounts/login.html:119
+msgid ""
+"Secure access keeps account activity tied to the right customer or "
+"professional."
+msgstr ""
+"Secure access keeps account activity tied to the right customer or "
+"professional."
+
+#: accounts/templates/accounts/login.html:128
+msgid "New to UstoHub?"
+msgstr "New to UstoHub?"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:3
+msgid "Marketplace confidence"
+msgstr "Marketplace confidence"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:7
+msgid "Request intake"
+msgstr "Request intake"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:11
+msgid "Repair workflow stages"
+msgstr "Repair workflow stages"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:15
+msgid "Account for service history"
+msgstr "Account for service history"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:19
+msgid "Accessible interface standard"
+msgstr "Accessible interface standard"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:27
+msgid "Service categories"
+msgstr "Service categories"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:28
+msgid "Coverage for everyday home repairs."
+msgstr "Coverage for everyday home repairs."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:29
+msgid ""
+"Start with the repair type, then add details, photos, preferred timing, and "
+"location when those tools are available in the account."
+msgstr ""
+"Start with the repair type, then add details, photos, preferred timing, and "
+"location when those tools are available in the account."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:32
+msgid "Repair service photography preview"
+msgstr "Repair service photography preview"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:38
+msgid ""
+"Professional technician testing an electrical outlet in a bright home living "
+"space."
+msgstr ""
+"Professional technician testing an electrical outlet in a bright home living "
+"space."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:44
+msgid "Visual repair context"
+msgstr "Visual repair context"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:45
+msgid "Real home issues need clear evidence."
+msgstr "Real home issues need clear evidence."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:46
+msgid ""
+"UstoHub is structured for photos, repair descriptions, visit records, and "
+"status updates as the marketplace grows."
+msgstr ""
+"UstoHub is structured for photos, repair descriptions, visit records, and "
+"status updates as the marketplace grows."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:48
+msgid "Issue details stay attached to the request"
+msgstr "Issue details stay attached to the request"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:49
+msgid "Professionals can understand scope faster"
+msgstr "Professionals can understand scope faster"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:50
+msgid "Completed work can be documented clearly"
+msgstr "Completed work can be documented clearly"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:61
+msgid "Leaks, faucets, drains, water pressure, and emergency fixes."
+msgstr "Leaks, faucets, drains, water pressure, and emergency fixes."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:68
+msgid "Switches, outlets, lighting, wiring checks, and safety issues."
+msgstr "Switches, outlets, lighting, wiring checks, and safety issues."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:74
+msgid "Appliance Repair"
+msgstr "Appliance Repair"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:75
+msgid "Diagnostics and repairs for essential home appliances."
+msgstr "Diagnostics and repairs for essential home appliances."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:81
+msgid "Heating and Cooling"
+msgstr "Heating and Cooling"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:82
+msgid "Seasonal service, troubleshooting, and comfort checks."
+msgstr "Seasonal service, troubleshooting, and comfort checks."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:88
+msgid "Furniture Assembly"
+msgstr "Furniture Assembly"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:89
+msgid "Assembly, mounting, adjustments, and safe installation."
+msgstr "Assembly, mounting, adjustments, and safe installation."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:95
+msgid "Painting"
+msgstr "Painting"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:96
+msgid "Interior painting, touch-ups, surface preparation, and finish work."
+msgstr "Interior painting, touch-ups, surface preparation, and finish work."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:102
+msgid "Cleaning"
+msgstr "Cleaning"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:103
+msgid "Post-repair cleanup, deep cleaning, and move-ready spaces."
+msgstr "Post-repair cleanup, deep cleaning, and move-ready spaces."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:109
+msgid "General Maintenance"
+msgstr "General Maintenance"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:110
+msgid "Small fixes, inspections, routine improvements, and urgent help."
+msgstr "Small fixes, inspections, routine improvements, and urgent help."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:120
+msgid "A clear path from issue to completed repair."
+msgstr "A clear path from issue to completed repair."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:121
+msgid ""
+"The interface is ready for a full marketplace flow while staying compatible "
+"with the current account and verification steps."
+msgstr ""
+"The interface is ready for a full marketplace flow while staying compatible "
+"with the current account and verification steps."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:128
+msgid "Describe the problem."
+msgstr "Describe the problem."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:129
+msgid "Tell UstoHub what happened, where it happened, and how urgent it feels."
+msgstr ""
+"Tell UstoHub what happened, where it happened, and how urgent it feels."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:135
+msgid "Add photos or video."
+msgstr "Add photos or video."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:136
+msgid ""
+"Visual evidence helps professionals understand scope before they respond."
+msgstr ""
+"Visual evidence helps professionals understand scope before they respond."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:142
+msgid "Receive verified offers."
+msgstr "Receive verified offers."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:143
+msgid "Compare price, availability, service details, and customer feedback."
+msgstr "Compare price, availability, service details, and customer feedback."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:149
+msgid "Book and track the repair."
+msgstr "Book and track the repair."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:150
+msgid ""
+"Keep the visit, scope, status, and completion record attached to one account."
+msgstr ""
+"Keep the visit, scope, status, and completion record attached to one account."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:156
+msgid "Review the work."
+msgstr "Review the work."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:157
+msgid ""
+"Confirm completion, keep warranty information, and help future customers "
+"choose well."
+msgstr ""
+"Confirm completion, keep warranty information, and help future customers "
+"choose well."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:167
+msgid "Verified professionals"
+msgstr "Verified professionals"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:168
+msgid "Profiles designed for confident comparison."
+msgstr "Profiles designed for confident comparison."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:169
+msgid ""
+"Professional cards are structured to show verification, service type, "
+"rating, availability, completed work, and warranty details when real profile "
+"data is available."
+msgstr ""
+"Professional cards are structured to show verification, service type, "
+"rating, availability, completed work, and warranty details when real profile "
+"data is available."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:176
+msgid "No professional profiles are published yet."
+msgstr "No professional profiles are published yet."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:177
+msgid ""
+"Verified profile cards will appear here after professionals are available "
+"through the account flow."
+msgstr ""
+"Verified profile cards will appear here after professionals are available "
+"through the account flow."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:178
+msgid "Empty state"
+msgstr "Empty state"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:186
+msgid "Warranty and safety"
+msgstr "Warranty and safety"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:187
+msgid "Every serious repair needs a record."
+msgstr "Every serious repair needs a record."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:188
+msgid ""
+"UstoHub is structured for before-and-after evidence, confirmed scope, "
+"completion status, and warranty details so the customer and professional can "
+"stay aligned."
+msgstr ""
+"UstoHub is structured for before-and-after evidence, confirmed scope, "
+"completion status, and warranty details so the customer and professional can "
+"stay aligned."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:191
+msgid "Quality-control checklist"
+msgstr "Quality-control checklist"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:193
+msgid "Verified account before request activity"
+msgstr "Verified account before request activity"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:194
+msgid "Issue description and supporting media"
+msgstr "Issue description and supporting media"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:195
+msgid "Offer comparison and booking summary"
+msgstr "Offer comparison and booking summary"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:196
+msgid "Completion confirmation and review history"
+msgstr "Completion confirmation and review history"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:208
+msgid "No customer reviews yet."
+msgstr "No customer reviews yet."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:209
+msgid ""
+"Reviews will appear after completed repair work is available in UstoHub."
+msgstr ""
+"Reviews will appear after completed repair work is available in UstoHub."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:213
+msgid "Customer feedback"
+msgstr "Customer feedback"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:214
+msgid "Reviews should prove real work, not decorate the page."
+msgstr "Reviews should prove real work, not decorate the page."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:215
+msgid ""
+"Verified reviews will appear only after completed repair work is available "
+"in UstoHub."
+msgstr ""
+"Verified reviews will appear only after completed repair work is available "
+"in UstoHub."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:223
+msgid "For professionals"
+msgstr "For professionals"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:224
+msgid "A practical workspace for trusted service providers."
+msgstr "A practical workspace for trusted service providers."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:225
+msgid ""
+"Professionals can use the same account system today, with the interface "
+"prepared for requests, offers, schedules, jobs, reviews, and service history "
+"as the marketplace grows."
+msgstr ""
+"Professionals can use the same account system today, with the interface "
+"prepared for requests, offers, schedules, jobs, reviews, and service history "
+"as the marketplace grows."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:234
+msgid "Questions"
+msgstr "Questions"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:235
+msgid "Frequently asked questions."
+msgstr "Frequently asked questions."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:240
+msgid "Can I create a customer or professional account?"
+msgstr "Can I create a customer or professional account?"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:241
+msgid ""
+"Yes. Choose Customer or Professional during registration to open the "
+"workspace that matches your role."
+msgstr ""
+"Yes. Choose Customer or Professional during registration to open the "
+"workspace that matches your role."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:244
+msgid "Why do I need email verification?"
+msgstr "Why do I need email verification?"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:245
+msgid ""
+"Email verification helps keep repair requests and service activity connected "
+"to the correct account."
+msgstr ""
+"Email verification helps keep repair requests and service activity connected "
+"to the correct account."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:248
+msgid "Are professional offers available now?"
+msgstr "Are professional offers available now?"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:249
+msgid ""
+"The interface is prepared for offers and bookings. Real offer data will "
+"appear when those marketplace features are connected."
+msgstr ""
+"The interface is prepared for offers and bookings. Real offer data will "
+"appear when those marketplace features are connected."
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:258
+msgid "Start with an account"
+msgstr "Start with an account"
+
+#: accounts/templates/accounts/partials/marketplace_sections.html:259
+msgid "Bring your next home repair into one organized flow."
+msgstr "Bring your next home repair into one organized flow."
+
+#: accounts/templates/accounts/partials/messages.html:4
+msgid "Notifications"
+msgstr "Notifications"
+
+#: accounts/templates/accounts/register.html:6
+msgid "Create a UstoHub account"
+msgstr "Create a UstoHub account"
+
+#: accounts/templates/accounts/register.html:7
+#: accounts/templates/accounts/register.html:84
+msgid "Account setup"
+msgstr "Account setup"
+
+#: accounts/templates/accounts/register.html:8
+msgid "Your account is ready."
+msgstr "Your account is ready."
+
+#: accounts/templates/accounts/register.html:8
+msgid "Create your UstoHub account."
+msgstr "Create your UstoHub account."
+
+#: accounts/templates/accounts/register.html:9
+msgid "Use your workspace to manage repair activity."
+msgstr "Use your workspace to manage repair activity."
+
+#: accounts/templates/accounts/register.html:9
+msgid ""
+"Choose Customer or Professional, verify your email, and continue to the "
+"right workspace."
+msgstr "Choose Customer or Professional, verify your email, and continue to the right workspace."
+
+#: accounts/templates/accounts/register.html:25
+msgid "Account setup highlights"
+msgstr "Account setup highlights"
+
+#: accounts/templates/accounts/register.html:28
+msgid "Customer workspace"
+msgstr "Customer workspace"
+
+#: accounts/templates/accounts/register.html:36
+msgid "Email verification"
+msgstr "Email verification"
+
+#: accounts/templates/accounts/register.html:46
+#, python-format
+msgid "Welcome back, %(username)s."
+msgstr "Welcome back, %(username)s."
+
+#: accounts/templates/accounts/register.html:48
+msgid "Your professional queue is ready."
+msgstr "Your professional queue is ready."
+
+#: accounts/templates/accounts/register.html:50
+msgid "Your Professional account is pending approval."
+msgstr "Your Professional account is pending approval."
+
+#: accounts/templates/accounts/register.html:52
+msgid "Your customer workspace is ready."
+msgstr "Your customer workspace is ready."
+
+#: accounts/templates/accounts/register.html:61
+msgid "Open your work queue."
+msgstr "Open your work queue."
+
+#: accounts/templates/accounts/register.html:62
+msgid "Browse open requests or review assigned work."
+msgstr "Browse open requests or review assigned work."
+
+#: accounts/templates/accounts/register.html:65
+msgid "Professional approval is pending."
+msgstr "Professional approval is pending."
+
+#: accounts/templates/accounts/register.html:66
+msgid "Approval is required before queue access."
+msgstr "Approval is required before queue access."
+
+#: accounts/templates/accounts/register.html:69
+msgid "Start a repair request."
+msgstr "Start a repair request."
+
+#: accounts/templates/accounts/register.html:70
+msgid "Create a request or open your saved requests."
+msgstr "Create a request or open your saved requests."
+
+#: accounts/templates/accounts/register.html:77
+#: accounts/templates/accounts/verify_email.html:18
+msgid "Account progress"
+msgstr "Account progress"
+
+#: accounts/templates/accounts/register.html:78
+#: accounts/templates/accounts/verify_email.html:19
+msgid "Account"
+msgstr "Account"
+
+#: accounts/templates/accounts/register.html:79
+#: accounts/templates/accounts/verify_email.html:20
+msgid "Verify"
+msgstr "Verify"
+
+#: accounts/templates/accounts/register.html:80
+#: accounts/templates/accounts/verify_email.html:21
+msgid "Ready"
+msgstr "Ready"
+
+#: accounts/templates/accounts/register.html:85
+msgid "Create your repair profile."
+msgstr "Create your repair profile."
+
+#: accounts/templates/accounts/register.html:86
+msgid ""
+"Join as a customer or professional. We will send a verification code to your "
+"email."
+msgstr ""
+"Join as a customer or professional. We will send a verification code to your "
+"email."
+
+#: accounts/templates/accounts/register.html:95
+msgid "Account details need attention."
+msgstr "Account details need attention."
+
+#: accounts/templates/accounts/register.html:123
+msgid "Email"
+msgstr "Email"
+
+#: accounts/templates/accounts/register.html:140
+msgid "Phone number"
+msgstr "Phone number"
+
+#: accounts/templates/accounts/register.html:147
+msgid "Optional account contact number."
+msgstr "Optional account contact number."
+
+#: accounts/templates/accounts/register.html:159
+msgid "I am joining as"
+msgstr "I am joining as"
+
+#: accounts/templates/accounts/register.html:184
+msgid "Respond to repair requests"
+msgstr "Respond to repair requests"
+
+#: accounts/templates/accounts/register.html:184
+msgid "Request and track repairs"
+msgstr "Request and track repairs"
+
+#: accounts/templates/accounts/register.html:217
+msgid "Password requirements"
+msgstr "Password requirements"
+
+#: accounts/templates/accounts/register.html:231
+msgid "Password confirmation"
+msgstr "Password confirmation"
+
+#: accounts/templates/accounts/register.html:234
+msgid "Show password confirmation"
+msgstr "Show password confirmation"
+
+#: accounts/templates/accounts/register.html:234
+msgid "Hide password confirmation"
+msgstr "Hide password confirmation"
+
+#: accounts/templates/accounts/register.html:254
+msgid ""
+"Account verification helps keep repair requests and professional activity "
+"secure."
+msgstr ""
+"Account verification helps keep repair requests and professional activity "
+"secure."
+
+#: accounts/templates/accounts/register.html:263
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+#: accounts/templates/accounts/verify_email.html:4
+#: accounts/templates/accounts/verify_email.html:71
+msgid "Verify email"
+msgstr "Verify email"
+
+#: accounts/templates/accounts/verify_email.html:6
+msgid "Verify your UstoHub email"
+msgstr "Verify your UstoHub email"
+
+#: accounts/templates/accounts/verify_email.html:7
+msgid "Account verification"
+msgstr "Account verification"
+
+#: accounts/templates/accounts/verify_email.html:8
+msgid "Confirm your email before repair activity begins."
+msgstr "Confirm your email before repair activity begins."
+
+#: accounts/templates/accounts/verify_email.html:9
+msgid ""
+"Enter the six-digit code sent to your inbox so your account can be activated "
+"securely."
+msgstr ""
+"Enter the six-digit code sent to your inbox so your account can be activated "
+"securely."
+
+#: accounts/templates/accounts/verify_email.html:11
+msgid "Enter verification code"
+msgstr "Enter verification code"
+
+#: accounts/templates/accounts/verify_email.html:12
+msgid "Back to log in"
+msgstr "Back to log in"
+
+#: accounts/templates/accounts/verify_email.html:25
+msgid "Email checkpoint"
+msgstr "Email checkpoint"
+
+#: accounts/templates/accounts/verify_email.html:26
+msgid "Enter the six-digit code."
+msgstr "Enter the six-digit code."
+
+#: accounts/templates/accounts/verify_email.html:27
+#, python-format
+msgid "We sent it to <strong>%(email)s</strong>."
+msgstr "We sent it to <strong>%(email)s</strong>."
+
+#: accounts/templates/accounts/verify_email.html:36
+msgid "Verification needs attention."
+msgstr "Verification needs attention."
+
+#: accounts/templates/accounts/verify_email.html:46
+msgid "Verification code"
+msgstr "Verification code"
+
+#: accounts/templates/accounts/verify_email.html:55
+msgid "Use numbers only. Paste is supported."
+msgstr "Use numbers only. Paste is supported."
+
+#: accounts/templates/accounts/verify_email.html:67
+msgid ""
+"Verification protects your account before repair requests or professional "
+"work can begin."
+msgstr ""
+"Verification protects your account before repair requests or professional "
+"work can begin."
+
+#: config/settings.py:117
+msgid "English"
+msgstr "English"
+
+#: config/settings.py:118
+msgid "Russian"
+msgstr "Russian"
+
+#: config/settings.py:119
+msgid "Tajik"
+msgstr "Tajik"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:4
+#: repairs/templates/repairs/professional_assigned_request_list.html:8
+#: repairs/templates/repairs/professional_assigned_request_list.html:61
+msgid "My Accepted Requests"
+msgstr "My Accepted Requests"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:6
+msgid "Professional accepted repair requests"
+msgstr "Professional accepted repair requests"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:7
+#: repairs/templates/repairs/professional_request_list.html:7
+msgid "Professional work queue"
+msgstr "Professional work queue"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:9
+msgid "Track repair requests assigned to your professional account."
+msgstr "Track repair requests assigned to your professional account."
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:14
+msgid "Assigned repair request summary"
+msgstr "Assigned repair request summary"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:18
 msgid "accepted request"
 msgid_plural "accepted requests"
 msgstr[0] "accepted request"
 msgstr[1] "accepted requests"
 
-msgid "completed request"
-msgid_plural "completed requests"
-msgstr[0] "completed request"
-msgstr[1] "completed requests"
+#: repairs/templates/repairs/professional_assigned_request_list.html:22
+#: repairs/templates/repairs/professional_assigned_request_list.html:60
+msgid "Accepted work"
+msgstr "Accepted work"
 
-msgid "open request"
-msgid_plural "open requests"
-msgstr[0] "open request"
-msgstr[1] "open requests"
+#: repairs/templates/repairs/professional_assigned_request_list.html:24
+msgid "Requests in progress appear here."
+msgstr "Requests in progress appear here."
 
-msgid "visible request"
-msgid_plural "visible requests"
-msgstr[0] "visible request"
-msgstr[1] "visible requests"
+#: repairs/templates/repairs/professional_assigned_request_list.html:26
+msgid "No in-progress requests right now."
+msgstr "No in-progress requests right now."
 
-msgid "%(total)s accepted repair request is currently assigned to you."
-msgid_plural "%(total)s accepted repair requests are currently assigned to you."
-msgstr[0] "%(total)s accepted repair request is currently assigned to you."
-msgstr[1] "%(total)s accepted repair requests are currently assigned to you."
+#: repairs/templates/repairs/professional_assigned_request_list.html:35
+msgid "In Progress"
+msgstr "In Progress"
 
-msgid "%(total)s completed repair request is saved in your professional work history."
-msgid_plural "%(total)s completed repair requests are saved in your professional work history."
-msgstr[0] "%(total)s completed repair request is saved in your professional work history."
-msgstr[1] "%(total)s completed repair requests are saved in your professional work history."
+#: repairs/templates/repairs/professional_assigned_request_list.html:36
+msgid "Assigned work overview"
+msgstr "Assigned work overview"
 
-msgid "%(total)s open repair request can be reviewed from this professional workspace."
-msgid_plural "%(total)s open repair requests can be reviewed from this professional workspace."
-msgstr[0] "%(total)s open repair request can be reviewed from this professional workspace."
-msgstr[1] "%(total)s open repair requests can be reviewed from this professional workspace."
+#: repairs/templates/repairs/professional_assigned_request_list.html:39
+#, python-format
+msgid "%(total)s accepted request."
+msgid_plural "%(total)s accepted requests."
+msgstr[0] "%(total)s accepted request."
+msgstr[1] "%(total)s accepted requests."
 
+#: repairs/templates/repairs/professional_assigned_request_list.html:42
+msgid "Accepted customer requests will appear here."
+msgstr "Accepted customer requests will appear here."
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:50
+msgid "Only requests assigned to you are shown."
+msgstr "Only requests assigned to you are shown."
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:62
+msgid "Manage active repair work."
+msgstr "Manage active repair work."
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:66
+#, python-format
 msgid "%(total)s request accepted"
 msgid_plural "%(total)s requests accepted"
 msgstr[0] "%(total)s request accepted"
 msgstr[1] "%(total)s requests accepted"
 
+#: repairs/templates/repairs/professional_assigned_request_list.html:77
+msgid "Assigned Repair Request"
+msgstr "Assigned Repair Request"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:82
+#: repairs/templates/repairs/professional_completed_request_list.html:82
+#: repairs/templates/repairs/professional_request_list.html:80
+#: repairs/templates/repairs/repair_confirm_delete.html:45
+#: repairs/templates/repairs/repair_detail.html:21
+#: repairs/templates/repairs/repair_detail.html:66
+#: repairs/templates/repairs/repair_list.html:113
+#: repairs/templates/repairs/repair_list.html:145
+#: repairs/templates/repairs/repair_list.html:163
+msgid "Status"
+msgstr "Status"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:90
+#: repairs/templates/repairs/professional_completed_request_list.html:90
+#: repairs/templates/repairs/professional_request_list.html:88
+#: repairs/templates/repairs/repair_confirm_delete.html:41
+#: repairs/templates/repairs/repair_detail.html:26
+#: repairs/templates/repairs/repair_detail.html:62
+#: repairs/templates/repairs/repair_form.html:70
+#: repairs/templates/repairs/repair_list.html:89
+#: repairs/templates/repairs/repair_list.html:139
+#: repairs/templates/repairs/repair_list.html:171
+msgid "Category"
+msgstr "Category"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:94
+#: repairs/templates/repairs/professional_completed_request_list.html:94
+#: repairs/templates/repairs/professional_request_list.html:92
+#: repairs/templates/repairs/repair_confirm_delete.html:49
+#: repairs/templates/repairs/repair_detail.html:30
+#: repairs/templates/repairs/repair_detail.html:56
+#: repairs/templates/repairs/repair_form.html:74
+#: repairs/templates/repairs/repair_form.html:172
+#: repairs/templates/repairs/repair_list.html:101
+#: repairs/templates/repairs/repair_list.html:142
+#: repairs/templates/repairs/repair_list.html:177
+msgid "Urgency"
+msgstr "Urgency"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:102
+#: repairs/templates/repairs/professional_completed_request_list.html:102
+#: repairs/templates/repairs/professional_request_list.html:100
+#: repairs/templates/repairs/repair_detail.html:70
+#: repairs/templates/repairs/repair_list.html:185
+msgid "Created"
+msgstr "Created"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:106
+#: repairs/templates/repairs/professional_completed_request_list.html:106
+#: repairs/templates/repairs/professional_request_list.html:104
+#: repairs/templates/repairs/repair_detail.html:74
+#: repairs/templates/repairs/repair_list.html:189
+msgid "Updated"
+msgstr "Updated"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:119
+#: repairs/templates/repairs/professional_completed_request_list.html:119
+#: repairs/templates/repairs/professional_request_list.html:117
+#, python-format
+msgid "Customer: %(username)s"
+msgstr "Customer: %(username)s"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:125
+#, python-format
+msgid "Mark repair request %(title)s as completed"
+msgstr "Mark repair request %(title)s as completed"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:127
+msgid "Mark as Completed"
+msgstr "Mark as Completed"
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:138
+msgid "No accepted repair requests."
+msgstr "No accepted repair requests."
+
+#: repairs/templates/repairs/professional_assigned_request_list.html:139
+msgid "Browse open requests when you are ready for work."
+msgstr "Browse open requests when you are ready for work."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:6
+msgid "Professional completed repair requests"
+msgstr "Professional completed repair requests"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:7
+msgid "Professional work history"
+msgstr "Professional work history"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:9
+msgid "Review repair requests you have marked as completed."
+msgstr "Review repair requests you have marked as completed."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:11
+#: repairs/templates/repairs/professional_completed_request_list.html:133
+msgid "View Active Requests"
+msgstr "View Active Requests"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:14
+msgid "Completed repair request summary"
+msgstr "Completed repair request summary"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:18
+msgid "completed request"
+msgid_plural "completed requests"
+msgstr[0] "completed request"
+msgstr[1] "completed requests"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:22
+msgid "Finished work"
+msgstr "Finished work"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:24
+msgid "Latest completed requests appear first."
+msgstr "Latest completed requests appear first."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:26
+msgid "No completed requests yet."
+msgstr "No completed requests yet."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:36
+msgid "Completed work overview"
+msgstr "Completed work overview"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:39
+#, python-format
+msgid "%(total)s completed request."
+msgid_plural "%(total)s completed requests."
+msgstr[0] "%(total)s completed request."
+msgstr[1] "%(total)s completed requests."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:42
+msgid "Completed requests will appear here."
+msgstr "Completed requests will appear here."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:50
+msgid "Only your completed requests are shown."
+msgstr "Only your completed requests are shown."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:60
+msgid "Completed work"
+msgstr "Completed work"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:61
+msgid "Finished repair requests"
+msgstr "Finished repair requests"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:62
+msgid "Review completed request records."
+msgstr "Review completed request records."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:66
+#, python-format
 msgid "%(total)s request completed"
 msgid_plural "%(total)s requests completed"
 msgstr[0] "%(total)s request completed"
 msgstr[1] "%(total)s requests completed"
 
+#: repairs/templates/repairs/professional_completed_request_list.html:77
+msgid "Completed Repair Request"
+msgstr "Completed Repair Request"
+
+#: repairs/templates/repairs/professional_completed_request_list.html:131
+msgid "No completed repair requests."
+msgstr "No completed repair requests."
+
+#: repairs/templates/repairs/professional_completed_request_list.html:132
+msgid "Active requests can be reviewed from your accepted queue."
+msgstr "Active requests can be reviewed from your accepted queue."
+
+#: repairs/templates/repairs/professional_request_list.html:4
+#: repairs/templates/repairs/professional_request_list.html:8
+msgid "Open Repair Requests"
+msgstr "Open Repair Requests"
+
+#: repairs/templates/repairs/professional_request_list.html:6
+msgid "Professional open repair requests"
+msgstr "Professional open repair requests"
+
+#: repairs/templates/repairs/professional_request_list.html:9
+msgid "Review open customer requests and accept suitable work."
+msgstr "Review open customer requests and accept suitable work."
+
+#: repairs/templates/repairs/professional_request_list.html:12
+msgid "Open repair request summary"
+msgstr "Open repair request summary"
+
+#: repairs/templates/repairs/professional_request_list.html:16
+msgid "open request"
+msgid_plural "open requests"
+msgstr[0] "open request"
+msgstr[1] "open requests"
+
+#: repairs/templates/repairs/professional_request_list.html:20
+#: repairs/templates/repairs/professional_request_list.html:58
+msgid "Available requests"
+msgstr "Available requests"
+
+#: repairs/templates/repairs/professional_request_list.html:22
+msgid "Newest open requests appear first."
+msgstr "Newest open requests appear first."
+
+#: repairs/templates/repairs/professional_request_list.html:24
+msgid "No open requests right now."
+msgstr "No open requests right now."
+
+#: repairs/templates/repairs/professional_request_list.html:33
+msgid "Professional Queue"
+msgstr "Professional Queue"
+
+#: repairs/templates/repairs/professional_request_list.html:34
+msgid "Open work overview"
+msgstr "Open work overview"
+
+#: repairs/templates/repairs/professional_request_list.html:37
+#, python-format
+msgid "%(total)s open request available."
+msgid_plural "%(total)s open requests available."
+msgstr[0] "%(total)s open request available."
+msgstr[1] "%(total)s open requests available."
+
+#: repairs/templates/repairs/professional_request_list.html:40
+msgid "No open requests at the moment."
+msgstr "No open requests at the moment."
+
+#: repairs/templates/repairs/professional_request_list.html:48
+msgid "Accepted requests move to your assigned queue."
+msgstr "Accepted requests move to your assigned queue."
+
+#: repairs/templates/repairs/professional_request_list.html:59
+msgid "Customer repair requests"
+msgstr "Customer repair requests"
+
+#: repairs/templates/repairs/professional_request_list.html:60
+msgid "Review scope, urgency, and location before accepting."
+msgstr "Review scope, urgency, and location before accepting."
+
+#: repairs/templates/repairs/professional_request_list.html:64
+#, python-format
+msgid "%(total)s request visible"
+msgid_plural "%(total)s requests visible"
+msgstr[0] "%(total)s request visible"
+msgstr[1] "%(total)s requests visible"
+
+#: repairs/templates/repairs/professional_request_list.html:75
+msgid "Open Repair Request"
+msgstr "Open Repair Request"
+
+#: repairs/templates/repairs/professional_request_list.html:123
+#, python-format
+msgid "Accept repair request %(title)s"
+msgstr "Accept repair request %(title)s"
+
+#: repairs/templates/repairs/professional_request_list.html:125
+msgid "Accept Request"
+msgstr "Accept Request"
+
+#: repairs/templates/repairs/professional_request_list.html:136
+msgid "No open repair requests."
+msgstr "No open repair requests."
+
+#: repairs/templates/repairs/professional_request_list.html:137
+msgid "New customer requests will appear here."
+msgstr "New customer requests will appear here."
+
+#: repairs/templates/repairs/repair_confirm_delete.html:4
+msgid "Delete Repair Request"
+msgstr "Delete Repair Request"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:6
+msgid "Delete repair request"
+msgstr "Delete repair request"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:7
+msgid "Repair request deletion"
+msgstr "Repair request deletion"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:8
+#: repairs/templates/repairs/repair_confirm_delete.html:31
+msgid "Delete Repair Request?"
+msgstr "Delete Repair Request?"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:9
+msgid "Review the selected request before deleting it."
+msgstr "Review the selected request before deleting it."
+
+#: repairs/templates/repairs/repair_confirm_delete.html:11
+msgid "Cancel and Return"
+msgstr "Cancel and Return"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:14
+msgid "Permanent deletion warning"
+msgstr "Permanent deletion warning"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:19
+msgid "Permanent Action"
+msgstr "Permanent Action"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:20
+msgid "This request will be removed."
+msgstr "This request will be removed."
+
+#: repairs/templates/repairs/repair_confirm_delete.html:21
+msgid "This cannot be undone."
+msgstr "This cannot be undone."
+
+#: repairs/templates/repairs/repair_confirm_delete.html:30
+#: repairs/templates/repairs/repair_confirm_delete.html:69
+#: repairs/templates/repairs/repair_detail.html:155
+msgid "Delete Request"
+msgstr "Delete Request"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:32
+msgid "This permanently removes the request."
+msgstr "This permanently removes the request."
+
+#: repairs/templates/repairs/repair_confirm_delete.html:36
+msgid "Request selected for deletion"
+msgstr "Request selected for deletion"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:53
+#: repairs/templates/repairs/repair_form.html:78
+msgid "Address"
+msgstr "Address"
+
+#: repairs/templates/repairs/repair_confirm_delete.html:63
+msgid "Deletion is permanent."
+msgstr "Deletion is permanent."
+
+#: repairs/templates/repairs/repair_confirm_delete.html:64
+msgid "The request will disappear from My Requests."
+msgstr "The request will disappear from My Requests."
+
+#: repairs/templates/repairs/repair_confirm_delete.html:72
+#: repairs/templates/repairs/repair_form.html:237
+msgid "Cancel"
+msgstr "Cancel"
+
+#: repairs/templates/repairs/repair_detail.html:4
+#: repairs/templates/repairs/repair_list.html:158
+msgid "Repair Request"
+msgstr "Repair Request"
+
+#: repairs/templates/repairs/repair_detail.html:6
+#: repairs/templates/repairs/repair_detail.html:7
+msgid "Repair request detail"
+msgstr "Repair request detail"
+
+#: repairs/templates/repairs/repair_detail.html:9
+msgid "Review the request status, assignment, and saved service details."
+msgstr "Review the request status, assignment, and saved service details."
+
+#: repairs/templates/repairs/repair_detail.html:11
+#: repairs/templates/repairs/repair_detail.html:157
+#: repairs/templates/repairs/repair_form.html:14
+msgid "Back to My Requests"
+msgstr "Back to My Requests"
+
+#: repairs/templates/repairs/repair_detail.html:14
+msgid "Repair request status summary"
+msgstr "Repair request status summary"
+
+#: repairs/templates/repairs/repair_detail.html:23
+msgid "Current request snapshot"
+msgstr "Current request snapshot"
+
+#: repairs/templates/repairs/repair_detail.html:35
+msgid "Not assigned"
+msgstr "Not assigned"
+
+#: repairs/templates/repairs/repair_detail.html:46
+msgid "Saved Repair Request"
+msgstr "Saved Repair Request"
+
+#: repairs/templates/repairs/repair_detail.html:47
+msgid "Request details"
+msgstr "Request details"
+
+#: repairs/templates/repairs/repair_detail.html:52
+msgid "Request title"
+msgstr "Request title"
+
+#: repairs/templates/repairs/repair_detail.html:82
+msgid "Progress"
+msgstr "Progress"
+
+#: repairs/templates/repairs/repair_detail.html:97
+msgid "Not assigned yet"
+msgstr "Not assigned yet"
+
+#: repairs/templates/repairs/repair_detail.html:102
+msgid "Repair request status timeline"
+msgstr "Repair request status timeline"
+
+#: repairs/templates/repairs/repair_detail.html:106
+msgid "Request submitted"
+msgstr "Request submitted"
+
+#: repairs/templates/repairs/repair_detail.html:107
+#: repairs/templates/repairs/repair_detail.html:114
+#: repairs/templates/repairs/repair_detail.html:121
+#: repairs/templates/repairs/repair_detail.html:128
+msgid "Complete"
+msgstr "Complete"
+
+#: repairs/templates/repairs/repair_detail.html:113
+msgid "Professional review"
+msgstr "Professional review"
+
+#: repairs/templates/repairs/repair_detail.html:114
+#: repairs/templates/repairs/repair_detail.html:121
+msgid "Current"
+msgstr "Current"
+
+#: repairs/templates/repairs/repair_detail.html:114
+#: repairs/templates/repairs/repair_detail.html:121
+#: repairs/templates/repairs/repair_detail.html:128
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#: repairs/templates/repairs/repair_detail.html:114
+#: repairs/templates/repairs/repair_detail.html:121
+#: repairs/templates/repairs/repair_detail.html:128
+msgid "Pending"
+msgstr "Pending"
+
+#: repairs/templates/repairs/repair_detail.html:120
+msgid "Work in progress"
+msgstr "Work in progress"
+
+#: repairs/templates/repairs/repair_detail.html:137
+msgid "Description"
+msgstr "Description"
+
+#: repairs/templates/repairs/repair_detail.html:145
+#: repairs/templates/repairs/repair_form.html:200
+msgid "Service address"
+msgstr "Service address"
+
+#: repairs/templates/repairs/repair_detail.html:151
+#, python-format
+msgid "Edit repair request %(title)s"
+msgstr "Edit repair request %(title)s"
+
+#: repairs/templates/repairs/repair_detail.html:152
+msgid "Edit Request"
+msgstr "Edit Request"
+
+#: repairs/templates/repairs/repair_detail.html:154
+#, python-format
+msgid "Delete repair request %(title)s"
+msgstr "Delete repair request %(title)s"
+
+#: repairs/templates/repairs/repair_form.html:4
+#: repairs/templates/repairs/repair_form.html:8
+msgid "Edit Repair Request"
+msgstr "Edit Repair Request"
+
+#: repairs/templates/repairs/repair_form.html:6
+msgid "Edit a repair request"
+msgstr "Edit a repair request"
+
+#: repairs/templates/repairs/repair_form.html:6
+msgid "Create a repair request"
+msgstr "Create a repair request"
+
+#: repairs/templates/repairs/repair_form.html:7
+msgid "Repair request update"
+msgstr "Repair request update"
+
+#: repairs/templates/repairs/repair_form.html:7
+msgid "Repair request"
+msgstr "Repair request"
+
+#: repairs/templates/repairs/repair_form.html:9
+msgid "Update the details that changed."
+msgstr "Update the details that changed."
+
+#: repairs/templates/repairs/repair_form.html:9
+msgid ""
+"Describe the issue, choose a category, set urgency, and add the service "
+"address."
+msgstr "Describe the issue, choose a category, set urgency, and add the service address."
+
+#: repairs/templates/repairs/repair_form.html:12
+#: repairs/templates/repairs/repair_form.html:235
+msgid "Back to Request Details"
+msgstr "Back to Request Details"
+
+#: repairs/templates/repairs/repair_form.html:18
+msgid "Request guidance"
+msgstr "Request guidance"
+
+#: repairs/templates/repairs/repair_form.html:25
+msgid "Update changed details"
+msgstr "Update changed details"
+
+#: repairs/templates/repairs/repair_form.html:26
+msgid "Keep the request accurate before saving."
+msgstr "Keep the request accurate before saving."
+
+#: repairs/templates/repairs/repair_form.html:28
+msgid "Keep it specific"
+msgstr "Keep it specific"
+
+#: repairs/templates/repairs/repair_form.html:29
+msgid "Explain what happened and where."
+msgstr "Explain what happened and where."
+
+#: repairs/templates/repairs/repair_form.html:39
+msgid "Status is preserved"
+msgstr "Status is preserved"
+
+#: repairs/templates/repairs/repair_form.html:40
+msgid "Saving edits keeps the current request status."
+msgstr "Saving edits keeps the current request status."
+
+#: repairs/templates/repairs/repair_form.html:42
+msgid "Saved to your account"
+msgstr "Saved to your account"
+
+#: repairs/templates/repairs/repair_form.html:43
+msgid "The request appears in My Requests after posting."
+msgstr "The request appears in My Requests after posting."
+
+#: repairs/templates/repairs/repair_form.html:54
+msgid "Existing Repair Request"
+msgstr "Existing Repair Request"
+
+#: repairs/templates/repairs/repair_form.html:54
+msgid "New Repair Request"
+msgstr "New Repair Request"
+
+#: repairs/templates/repairs/repair_form.html:55
+msgid "Edit request details"
+msgstr "Edit request details"
+
+#: repairs/templates/repairs/repair_form.html:55
+msgid "Create request details"
+msgstr "Create request details"
+
+#: repairs/templates/repairs/repair_form.html:57
+#: repairs/templates/repairs/repair_form.html:59
+msgid "Required fields are marked."
+msgstr "Required fields are marked."
+
+#: repairs/templates/repairs/repair_form.html:65
+msgid "Live request brief"
+msgstr "Live request brief"
+
+#: repairs/templates/repairs/repair_form.html:66
+msgid "Untitled repair request"
+msgstr "Untitled repair request"
+
+#: repairs/templates/repairs/repair_form.html:71
+msgid "Choose a service category"
+msgstr "Choose a service category"
+
+#: repairs/templates/repairs/repair_form.html:75
+msgid "Set urgency"
+msgstr "Set urgency"
+
+#: repairs/templates/repairs/repair_form.html:79
+msgid "Add the service address"
+msgstr "Add the service address"
+
+#: repairs/templates/repairs/repair_form.html:90
+msgid "The request needs attention."
+msgstr "The request needs attention."
+
+#: repairs/templates/repairs/repair_form.html:102
+msgid "Repair title"
+msgstr "Repair title"
+
+#: repairs/templates/repairs/repair_form.html:105
+#: repairs/templates/repairs/repair_form.html:126
+#: repairs/templates/repairs/repair_form.html:148
+#: repairs/templates/repairs/repair_form.html:175
+#: repairs/templates/repairs/repair_form.html:203
+msgid "required"
+msgstr "required"
+
+#: repairs/templates/repairs/repair_form.html:111
+msgid "Example: \"Kitchen sink is leaking.\""
+msgstr "Example: \"Kitchen sink is leaking.\""
+
+#: repairs/templates/repairs/repair_form.html:123
+msgid "Problem description"
+msgstr "Problem description"
+
+#: repairs/templates/repairs/repair_form.html:132
+msgid "Include symptoms, room, timing, and safety concerns."
+msgstr "Include symptoms, room, timing, and safety concerns."
+
+#: repairs/templates/repairs/repair_form.html:145
+msgid "Service category"
+msgstr "Service category"
+
+#: repairs/templates/repairs/repair_form.html:160
+msgid "Choose the closest repair area."
+msgstr "Choose the closest repair area."
+
+#: repairs/templates/repairs/repair_form.html:187
+msgid "Set how quickly the issue should be reviewed."
+msgstr "Set how quickly the issue should be reviewed."
+
+#: repairs/templates/repairs/repair_form.html:209
+msgid "Enter the address where the repair is needed."
+msgstr "Enter the address where the repair is needed."
+
+#: repairs/templates/repairs/repair_form.html:223
+msgid "This request stays linked to your account."
+msgstr "This request stays linked to your account."
+
+#: repairs/templates/repairs/repair_form.html:225
+msgid "Posting saves this request to your account."
+msgstr "Posting saves this request to your account."
+
+#: repairs/templates/repairs/repair_form.html:231
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: repairs/templates/repairs/repair_form.html:231
+msgid "Post Repair Request"
+msgstr "Post Repair Request"
+
+#: repairs/templates/repairs/repair_list.html:6
+msgid "Repair request overview"
+msgstr "Repair request overview"
+
+#: repairs/templates/repairs/repair_list.html:7
+msgid "Customer repair dashboard"
+msgstr "Customer repair dashboard"
+
+#: repairs/templates/repairs/repair_list.html:8
+msgid "Track your repair requests in one place."
+msgstr "Track your repair requests in one place."
+
+#: repairs/templates/repairs/repair_list.html:9
+msgid ""
+"Review saved requests, check status, and start a new repair when needed."
+msgstr "Review saved requests, check status, and start a new repair when needed."
+
+#: repairs/templates/repairs/repair_list.html:14
+msgid "Repair request summary"
+msgstr "Repair request summary"
+
+#: repairs/templates/repairs/repair_list.html:18
+msgid "visible request"
+msgid_plural "visible requests"
+msgstr[0] "visible request"
+msgstr[1] "visible requests"
+
+#: repairs/templates/repairs/repair_list.html:22
+msgid "Your request list"
+msgstr "Your request list"
+
+#: repairs/templates/repairs/repair_list.html:24
+msgid "Showing matching requests only."
+msgstr "Showing matching requests only."
+
+#: repairs/templates/repairs/repair_list.html:26
+msgid "Only your repair requests appear here."
+msgstr "Only your repair requests appear here."
+
+#: repairs/templates/repairs/repair_list.html:36
+msgid "Request overview"
+msgstr "Request overview"
+
+#: repairs/templates/repairs/repair_list.html:39
+#, python-format
+msgid "%(total)s request visible."
+msgid_plural "%(total)s requests visible."
+msgstr[0] "%(total)s request visible."
+msgstr[1] "%(total)s requests visible."
+
+#: repairs/templates/repairs/repair_list.html:42
+msgid "No repair requests match the current search and filters."
+msgstr "No repair requests match the current search and filters."
+
+#: repairs/templates/repairs/repair_list.html:44
+#: repairs/templates/repairs/repair_list.html:222
+msgid "No repair requests yet."
+msgstr "No repair requests yet."
+
+#: repairs/templates/repairs/repair_list.html:47
+msgid "Create Repair Request"
+msgstr "Create Repair Request"
+
+#: repairs/templates/repairs/repair_list.html:56
+msgid "Repair activity"
+msgstr "Repair activity"
+
+#: repairs/templates/repairs/repair_list.html:57
+msgid "Submitted requests"
+msgstr "Submitted requests"
+
+#: repairs/templates/repairs/repair_list.html:58
+msgid "Search by title or filter by category, urgency, and status."
+msgstr "Search by title or filter by category, urgency, and status."
+
+#: repairs/templates/repairs/repair_list.html:62
+#, python-format
 msgid "%(total)s request shown"
 msgid_plural "%(total)s requests shown"
 msgstr[0] "%(total)s request shown"
 msgstr[1] "%(total)s requests shown"
 
-msgid "%(total)s request visible"
-msgid_plural "%(total)s requests visible"
-msgstr[0] "%(total)s request visible"
-msgstr[1] "%(total)s requests visible"
+#: repairs/templates/repairs/repair_list.html:70
+msgid "Find repair requests."
+msgstr "Find repair requests."
+
+#: repairs/templates/repairs/repair_list.html:71
+msgid "Use any field you need."
+msgstr "Use any field you need."
+
+#: repairs/templates/repairs/repair_list.html:74
+msgid "Filters Active"
+msgstr "Filters Active"
+
+#: repairs/templates/repairs/repair_list.html:81
+msgid "Search by title"
+msgstr "Search by title"
+
+#: repairs/templates/repairs/repair_list.html:83
+msgid "Search repair titles"
+msgstr "Search repair titles"
+
+#: repairs/templates/repairs/repair_list.html:85
+msgid "Search request titles."
+msgstr "Search request titles."
+
+#: repairs/templates/repairs/repair_list.html:92
+msgid "All categories"
+msgstr "All categories"
+
+#: repairs/templates/repairs/repair_list.html:104
+msgid "All urgency levels"
+msgstr "All urgency levels"
+
+#: repairs/templates/repairs/repair_list.html:116
+msgid "All statuses"
+msgstr "All statuses"
+
+#: repairs/templates/repairs/repair_list.html:126
+msgid "Apply Filters"
+msgstr "Apply Filters"
+
+#: repairs/templates/repairs/repair_list.html:127
+#: repairs/templates/repairs/repair_list.html:215
+msgid "Clear Filters"
+msgstr "Clear Filters"
+
+#: repairs/templates/repairs/repair_list.html:132
+#: repairs/templates/repairs/repair_list.html:133
+msgid "Active filters"
+msgstr "Active filters"
+
+#: repairs/templates/repairs/repair_list.html:136
+#, python-format
+msgid "Search: %(query)s"
+msgstr "Search: %(query)s"
+
+#: repairs/templates/repairs/repair_list.html:200
+#, python-format
+msgid "View details for %(title)s"
+msgstr "View details for %(title)s"
+
+#: repairs/templates/repairs/repair_list.html:201
+msgid "View Details"
+msgstr "View Details"
+
+#: repairs/templates/repairs/repair_list.html:213
+msgid "No matching repair requests."
+msgstr "No matching repair requests."
+
+#: repairs/templates/repairs/repair_list.html:214
+msgid "Clear filters to return to your full request list."
+msgstr "Clear filters to return to your full request list."
+
+#: repairs/templates/repairs/repair_list.html:223
+msgid "Create a request when something needs attention."
+msgstr "Create a request when something needs attention."
+
+#~ msgid ""
+#~ "A customer can save the title, description, category, urgency, and "
+#~ "address for each repair request."
+#~ msgstr ""
+#~ "A customer can save the title, description, category, urgency, and "
+#~ "address for each repair request."
+
+#~ msgid ""
+#~ "A professional assignment will appear here after the request is accepted."
+#~ msgstr ""
+#~ "A professional assignment will appear here after the request is accepted."
+
+#~ msgid "A serious MVP should be honest about what it does."
+#~ msgstr "A serious MVP should be honest about what it does."
+
+#~ msgid "A simple repair workflow with real account roles."
+#~ msgstr "A simple repair workflow with real account roles."
+
+#~ msgid "Accepted work in progress."
+#~ msgstr "Accepted work in progress."
+
+#~ msgid "Account overview"
+#~ msgstr "Account overview"
+
+#~ msgid "Account protected."
+#~ msgstr "Account protected."
+
+#~ msgid "Account status"
+#~ msgstr "Account status"
+
+#~ msgid "Active jobs"
+#~ msgstr "Active jobs"
+
+#~ msgid "Active requests"
+#~ msgstr "Active requests"
+
+#~ msgid ""
+#~ "Admin review adds a calm checkpoint before Professionals begin accepting "
+#~ "work."
+#~ msgstr ""
+#~ "Admin review adds a calm checkpoint before Professionals begin accepting "
+#~ "work."
+
+#~ msgid "After approval, you can accept Repair Requests from customers."
+#~ msgstr "After approval, you can accept Repair Requests from customers."
+
+#~ msgid ""
+#~ "After you delete this request, UstoHub will no longer show it in your "
+#~ "repair request list."
+#~ msgstr ""
+#~ "After you delete this request, UstoHub will no longer show it in your "
+#~ "repair request list."
+
+#~ msgid ""
+#~ "All required fields are marked. UstoHub will review the request details "
+#~ "before saving them."
+#~ msgstr ""
+#~ "All required fields are marked. UstoHub will review the request details "
+#~ "before saving them."
+
+#~ msgid ""
+#~ "An admin reviews the account before Professional access is activated."
+#~ msgstr ""
+#~ "An admin reviews the account before Professional access is activated."
+
+#~ msgid "Available after approval."
+#~ msgstr "Available after approval."
+
+#~ msgid "Available customer requests."
+#~ msgstr "Available customer requests."
+
+#~ msgid "Booking"
+#~ msgstr "Booking"
+
+#~ msgid ""
+#~ "Category, urgency, address, and timestamps come from the saved repair "
+#~ "request record."
+#~ msgstr ""
+#~ "Category, urgency, address, and timestamps come from the saved repair "
+#~ "request record."
+
+#~ msgid "Clear visual context for the repair record."
+#~ msgstr "Clear visual context for the repair record."
+
+#~ msgid "Complete request"
+#~ msgstr "Complete request"
+
+#~ msgid "Completed repairs are kept with the saved request details."
+#~ msgstr "Completed repairs are kept with the saved request details."
+
+#~ msgid ""
+#~ "Completed requests will appear here after active work is marked as "
+#~ "completed."
+#~ msgstr ""
+#~ "Completed requests will appear here after active work is marked as "
+#~ "completed."
+
+#~ msgid "Completion record"
+#~ msgstr "Completion record"
+
+#~ msgid "Confirm delete"
+#~ msgstr "Confirm delete"
+
+#~ msgid ""
+#~ "Continue managing repair requests, professional offers, bookings, "
+#~ "warranty records, and account details."
+#~ msgstr ""
+#~ "Continue managing repair requests, professional offers, bookings, "
+#~ "warranty records, and account details."
+
+#~ msgid ""
+#~ "Create a clear repair request with the problem, service category, "
+#~ "urgency, and address. UstoHub will attach it to your signed-in account."
+#~ msgstr ""
+#~ "Create a clear repair request with the problem, service category, "
+#~ "urgency, and address. UstoHub will attach it to your signed-in account."
+
+#~ msgid ""
+#~ "Create a repair request with the problem, category, urgency, and address, "
+#~ "then review it from your request list."
+#~ msgstr ""
+#~ "Create a repair request with the problem, category, urgency, and address, "
+#~ "then review it from your request list."
+
+#~ msgid ""
+#~ "Customer contact details stay private here. Use the visible request "
+#~ "information to understand the work scope. Accepted requests move to your "
+#~ "assigned work queue."
+#~ msgstr ""
+#~ "Customer contact details stay private here. Use the visible request "
+#~ "information to understand the work scope. Accepted requests move to your "
+#~ "assigned work queue."
+
+#~ msgid ""
+#~ "Customer ownership and request status remain managed by UstoHub while you "
+#~ "save the updated details."
+#~ msgstr ""
+#~ "Customer ownership and request status remain managed by UstoHub while you "
+#~ "save the updated details."
+
+#~ msgid ""
+#~ "Customers and professionals see different actions based on their account "
+#~ "role."
+#~ msgstr ""
+#~ "Customers and professionals see different actions based on their account "
+#~ "role."
+
+#~ msgid ""
+#~ "Customers can create repair requests and keep their request list tied to "
+#~ "their account."
+#~ msgstr ""
+#~ "Customers can create repair requests and keep their request list tied to "
+#~ "their account."
+
+#~ msgid ""
+#~ "Customers describe the issue. Professionals accept open work. Status "
+#~ "stays visible until completion."
+#~ msgstr ""
+#~ "Customers describe the issue. Professionals accept open work. Status "
+#~ "stays visible until completion."
+
+#~ msgid ""
+#~ "Customers need one place to describe a problem and see what happened "
+#~ "next. Professionals need a clean queue instead of scattered messages and "
+#~ "unclear job status."
+#~ msgstr ""
+#~ "Customers need one place to describe a problem and see what happened "
+#~ "next. Professionals need a clean queue instead of scattered messages and "
+#~ "unclear job status."
+
+#~ msgid "Delete"
+#~ msgstr "Delete"
+
+#~ msgid ""
+#~ "Deletion cannot be undone. If you still need this repair record, return "
+#~ "to the request details instead."
+#~ msgstr ""
+#~ "Deletion cannot be undone. If you still need this repair record, return "
+#~ "to the request details instead."
+
+#~ msgid ""
+#~ "Describe the issue, choose a category and urgency, and keep the request "
+#~ "status connected to your account."
+#~ msgstr ""
+#~ "Describe the issue, choose a category and urgency, and keep the request "
+#~ "status connected to your account."
+
+#~ msgid ""
+#~ "Each card shows request details for professional review without exposing "
+#~ "private customer contact information."
+#~ msgstr ""
+#~ "Each card shows request details for professional review without exposing "
+#~ "private customer contact information."
+
+#~ msgid "Full description"
+#~ msgstr "Full description"
+
+#~ msgid "Hidden"
+#~ msgstr "Hidden"
+
+#~ msgid "Hidden until approval is complete."
+#~ msgstr "Hidden until approval is complete."
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Home repair needs more than a phone call and guesswork."
+#~ msgstr "Home repair needs more than a phone call and guesswork."
+
+#~ msgid "In progress"
+#~ msgstr "In progress"
+
+#~ msgid "Locked"
+#~ msgstr "Locked"
+
+#~ msgid ""
+#~ "Log in to continue managing repair requests, professional offers, "
+#~ "bookings, warranty records, and account details."
+#~ msgstr ""
+#~ "Log in to continue managing repair requests, professional offers, "
+#~ "bookings, warranty records, and account details."
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "Manage repair requests from first issue to completed work."
+#~ msgstr "Manage repair requests from first issue to completed work."
+
+#~ msgid "Master"
+#~ msgstr "Master"
+
+#~ msgid "Medium"
+#~ msgstr "Medium"
+
+#~ msgid "My Accepted Requests."
+#~ msgstr "My Accepted Requests."
+
+#~ msgid "New requests"
+#~ msgstr "New requests"
+
+#~ msgid ""
+#~ "Newest open repair requests are shown first, with customer-safe details "
+#~ "for professional review."
+#~ msgstr ""
+#~ "Newest open repair requests are shown first, with customer-safe details "
+#~ "for professional review."
+
+#~ msgid "No active repair requests yet."
+#~ msgstr "No active repair requests yet."
+
+#~ msgid "No available repair requests yet."
+#~ msgstr "No available repair requests yet."
+
+#~ msgid ""
+#~ "No open requests are waiting in the professional queue at the moment."
+#~ msgstr ""
+#~ "No open requests are waiting in the professional queue at the moment."
+
+#~ msgid "No professional activity yet."
+#~ msgstr "No professional activity yet."
+
+#~ msgid "No repair activity yet."
+#~ msgstr "No repair activity yet."
+
+#~ msgid "No repair requests are active in your account yet."
+#~ msgstr "No repair requests are active in your account yet."
+
+#~ msgid "No requests found"
+#~ msgstr "No requests found"
+
+#~ msgid "Offer"
+#~ msgstr "Offer"
+
+#~ msgid "Offers"
+#~ msgstr "Offers"
+
+#~ msgid ""
+#~ "Only matching repair requests connected to your signed-in customer "
+#~ "account are shown here."
+#~ msgstr ""
+#~ "Only matching repair requests connected to your signed-in customer "
+#~ "account are shown here."
+
+#~ msgid ""
+#~ "Only repair requests connected to your signed-in customer account are "
+#~ "shown here."
+#~ msgstr ""
+#~ "Only repair requests connected to your signed-in customer account are "
+#~ "shown here."
+
+#~ msgid "Open"
+#~ msgstr "Open"
+
+#~ msgid "Pending admin review."
+#~ msgstr "Pending admin review."
+
+#~ msgid "Please wait until an administrator approves your account."
+#~ msgstr "Please wait until an administrator approves your account."
+
+#~ msgid "Professional access"
+#~ msgstr "Professional access"
+
+#~ msgid ""
+#~ "Professional access is reviewed before customer Repair Requests can be "
+#~ "accepted. This keeps the workflow safer, clearer, and more trustworthy "
+#~ "for everyone."
+#~ msgstr ""
+#~ "Professional access is reviewed before customer Repair Requests can be "
+#~ "accepted. This keeps the workflow safer, clearer, and more trustworthy "
+#~ "for everyone."
+
+#~ msgid "Professional account pending approval"
+#~ msgstr "Professional account pending approval"
+
+#~ msgid "Professional repair request views"
+#~ msgstr "Professional repair request views"
+
+#~ msgid ""
+#~ "Professionals can browse open requests, accept available work, and mark "
+#~ "assigned work completed."
+#~ msgstr ""
+#~ "Professionals can browse open requests, accept available work, and mark "
+#~ "assigned work completed."
+
+#~ msgid "Professionals get a clear pipeline."
+#~ msgstr "Professionals get a clear pipeline."
+
+#~ msgid "Real request ownership"
+#~ msgstr "Real request ownership"
+
+#~ msgid ""
+#~ "Repair Requests are shown to Professional accounts only after admin "
+#~ "approval."
+#~ msgstr ""
+#~ "Repair Requests are shown to Professional accounts only after admin "
+#~ "approval."
+
+#~ msgid ""
+#~ "Repair requests are connected to the customer account that created them."
+#~ msgstr ""
+#~ "Repair requests are connected to the customer account that created them."
+
+#~ msgid "Request information stays connected."
+#~ msgstr "Request information stays connected."
+
+#~ msgid "Request queue"
+#~ msgstr "Request queue"
+
+#~ msgid "Request record."
+#~ msgstr "Request record."
+
+#~ msgid "Request repair"
+#~ msgstr "Request repair"
+
+#~ msgid ""
+#~ "Request status labels make progress readable without relying on color "
+#~ "alone."
+#~ msgstr ""
+#~ "Request status labels make progress readable without relying on color "
+#~ "alone."
+
+#~ msgid ""
+#~ "Requests, jobs, customer messages, and reviews will show here when "
+#~ "marketplace activity starts."
+#~ msgstr ""
+#~ "Requests, jobs, customer messages, and reviews will show here when "
+#~ "marketplace activity starts."
+
+#~ msgid "Required before professional access"
+#~ msgstr "Required before professional access"
+
+#~ msgid "Review"
+#~ msgstr "Review"
+
+#~ msgid ""
+#~ "Review available customer repair requests that are currently open and "
+#~ "ready for professional attention."
+#~ msgstr ""
+#~ "Review available customer repair requests that are currently open and "
+#~ "ready for professional attention."
+
+#~ msgid ""
+#~ "Review customer repair requests, accept work that fits your service, and "
+#~ "move active jobs toward completion."
+#~ msgstr ""
+#~ "Review customer repair requests, accept work that fits your service, and "
+#~ "move active jobs toward completion."
+
+#~ msgid ""
+#~ "Review finished repair requests completed by your professional account, "
+#~ "with customer-safe work history details."
+#~ msgstr ""
+#~ "Review finished repair requests completed by your professional account, "
+#~ "with customer-safe work history details."
+
+#~ msgid ""
+#~ "Review finished work records with essential request details, customer-"
+#~ "safe labels, and the latest update date."
+#~ msgstr ""
+#~ "Review finished work records with essential request details, customer-"
+#~ "safe labels, and the latest update date."
+
+#~ msgid ""
+#~ "Review the active repair requests that have been accepted by your "
+#~ "professional account."
+#~ msgstr ""
+#~ "Review the active repair requests that have been accepted by your "
+#~ "professional account."
+
+#~ msgid ""
+#~ "Review the repair problems you have submitted, check their current "
+#~ "status, and start a new request when something else needs attention."
+#~ msgstr ""
+#~ "Review the repair problems you have submitted, check their current "
+#~ "status, and start a new request when something else needs attention."
+
+#~ msgid ""
+#~ "Review the saved repair details, service location, and current request "
+#~ "status for this account-owned request."
+#~ msgstr ""
+#~ "Review the saved repair details, service location, and current request "
+#~ "status for this account-owned request."
+
+#~ msgid "Reviews"
+#~ msgstr "Reviews"
+
+#~ msgid "Role-based workflow"
+#~ msgstr "Role-based workflow"
+
+#~ msgid "Save"
+#~ msgstr "Save"
+
+#~ msgid ""
+#~ "Search and filter saved request details from your account. Status, "
+#~ "urgency, and category values come directly from UstoHub."
+#~ msgstr ""
+#~ "Search and filter saved request details from your account. Status, "
+#~ "urgency, and category values come directly from UstoHub."
+
+#~ msgid "Service"
+#~ msgstr "Service"
+
+#~ msgid "Simple MVP flow"
+#~ msgstr "Simple MVP flow"
+
+#~ msgid "Status stays visible."
+#~ msgstr "Status stays visible."
+
+#~ msgid "Status timeline"
+#~ msgstr "Status timeline"
+
+#~ msgid "Status values come from the saved repair request record."
+#~ msgstr "Status values come from the saved repair request record."
+
+#~ msgid "Submit"
+#~ msgstr "Submit"
+
+#~ msgid ""
+#~ "Thanks for joining UstoHub as a Professional. An admin needs to approve "
+#~ "your account before you can accept customer Repair Requests."
+#~ msgstr ""
+#~ "Thanks for joining UstoHub as a Professional. An admin needs to approve "
+#~ "your account before you can accept customer Repair Requests."
+
+#~ msgid ""
+#~ "The current repair request form supports these categories, so the "
+#~ "homepage keeps the service promise accurate."
+#~ msgstr ""
+#~ "The current repair request form supports these categories, so the "
+#~ "homepage keeps the service promise accurate."
+
+#~ msgid ""
+#~ "The product focuses on request creation, acceptance, assigned work, and "
+#~ "completion."
+#~ msgstr ""
+#~ "The product focuses on request creation, acceptance, assigned work, and "
+#~ "completion."
+
+#~ msgid ""
+#~ "The professional marks accepted work completed, and the record stays in "
+#~ "the completed queue."
+#~ msgstr ""
+#~ "The professional marks accepted work completed, and the record stays in "
+#~ "the completed queue."
+
+#~ msgid ""
+#~ "The request is available for professional review while it remains open."
+#~ msgstr ""
+#~ "The request is available for professional review while it remains open."
+
+#~ msgid ""
+#~ "The request status shows whether the repair is open, in progress, "
+#~ "completed, or cancelled."
+#~ msgstr ""
+#~ "The request status shows whether the repair is open, in progress, "
+#~ "completed, or cancelled."
+
+#~ msgid "Theme"
+#~ msgstr "Theme"
+
+#~ msgid ""
+#~ "There are no customer repair requests available for professional review "
+#~ "right now. New open requests will appear here when customers submit them."
+#~ msgstr ""
+#~ "There are no customer repair requests available for professional review "
+#~ "right now. New open requests will appear here when customers submit them."
+
+#~ msgid "These are the details currently saved for this repair request."
+#~ msgstr "These are the details currently saved for this repair request."
+
+#~ msgid ""
+#~ "These repair requests are assigned to your professional account and "
+#~ "remain in progress."
+#~ msgstr ""
+#~ "These repair requests are assigned to your professional account and "
+#~ "remain in progress."
+
+#~ msgid ""
+#~ "These repair requests were completed by your professional account and are "
+#~ "ordered by latest update."
+#~ msgstr ""
+#~ "These repair requests were completed by your professional account and are "
+#~ "ordered by latest update."
+
+#~ msgid ""
+#~ "This approval step keeps customer Repair Requests available only to "
+#~ "reviewed Professional accounts."
+#~ msgstr ""
+#~ "This approval step keeps customer Repair Requests available only to "
+#~ "reviewed Professional accounts."
+
+#~ msgid ""
+#~ "This confirmation protects your repair history from accidental deletion. "
+#~ "Review the selected request before permanently removing it."
+#~ msgstr ""
+#~ "This confirmation protects your repair history from accidental deletion. "
+#~ "Review the selected request before permanently removing it."
+
+#~ msgid ""
+#~ "This page shows only completed repair requests assigned to your "
+#~ "professional account. Customer private contact details are not displayed."
+#~ msgstr ""
+#~ "This page shows only completed repair requests assigned to your "
+#~ "professional account. Customer private contact details are not displayed."
+
+#~ msgid "Title"
+#~ msgstr "Title"
+
+#~ msgid ""
+#~ "Track active repair requests assigned to you after accepting them from "
+#~ "the professional open request queue."
+#~ msgstr ""
+#~ "Track active repair requests assigned to you after accepting them from "
+#~ "the professional open request queue."
+
+#~ msgid "Trust and product principles"
+#~ msgstr "Trust and product principles"
+
+#~ msgid ""
+#~ "Update the saved fields below. All required fields are marked, and "
+#~ "UstoHub will confirm the changes before saving."
+#~ msgstr ""
+#~ "Update the saved fields below. All required fields are marked, and "
+#~ "UstoHub will confirm the changes before saving."
+
+#~ msgid ""
+#~ "Update the saved repair details for this request while keeping ownership "
+#~ "and status managed by UstoHub."
+#~ msgstr ""
+#~ "Update the saved repair details for this request while keeping ownership "
+#~ "and status managed by UstoHub."
+
+#~ msgid ""
+#~ "Use the title and description to explain what happened, where the issue "
+#~ "is, and what you have already checked."
+#~ msgstr ""
+#~ "Use the title and description to explain what happened, where the issue "
+#~ "is, and what you have already checked."
+
+#~ msgid ""
+#~ "UstoHub Lite focuses on the core marketplace path already supported by "
+#~ "the project."
+#~ msgstr ""
+#~ "UstoHub Lite focuses on the core marketplace path already supported by "
+#~ "the project."
+
+#~ msgid ""
+#~ "UstoHub Lite gives customers a clear place to post repair requests and "
+#~ "gives professionals a focused queue for accepting, tracking, and "
+#~ "completing work."
+#~ msgstr ""
+#~ "UstoHub Lite gives customers a clear place to post repair requests and "
+#~ "gives professionals a focused queue for accepting, tracking, and "
+#~ "completing work."
+
+#~ msgid ""
+#~ "UstoHub Lite presents the supported marketplace workflow clearly and "
+#~ "leaves room to grow without pretending unfinished features already exist."
+#~ msgstr ""
+#~ "UstoHub Lite presents the supported marketplace workflow clearly and "
+#~ "leaves room to grow without pretending unfinished features already exist."
+
+#~ msgid ""
+#~ "UstoHub Lite separates customer actions from professional actions so each "
+#~ "user sees the workflow meant for them."
+#~ msgstr ""
+#~ "UstoHub Lite separates customer actions from professional actions so each "
+#~ "user sees the workflow meant for them."
+
+#~ msgid ""
+#~ "UstoHub keeps this request linked to your account and preserves system-"
+#~ "managed status details automatically."
+#~ msgstr ""
+#~ "UstoHub keeps this request linked to your account and preserves system-"
+#~ "managed status details automatically."
+
+#~ msgid ""
+#~ "UstoHub links this request to your signed-in account and sets the request "
+#~ "status automatically."
+#~ msgstr ""
+#~ "UstoHub links this request to your signed-in account and sets the request "
+#~ "status automatically."
+
+#~ msgid "Verified"
+#~ msgstr "Verified"
+
+#~ msgid "Warranties"
+#~ msgstr "Warranties"
+
+#~ msgid "Warranty"
+#~ msgstr "Warranty"
+
+#~ msgid "Warranty records will appear after completed repairs."
+#~ msgstr "Warranty records will appear after completed repairs."
+
+#~ msgid ""
+#~ "You have not accepted any open repair requests yet. Browse the "
+#~ "professional queue when you are ready to take active work."
+#~ msgstr ""
+#~ "You have not accepted any open repair requests yet. Browse the "
+#~ "professional queue when you are ready to take active work."
+
+#~ msgid "You have not completed any repair requests yet."
+#~ msgstr "You have not completed any repair requests yet."
+
+#~ msgid ""
+#~ "Your Professional account is pending admin approval. After approval, you "
+#~ "will be able to accept Repair Requests."
+#~ msgstr ""
+#~ "Your Professional account is pending admin approval. After approval, you "
+#~ "will be able to accept Repair Requests."
+
+#~ msgid ""
+#~ "Your account and request status are handled by UstoHub, so you only need "
+#~ "to submit the repair details."
+#~ msgstr ""
+#~ "Your account and request status are handled by UstoHub, so you only need "
+#~ "to submit the repair details."
+
+#~ msgid ""
+#~ "Your account has been created successfully. Once an admin approves it, "
+#~ "you will be able to browse open Repair Requests, accept suitable work, "
+#~ "and manage accepted jobs."
+#~ msgstr ""
+#~ "Your account has been created successfully. Once an admin approves it, "
+#~ "you will be able to browse open Repair Requests, accept suitable work, "
+#~ "and manage accepted jobs."
+
+#~ msgid ""
+#~ "Your customer workspace is ready to collect repair requests, offers, "
+#~ "bookings, warranties, and reviews as those tools become available."
+#~ msgstr ""
+#~ "Your customer workspace is ready to collect repair requests, offers, "
+#~ "bookings, warranties, and reviews as those tools become available."
+
+#~ msgid ""
+#~ "Your professional workspace is ready for repair requests, offers, "
+#~ "bookings, and service history as those tools become available."
+#~ msgstr ""
+#~ "Your professional workspace is ready for repair requests, offers, "
+#~ "bookings, and service history as those tools become available."
+
+#~ msgid ""
+#~ "Your requests, bookings, repair status, warranties, and reviews will show "
+#~ "here when activity starts."
+#~ msgstr ""
+#~ "Your requests, bookings, repair status, warranties, and reviews will show "
+#~ "here when activity starts."
+
+#~ msgid "You have %(total)s visible repair request."
+#~ msgid_plural "You have %(total)s visible repair requests."
+#~ msgstr[0] "You have %(total)s visible repair request."
+#~ msgstr[1] "You have %(total)s visible repair requests."
+
+#~ msgid "%(total)s accepted repair request is currently assigned to you."
+#~ msgid_plural ""
+#~ "%(total)s accepted repair requests are currently assigned to you."
+#~ msgstr[0] "%(total)s accepted repair request is currently assigned to you."
+#~ msgstr[1] ""
+#~ "%(total)s accepted repair requests are currently assigned to you."
+
+#~ msgid ""
+#~ "%(total)s completed repair request is saved in your professional work "
+#~ "history."
+#~ msgid_plural ""
+#~ "%(total)s completed repair requests are saved in your professional work "
+#~ "history."
+#~ msgstr[0] ""
+#~ "%(total)s completed repair request is saved in your professional work "
+#~ "history."
+#~ msgstr[1] ""
+#~ "%(total)s completed repair requests are saved in your professional work "
+#~ "history."
+
+#~ msgid ""
+#~ "%(total)s open repair request can be reviewed from this professional "
+#~ "workspace."
+#~ msgid_plural ""
+#~ "%(total)s open repair requests can be reviewed from this professional "
+#~ "workspace."
+#~ msgstr[0] ""
+#~ "%(total)s open repair request can be reviewed from this professional "
+#~ "workspace."
+#~ msgstr[1] ""
+#~ "%(total)s open repair requests can be reviewed from this professional "
+#~ "workspace."

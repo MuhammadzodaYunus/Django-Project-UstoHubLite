@@ -12,5 +12,6 @@ urlpatterns = [
     path('professional/assigned/', views.professional_assigned_request_list_view, name='professional_assigned_request_list'),
     path("<int:pk>/complete/", views.professional_complete_request_view, name="professional_complete_request"),
     path("professional/completed/",views.professional_completed_request_list_view,name="professional_completed_request_list",),
+    path('<int:pk>/cancel/', views.repair_cancel_view, name='repair_cancel')
 ]
 

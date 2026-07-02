@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Professional accepted repair requests" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Professional work queue" %}{% endblock %}
 {% block hero_title %}{% trans "My Accepted Requests" %}{% endblock %}
-{% block hero_text %}{% trans "Track active repair requests assigned to you after accepting them from the professional open request queue." %}{% endblock %}
+{% block hero_text %}{% trans "Track repair requests assigned to your professional account." %}{% endblock %}
 {% block hero_actions %}
     <a class="btn btn--secondary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
 {% endblock %}
@@ -19,11 +19,11 @@
             {% endwith %}
         </div>
         <div class="repair-list-summary__copy">
-            <h2>{% trans "Accepted work in progress." %}</h2>
+            <h2>{% trans "Accepted work" %}</h2>
             {% if repairs %}
-                <p>{% trans "These repair requests are assigned to your professional account and remain in progress." %}</p>
+                <p>{% trans "Requests in progress appear here." %}</p>
             {% else %}
-                <p>{% trans "You do not have assigned in-progress repair requests right now." %}</p>
+                <p>{% trans "No in-progress requests right now." %}</p>
             {% endif %}
         </div>
     </div>
@@ -33,13 +33,13 @@
 <article class="auth-card professional-queue-card" aria-labelledby="professional-assigned-title">
     <header class="auth-card__header">
         <span class="status-badge status-badge--warning">{% trans "In Progress" %}</span>
-        <h2 id="professional-assigned-title">{% trans "Assigned work overview." %}</h2>
+        <h2 id="professional-assigned-title">{% trans "Assigned work overview" %}</h2>
         {% if repairs %}
             {% with total=repairs|length %}
-                <p>{% blocktrans count total=total %}{{ total }} accepted repair request is currently assigned to you.{% plural %}{{ total }} accepted repair requests are currently assigned to you.{% endblocktrans %}</p>
+                <p>{% blocktrans count total=total %}{{ total }} accepted request.{% plural %}{{ total }} accepted requests.{% endblocktrans %}</p>
             {% endwith %}
         {% else %}
-            <p>{% trans "Accepted customer requests will appear here after you use the open request queue." %}</p>
+            <p>{% trans "Accepted customer requests will appear here." %}</p>
         {% endif %}
     </header>
 
@@ -47,7 +47,7 @@
         <span class="icon-tile" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
         </span>
-        <p>{% trans "Only requests assigned to your professional account are shown on this page." %}</p>
+        <p>{% trans "Only requests assigned to you are shown." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -58,8 +58,8 @@
         <header class="repair-list-heading">
             <div>
                 <p class="eyebrow">{% trans "Accepted work" %}</p>
-                <h2 id="professional-assigned-list-title">{% trans "My Accepted Requests." %}</h2>
-                <p>{% trans "Review the active repair requests that have been accepted by your professional account." %}</p>
+                <h2 id="professional-assigned-list-title">{% trans "My Accepted Requests" %}</h2>
+                <p>{% trans "Manage active repair work." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}
@@ -83,7 +83,7 @@
                             </span>
                         </div>
 
-                        <p class="professional-request-card__description">{{ repair.description|truncatewords:34 }}</p>
+                        <p class="professional-request-card__description">{{ repair.description|truncatewords:20 }}</p>
 
                         <dl class="repair-meta-grid professional-request-meta">
                             <div>
@@ -136,7 +136,7 @@
                     <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
                 </span>
                 <h3>{% trans "No accepted repair requests." %}</h3>
-                <p>{% trans "You have not accepted any open repair requests yet. Browse the professional queue when you are ready to take active work." %}</p>
+                <p>{% trans "Browse open requests when you are ready for work." %}</p>
                 <a class="btn btn--secondary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
             </div>
         {% endif %}

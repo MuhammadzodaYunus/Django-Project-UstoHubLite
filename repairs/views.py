@@ -209,3 +209,24 @@ def professional_completed_request_list_view(request):
         {"repairs": repairs},
     )
 
+
+@login_required
+@require_POST
+def repair_cancel_view(request, pk):
+
+    if not is_customer(request.user):
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        else:
+            return redirect('home')
+        
+    repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user)
+
+    if repair.status == 'open' and repair.assigned_master is None:
+        repair.status = 'cancelled'
+        repair.save()
+        messages.success(request, 'Repair request cancelled successfully.')
+        return redirect('repair_detail', pk=repair.pk)
+    else:
+        messages.error(request, 'This repair request cannot be cancelled because a professional has already accepted it or the work is completed.')
+        return redirect('repair_detail', pk=repair.pk)

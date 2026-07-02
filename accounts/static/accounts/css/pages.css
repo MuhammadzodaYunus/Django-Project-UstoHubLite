@@ -1488,6 +1488,20 @@
 
 .page-repair-detail .hero-grid {
   align-items: start;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.page-repair-detail .hero-section {
+  padding: 44px 0 48px;
+}
+
+.page-repair-detail .hero-copy {
+  max-width: 980px;
+}
+
+.page-repair-detail .hero-copy h1 {
+  font-size: clamp(2.2rem, 5vw, 3.45rem);
 }
 
 .repair-detail-summary {
@@ -1518,8 +1532,40 @@
   font-size: 0.94rem;
 }
 
+.compact-fact-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 14px 0 0;
+  gap: 10px;
+}
+
+.compact-fact-list div {
+  min-width: 0;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.compact-fact-list dt {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.compact-fact-list dd {
+  margin: 4px 0 0;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
 .repair-detail-card {
-  width: min(100%, 680px);
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: 0;
 }
 
 .repair-detail-card__header {
@@ -1556,7 +1602,7 @@
 
 .repair-detail-meta-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 18px 0 0;
   gap: 12px;
 }
@@ -1599,7 +1645,7 @@
 
 .repair-status-tracker__summary {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 240px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -1635,6 +1681,7 @@
 
 .repair-status-track {
   display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0;
   padding: 0;
   gap: 10px;
@@ -1646,7 +1693,8 @@
   grid-template-columns: 14px minmax(0, 1fr);
   gap: 10px;
   align-items: start;
-  padding: 12px 14px;
+  min-width: 0;
+  padding: 12px;
   background: #f8fafc;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);

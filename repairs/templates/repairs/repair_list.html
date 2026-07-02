@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Repair request overview" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Customer repair dashboard" %}{% endblock %}
 {% block hero_title %}{% trans "Track your repair requests in one place." %}{% endblock %}
-{% block hero_text %}{% trans "Review the repair problems you have submitted, check their current status, and start a new request when something else needs attention." %}{% endblock %}
+{% block hero_text %}{% trans "Review saved requests, check status, and start a new repair when needed." %}{% endblock %}
 {% block hero_actions %}
     <a class="btn btn--primary" href="{% url 'repair_create' %}">{% trans "Post a Repair Request" %}</a>
 {% endblock %}
@@ -19,11 +19,11 @@
             {% endwith %}
         </div>
         <div class="repair-list-summary__copy">
-            <h2>{% trans "Requests are private to your account." %}</h2>
+            <h2>{% trans "Your request list" %}</h2>
             {% if query or selected_category or selected_urgency or selected_status %}
-                <p>{% trans "Only matching repair requests connected to your signed-in customer account are shown here." %}</p>
+                <p>{% trans "Showing matching requests only." %}</p>
             {% else %}
-                <p>{% trans "Only repair requests connected to your signed-in customer account are shown here." %}</p>
+                <p>{% trans "Only your repair requests appear here." %}</p>
             {% endif %}
         </div>
     </div>
@@ -33,15 +33,15 @@
 <article class="auth-card repair-overview-card" aria-labelledby="repair-overview-title">
     <header class="auth-card__header">
         <span class="status-badge status-badge--info">{% trans "My Requests" %}</span>
-        <h2 id="repair-overview-title">{% trans "Repair request overview." %}</h2>
+        <h2 id="repair-overview-title">{% trans "Request overview" %}</h2>
         {% if repairs %}
             {% with total=repairs|length %}
-                <p>{% blocktrans count total=total %}You have {{ total }} visible repair request.{% plural %}You have {{ total }} visible repair requests.{% endblocktrans %}</p>
+                <p>{% blocktrans count total=total %}{{ total }} request visible.{% plural %}{{ total }} requests visible.{% endblocktrans %}</p>
             {% endwith %}
         {% elif query or selected_category or selected_urgency or selected_status %}
             <p>{% trans "No repair requests match the current search and filters." %}</p>
         {% else %}
-            <p>{% trans "No repair requests are active in your account yet." %}</p>
+            <p>{% trans "No repair requests yet." %}</p>
         {% endif %}
     </header>
     <a class="btn btn--primary auth-submit" href="{% url 'repair_create' %}">{% trans "Create Repair Request" %}</a>
@@ -54,8 +54,8 @@
         <header class="repair-list-heading">
             <div>
                 <p class="eyebrow">{% trans "Repair activity" %}</p>
-                <h2 id="repair-list-title">{% trans "Submitted requests." %}</h2>
-                <p>{% trans "Search and filter saved request details from your account. Status, urgency, and category values come directly from UstoHub." %}</p>
+                <h2 id="repair-list-title">{% trans "Submitted requests" %}</h2>
+                <p>{% trans "Search by title or filter by category, urgency, and status." %}</p>
             </div>
             {% if repairs or query or selected_category or selected_urgency or selected_status %}
                 {% with total=repairs|length %}
@@ -68,7 +68,7 @@
             <header class="repair-filter-panel__header">
                 <div>
                     <h3 id="repair-filter-title">{% trans "Find repair requests." %}</h3>
-                    <p>{% trans "Search by title or narrow the list by category, urgency, and status." %}</p>
+                    <p>{% trans "Use any field you need." %}</p>
                 </div>
                 {% if query or selected_category or selected_urgency or selected_status %}
                     <span class="status-badge status-badge--info">{% trans "Filters Active" %}</span>
@@ -82,7 +82,7 @@
                         <div class="control">
                             <input id="repair-search-query" type="search" name="q" value="{{ query }}" autocomplete="off" aria-describedby="repair-search-query-help" placeholder="{% trans 'Search repair titles' %}">
                         </div>
-                        <p id="repair-search-query-help" class="field-hint">{% trans "Search saved repair request titles." %}</p>
+                        <p id="repair-search-query-help" class="field-hint">{% trans "Search request titles." %}</p>
                     </div>
 
                     <div class="form-field repair-filter-field">
@@ -164,7 +164,7 @@
                             </span>
                         </div>
 
-                        <p class="repair-request-card__description">{{ repair.description|truncatewords:32 }}</p>
+                        <p class="repair-request-card__description">{{ repair.description|truncatewords:20 }}</p>
 
                         <dl class="repair-meta-grid">
                             <div>
@@ -211,7 +211,7 @@
                         <svg class="icon" viewBox="0 0 24 24"><path d="M10 18a8 8 0 1 1 5.7-2.3L21 21"/><path d="M8 10h4M10 8v4"/></svg>
                     </span>
                     <h3>{% trans "No matching repair requests." %}</h3>
-                    <p>{% trans "No repair requests match the current search or filters. Clear the filters to return to your full request list." %}</p>
+                    <p>{% trans "Clear filters to return to your full request list." %}</p>
                     <a class="btn btn--secondary" href="{% url 'repair_list' %}">{% trans "Clear Filters" %}</a>
                 </div>
             {% else %}
@@ -220,7 +220,7 @@
                         <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18"/></svg>
                     </span>
                     <h3>{% trans "No repair requests yet." %}</h3>
-                    <p>{% trans "Create your first repair request when something at home needs professional attention." %}</p>
+                    <p>{% trans "Create a request when something needs attention." %}</p>
                     <a class="btn btn--primary" href="{% url 'repair_create' %}">{% trans "Post a Repair Request" %}</a>
                 </div>
             {% endif %}

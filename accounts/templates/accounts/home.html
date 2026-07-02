@@ -4,9 +4,9 @@
 {% block title %}UstoHub | {% trans "Home Repair Marketplace" %}{% endblock %}
 {% block body_class %}page-home{% endblock %}
 {% block auth_label %}{% trans "UstoHub repair marketplace start panel" %}{% endblock %}
-{% block hero_eyebrow %}{% trans "Home repair marketplace MVP" %}{% endblock %}
-{% block hero_title %}{% trans "Manage repair requests from first issue to completed work." %}{% endblock %}
-{% block hero_text %}{% trans "UstoHub Lite gives customers a clear place to post repair requests and gives professionals a focused queue for accepting, tracking, and completing work." %}{% endblock %}
+{% block hero_eyebrow %}{% trans "Home repair marketplace" %}{% endblock %}
+{% block hero_title %}{% trans "Repair requests, clearly managed." %}{% endblock %}
+{% block hero_text %}{% trans "Customers post repair requests. Professionals review, accept, and complete the work." %}{% endblock %}
 {% block hero_actions %}
     {% if request.user.is_authenticated %}
         {% if request.user.user_type == "master" and request.user.is_master_approved %}
@@ -53,7 +53,7 @@
         </figure>
         <div class="home-proof-card" data-depth-layer="1.05">
             <span class="status-badge status-badge--info">{% trans "Request flow" %}</span>
-            <p>{% trans "Customers describe the issue. Professionals accept open work. Status stays visible until completion." %}</p>
+            <p>{% trans "Post, accept, track, complete." %}</p>
         </div>
     </div>
 {% endblock %}
@@ -65,7 +65,7 @@
             <header class="auth-card__header">
                 <span class="status-badge status-badge--info">{% trans "Professional account" %}</span>
                 <h2 id="home-command-title">{% trans "Your work queue starts with open requests." %}</h2>
-                <p>{% trans "Review customer repair requests, accept work that fits your service, and move active jobs toward completion." %}</p>
+                <p>{% trans "Review open requests and accept suitable work." %}</p>
             </header>
 
             <ol class="home-command-steps" aria-label="{% trans 'Professional workflow' %}">
@@ -82,7 +82,7 @@
             <header class="auth-card__header">
                 <span class="status-badge status-badge--warning">{% trans "Pending Review" %}</span>
                 <h2 id="home-command-title">{% trans "Your Professional account is waiting for admin approval." %}</h2>
-                <p>{% trans "After approval, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs." %}</p>
+                <p>{% trans "After approval, your professional queue will open." %}</p>
             </header>
 
             <ol class="home-command-steps" aria-label="{% trans 'Professional approval workflow' %}">
@@ -99,7 +99,7 @@
             <header class="auth-card__header">
                 <span class="status-badge status-badge--success">{% trans "Customer account" %}</span>
                 <h2 id="home-command-title">{% trans "Post the issue and keep its status clear." %}</h2>
-                <p>{% trans "Create a repair request with the problem, category, urgency, and address, then review it from your request list." %}</p>
+                <p>{% trans "Create a request, then track it from My Requests." %}</p>
             </header>
 
             <ol class="home-command-steps" aria-label="{% trans 'Customer workflow' %}">
@@ -117,7 +117,7 @@
         <header class="auth-card__header">
             <span class="status-badge status-badge--info">{% trans "Start here" %}</span>
             <h2 id="home-command-title">{% trans "Choose the right account for your repair work." %}</h2>
-            <p>{% trans "Customers create repair requests. Professionals use a separate work queue to accept and complete open requests." %}</p>
+            <p>{% trans "Customers request repairs. Professionals manage open work." %}</p>
         </header>
 
         <ol class="home-command-steps" aria-label="{% trans 'Account options' %}">
@@ -139,8 +139,8 @@
     <div class="container home-section-grid">
         <div class="section-heading">
             <p class="eyebrow">{% trans "The repair problem" %}</p>
-            <h2 id="home-problem-title">{% trans "Home repair needs more than a phone call and guesswork." %}</h2>
-            <p>{% trans "Customers need one place to describe a problem and see what happened next. Professionals need a clean queue instead of scattered messages and unclear job status." %}</p>
+            <h2 id="home-problem-title">{% trans "Home repair needs a clear record." %}</h2>
+            <p>{% trans "One request keeps the issue, address, urgency, and status together." %}</p>
         </div>
 
         <div class="home-problem-grid" aria-label="{% trans 'Marketplace problems UstoHub Lite solves' %}">
@@ -148,22 +148,22 @@
                 <span class="icon-tile" aria-hidden="true">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16M4 12h12M4 19h8"/></svg>
                 </span>
-                <h3>{% trans "Requests become organized records." %}</h3>
-                <p>{% trans "A customer can save the title, description, category, urgency, and address for each repair request." %}</p>
+                <h3>{% trans "Organized records" %}</h3>
+                <p>{% trans "Title, description, category, urgency, and address stay together." %}</p>
             </article>
             <article class="home-problem-card">
                 <span class="icon-tile" aria-hidden="true">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/></svg>
                 </span>
-                <h3>{% trans "Professionals get a clear pipeline." %}</h3>
-                <p>{% trans "Professional accounts can review open requests, accept work, and manage assigned requests." %}</p>
+                <h3>{% trans "Clear work queue" %}</h3>
+                <p>{% trans "Professionals review open work and manage assigned requests." %}</p>
             </article>
             <article class="home-problem-card">
                 <span class="icon-tile" aria-hidden="true">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
                 </span>
-                <h3>{% trans "Status stays visible." %}</h3>
-                <p>{% trans "Open, In Progress, Completed, and Cancelled states keep the repair record understandable." %}</p>
+                <h3>{% trans "Visible status" %}</h3>
+                <p>{% trans "Open, In Progress, Completed, and Cancelled remain readable." %}</p>
             </article>
         </div>
     </div>
@@ -173,30 +173,30 @@
     <div class="container">
         <div class="section-heading">
             <p class="eyebrow">{% trans "How it works" %}</p>
-            <h2 id="home-workflow-title">{% trans "A simple repair workflow with real account roles." %}</h2>
-            <p>{% trans "UstoHub Lite focuses on the core marketplace path already supported by the project." %}</p>
+            <h2 id="home-workflow-title">{% trans "A simple repair workflow." %}</h2>
+            <p>{% trans "The current flow is direct and role-based." %}</p>
         </div>
 
         <ol class="home-process-grid">
             <li class="home-process-card">
                 <span class="home-process-card__number">1</span>
                 <h3>{% trans "Customer posts a Repair Request" %}</h3>
-                <p>{% trans "The customer describes the issue, chooses a category, sets urgency, and adds the service address." %}</p>
+                <p>{% trans "Describe the issue and service address." %}</p>
             </li>
             <li class="home-process-card">
                 <span class="home-process-card__number">2</span>
                 <h3>{% trans "Professional accepts the request" %}</h3>
-                <p>{% trans "A professional account can view open requests and accept available work from the queue." %}</p>
+                <p>{% trans "Accept suitable work from the queue." %}</p>
             </li>
             <li class="home-process-card">
                 <span class="home-process-card__number">3</span>
                 <h3>{% trans "Customer tracks progress" %}</h3>
-                <p>{% trans "The request status shows whether the repair is open, in progress, completed, or cancelled." %}</p>
+                <p>{% trans "Follow the request status." %}</p>
             </li>
             <li class="home-process-card">
                 <span class="home-process-card__number">4</span>
                 <h3>{% trans "Work is completed" %}</h3>
-                <p>{% trans "The professional marks accepted work completed, and the record stays in the completed queue." %}</p>
+                <p>{% trans "Completed work moves to history." %}</p>
             </li>
         </ol>
     </div>
@@ -207,7 +207,7 @@
         <div class="section-heading">
             <p class="eyebrow">{% trans "Role-based marketplace" %}</p>
             <h2 id="home-roles-title">{% trans "One product, two focused workspaces." %}</h2>
-            <p>{% trans "UstoHub Lite separates customer actions from professional actions so each user sees the workflow meant for them." %}</p>
+            <p>{% trans "Each role sees the actions it can use." %}</p>
         </div>
 
         <div class="home-role-grid">
@@ -219,7 +219,7 @@
                     </span>
                 </div>
                 <h3 id="customer-role-title">{% trans "Create and review repair requests." %}</h3>
-                <p>{% trans "Customers can create repair requests and keep their request list tied to their account." %}</p>
+                <p>{% trans "Customers post requests and review saved details." %}</p>
                 <ul class="home-check-list">
                     <li>{% trans "Post a Repair Request" %}</li>
                     <li>{% trans "View My Repair Requests" %}</li>
@@ -240,7 +240,7 @@
                     </span>
                 </div>
                 <h3 id="professional-role-title">{% trans "Accept and complete repair work." %}</h3>
-                <p>{% trans "Professionals can browse open requests, accept available work, and mark assigned work completed." %}</p>
+                <p>{% trans "Professionals browse open work and complete assigned requests." %}</p>
                 <ul class="home-check-list">
                     <li>{% trans "Browse Open Requests" %}</li>
                     <li>{% trans "View Assigned Requests" %}</li>
@@ -262,8 +262,8 @@
     <div class="container">
         <div class="section-heading">
             <p class="eyebrow">{% trans "Repair categories" %}</p>
-            <h2 id="home-services-title">{% trans "Built around the service types available today." %}</h2>
-            <p>{% trans "The current repair request form supports these categories, so the homepage keeps the service promise accurate." %}</p>
+            <h2 id="home-services-title">{% trans "Service types available today." %}</h2>
+            <p>{% trans "Choose the closest category when posting a request." %}</p>
         </div>
 
         <div class="home-category-grid">
@@ -306,44 +306,11 @@
     </div>
 </section>
 
-<section class="section home-principles-section" id="principles" aria-labelledby="home-principles-title">
-    <div class="container home-section-grid">
-        <div class="section-heading">
-            <p class="eyebrow">{% trans "Trust and product principles" %}</p>
-            <h2 id="home-principles-title">{% trans "A serious MVP should be honest about what it does." %}</h2>
-            <p>{% trans "UstoHub Lite presents the supported marketplace workflow clearly and leaves room to grow without pretending unfinished features already exist." %}</p>
-        </div>
-
-        <div class="home-principle-grid">
-            <article class="home-principle-card">
-                <span>01</span>
-                <h3>{% trans "Real request ownership" %}</h3>
-                <p>{% trans "Repair requests are connected to the customer account that created them." %}</p>
-            </article>
-            <article class="home-principle-card">
-                <span>02</span>
-                <h3>{% trans "Role-based workflow" %}</h3>
-                <p>{% trans "Customers and professionals see different actions based on their account role." %}</p>
-            </article>
-            <article class="home-principle-card">
-                <span>03</span>
-                <h3>{% trans "Status tracking" %}</h3>
-                <p>{% trans "Request status labels make progress readable without relying on color alone." %}</p>
-            </article>
-            <article class="home-principle-card">
-                <span>04</span>
-                <h3>{% trans "Simple MVP flow" %}</h3>
-                <p>{% trans "The product focuses on request creation, acceptance, assigned work, and completion." %}</p>
-            </article>
-        </div>
-    </div>
-</section>
-
 <section class="home-final-cta" aria-labelledby="home-final-title">
     <div class="container home-final-cta__inner">
         <div>
             <p class="eyebrow">{% trans "Ready when the repair is real" %}</p>
-            <h2 id="home-final-title">{% trans "Start with the workflow your account supports." %}</h2>
+            <h2 id="home-final-title">{% trans "Start with the right workspace." %}</h2>
         </div>
         <div class="home-final-cta__actions">
             {% if request.user.is_authenticated %}

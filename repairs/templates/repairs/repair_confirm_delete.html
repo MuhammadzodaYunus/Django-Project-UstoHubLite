@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Delete repair request" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Repair request deletion" %}{% endblock %}
 {% block hero_title %}{% trans "Delete Repair Request?" %}{% endblock %}
-{% block hero_text %}{% trans "This confirmation protects your repair history from accidental deletion. Review the selected request before permanently removing it." %}{% endblock %}
+{% block hero_text %}{% trans "Review the selected request before deleting it." %}{% endblock %}
 {% block hero_actions %}
     <a class="btn btn--secondary" href="{% url 'repair_detail' repair.pk %}">{% trans "Cancel and Return" %}</a>
 {% endblock %}
@@ -18,7 +18,7 @@
         <div>
             <span class="status-badge status-badge--danger">{% trans "Permanent Action" %}</span>
             <h2>{% trans "This request will be removed." %}</h2>
-            <p>{% trans "Deletion cannot be undone. If you still need this repair record, return to the request details instead." %}</p>
+            <p>{% trans "This cannot be undone." %}</p>
         </div>
     </div>
 {% endblock %}
@@ -29,7 +29,7 @@
     <header class="auth-card__header repair-delete-card__header">
         <span class="status-badge status-badge--danger">{% trans "Delete Request" %}</span>
         <h2 id="delete-repair-title">{% trans "Delete Repair Request?" %}</h2>
-        <p>{% trans "This will permanently remove the repair request from your account." %}</p>
+        <p>{% trans "This permanently removes the request." %}</p>
     </header>
 
     <section class="repair-delete-record" aria-labelledby="delete-record-title">
@@ -61,7 +61,7 @@
 
         <div class="repair-delete-alert" role="alert">
             <strong>{% trans "Deletion is permanent." %}</strong>
-            <p>{% trans "After you delete this request, UstoHub will no longer show it in your repair request list." %}</p>
+            <p>{% trans "The request will disappear from My Requests." %}</p>
         </div>
 
         <div class="form-actions repair-delete-actions">

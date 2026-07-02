@@ -201,6 +201,10 @@
     grid-template-columns: 1fr;
   }
 
+  .repair-status-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .repair-filter-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -304,9 +308,11 @@
   .repair-filter-grid,
   .repair-list-summary,
   .repair-meta-grid,
+  .compact-fact-list,
   .repair-detail-summary,
   .repair-detail-meta-grid,
   .repair-status-tracker__summary,
+  .repair-status-track,
   .repair-delete-warning,
   .repair-delete-summary,
   .dashboard-overview,

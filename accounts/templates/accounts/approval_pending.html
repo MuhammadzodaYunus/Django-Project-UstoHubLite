@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Professional account approval status" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Professional account review" %}{% endblock %}
 {% block hero_title %}{% trans "Your professional account is pending admin approval." %}{% endblock %}
-{% block hero_text %}{% trans "Thanks for joining UstoHub as a Professional. An admin needs to approve your account before you can accept customer Repair Requests." %}{% endblock %}
+{% block hero_text %}{% trans "Approval is required before accepting customer Repair Requests." %}{% endblock %}
 
 {% block hero_actions %}
     <a class="btn btn--primary" href="{% url 'home' %}">{% trans "Back to Home" %}</a>
@@ -31,19 +31,19 @@
                     <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-5"/></svg>
                 </span>
                 <strong>{% trans "Admin review" %}</strong>
-                <span>{% trans "Required before professional access" %}</span>
+                <span>{% trans "Required" %}</span>
             </div>
             <div class="approval-hero-metric" data-depth-layer="0.9">
                 <span class="approval-hero-metric__icon" aria-hidden="true">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
                 </span>
                 <strong>{% trans "Repair Requests" %}</strong>
-                <span>{% trans "Available after approval" %}</span>
+                <span>{% trans "After approval" %}</span>
             </div>
         </div>
         <div class="approval-signal approval-signal--quiet" data-depth-layer="0.55">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p>{% trans "Approval protects customers and keeps professional access controlled." %}</p>
+            <p>{% trans "Customer requests unlock after review." %}</p>
         </div>
     </div>
 {% endblock %}
@@ -56,7 +56,7 @@
             {% trans "Pending Review" %}
         </span>
         <h2 id="approval-title">{% trans "Your Professional workspace is almost ready." %}</h2>
-        <p>{% trans "Your account has been created successfully. Once an admin approves it, you will be able to browse open Repair Requests, accept suitable work, and manage accepted jobs." %}</p>
+        <p>{% trans "After approval, you can browse open requests and manage accepted work." %}</p>
     </header>
 
     <ol class="approval-timeline" data-approval-timeline aria-label="{% trans 'Professional approval steps' %}">
@@ -66,7 +66,7 @@
             </span>
             <div>
                 <strong>{% trans "Account created" %}</strong>
-                <p>{% trans "Your Professional account is registered and signed in." %}</p>
+                <p>{% trans "Your account is registered." %}</p>
             </div>
         </li>
         <li class="approval-timeline__item is-active" data-approval-step aria-current="step">
@@ -75,7 +75,7 @@
             </span>
             <div>
                 <strong>{% trans "Admin review" %}</strong>
-                <p>{% trans "An admin reviews the account before Professional access is activated." %}</p>
+                <p>{% trans "Access is being reviewed." %}</p>
             </div>
         </li>
         <li class="approval-timeline__item" data-approval-step>
@@ -84,14 +84,14 @@
             </span>
             <div>
                 <strong>{% trans "Professional access activated" %}</strong>
-                <p>{% trans "After approval, you can accept Repair Requests from customers." %}</p>
+                <p>{% trans "Open requests become available." %}</p>
             </div>
         </li>
     </ol>
 
     <p class="trust-note approval-card-note">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5V11Z"/></svg>
-        {% trans "This approval step keeps customer Repair Requests available only to reviewed Professional accounts." %}
+        {% trans "Approval keeps customer requests controlled." %}
     </p>
 
     <div class="form-actions approval-card-actions">
@@ -110,7 +110,7 @@
         <div class="section-heading">
             <p class="eyebrow">{% trans "Trust and service quality" %}</p>
             <h2 id="approval-trust-title">{% trans "Approval helps keep the marketplace dependable." %}</h2>
-            <p>{% trans "Professional access is reviewed before customer Repair Requests can be accepted. This keeps the workflow safer, clearer, and more trustworthy for everyone." %}</p>
+            <p>{% trans "Reviewed access keeps the workflow clear for customers and professionals." %}</p>
         </div>
 
         <div class="approval-trust-grid">
@@ -119,21 +119,21 @@
                     <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
                 </span>
                 <h3>{% trans "Customer protection" %}</h3>
-                <p>{% trans "Repair Requests are shown to Professional accounts only after admin approval." %}</p>
+                <p>{% trans "Open requests require approved access." %}</p>
             </article>
             <article class="approval-trust-card">
                 <span class="icon-tile" aria-hidden="true">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
                 </span>
                 <h3>{% trans "Cleaner workflow" %}</h3>
-                <p>{% trans "Approved Professionals get the right request queue and workspace actions." %}</p>
+                <p>{% trans "Approved professionals get the right queue." %}</p>
             </article>
             <article class="approval-trust-card">
                 <span class="icon-tile" aria-hidden="true">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
                 </span>
                 <h3>{% trans "Better service quality" %}</h3>
-                <p>{% trans "Admin review adds a calm checkpoint before Professionals begin accepting work." %}</p>
+                <p>{% trans "Review happens before accepting work." %}</p>
             </article>
         </div>
     </div>

@@ -4,6 +4,39 @@
 {% block title %}{% trans "Create account" %} | UstoHub{% endblock %}
 {% block body_class %}page-register{% endblock %}
 {% block auth_label %}{% trans "Create a UstoHub account" %}{% endblock %}
+{% block hero_eyebrow %}{% trans "Account setup" %}{% endblock %}
+{% block hero_title %}{% if request.user.is_authenticated %}{% trans "Your account is ready." %}{% else %}{% trans "Create your UstoHub account." %}{% endif %}{% endblock %}
+{% block hero_text %}{% if request.user.is_authenticated %}{% trans "Use your workspace to manage repair activity." %}{% else %}{% trans "Choose Customer or Professional, verify your email, and continue to the right workspace." %}{% endif %}{% endblock %}
+{% block hero_actions %}
+    {% if request.user.is_authenticated %}
+        {% if request.user.user_type == "master" and request.user.is_master_approved %}
+            <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Open Professional Queue" %}</a>
+        {% elif request.user.user_type == "master" %}
+            <a class="btn btn--primary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
+        {% else %}
+            <a class="btn btn--primary" href="{% url 'repair_list' %}">{% trans "My Requests" %}</a>
+        {% endif %}
+    {% else %}
+        <a class="btn btn--primary" href="#account-panel">{% trans "Create account" %}</a>
+        <a class="btn btn--secondary" href="{% url 'login' %}">{% trans "Log in" %}</a>
+    {% endif %}
+{% endblock %}
+{% block hero_support %}
+    <ul class="trust-strip auth-trust-strip" aria-label="{% trans 'Account setup highlights' %}">
+        <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9Z"/></svg>
+            {% trans "Customer workspace" %}
+        </li>
+        <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/></svg>
+            {% trans "Professional queue" %}
+        </li>
+        <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+            {% trans "Email verification" %}
+        </li>
+    </ul>
+{% endblock %}
 
 {% block content %}
 {% if request.user.is_authenticated %}
@@ -12,80 +45,30 @@
             <span class="status-badge status-badge--success">{% trans "Signed in" %}</span>
             <h2 id="dashboard-title">{% blocktrans trimmed with username=request.user.username %}Welcome back, {{ username }}.{% endblocktrans %}</h2>
             {% if request.user.user_type == "master" and request.user.is_master_approved %}
-                <p>{% trans "Your professional workspace is ready for repair requests, offers, bookings, and service history as those tools become available." %}</p>
+                <p>{% trans "Your professional queue is ready." %}</p>
             {% elif request.user.user_type == "master" %}
-                <p>{% trans "Your Professional account is pending admin approval. After approval, you will be able to accept Repair Requests." %}</p>
+                <p>{% trans "Your Professional account is pending approval." %}</p>
             {% else %}
-                <p>{% trans "Your customer workspace is ready to collect repair requests, offers, bookings, warranties, and reviews as those tools become available." %}</p>
+                <p>{% trans "Your customer workspace is ready." %}</p>
             {% endif %}
         </header>
-
-        <div class="dashboard-overview" aria-label="{% trans 'Account overview' %}">
-            {% if request.user.user_type == "master" and request.user.is_master_approved %}
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "New requests" %}</span>
-                    <strong>0</strong>
-                    <p>{% trans "No available repair requests yet." %}</p>
-                </div>
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Active jobs" %}</span>
-                    <strong>0</strong>
-                    <p>{% trans "Your booked work will appear here." %}</p>
-                </div>
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Reviews" %}</span>
-                    <strong>0</strong>
-                    <p>{% trans "Customer reviews will appear after completed work." %}</p>
-                </div>
-            {% elif request.user.user_type == "master" %}
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Account status" %}</span>
-                    <strong>{% trans "Pending" %}</strong>
-                    <p>{% trans "Pending admin review." %}</p>
-                </div>
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Professional access" %}</span>
-                    <strong>{% trans "Locked" %}</strong>
-                    <p>{% trans "Available after approval." %}</p>
-                </div>
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Request queue" %}</span>
-                    <strong>{% trans "Hidden" %}</strong>
-                    <p>{% trans "Hidden until approval is complete." %}</p>
-                </div>
-            {% else %}
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Active requests" %}</span>
-                    <strong>0</strong>
-                    <p>{% trans "No active repair requests yet." %}</p>
-                </div>
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Offers" %}</span>
-                    <strong>0</strong>
-                    <p>{% trans "Professional offers will appear here." %}</p>
-                </div>
-                <div class="summary-card">
-                    <span class="summary-card__label">{% trans "Warranties" %}</span>
-                    <strong>0</strong>
-                    <p>{% trans "Warranty records will appear after completed repairs." %}</p>
-                </div>
-            {% endif %}
-        </div>
 
         <div class="empty-state empty-state--panel">
             <span class="empty-state__icon" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18"/></svg>
             </span>
             {% if request.user.user_type == "master" and request.user.is_master_approved %}
-                <h3>{% trans "No professional activity yet." %}</h3>
-                <p>{% trans "Requests, jobs, customer messages, and reviews will show here when marketplace activity starts." %}</p>
+                <h3>{% trans "Open your work queue." %}</h3>
+                <p>{% trans "Browse open requests or review assigned work." %}</p>
+                <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Open Professional Queue" %}</a>
             {% elif request.user.user_type == "master" %}
                 <h3>{% trans "Professional approval is pending." %}</h3>
-                <p>{% trans "Admin approval is required before you can access Professional queue actions." %}</p>
+                <p>{% trans "Approval is required before queue access." %}</p>
                 <a class="btn btn--secondary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
             {% else %}
-                <h3>{% trans "No repair activity yet." %}</h3>
-                <p>{% trans "Your requests, bookings, repair status, warranties, and reviews will show here when activity starts." %}</p>
+                <h3>{% trans "Start a repair request." %}</h3>
+                <p>{% trans "Create a request or open your saved requests." %}</p>
+                <a class="btn btn--primary" href="{% url 'repair_create' %}">{% trans "Post a Repair Request" %}</a>
             {% endif %}
         </div>
     </article>
@@ -281,3 +264,5 @@
     </article>
 {% endif %}
 {% endblock %}
+
+{% block product_sections %}{% endblock %}

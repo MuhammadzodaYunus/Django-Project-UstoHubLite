@@ -6,7 +6,7 @@
 {% block auth_label %}{% if request.user.is_authenticated %}{% trans "UstoHub dashboard access" %}{% else %}{% trans "Log in to UstoHub" %}{% endif %}{% endblock %}
 {% block hero_eyebrow %}{% if request.user.is_authenticated %}{% trans "Signed in" %}{% else %}{% trans "Secure account access" %}{% endif %}{% endblock %}
 {% block hero_title %}{% if request.user.is_authenticated %}{% trans "Your repair workspace is ready." %}{% else %}{% trans "Return to your repair workspace." %}{% endif %}{% endblock %}
-{% block hero_text %}{% if request.user.is_authenticated %}{% trans "Continue managing repair requests, professional offers, bookings, warranty records, and account details." %}{% else %}{% trans "Log in to continue managing repair requests, professional offers, bookings, warranty records, and account details." %}{% endif %}{% endblock %}
+{% block hero_text %}{% if request.user.is_authenticated %}{% trans "Continue to the workspace for your account role." %}{% else %}{% trans "Access your repair requests or professional work queue." %}{% endif %}{% endblock %}
 {% block hero_actions %}
     {% if request.user.is_authenticated %}
         {% if request.user.user_type == "master" and request.user.is_master_approved %}
@@ -21,6 +21,18 @@
         <a class="btn btn--primary" href="#account-panel">{% trans "Log in securely" %}</a>
         <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">{% trans "Create account" %}</a>
     {% endif %}
+{% endblock %}
+{% block hero_support %}
+    <ul class="trust-strip auth-trust-strip" aria-label="{% trans 'Login highlights' %}">
+        <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5V11Z"/></svg>
+            {% trans "Protected access" %}
+        </li>
+        <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
+            {% trans "Role-based workspace" %}
+        </li>
+    </ul>
 {% endblock %}
 
 {% block content %}
@@ -117,3 +129,5 @@
 </article>
 {% endif %}
 {% endblock %}
+
+{% block product_sections %}{% endblock %}

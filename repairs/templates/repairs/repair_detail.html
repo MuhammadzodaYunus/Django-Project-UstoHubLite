@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Repair request detail" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Repair request detail" %}{% endblock %}
 {% block hero_title %}{{ repair.title }}{% endblock %}
-{% block hero_text %}{% trans "Review the saved repair details, service location, and current request status for this account-owned request." %}{% endblock %}
+{% block hero_text %}{% trans "Review the request status, assignment, and saved service details." %}{% endblock %}
 {% block hero_actions %}
     <a class="btn btn--secondary" href="{% url 'repair_list' %}">{% trans "Back to My Requests" %}</a>
 {% endblock %}
@@ -20,8 +20,21 @@
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
                 {% trans "Status" %}: {% trans repair.get_status_display %}
             </span>
-            <h2>{% trans "Request information stays connected." %}</h2>
-            <p>{% trans "Category, urgency, address, and timestamps come from the saved repair request record." %}</p>
+            <h2>{% trans "Current request snapshot" %}</h2>
+            <dl class="compact-fact-list">
+                <div>
+                    <dt>{% trans "Category" %}</dt>
+                    <dd>{% trans repair.get_category_display %}</dd>
+                </div>
+                <div>
+                    <dt>{% trans "Urgency" %}</dt>
+                    <dd>{% trans repair.get_urgency_display %}</dd>
+                </div>
+                <div>
+                    <dt>{% trans "Professional" %}</dt>
+                    <dd>{% if repair.assigned_master %}{{ repair.assigned_master.username }}{% else %}{% trans "Not assigned" %}{% endif %}</dd>
+                </div>
+            </dl>
         </div>
     </div>
 {% endblock %}
@@ -31,8 +44,7 @@
 <article class="auth-card repair-detail-card" aria-labelledby="repair-detail-title">
     <header class="auth-card__header repair-detail-card__header">
         <span class="status-badge status-badge--neutral">{% trans "Saved Repair Request" %}</span>
-        <h2 id="repair-detail-title">{% trans "Request record." %}</h2>
-        <p>{% trans "These are the details currently saved for this repair request." %}</p>
+        <h2 id="repair-detail-title">{% trans "Request details" %}</h2>
     </header>
 
     <div class="repair-detail-title-row">
@@ -67,7 +79,7 @@
     <section class="repair-detail-section repair-status-tracker" aria-labelledby="repair-status-title">
         <div class="repair-detail-section__heading">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h5l3-8 3 16 3-8h2"/></svg>
-            <h3 id="repair-status-title">{% trans "Status timeline" %}</h3>
+            <h3 id="repair-status-title">{% trans "Progress" %}</h3>
         </div>
 
         <div class="repair-status-tracker__summary">
@@ -76,16 +88,13 @@
                 <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
                     {% trans repair.get_status_display %}
                 </span>
-                <p>{% trans "Status values come from the saved repair request record." %}</p>
             </div>
             <div class="repair-status-tracker__professional">
                 <span class="repair-status-tracker__label">{% trans "Professional" %}</span>
                 {% if repair.assigned_master %}
                     <strong>{{ repair.assigned_master.username }}</strong>
-                    <p>{% trans "This request is assigned to a professional account." %}</p>
                 {% else %}
                     <strong>{% trans "Not assigned yet" %}</strong>
-                    <p>{% trans "A professional assignment will appear here after the request is accepted." %}</p>
                 {% endif %}
             </div>
         </div>
@@ -95,7 +104,6 @@
                 <span class="repair-status-track__dot" aria-hidden="true"></span>
                 <div class="repair-status-track__content">
                     <strong>{% trans "Request submitted" %}</strong>
-                    <p>{% trans "The repair request was saved to your account." %}</p>
                     <span class="repair-status-track__state">{% trans "Complete" %}</span>
                 </div>
             </li>
@@ -103,7 +111,6 @@
                 <span class="repair-status-track__dot" aria-hidden="true"></span>
                 <div class="repair-status-track__content">
                     <strong>{% trans "Professional review" %}</strong>
-                    <p>{% trans "The request is available for professional review while it remains open." %}</p>
                     <span class="repair-status-track__state">{% if repair.status == 'open' %}{% trans "Current" %}{% elif repair.status == 'in_progress' or repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
                 </div>
             </li>
@@ -111,15 +118,13 @@
                 <span class="repair-status-track__dot" aria-hidden="true"></span>
                 <div class="repair-status-track__content">
                     <strong>{% trans "Work in progress" %}</strong>
-                    <p>{% trans "An accepted request moves into active professional work." %}</p>
                     <span class="repair-status-track__state">{% if repair.status == 'in_progress' %}{% trans "Current" %}{% elif repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
                 </div>
             </li>
             <li class="repair-status-track__item {% if repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
                 <span class="repair-status-track__dot" aria-hidden="true"></span>
                 <div class="repair-status-track__content">
-                    <strong>{% trans "Completion record" %}</strong>
-                    <p>{% trans "Completed repairs are kept with the saved request details." %}</p>
+                    <strong>{% trans "Completed" %}</strong>
                     <span class="repair-status-track__state">{% if repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
                 </div>
             </li>
@@ -129,7 +134,7 @@
     <section class="repair-detail-section" aria-labelledby="repair-detail-description-title">
         <div class="repair-detail-section__heading">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16M4 12h12M4 19h8"/></svg>
-            <h3 id="repair-detail-description-title">{% trans "Full description" %}</h3>
+            <h3 id="repair-detail-description-title">{% trans "Description" %}</h3>
         </div>
         <div class="repair-detail-copy">{{ repair.description|linebreaksbr }}</div>
     </section>

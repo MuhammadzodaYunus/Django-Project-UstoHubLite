@@ -6,7 +6,7 @@
 {% block auth_label %}{% if form.instance.pk %}{% trans "Edit a repair request" %}{% else %}{% trans "Create a repair request" %}{% endif %}{% endblock %}
 {% block hero_eyebrow %}{% if form.instance.pk %}{% trans "Repair request update" %}{% else %}{% trans "Repair request" %}{% endif %}{% endblock %}
 {% block hero_title %}{% if form.instance.pk %}{% trans "Edit Repair Request" %}{% else %}{% trans "Post a Repair Request" %}{% endif %}{% endblock %}
-{% block hero_text %}{% if form.instance.pk %}{% trans "Update the saved repair details for this request while keeping ownership and status managed by UstoHub." %}{% else %}{% trans "Create a clear repair request with the problem, service category, urgency, and address. UstoHub will attach it to your signed-in account." %}{% endif %}{% endblock %}
+{% block hero_text %}{% if form.instance.pk %}{% trans "Update the details that changed." %}{% else %}{% trans "Describe the issue, choose a category, set urgency, and add the service address." %}{% endif %}{% endblock %}
 {% block hero_actions %}
     {% if form.instance.pk %}
         <a class="btn btn--secondary" href="{% url 'repair_detail' form.instance.pk %}">{% trans "Back to Request Details" %}</a>
@@ -22,11 +22,11 @@
             </span>
             <div>
                 {% if form.instance.pk %}
-                    <h2>{% trans "Update only what changed." %}</h2>
-                    <p>{% trans "Adjust the title, description, category, urgency, or address so the request stays accurate." %}</p>
+                    <h2>{% trans "Update changed details" %}</h2>
+                    <p>{% trans "Keep the request accurate before saving." %}</p>
                 {% else %}
-                    <h2>{% trans "Keep it specific." %}</h2>
-                    <p>{% trans "Use the title and description to explain what happened, where the issue is, and what you have already checked." %}</p>
+                    <h2>{% trans "Keep it specific" %}</h2>
+                    <p>{% trans "Explain what happened and where." %}</p>
                 {% endif %}
             </div>
         </div>
@@ -36,11 +36,11 @@
             </span>
             <div>
                 {% if form.instance.pk %}
-                    <h2>{% trans "Status stays protected." %}</h2>
-                    <p>{% trans "Customer ownership and request status remain managed by UstoHub while you save the updated details." %}</p>
+                    <h2>{% trans "Status is preserved" %}</h2>
+                    <p>{% trans "Saving edits keeps the current request status." %}</p>
                 {% else %}
-                    <h2>{% trans "Account protected." %}</h2>
-                    <p>{% trans "Your account and request status are handled by UstoHub, so you only need to submit the repair details." %}</p>
+                    <h2>{% trans "Saved to your account" %}</h2>
+                    <p>{% trans "The request appears in My Requests after posting." %}</p>
                 {% endif %}
             </div>
         </div>
@@ -52,11 +52,11 @@
 <article class="auth-card repair-card" aria-labelledby="repair-form-title">
     <header class="auth-card__header">
         <span class="status-badge status-badge--info">{% if form.instance.pk %}{% trans "Existing Repair Request" %}{% else %}{% trans "New Repair Request" %}{% endif %}</span>
-        <h2 id="repair-form-title">{% if form.instance.pk %}{% trans "Edit request details." %}{% else %}{% trans "Create request details." %}{% endif %}</h2>
+        <h2 id="repair-form-title">{% if form.instance.pk %}{% trans "Edit request details" %}{% else %}{% trans "Create request details" %}{% endif %}</h2>
         {% if form.instance.pk %}
-            <p>{% trans "Update the saved fields below. All required fields are marked, and UstoHub will confirm the changes before saving." %}</p>
+            <p>{% trans "Required fields are marked." %}</p>
         {% else %}
-            <p>{% trans "All required fields are marked. UstoHub will review the request details before saving them." %}</p>
+            <p>{% trans "Required fields are marked." %}</p>
         {% endif %}
     </header>
 
@@ -108,7 +108,7 @@
                 <div class="control">
                     {{ form.title }}
                 </div>
-                <p id="id_title_help" class="field-hint">{% trans 'A short summary such as "Kitchen sink is leaking."' %}</p>
+                <p id="id_title_help" class="field-hint">{% trans 'Example: "Kitchen sink is leaking."' %}</p>
                 {% if form.title.errors %}
                     <ul id="id_title_errors" class="field-errors">
                         {% for error in form.title.errors %}
@@ -129,7 +129,7 @@
                 <div class="control">
                     {{ form.description }}
                 </div>
-                <p id="id_description_help" class="field-hint">{% trans "Include symptoms, timing, affected room, and any safety concerns." %}</p>
+                <p id="id_description_help" class="field-hint">{% trans "Include symptoms, room, timing, and safety concerns." %}</p>
                 {% if form.description.errors %}
                     <ul id="id_description_errors" class="field-errors">
                         {% for error in form.description.errors %}
@@ -220,9 +220,9 @@
         <p class="trust-note">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
             {% if form.instance.pk %}
-                {% trans "UstoHub keeps this request linked to your account and preserves system-managed status details automatically." %}
+                {% trans "This request stays linked to your account." %}
             {% else %}
-                {% trans "UstoHub links this request to your signed-in account and sets the request status automatically." %}
+                {% trans "Posting saves this request to your account." %}
             {% endif %}
         </p>
 

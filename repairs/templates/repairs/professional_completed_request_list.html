@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Professional completed repair requests" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Professional work history" %}{% endblock %}
 {% block hero_title %}{% trans "Completed Requests" %}{% endblock %}
-{% block hero_text %}{% trans "Review finished repair requests completed by your professional account, with customer-safe work history details." %}{% endblock %}
+{% block hero_text %}{% trans "Review repair requests you have marked as completed." %}{% endblock %}
 {% block hero_actions %}
     <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">{% trans "View Active Requests" %}</a>
 {% endblock %}
@@ -19,11 +19,11 @@
             {% endwith %}
         </div>
         <div class="repair-list-summary__copy">
-            <h2>{% trans "Finished work history." %}</h2>
+            <h2>{% trans "Finished work" %}</h2>
             {% if repairs %}
-                <p>{% trans "These repair requests were completed by your professional account and are ordered by latest update." %}</p>
+                <p>{% trans "Latest completed requests appear first." %}</p>
             {% else %}
-                <p>{% trans "You have not completed any repair requests yet." %}</p>
+                <p>{% trans "No completed requests yet." %}</p>
             {% endif %}
         </div>
     </div>
@@ -33,13 +33,13 @@
 <article class="auth-card professional-queue-card" aria-labelledby="professional-completed-title">
     <header class="auth-card__header">
         <span class="status-badge status-badge--success">{% trans "Completed" %}</span>
-        <h2 id="professional-completed-title">{% trans "Completed work overview." %}</h2>
+        <h2 id="professional-completed-title">{% trans "Completed work overview" %}</h2>
         {% if repairs %}
             {% with total=repairs|length %}
-                <p>{% blocktrans count total=total %}{{ total }} completed repair request is saved in your professional work history.{% plural %}{{ total }} completed repair requests are saved in your professional work history.{% endblocktrans %}</p>
+                <p>{% blocktrans count total=total %}{{ total }} completed request.{% plural %}{{ total }} completed requests.{% endblocktrans %}</p>
             {% endwith %}
         {% else %}
-            <p>{% trans "Completed requests will appear here after active work is marked as completed." %}</p>
+            <p>{% trans "Completed requests will appear here." %}</p>
         {% endif %}
     </header>
 
@@ -47,7 +47,7 @@
         <span class="icon-tile icon-tile--success" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
         </span>
-        <p>{% trans "This page shows only completed repair requests assigned to your professional account. Customer private contact details are not displayed." %}</p>
+        <p>{% trans "Only your completed requests are shown." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -58,8 +58,8 @@
         <header class="repair-list-heading">
             <div>
                 <p class="eyebrow">{% trans "Completed work" %}</p>
-                <h2 id="professional-completed-list-title">{% trans "Finished repair requests." %}</h2>
-                <p>{% trans "Review finished work records with essential request details, customer-safe labels, and the latest update date." %}</p>
+                <h2 id="professional-completed-list-title">{% trans "Finished repair requests" %}</h2>
+                <p>{% trans "Review completed request records." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}
@@ -83,7 +83,7 @@
                             </span>
                         </div>
 
-                        <p class="professional-request-card__description">{{ repair.description|truncatewords:34 }}</p>
+                        <p class="professional-request-card__description">{{ repair.description|truncatewords:20 }}</p>
 
                         <dl class="repair-meta-grid professional-request-meta">
                             <div>
@@ -129,7 +129,7 @@
                     <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
                 </span>
                 <h3>{% trans "No completed repair requests." %}</h3>
-                <p>{% trans "You have not completed any assigned repair requests yet. Active requests can be reviewed from your accepted work queue." %}</p>
+                <p>{% trans "Active requests can be reviewed from your accepted queue." %}</p>
                 <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">{% trans "View Active Requests" %}</a>
             </div>
         {% endif %}

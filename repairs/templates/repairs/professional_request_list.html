@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Professional open repair requests" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Professional work queue" %}{% endblock %}
 {% block hero_title %}{% trans "Open Repair Requests" %}{% endblock %}
-{% block hero_text %}{% trans "Review available customer repair requests that are currently open and ready for professional attention." %}{% endblock %}
+{% block hero_text %}{% trans "Review open customer requests and accept suitable work." %}{% endblock %}
 {% block hero_actions %}{% endblock %}
 {% block hero_support %}
     <div class="repair-list-summary professional-request-summary" aria-label="{% trans 'Open repair request summary' %}">
@@ -17,11 +17,11 @@
             {% endwith %}
         </div>
         <div class="repair-list-summary__copy">
-            <h2>{% trans "Available customer requests." %}</h2>
+            <h2>{% trans "Available requests" %}</h2>
             {% if repairs %}
-                <p>{% trans "Newest open repair requests are shown first, with customer-safe details for professional review." %}</p>
+                <p>{% trans "Newest open requests appear first." %}</p>
             {% else %}
-                <p>{% trans "No open customer repair requests are available right now." %}</p>
+                <p>{% trans "No open requests right now." %}</p>
             {% endif %}
         </div>
     </div>
@@ -31,13 +31,13 @@
 <article class="auth-card professional-queue-card" aria-labelledby="professional-queue-title">
     <header class="auth-card__header">
         <span class="status-badge status-badge--info">{% trans "Professional Queue" %}</span>
-        <h2 id="professional-queue-title">{% trans "Open work overview." %}</h2>
+        <h2 id="professional-queue-title">{% trans "Open work overview" %}</h2>
         {% if repairs %}
             {% with total=repairs|length %}
-                <p>{% blocktrans count total=total %}{{ total }} open repair request can be reviewed from this professional workspace.{% plural %}{{ total }} open repair requests can be reviewed from this professional workspace.{% endblocktrans %}</p>
+                <p>{% blocktrans count total=total %}{{ total }} open request available.{% plural %}{{ total }} open requests available.{% endblocktrans %}</p>
             {% endwith %}
         {% else %}
-            <p>{% trans "No open requests are waiting in the professional queue at the moment." %}</p>
+            <p>{% trans "No open requests at the moment." %}</p>
         {% endif %}
     </header>
 
@@ -45,7 +45,7 @@
         <span class="icon-tile" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
         </span>
-        <p>{% trans "Customer contact details stay private here. Use the visible request information to understand the work scope. Accepted requests move to your assigned work queue." %}</p>
+        <p>{% trans "Accepted requests move to your assigned queue." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -56,8 +56,8 @@
         <header class="repair-list-heading">
             <div>
                 <p class="eyebrow">{% trans "Available requests" %}</p>
-                <h2 id="professional-request-list-title">{% trans "Customer repair requests." %}</h2>
-                <p>{% trans "Each card shows request details for professional review without exposing private customer contact information." %}</p>
+                <h2 id="professional-request-list-title">{% trans "Customer repair requests" %}</h2>
+                <p>{% trans "Review scope, urgency, and location before accepting." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}
@@ -81,7 +81,7 @@
                             </span>
                         </div>
 
-                        <p class="professional-request-card__description">{{ repair.description|truncatewords:34 }}</p>
+                        <p class="professional-request-card__description">{{ repair.description|truncatewords:20 }}</p>
 
                         <dl class="repair-meta-grid professional-request-meta">
                             <div>
@@ -134,7 +134,7 @@
                     <svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18v3h3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3 3-3-3 3-3Z"/></svg>
                 </span>
                 <h3>{% trans "No open repair requests." %}</h3>
-                <p>{% trans "There are no customer repair requests available for professional review right now. New open requests will appear here when customers submit them." %}</p>
+                <p>{% trans "New customer requests will appear here." %}</p>
             </div>
         {% endif %}
     </div>

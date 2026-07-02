@@ -11,24 +11,24 @@
     <script>
         (function () {
             var storageKey = "ustohub-theme";
-            var fallback = "light";
-            var theme = fallback;
+            var theme = "light";
 
             try {
-                var stored = window.localStorage.getItem(storageKey);
-                var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                var storedTheme = window.localStorage.getItem(storageKey);
 
-                if (stored === "light" || stored === "dark") {
-                    theme = stored;
-                } else if (systemDark) {
+                if (storedTheme === "dark" || storedTheme === "light") {
+                    theme = storedTheme;
+                } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
                     theme = "dark";
                 }
-
-                document.documentElement.dataset.theme = theme;
-                document.documentElement.style.colorScheme = theme;
             } catch (error) {
-                document.documentElement.dataset.theme = fallback;
+                if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    theme = "dark";
+                }
             }
+
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.style.colorScheme = theme;
         }());
     </script>
     <link rel="stylesheet" href="{% static 'accounts/css/accounts.css' %}">
@@ -78,21 +78,26 @@
                             data-theme-toggle
                             data-theme-label-light="{% trans 'Light' %}"
                             data-theme-label-dark="{% trans 'Dark' %}"
-                            data-theme-switch-light="{% trans 'Switch to light theme' %}"
                             data-theme-switch-dark="{% trans 'Switch to dark theme' %}"
+                            data-theme-switch-light="{% trans 'Switch to light theme' %}"
                             aria-label="{% trans 'Toggle color theme' %}"
                             aria-pressed="false"
                         >
                             <span class="theme-toggle__track" aria-hidden="true">
                                 <span class="theme-toggle__icon theme-toggle__icon--sun">
-                                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 4V2M12 22v-2M4.93 4.93 3.52 3.52M20.48 20.48l-1.41-1.41M4 12H2M22 12h-2M4.93 19.07l-1.41 1.41M20.48 3.52l-1.41 1.41"/><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
+                                    <svg class="icon" viewBox="0 0 24 24" focusable="false">
+                                        <path d="M12 4V2M12 22v-2M4 12H2M22 12h-2M5 5l-1.5-1.5M20.5 20.5 19 19M19 5l1.5-1.5M3.5 20.5 5 19"/>
+                                        <circle cx="12" cy="12" r="4"/>
+                                    </svg>
                                 </span>
                                 <span class="theme-toggle__icon theme-toggle__icon--moon">
-                                    <svg class="icon" viewBox="0 0 24 24"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
+                                    <svg class="icon" viewBox="0 0 24 24" focusable="false">
+                                        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.5 6.5 0 0 0 21 12.8Z"/>
+                                    </svg>
                                 </span>
                                 <span class="theme-toggle__knob"></span>
                             </span>
-                            <span class="theme-toggle__label" data-theme-label>{% trans "Theme" %}</span>
+                            <span class="theme-toggle__label" data-theme-label>{% trans "Light" %}</span>
                         </button>
                         <form class="language-switcher" action="{% url 'set_language' %}" method="post" aria-label="{% trans 'Language' %}">
                             {% csrf_token %}
@@ -183,7 +188,7 @@
                 <div class="hero-copy">
                     <p class="eyebrow">{% block hero_eyebrow %}{% trans "Trusted home repair workflow" %}{% endblock %}</p>
                     <h1 id="hero-title">{% block hero_title %}{% trans "Solve home problems with organized repair requests." %}{% endblock %}</h1>
-                    <p class="hero-copy__text">{% block hero_text %}{% trans "Describe the issue, choose a category and urgency, and keep the request status connected to your account." %}{% endblock %}</p>
+                    <p class="hero-copy__text">{% block hero_text %}{% trans "Post clear repair requests, manage work by role, and track each status from one account." %}{% endblock %}</p>
 
                     <div class="hero-actions">
                         {% block hero_actions %}
@@ -206,7 +211,7 @@
                         <ul class="trust-strip" aria-label="{% trans 'UstoHub trust indicators' %}">
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
-                                {% trans "Role-based workflow" %}
+                                {% trans "Customer requests" %}
                             </li>
                             <li>
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -229,13 +234,13 @@
                                     decoding="async"
                                 >
                                 <figcaption>
-                                    <span>{% trans "Repair request context" %}</span>
-                                    <strong>{% trans "Issue, location, and status details stay connected to the request." %}</strong>
+                                    <span>{% trans "Repair context" %}</span>
+                                    <strong>{% trans "Issue, location, and status in one record." %}</strong>
                                 </figcaption>
                             </figure>
                             <div class="photo-signal photo-signal--top" data-depth-layer="1.25">
                                 <span class="status-badge status-badge--success">{% trans "Saved request" %}</span>
-                                <p>{% trans "Clear visual context for the repair record." %}</p>
+                                <p>{% trans "Issue details stay organized." %}</p>
                             </div>
                             <div class="repair-proof-rail" data-depth-layer="0.55" aria-label="{% trans 'Repair evidence highlights' %}">
                                 <span>
