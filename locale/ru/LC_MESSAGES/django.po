@@ -2749,6 +2749,51 @@ msgstr "Ожидается подтверждение клиента, прежд
 msgid "Request sent to the customer for approval."
 msgstr "Заявка отправлена клиенту на подтверждение."
 
+msgid "A professional wants to take this repair request."
+msgstr "Специалист хочет взять эту заявку на ремонт."
+
+msgid "Review the professional before deciding whether this request should move into active work."
+msgstr "Проверьте специалиста перед решением, должна ли заявка перейти в активную работу."
+
+msgid "Next status after approval"
+msgstr "Следующий статус после одобрения"
+
+msgid "Approve professional %(username)s"
+msgstr "Одобрить специалиста %(username)s"
+
+msgid "Approve Professional"
+msgstr "Одобрить специалиста"
+
+msgid "Decline professional %(username)s"
+msgstr "Отклонить специалиста %(username)s"
+
+msgid "Decline Professional"
+msgstr "Отклонить специалиста"
+
+msgid "Assigned"
+msgstr "Назначено"
+
+msgid "Waiting and in-progress requests appear here."
+msgstr "Здесь отображаются ожидающие и текущие заявки."
+
+msgid "Pending customer approval and active requests assigned to you are shown."
+msgstr "Показаны заявки, ожидающие подтверждения клиента, и активные заявки, назначенные вам."
+
+msgid "Track pending customer approvals separately from active in-progress repair work."
+msgstr "Отслеживайте ожидание подтверждения клиента отдельно от активной ремонтной работы."
+
+msgid "Waiting for customer approval"
+msgstr "Ожидает подтверждения клиента"
+
+msgid "Complete is available only after the customer approves and work is in progress."
+msgstr "Завершение доступно только после подтверждения клиента и перехода работы в процесс."
+
+msgid "Professional approved. Your repair request is now in progress."
+msgstr "Специалист одобрен. Ваша заявка на ремонт теперь в процессе."
+
+msgid "Professional request declined. Your repair request is open again."
+msgstr "Запрос специалиста отклонен. Ваша заявка на ремонт снова открыта."
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

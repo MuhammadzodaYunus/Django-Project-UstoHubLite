@@ -276,6 +276,7 @@
   .repair-request-card__header,
   .professional-request-card__header,
   .repair-detail-title-row,
+  .repair-approval-card__actions,
   .repair-detail-actions {
     align-items: stretch;
     flex-direction: column;
@@ -291,6 +292,8 @@
   .approval-card-actions .approval-logout-form,
   .approval-card-actions .approval-logout-form .btn,
   .repair-filter-actions .btn,
+  .repair-approval-card__actions form,
+  .repair-approval-card__actions .btn,
   .repair-detail-actions .repair-detail-cancel-form,
   .repair-detail-actions .btn,
   .repair-request-card__action,
@@ -316,6 +319,7 @@
   .repair-meta-grid,
   .compact-fact-list,
   .repair-detail-summary,
+  .repair-approval-card__facts,
   .repair-detail-meta-grid,
   .repair-status-tracker__summary,
   .repair-status-track,

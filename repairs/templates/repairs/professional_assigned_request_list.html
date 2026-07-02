@@ -21,7 +21,7 @@
         <div class="repair-list-summary__copy">
             <h2>{% trans "Accepted work" %}</h2>
             {% if repairs %}
-                <p>{% trans "Requests in progress appear here." %}</p>
+                <p>{% trans "Waiting and in-progress requests appear here." %}</p>
             {% else %}
                 <p>{% trans "No active assigned requests right now." %}</p>
             {% endif %}
@@ -32,7 +32,7 @@
 {% block content %}
 <article class="auth-card professional-queue-card" aria-labelledby="professional-assigned-title">
     <header class="auth-card__header">
-        <span class="status-badge status-badge--warning">{% trans "In Progress" %}</span>
+        <span class="status-badge status-badge--warning">{% trans "Assigned" %}</span>
         <h2 id="professional-assigned-title">{% trans "Assigned work overview" %}</h2>
         {% if repairs %}
             {% with total=repairs|length %}
@@ -47,7 +47,7 @@
         <span class="icon-tile" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
         </span>
-        <p>{% trans "Only active requests assigned to you are shown." %}</p>
+        <p>{% trans "Pending customer approval and active requests assigned to you are shown." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -59,7 +59,7 @@
             <div>
                 <p class="eyebrow">{% trans "Accepted work" %}</p>
                 <h2 id="professional-assigned-list-title">{% trans "My Accepted Requests" %}</h2>
-                <p>{% trans "Manage active repair work and mark it completed only when the work is finished." %}</p>
+                <p>{% trans "Track pending customer approvals separately from active in-progress repair work." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}
@@ -79,7 +79,7 @@
                             </div>
                             <span class="status-badge status-badge--warning">
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
-                                {% trans "Status" %}: {% trans repair.get_status_display %}
+                                {% trans "Status" %}: {% if repair.status == "pending_customer" %}{% trans "Waiting for customer approval" %}{% else %}{% trans repair.get_status_display %}{% endif %}
                             </span>
                         </div>
 
@@ -130,7 +130,10 @@
                             {% elif repair.status == "pending_customer" %}
                                 <div class="professional-request-state-note" role="note">
                                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6v6l4 2"/><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/></svg>
-                                    <span>{% trans "Waiting for customer approval before this work can be completed." %}</span>
+                                    <span>
+                                        <strong>{% trans "Waiting for customer approval" %}</strong>
+                                        {% trans "Complete is available only after the customer approves and work is in progress." %}
+                                    </span>
                                 </div>
                             {% endif %}
                         </div>

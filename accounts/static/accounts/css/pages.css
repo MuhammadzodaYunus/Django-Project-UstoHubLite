@@ -1955,6 +1955,88 @@
   overflow-wrap: anywhere;
 }
 
+.repair-approval-card {
+  display: grid;
+  gap: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+  border-color: #fed7aa;
+  box-shadow: 0 18px 38px rgba(249, 115, 22, 0.1);
+}
+
+.repair-approval-card__header {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+
+.repair-approval-card__header h3 {
+  margin: 10px 0 0;
+  color: var(--color-navy);
+  font-size: 1.18rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.repair-approval-card__header p {
+  margin: 8px 0 0;
+  color: var(--color-text-soft);
+  font-size: 0.94rem;
+}
+
+.repair-approval-card__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  gap: 10px;
+}
+
+.repair-approval-card__facts div {
+  min-width: 0;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius-sm);
+}
+
+.repair-approval-card__facts dt {
+  color: var(--color-text-muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.repair-approval-card__facts dd {
+  margin: 5px 0 0;
+  color: var(--color-text);
+  font-size: 0.94rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.repair-approval-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.repair-approval-card__actions form {
+  display: inline-flex;
+  margin: 0;
+}
+
+.repair-approval-card__decline {
+  color: var(--color-error);
+  border-color: #fecaca;
+}
+
+.repair-approval-card__decline:hover,
+.repair-approval-card__decline:focus-visible {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
 .repair-detail-actions {
   display: flex;
   justify-content: flex-start;

@@ -454,6 +454,7 @@ html[data-theme="dark"] :is(
     .professional-customer-chip,
     .repair-detail-summary,
     .repair-detail-title-row,
+    .repair-approval-card__facts div,
     .repair-detail-meta-grid div,
     .repair-detail-section,
     .repair-status-tracker__badge,
@@ -572,6 +573,32 @@ html[data-theme="dark"] .professional-request-state-note {
     color: #FCD34D;
     background: var(--theme-warning-surface);
     border-color: var(--theme-warning-border);
+}
+
+html[data-theme="dark"] .repair-approval-card {
+    background: linear-gradient(180deg, var(--theme-surface-elevated) 0%, var(--theme-warning-surface) 100%);
+    border-color: var(--theme-warning-border);
+}
+
+html[data-theme="dark"] .repair-approval-card__header h3,
+html[data-theme="dark"] .repair-approval-card__facts dd {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .repair-approval-card__header p {
+    color: var(--color-text-soft);
+}
+
+html[data-theme="dark"] .repair-approval-card__decline {
+    color: #FCA5A5;
+    background: var(--theme-surface-elevated);
+    border-color: var(--theme-danger-border);
+}
+
+html[data-theme="dark"] .repair-approval-card__decline:hover,
+html[data-theme="dark"] .repair-approval-card__decline:focus-visible {
+    color: #FECACA;
+    background: var(--theme-danger-surface);
 }
 
 html[data-theme="dark"] .icon-tile--danger {

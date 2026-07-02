@@ -2718,6 +2718,51 @@ msgstr "Waiting for customer approval before this work can be completed."
 msgid "Request sent to the customer for approval."
 msgstr "Request sent to the customer for approval."
 
+msgid "A professional wants to take this repair request."
+msgstr "A professional wants to take this repair request."
+
+msgid "Review the professional before deciding whether this request should move into active work."
+msgstr "Review the professional before deciding whether this request should move into active work."
+
+msgid "Next status after approval"
+msgstr "Next status after approval"
+
+msgid "Approve professional %(username)s"
+msgstr "Approve professional %(username)s"
+
+msgid "Approve Professional"
+msgstr "Approve Professional"
+
+msgid "Decline professional %(username)s"
+msgstr "Decline professional %(username)s"
+
+msgid "Decline Professional"
+msgstr "Decline Professional"
+
+msgid "Assigned"
+msgstr "Assigned"
+
+msgid "Waiting and in-progress requests appear here."
+msgstr "Waiting and in-progress requests appear here."
+
+msgid "Pending customer approval and active requests assigned to you are shown."
+msgstr "Pending customer approval and active requests assigned to you are shown."
+
+msgid "Track pending customer approvals separately from active in-progress repair work."
+msgstr "Track pending customer approvals separately from active in-progress repair work."
+
+msgid "Waiting for customer approval"
+msgstr "Waiting for customer approval"
+
+msgid "Complete is available only after the customer approves and work is in progress."
+msgstr "Complete is available only after the customer approves and work is in progress."
+
+msgid "Professional approved. Your repair request is now in progress."
+msgstr "Professional approved. Your repair request is now in progress."
+
+msgid "Professional request declined. Your repair request is open again."
+msgstr "Professional request declined. Your repair request is open again."
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

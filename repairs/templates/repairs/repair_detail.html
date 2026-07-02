@@ -154,6 +154,43 @@
         <address>{{ repair.address }}</address>
     </section>
 
+    {% if repair.status == "pending_customer" and repair.assigned_master %}
+        <section class="repair-detail-section repair-approval-card" aria-labelledby="repair-approval-title">
+            <div class="repair-approval-card__header">
+                <span class="icon-tile icon-tile--warning" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 6v6l4 2"/><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/></svg>
+                </span>
+                <div>
+                    <span class="status-badge status-badge--warning">{% trans "Customer approval" %}</span>
+                    <h3 id="repair-approval-title">{% trans "A professional wants to take this repair request." %}</h3>
+                    <p>{% trans "Review the professional before deciding whether this request should move into active work." %}</p>
+                </div>
+            </div>
+
+            <dl class="repair-approval-card__facts">
+                <div>
+                    <dt>{% trans "Professional" %}</dt>
+                    <dd>{{ repair.assigned_master.username }}</dd>
+                </div>
+                <div>
+                    <dt>{% trans "Next status after approval" %}</dt>
+                    <dd>{% trans "In Progress" %}</dd>
+                </div>
+            </dl>
+
+            <div class="repair-approval-card__actions">
+                <form method="post" action="{% url 'approve_master' repair.pk %}" aria-label="{% blocktrans trimmed with username=repair.assigned_master.username %}Approve professional {{ username }}{% endblocktrans %}">
+                    {% csrf_token %}
+                    <button class="btn btn--primary" type="submit">{% trans "Approve Professional" %}</button>
+                </form>
+                <form method="post" action="{% url 'decline_master' repair.pk %}" aria-label="{% blocktrans trimmed with username=repair.assigned_master.username %}Decline professional {{ username }}{% endblocktrans %}">
+                    {% csrf_token %}
+                    <button class="btn btn--secondary repair-approval-card__decline" type="submit">{% trans "Decline Professional" %}</button>
+                </form>
+            </div>
+        </section>
+    {% endif %}
+
     {% if repair.status == "open" and not repair.assigned_master %}
         <div class="trust-note repair-detail-action-note" role="note">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
