@@ -158,7 +158,7 @@
                                 <p class="repair-request-card__eyebrow">{% trans "Repair Request" %}</p>
                                 <h3 id="repair-{{ forloop.counter }}-title">{{ repair.title }}</h3>
                             </div>
-                            <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
+                            <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' or repair.status == 'pending_customer' %}status-badge--warning{% else %}status-badge--info{% endif %}">
                                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
                                 {% trans "Status" %}: {% trans repair.get_status_display %}
                             </span>

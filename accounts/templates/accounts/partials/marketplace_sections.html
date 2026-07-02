@@ -26,7 +26,7 @@
         <div class="section-heading">
             <p class="eyebrow">{% trans "Service categories" %}</p>
             <h2 id="services-title">{% trans "Coverage for everyday home repairs." %}</h2>
-            <p>{% trans "Start with the repair type, then add details, photos, preferred timing, and location when those tools are available in the account." %}</p>
+            <p>{% trans "Start with the repair type, then add a clear title, description, urgency, and service address." %}</p>
         </div>
 
         <div class="service-photo-band" data-depth-scene aria-label="{% trans 'Repair service photography preview' %}">
@@ -41,13 +41,13 @@
                 >
             </figure>
             <div class="service-photo-band__content" data-depth-layer="1.15">
-                <span class="status-badge status-badge--info">{% trans "Visual repair context" %}</span>
-                <h3>{% trans "Real home issues need clear evidence." %}</h3>
-                <p>{% trans "UstoHub is structured for photos, repair descriptions, visit records, and status updates as the marketplace grows." %}</p>
+                <span class="status-badge status-badge--info">{% trans "Repair context" %}</span>
+                <h3>{% trans "Real home issues need clear request details." %}</h3>
+                <p>{% trans "UstoHub keeps the issue description, category, urgency, address, status, and professional assignment in one record." %}</p>
                 <ul class="photo-feature-list">
-                    <li>{% trans "Issue details stay attached to the request" %}</li>
-                    <li>{% trans "Professionals can understand scope faster" %}</li>
-                    <li>{% trans "Completed work can be documented clearly" %}</li>
+                    <li>{% trans "Customers control their own repair requests" %}</li>
+                    <li>{% trans "Professionals see only open unassigned requests" %}</li>
+                    <li>{% trans "Completed and cancelled work stays readable" %}</li>
                 </ul>
             </div>
         </div>
@@ -132,29 +132,29 @@
             <li>
                 <span class="process-list__number">2</span>
                 <div>
-                    <h3>{% trans "Add photos or video." %}</h3>
-                    <p>{% trans "Visual evidence helps professionals understand scope before they respond." %}</p>
+                    <h3>{% trans "Choose category and urgency." %}</h3>
+                    <p>{% trans "The request keeps service type, urgency, and address together." %}</p>
                 </div>
             </li>
             <li>
                 <span class="process-list__number">3</span>
                 <div>
-                    <h3>{% trans "Receive verified offers." %}</h3>
-                    <p>{% trans "Compare price, availability, service details, and customer feedback." %}</p>
+                    <h3>{% trans "Professional accepts the request." %}</h3>
+                    <p>{% trans "Accepted requests move from open work to the professional assigned queue." %}</p>
                 </div>
             </li>
             <li>
                 <span class="process-list__number">4</span>
                 <div>
-                    <h3>{% trans "Book and track the repair." %}</h3>
-                    <p>{% trans "Keep the visit, scope, status, and completion record attached to one account." %}</p>
+                    <h3>{% trans "Customer tracks progress." %}</h3>
+                    <p>{% trans "The detail page shows status, assignment, description, and address." %}</p>
                 </div>
             </li>
             <li>
                 <span class="process-list__number">5</span>
                 <div>
-                    <h3>{% trans "Review the work." %}</h3>
-                    <p>{% trans "Confirm completion, keep warranty information, and help future customers choose well." %}</p>
+                    <h3>{% trans "Professional marks completed." %}</h3>
+                    <p>{% trans "Completed requests move to professional work history and stay visible to the customer." %}</p>
                 </div>
             </li>
         </ol>
@@ -166,16 +166,22 @@
         <div class="section-heading">
             <p class="eyebrow">{% trans "Verified professionals" %}</p>
             <h2 id="professionals-title">{% trans "Profiles designed for confident comparison." %}</h2>
-            <p>{% trans "Professional cards are structured to show verification, service type, rating, availability, completed work, and warranty details when real profile data is available." %}</p>
+            <p>{% trans "Approved professionals can browse open repair requests, accept suitable work, and mark assigned work as completed." %}</p>
         </div>
 
         <div class="empty-state">
             <span class="empty-state__icon" aria-hidden="true">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
             </span>
-            <h3>{% trans "No professional profiles are published yet." %}</h3>
-            <p>{% trans "Verified profile cards will appear here after professionals are available through the account flow." %}</p>
-            <span class="status-badge status-badge--neutral">{% trans "Empty state" %}</span>
+            <h3>{% trans "Professional work starts after approval." %}</h3>
+            <p>{% trans "Approved accounts get access to open requests, accepted work, and completed work history." %}</p>
+            {% if request.user.is_authenticated and request.user.user_type == "master" and request.user.is_master_approved %}
+                <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
+            {% elif request.user.is_authenticated and request.user.user_type == "master" %}
+                <a class="btn btn--secondary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
+            {% elif not request.user.is_authenticated %}
+                <a class="btn btn--secondary" href="{% url 'register' %}#account-panel">{% trans "Join as a Professional" %}</a>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -183,36 +189,36 @@
 <section class="section section--navy" id="warranty" aria-labelledby="warranty-title">
     <div class="container warranty-grid">
         <div>
-            <p class="eyebrow eyebrow--on-dark">{% trans "Warranty and safety" %}</p>
-            <h2 id="warranty-title">{% trans "Every serious repair needs a record." %}</h2>
-            <p>{% trans "UstoHub is structured for before-and-after evidence, confirmed scope, completion status, and warranty details so the customer and professional can stay aligned." %}</p>
+            <p class="eyebrow eyebrow--on-dark">{% trans "Status and control" %}</p>
+            <h2 id="warranty-title">{% trans "Every repair request has a clear lifecycle." %}</h2>
+            <p>{% trans "The frontend keeps available actions visible only when the backend allows them." %}</p>
         </div>
         <div class="quality-card">
-            <h3>{% trans "Quality-control checklist" %}</h3>
+            <h3>{% trans "Supported lifecycle" %}</h3>
             <ul class="check-list">
-                <li>{% trans "Verified account before request activity" %}</li>
-                <li>{% trans "Issue description and supporting media" %}</li>
-                <li>{% trans "Offer comparison and booking summary" %}</li>
-                <li>{% trans "Completion confirmation and review history" %}</li>
+                <li>{% trans "Open requests can be edited, deleted, or cancelled before assignment" %}</li>
+                <li>{% trans "Accepted requests move to In Progress" %}</li>
+                <li>{% trans "Completed requests are locked as history" %}</li>
+                <li>{% trans "Cancelled requests remain visible in My Requests" %}</li>
             </ul>
         </div>
     </div>
 </section>
 
-<section class="section" aria-labelledby="reviews-title">
+<section class="section" aria-labelledby="action-visibility-title">
     <div class="container feature-grid feature-grid--reverse">
         <div class="empty-state empty-state--compact">
             <span class="empty-state__icon" aria-hidden="true">
-                <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
             </span>
-            <h3>{% trans "No customer reviews yet." %}</h3>
-            <p>{% trans "Reviews will appear after completed repair work is available in UstoHub." %}</p>
+            <h3>{% trans "Actions are hidden when a request is locked." %}</h3>
+            <p>{% trans "Edit, delete, and cancel are shown only while a request is open and unassigned." %}</p>
         </div>
 
         <div class="section-heading">
-            <p class="eyebrow">{% trans "Customer feedback" %}</p>
-            <h2 id="reviews-title">{% trans "Reviews should prove real work, not decorate the page." %}</h2>
-            <p>{% trans "Verified reviews will appear only after completed repair work is available in UstoHub." %}</p>
+            <p class="eyebrow">{% trans "Action visibility" %}</p>
+            <h2 id="action-visibility-title">{% trans "Nothing disappears without a reason." %}</h2>
+            <p>{% trans "When a professional accepts work, the request becomes locked for customer edit, delete, and cancel actions so the saved record stays consistent." %}</p>
         </div>
     </div>
 </section>
@@ -222,9 +228,15 @@
         <div>
             <p class="eyebrow">{% trans "For professionals" %}</p>
             <h2 id="pros-title">{% trans "A practical workspace for trusted service providers." %}</h2>
-            <p>{% trans "Professionals can use the same account system today, with the interface prepared for requests, offers, schedules, jobs, reviews, and service history as the marketplace grows." %}</p>
+            <p>{% trans "Professionals can use the current account system to browse open requests, manage assigned work, and review completed jobs." %}</p>
         </div>
-        <a class="btn btn--primary" href="{% url 'register' %}#account-panel">{% trans "Join as a Professional" %}</a>
+        {% if request.user.is_authenticated and request.user.user_type == "master" and request.user.is_master_approved %}
+            <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
+        {% elif request.user.is_authenticated and request.user.user_type == "master" %}
+            <a class="btn btn--primary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
+        {% elif not request.user.is_authenticated %}
+            <a class="btn btn--primary" href="{% url 'register' %}#account-panel">{% trans "Join as a Professional" %}</a>
+        {% endif %}
     </div>
 </section>
 
@@ -245,8 +257,8 @@
                 <p>{% trans "Email verification helps keep repair requests and service activity connected to the correct account." %}</p>
             </details>
             <details>
-                <summary>{% trans "Are professional offers available now?" %}</summary>
-                <p>{% trans "The interface is prepared for offers and bookings. Real offer data will appear when those marketplace features are connected." %}</p>
+                <summary>{% trans "Why do edit, delete, or cancel buttons disappear?" %}</summary>
+                <p>{% trans "Those actions are available only while a repair request is open and no professional has accepted it." %}</p>
             </details>
         </div>
     </div>
@@ -258,6 +270,16 @@
             <p class="eyebrow">{% trans "Start with an account" %}</p>
             <h2 id="final-cta-title">{% trans "Bring your next home repair into one organized flow." %}</h2>
         </div>
-        <a class="btn btn--primary" href="{% url 'repair_create' %}">{% trans "Post a Repair Request" %}</a>
+        {% if request.user.is_authenticated %}
+            {% if request.user.user_type == "master" and request.user.is_master_approved %}
+                <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
+            {% elif request.user.user_type == "master" %}
+                <a class="btn btn--primary" href="{% url 'approval_pending' %}">{% trans "View Approval Status" %}</a>
+            {% else %}
+                <a class="btn btn--primary" href="{% url 'repair_create' %}">{% trans "Post a Repair Request" %}</a>
+            {% endif %}
+        {% else %}
+            <a class="btn btn--primary" href="{% url 'register' %}#account-panel">{% trans "Create account" %}</a>
+        {% endif %}
     </div>
 </section>

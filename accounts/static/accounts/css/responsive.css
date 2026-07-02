@@ -182,6 +182,10 @@
     margin-inline: auto;
   }
 
+  .workspace-context {
+    grid-template-columns: 1fr;
+  }
+
   .split-section,
   .feature-grid,
   .feature-grid--reverse,
@@ -321,6 +325,10 @@
     grid-template-columns: 1fr;
   }
 
+  .workspace-context__steps {
+    grid-template-columns: 1fr;
+  }
+
   .repair-list-summary__metric {
     text-align: left;
   }
@@ -420,6 +428,8 @@
   }
 
   .workflow-preview,
+  .workspace-context__header,
+  .workspace-context__step,
   .repair-photo-showcase,
   .approval-signal-board,
   .approval-status-card,

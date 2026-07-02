@@ -2543,6 +2543,114 @@ msgstr ""
 "Ин дархости таъмирро дигар таҳрир, нест кардан ё бекор кардан мумкин нест, "
 "зеро мутахассис онро аллакай қабул кардааст ё кор анҷом шудааст."
 
+msgid "Workspace navigation"
+msgstr "Навигатсияи фазои корӣ"
+
+msgid "Start with the repair type, then add a clear title, description, urgency, and service address."
+msgstr "Аз навъи таъмир оғоз кунед, сипас унвони равшан, тавсиф, таъҷилӣ ва суроғаи хизматрасониро илова кунед."
+
+msgid "Real home issues need clear request details."
+msgstr "Мушкилоти воқеии хона ба тафсилоти равшани дархост ниёз доранд."
+
+msgid "UstoHub keeps the issue description, category, urgency, address, status, and professional assignment in one record."
+msgstr "UstoHub тавсифи мушкил, категория, таъҷилӣ, суроға, ҳолат ва таъйини мутахассисро дар як сабт нигоҳ медорад."
+
+msgid "Customers control their own repair requests"
+msgstr "Муштариён дархостҳои таъмири худро идора мекунанд"
+
+msgid "Professionals see only open unassigned requests"
+msgstr "Мутахассисон танҳо дархостҳои кушодаи таъйиннашударо мебинанд"
+
+msgid "Completed and cancelled work stays readable"
+msgstr "Кори анҷомшуда ва бекоршуда хонданӣ мемонад"
+
+msgid "The request keeps service type, urgency, and address together."
+msgstr "Дархост навъи хизматрасонӣ, таъҷилӣ ва суроғаро якҷо нигоҳ медорад."
+
+msgid "Professional accepts the request."
+msgstr "Мутахассис дархостро қабул мекунад."
+
+msgid "Accepted requests move from open work to the professional assigned queue."
+msgstr "Дархостҳои қабулшуда аз корҳои кушода ба навбати таъйиншудаи мутахассис мегузаранд."
+
+msgid "Customer tracks progress."
+msgstr "Муштарӣ пешрафтро пайгирӣ мекунад."
+
+msgid "The detail page shows status, assignment, description, and address."
+msgstr "Саҳифаи тафсилот ҳолат, таъйин, тавсиф ва суроғаро нишон медиҳад."
+
+msgid "Professional marks completed."
+msgstr "Мутахассис корро ҳамчун анҷомшуда қайд мекунад."
+
+msgid "Completed requests move to professional work history and stay visible to the customer."
+msgstr "Дархостҳои анҷомшуда ба таърихи кори мутахассис мегузаранд ва барои муштарӣ намоён мемонанд."
+
+msgid "Approved professionals can browse open repair requests, accept suitable work, and mark assigned work as completed."
+msgstr "Мутахассисони тасдиқшуда метавонанд дархостҳои кушодаро бинанд, кори мувофиқро қабул кунанд ва кори таъйиншударо анҷомшуда қайд намоянд."
+
+msgid "Professional work starts after approval."
+msgstr "Кори мутахассис пас аз тасдиқ оғоз мешавад."
+
+msgid "Approved accounts get access to open requests, accepted work, and completed work history."
+msgstr "Ҳисобҳои тасдиқшуда ба дархостҳои кушода, кори қабулшуда ва таърихи корҳои анҷомшуда дастрасӣ мегиранд."
+
+msgid "Status and control"
+msgstr "Ҳолат ва идоракунӣ"
+
+msgid "Every repair request has a clear lifecycle."
+msgstr "Ҳар дархости таъмир давраи равшани худро дорад."
+
+msgid "The frontend keeps available actions visible only when the backend allows them."
+msgstr "Фронтенд амалҳои дастрасро танҳо вақте нишон медиҳад, ки бэкенд иҷозат медиҳад."
+
+msgid "Supported lifecycle"
+msgstr "Давраи дастгиришаванда"
+
+msgid "Open requests can be edited, deleted, or cancelled before assignment"
+msgstr "Дархостҳои кушодаро пеш аз таъйин таҳрир, нест ё бекор кардан мумкин аст"
+
+msgid "Accepted requests move to In Progress"
+msgstr "Дархостҳои қабулшуда ба ҳолати «Дар ҷараён» мегузаранд"
+
+msgid "Completed requests are locked as history"
+msgstr "Дархостҳои анҷомшуда ҳамчун таърих қулф мешаванд"
+
+msgid "Cancelled requests remain visible in My Requests"
+msgstr "Дархостҳои бекоршуда дар «Дархостҳои ман» намоён мемонанд"
+
+msgid "Actions are hidden when a request is locked."
+msgstr "Вақте дархост қулф аст, амалҳо пинҳон мешаванд."
+
+msgid "Edit, delete, and cancel are shown only while a request is open and unassigned."
+msgstr "Таҳрир, нест кардан ва бекор кардан танҳо вақте нишон дода мешаванд, ки дархост кушода ва таъйиннашуда бошад."
+
+msgid "Action visibility"
+msgstr "Намоёнии амалҳо"
+
+msgid "Nothing disappears without a reason."
+msgstr "Ҳеҷ чиз бе сабаб нопадид намешавад."
+
+msgid "When a professional accepts work, the request becomes locked for customer edit, delete, and cancel actions so the saved record stays consistent."
+msgstr "Вақте мутахассис корро қабул мекунад, дархост барои таҳрир, нест кардан ва бекор кардани муштарӣ қулф мешавад, то сабти нигоҳдошташуда пайваста монад."
+
+msgid "Professionals can use the current account system to browse open requests, manage assigned work, and review completed jobs."
+msgstr "Мутахассисон метавонанд аз системаи ҳозираи ҳисоб барои дидани дархостҳои кушода, идораи кори таъйиншуда ва баррасии корҳои анҷомшуда истифода баранд."
+
+msgid "Why do edit, delete, or cancel buttons disappear?"
+msgstr "Чаро тугмаҳои таҳрир, нест кардан ё бекор кардан нопадид мешаванд?"
+
+msgid "Those actions are available only while a repair request is open and no professional has accepted it."
+msgstr "Ин амалҳо танҳо вақте дастрасанд, ки дархости таъмир кушода бошад ва ҳеҷ мутахассис онро қабул накарда бошад."
+
+msgid "Customer approval"
+msgstr "Тасдиқи муштарӣ"
+
+msgid "Edit, delete, and cancel are available because this request is open and no professional has accepted it yet."
+msgstr "Таҳрир, нест кардан ва бекор кардан дастрасанд, зеро ин дархост кушода аст ва мутахассис ҳанӯз онро қабул накардааст."
+
+msgid "Pending customer approval"
+msgstr "Интизори тасдиқи муштарӣ"
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

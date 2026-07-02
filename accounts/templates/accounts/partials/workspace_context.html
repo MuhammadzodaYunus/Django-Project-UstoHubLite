@@ -1,0 +1,74 @@
+{% load i18n %}
+
+{% with current_route=request.resolver_match.url_name %}
+<section class="workspace-context container" aria-label="{% trans 'Workspace navigation' %}">
+    <div class="workspace-context__header">
+        {% if request.user.user_type == "master" and request.user.is_master_approved %}
+            <span class="status-badge status-badge--info">{% trans "Professional" %}</span>
+            <div>
+                <h2>{% trans "Professional workspace navigation" %}</h2>
+                <p>{% trans "Review open requests and accept suitable work." %}</p>
+            </div>
+        {% elif request.user.user_type == "master" %}
+            <span class="status-badge status-badge--warning">{% trans "Pending approval" %}</span>
+            <div>
+                <h2>{% trans "Your Professional workspace is almost ready." %}</h2>
+                <p>{% trans "Approval is required before accepting customer Repair Requests." %}</p>
+            </div>
+        {% else %}
+            <span class="status-badge status-badge--success">{% trans "Customer" %}</span>
+            <div>
+                <h2>{% trans "Customer workspace navigation" %}</h2>
+                <p>{% trans "Create a request, then track it from My Requests." %}</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <nav class="workspace-context__steps" aria-label="{% trans 'Workspace navigation' %}">
+        {% if request.user.user_type == "master" and request.user.is_master_approved %}
+            <a class="workspace-context__step{% if current_route == 'professional_request_list' %} is-active{% endif %}" href="{% url 'professional_request_list' %}"{% if current_route == 'professional_request_list' %} aria-current="page"{% endif %}>
+                <span>1</span>
+                <strong>{% trans "Open Requests" %}</strong>
+                <small>{% trans "Newest open requests appear first." %}</small>
+            </a>
+            <a class="workspace-context__step{% if current_route == 'professional_assigned_request_list' %} is-active{% endif %}" href="{% url 'professional_assigned_request_list' %}"{% if current_route == 'professional_assigned_request_list' %} aria-current="page"{% endif %}>
+                <span>2</span>
+                <strong>{% trans "Accepted" %}</strong>
+                <small>{% trans "Accepted requests move to your assigned queue." %}</small>
+            </a>
+            <a class="workspace-context__step{% if current_route == 'professional_completed_request_list' %} is-active{% endif %}" href="{% url 'professional_completed_request_list' %}"{% if current_route == 'professional_completed_request_list' %} aria-current="page"{% endif %}>
+                <span>3</span>
+                <strong>{% trans "Completed" %}</strong>
+                <small>{% trans "Only your completed requests are shown." %}</small>
+            </a>
+        {% elif request.user.user_type == "master" %}
+            <a class="workspace-context__step{% if current_route == 'approval_pending' %} is-active{% endif %}" href="{% url 'approval_pending' %}"{% if current_route == 'approval_pending' %} aria-current="page"{% endif %}>
+                <span>1</span>
+                <strong>{% trans "Pending approval" %}</strong>
+                <small>{% trans "Access is being reviewed." %}</small>
+            </a>
+            <a class="workspace-context__step" href="{% url 'home' %}">
+                <span>2</span>
+                <strong>{% trans "Home" %}</strong>
+                <small>{% trans "How UstoHub Works" %}</small>
+            </a>
+        {% else %}
+            <a class="workspace-context__step{% if current_route == 'repair_list' or current_route == 'repair_detail' or current_route == 'repair_update' or current_route == 'repair_delete' %} is-active{% endif %}" href="{% url 'repair_list' %}"{% if current_route == 'repair_list' %} aria-current="page"{% endif %}>
+                <span>1</span>
+                <strong>{% trans "My Requests" %}</strong>
+                <small>{% trans "Only your repair requests appear here." %}</small>
+            </a>
+            <a class="workspace-context__step{% if current_route == 'repair_create' %} is-active{% endif %}" href="{% url 'repair_create' %}"{% if current_route == 'repair_create' %} aria-current="page"{% endif %}>
+                <span>2</span>
+                <strong>{% trans "Post a Repair Request" %}</strong>
+                <small>{% trans "The request appears in My Requests after posting." %}</small>
+            </a>
+            <a class="workspace-context__step" href="{% url 'home' %}#how-it-works">
+                <span>3</span>
+                <strong>{% trans "How It Works" %}</strong>
+                <small>{% trans "A simple repair workflow." %}</small>
+            </a>
+        {% endif %}
+    </nav>
+</section>
+{% endwith %}

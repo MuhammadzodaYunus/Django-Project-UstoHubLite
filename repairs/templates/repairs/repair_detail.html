@@ -16,7 +16,7 @@
             <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V8l8-5 8 5v11.5M9 22v-8h6v8M3 22h18"/></svg>
         </span>
         <div>
-            <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
+            <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' or repair.status == 'pending_customer' %}status-badge--warning{% else %}status-badge--info{% endif %}">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v5M12 16h.01"/></svg>
                 {% trans "Status" %}: {% trans repair.get_status_display %}
             </span>
@@ -85,7 +85,7 @@
         <div class="repair-status-tracker__summary">
             <div class="repair-status-tracker__badge">
                 <span class="repair-status-tracker__label">{% trans "Current status" %}</span>
-                <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' %}status-badge--warning{% else %}status-badge--info{% endif %}">
+                <span class="status-badge {% if repair.status == 'completed' %}status-badge--success{% elif repair.status == 'cancelled' %}status-badge--danger{% elif repair.status == 'in_progress' or repair.status == 'pending_customer' %}status-badge--warning{% else %}status-badge--info{% endif %}">
                     {% trans repair.get_status_display %}
                 </span>
             </div>
@@ -107,18 +107,25 @@
                     <span class="repair-status-track__state">{% trans "Complete" %}</span>
                 </div>
             </li>
-            <li class="repair-status-track__item {% if repair.status == 'open' %}is-active{% elif repair.status == 'in_progress' or repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
+            <li class="repair-status-track__item {% if repair.status == 'open' %}is-active{% elif repair.status == 'in_progress' or repair.status == 'pending_customer' or repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
                 <span class="repair-status-track__dot" aria-hidden="true"></span>
                 <div class="repair-status-track__content">
                     <strong>{% trans "Professional review" %}</strong>
-                    <span class="repair-status-track__state">{% if repair.status == 'open' %}{% trans "Current" %}{% elif repair.status == 'in_progress' or repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
+                    <span class="repair-status-track__state">{% if repair.status == 'open' %}{% trans "Current" %}{% elif repair.status == 'in_progress' or repair.status == 'pending_customer' or repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
                 </div>
             </li>
-            <li class="repair-status-track__item {% if repair.status == 'in_progress' %}is-active{% elif repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
+            <li class="repair-status-track__item {% if repair.status == 'in_progress' %}is-active{% elif repair.status == 'pending_customer' or repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
                 <span class="repair-status-track__dot" aria-hidden="true"></span>
                 <div class="repair-status-track__content">
                     <strong>{% trans "Work in progress" %}</strong>
-                    <span class="repair-status-track__state">{% if repair.status == 'in_progress' %}{% trans "Current" %}{% elif repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
+                    <span class="repair-status-track__state">{% if repair.status == 'in_progress' %}{% trans "Current" %}{% elif repair.status == 'pending_customer' or repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
+                </div>
+            </li>
+            <li class="repair-status-track__item {% if repair.status == 'pending_customer' %}is-active{% elif repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
+                <span class="repair-status-track__dot" aria-hidden="true"></span>
+                <div class="repair-status-track__content">
+                    <strong>{% trans "Customer approval" %}</strong>
+                    <span class="repair-status-track__state">{% if repair.status == 'pending_customer' %}{% trans "Current" %}{% elif repair.status == 'completed' %}{% trans "Complete" %}{% elif repair.status == 'cancelled' %}{% trans "Cancelled" %}{% else %}{% trans "Pending" %}{% endif %}</span>
                 </div>
             </li>
             <li class="repair-status-track__item {% if repair.status == 'completed' %}is-complete{% elif repair.status == 'cancelled' %}is-cancelled{% else %}is-pending{% endif %}">
@@ -148,6 +155,10 @@
     </section>
 
     {% if repair.status == "open" and not repair.assigned_master %}
+        <div class="trust-note repair-detail-action-note" role="note">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>{% trans "Edit, delete, and cancel are available because this request is open and no professional has accepted it yet." %}</span>
+        </div>
         <div class="repair-detail-actions">
             <a class="btn btn--secondary repair-detail-edit-action" href="{% url 'repair_update' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Edit repair request {{ title }}{% endblocktrans %}">
                 {% trans "Edit Request" %}

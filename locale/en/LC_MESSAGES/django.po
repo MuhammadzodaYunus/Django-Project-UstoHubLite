@@ -2520,6 +2520,114 @@ msgstr ""
 "This repair request can no longer be edited, deleted, or cancelled because a "
 "professional has already accepted it or the work is completed."
 
+msgid "Workspace navigation"
+msgstr "Workspace navigation"
+
+msgid "Start with the repair type, then add a clear title, description, urgency, and service address."
+msgstr "Start with the repair type, then add a clear title, description, urgency, and service address."
+
+msgid "Real home issues need clear request details."
+msgstr "Real home issues need clear request details."
+
+msgid "UstoHub keeps the issue description, category, urgency, address, status, and professional assignment in one record."
+msgstr "UstoHub keeps the issue description, category, urgency, address, status, and professional assignment in one record."
+
+msgid "Customers control their own repair requests"
+msgstr "Customers control their own repair requests"
+
+msgid "Professionals see only open unassigned requests"
+msgstr "Professionals see only open unassigned requests"
+
+msgid "Completed and cancelled work stays readable"
+msgstr "Completed and cancelled work stays readable"
+
+msgid "The request keeps service type, urgency, and address together."
+msgstr "The request keeps service type, urgency, and address together."
+
+msgid "Professional accepts the request."
+msgstr "Professional accepts the request."
+
+msgid "Accepted requests move from open work to the professional assigned queue."
+msgstr "Accepted requests move from open work to the professional assigned queue."
+
+msgid "Customer tracks progress."
+msgstr "Customer tracks progress."
+
+msgid "The detail page shows status, assignment, description, and address."
+msgstr "The detail page shows status, assignment, description, and address."
+
+msgid "Professional marks completed."
+msgstr "Professional marks completed."
+
+msgid "Completed requests move to professional work history and stay visible to the customer."
+msgstr "Completed requests move to professional work history and stay visible to the customer."
+
+msgid "Approved professionals can browse open repair requests, accept suitable work, and mark assigned work as completed."
+msgstr "Approved professionals can browse open repair requests, accept suitable work, and mark assigned work as completed."
+
+msgid "Professional work starts after approval."
+msgstr "Professional work starts after approval."
+
+msgid "Approved accounts get access to open requests, accepted work, and completed work history."
+msgstr "Approved accounts get access to open requests, accepted work, and completed work history."
+
+msgid "Status and control"
+msgstr "Status and control"
+
+msgid "Every repair request has a clear lifecycle."
+msgstr "Every repair request has a clear lifecycle."
+
+msgid "The frontend keeps available actions visible only when the backend allows them."
+msgstr "The frontend keeps available actions visible only when the backend allows them."
+
+msgid "Supported lifecycle"
+msgstr "Supported lifecycle"
+
+msgid "Open requests can be edited, deleted, or cancelled before assignment"
+msgstr "Open requests can be edited, deleted, or cancelled before assignment"
+
+msgid "Accepted requests move to In Progress"
+msgstr "Accepted requests move to In Progress"
+
+msgid "Completed requests are locked as history"
+msgstr "Completed requests are locked as history"
+
+msgid "Cancelled requests remain visible in My Requests"
+msgstr "Cancelled requests remain visible in My Requests"
+
+msgid "Actions are hidden when a request is locked."
+msgstr "Actions are hidden when a request is locked."
+
+msgid "Edit, delete, and cancel are shown only while a request is open and unassigned."
+msgstr "Edit, delete, and cancel are shown only while a request is open and unassigned."
+
+msgid "Action visibility"
+msgstr "Action visibility"
+
+msgid "Nothing disappears without a reason."
+msgstr "Nothing disappears without a reason."
+
+msgid "When a professional accepts work, the request becomes locked for customer edit, delete, and cancel actions so the saved record stays consistent."
+msgstr "When a professional accepts work, the request becomes locked for customer edit, delete, and cancel actions so the saved record stays consistent."
+
+msgid "Professionals can use the current account system to browse open requests, manage assigned work, and review completed jobs."
+msgstr "Professionals can use the current account system to browse open requests, manage assigned work, and review completed jobs."
+
+msgid "Why do edit, delete, or cancel buttons disappear?"
+msgstr "Why do edit, delete, or cancel buttons disappear?"
+
+msgid "Those actions are available only while a repair request is open and no professional has accepted it."
+msgstr "Those actions are available only while a repair request is open and no professional has accepted it."
+
+msgid "Customer approval"
+msgstr "Customer approval"
+
+msgid "Edit, delete, and cancel are available because this request is open and no professional has accepted it yet."
+msgstr "Edit, delete, and cancel are available because this request is open and no professional has accepted it yet."
+
+msgid "Pending customer approval"
+msgstr "Pending customer approval"
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

@@ -2551,6 +2551,114 @@ msgstr ""
 "Эту заявку на ремонт больше нельзя редактировать, удалять или отменять, "
 "потому что специалист уже принял ее или работа завершена."
 
+msgid "Workspace navigation"
+msgstr "Навигация по рабочей области"
+
+msgid "Start with the repair type, then add a clear title, description, urgency, and service address."
+msgstr "Начните с типа ремонта, затем добавьте понятное название, описание, срочность и адрес обслуживания."
+
+msgid "Real home issues need clear request details."
+msgstr "Для реальных домашних проблем нужны понятные детали заявки."
+
+msgid "UstoHub keeps the issue description, category, urgency, address, status, and professional assignment in one record."
+msgstr "UstoHub хранит описание проблемы, категорию, срочность, адрес, статус и назначение специалиста в одной записи."
+
+msgid "Customers control their own repair requests"
+msgstr "Клиенты управляют своими заявками на ремонт"
+
+msgid "Professionals see only open unassigned requests"
+msgstr "Специалисты видят только открытые неназначенные заявки"
+
+msgid "Completed and cancelled work stays readable"
+msgstr "Завершенные и отмененные работы остаются понятными"
+
+msgid "The request keeps service type, urgency, and address together."
+msgstr "Заявка хранит тип услуги, срочность и адрес вместе."
+
+msgid "Professional accepts the request."
+msgstr "Специалист принимает заявку."
+
+msgid "Accepted requests move from open work to the professional assigned queue."
+msgstr "Принятые заявки переходят из открытых работ в назначенную очередь специалиста."
+
+msgid "Customer tracks progress."
+msgstr "Клиент отслеживает прогресс."
+
+msgid "The detail page shows status, assignment, description, and address."
+msgstr "Страница деталей показывает статус, назначение, описание и адрес."
+
+msgid "Professional marks completed."
+msgstr "Специалист отмечает работу завершенной."
+
+msgid "Completed requests move to professional work history and stay visible to the customer."
+msgstr "Завершенные заявки переходят в историю работы специалиста и остаются видимыми клиенту."
+
+msgid "Approved professionals can browse open repair requests, accept suitable work, and mark assigned work as completed."
+msgstr "Одобренные специалисты могут просматривать открытые заявки, принимать подходящую работу и отмечать назначенную работу завершенной."
+
+msgid "Professional work starts after approval."
+msgstr "Работа специалиста начинается после одобрения."
+
+msgid "Approved accounts get access to open requests, accepted work, and completed work history."
+msgstr "Одобренные аккаунты получают доступ к открытым заявкам, принятой работе и истории завершенных работ."
+
+msgid "Status and control"
+msgstr "Статус и управление"
+
+msgid "Every repair request has a clear lifecycle."
+msgstr "У каждой заявки на ремонт есть понятный жизненный цикл."
+
+msgid "The frontend keeps available actions visible only when the backend allows them."
+msgstr "Фронтенд показывает доступные действия только тогда, когда их разрешает бэкенд."
+
+msgid "Supported lifecycle"
+msgstr "Поддерживаемый жизненный цикл"
+
+msgid "Open requests can be edited, deleted, or cancelled before assignment"
+msgstr "Открытые заявки можно редактировать, удалять или отменять до назначения"
+
+msgid "Accepted requests move to In Progress"
+msgstr "Принятые заявки переходят в статус «В процессе»"
+
+msgid "Completed requests are locked as history"
+msgstr "Завершенные заявки блокируются как история"
+
+msgid "Cancelled requests remain visible in My Requests"
+msgstr "Отмененные заявки остаются видимыми в «Моих заявках»"
+
+msgid "Actions are hidden when a request is locked."
+msgstr "Действия скрываются, когда заявка заблокирована."
+
+msgid "Edit, delete, and cancel are shown only while a request is open and unassigned."
+msgstr "Редактирование, удаление и отмена показываются только пока заявка открыта и не назначена."
+
+msgid "Action visibility"
+msgstr "Видимость действий"
+
+msgid "Nothing disappears without a reason."
+msgstr "Ничто не исчезает без причины."
+
+msgid "When a professional accepts work, the request becomes locked for customer edit, delete, and cancel actions so the saved record stays consistent."
+msgstr "Когда специалист принимает работу, заявка блокируется для редактирования, удаления и отмены клиентом, чтобы сохраненная запись оставалась согласованной."
+
+msgid "Professionals can use the current account system to browse open requests, manage assigned work, and review completed jobs."
+msgstr "Специалисты могут использовать текущую систему аккаунтов, чтобы просматривать открытые заявки, управлять назначенной работой и смотреть завершенные задачи."
+
+msgid "Why do edit, delete, or cancel buttons disappear?"
+msgstr "Почему кнопки редактирования, удаления или отмены исчезают?"
+
+msgid "Those actions are available only while a repair request is open and no professional has accepted it."
+msgstr "Эти действия доступны только пока заявка открыта и ни один специалист ее не принял."
+
+msgid "Customer approval"
+msgstr "Подтверждение клиента"
+
+msgid "Edit, delete, and cancel are available because this request is open and no professional has accepted it yet."
+msgstr "Редактирование, удаление и отмена доступны, потому что эта заявка открыта и специалист еще не принял ее."
+
+msgid "Pending customer approval"
+msgstr "Ожидает подтверждения клиента"
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

@@ -181,6 +181,9 @@
     </header>
 
     {% include "accounts/partials/messages.html" %}
+    {% if request.user.is_authenticated %}
+        {% include "accounts/partials/workspace_context.html" %}
+    {% endif %}
 
     <main id="main-content">
         <section class="hero-section" aria-labelledby="hero-title">

@@ -568,12 +568,48 @@ html[data-theme="dark"] .icon-tile--danger {
 }
 
 html[data-theme="dark"] .notice,
+html[data-theme="dark"] .workspace-context__header,
+html[data-theme="dark"] .workspace-context__step,
 html[data-theme="dark"] .trust-note,
 html[data-theme="dark"] .form-alert,
 html[data-theme="dark"] .repair-delete-alert {
     color: var(--color-text);
     background: var(--theme-surface-elevated);
     border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .workspace-context__header h2,
+html[data-theme="dark"] .workspace-context__step strong {
+    color: var(--color-text);
+}
+
+html[data-theme="dark"] .workspace-context__header p,
+html[data-theme="dark"] .workspace-context__step small {
+    color: var(--color-text-soft);
+}
+
+html[data-theme="dark"] .workspace-context__step span {
+    color: var(--color-text);
+    background: rgba(148, 163, 184, 0.14);
+    border-color: var(--color-border);
+}
+
+html[data-theme="dark"] .workspace-context__step:hover,
+html[data-theme="dark"] .workspace-context__step:focus-visible {
+    border-color: var(--color-border-strong);
+}
+
+html[data-theme="dark"] .workspace-context__step.is-active,
+html[data-theme="dark"] .workspace-context__step[aria-current="page"] {
+    background: rgba(249, 115, 22, 0.14);
+    border-color: rgba(249, 115, 22, 0.38);
+}
+
+html[data-theme="dark"] .workspace-context__step.is-active span,
+html[data-theme="dark"] .workspace-context__step[aria-current="page"] span {
+    color: #ffffff;
+    background: var(--color-orange);
+    border-color: var(--color-orange);
 }
 
 html[data-theme="dark"] .notice--success {

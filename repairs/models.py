@@ -25,6 +25,7 @@ class RepairRequest(models.Model):
         ('in_progress', 'In progress'),
         ('completed', 'Completed'),
         ('cancelled', 'Cancelled'),
+        ('pending_customer', 'Pending customer approval'),
 
     ]
 
