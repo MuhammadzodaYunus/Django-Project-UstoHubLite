@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Professional open repair requests" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Professional work queue" %}{% endblock %}
 {% block hero_title %}{% trans "Open Repair Requests" %}{% endblock %}
-{% block hero_text %}{% trans "Review open customer requests and accept suitable work." %}{% endblock %}
+{% block hero_text %}{% trans "Review open customer requests and accept suitable work when you are ready to take responsibility for it." %}{% endblock %}
 {% block hero_actions %}{% endblock %}
 {% block hero_support %}
     <div class="repair-list-summary professional-request-summary" aria-label="{% trans 'Open repair request summary' %}">
@@ -45,7 +45,7 @@
         <span class="icon-tile" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
         </span>
-        <p>{% trans "Accepted requests move to your assigned queue." %}</p>
+        <p>{% trans "Accepted requests are linked to your professional account and may wait for customer approval before active work begins." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -57,7 +57,7 @@
             <div>
                 <p class="eyebrow">{% trans "Available requests" %}</p>
                 <h2 id="professional-request-list-title">{% trans "Customer repair requests" %}</h2>
-                <p>{% trans "Review scope, urgency, and location before accepting." %}</p>
+                <p>{% trans "Review scope, urgency, location, and customer details before accepting." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}

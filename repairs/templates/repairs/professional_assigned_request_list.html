@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Professional accepted repair requests" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Professional work queue" %}{% endblock %}
 {% block hero_title %}{% trans "My Accepted Requests" %}{% endblock %}
-{% block hero_text %}{% trans "Track repair requests assigned to your professional account." %}{% endblock %}
+{% block hero_text %}{% trans "Track repair requests assigned to your professional account after they become active work." %}{% endblock %}
 {% block hero_actions %}
     <a class="btn btn--secondary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
 {% endblock %}
@@ -23,7 +23,7 @@
             {% if repairs %}
                 <p>{% trans "Requests in progress appear here." %}</p>
             {% else %}
-                <p>{% trans "No in-progress requests right now." %}</p>
+                <p>{% trans "No active assigned requests right now." %}</p>
             {% endif %}
         </div>
     </div>
@@ -39,7 +39,7 @@
                 <p>{% blocktrans count total=total %}{{ total }} accepted request.{% plural %}{{ total }} accepted requests.{% endblocktrans %}</p>
             {% endwith %}
         {% else %}
-            <p>{% trans "Accepted customer requests will appear here." %}</p>
+            <p>{% trans "Accepted customer requests appear here once they are in progress." %}</p>
         {% endif %}
     </header>
 
@@ -47,7 +47,7 @@
         <span class="icon-tile" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
         </span>
-        <p>{% trans "Only requests assigned to you are shown." %}</p>
+        <p>{% trans "Only active requests assigned to you are shown." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -59,7 +59,7 @@
             <div>
                 <p class="eyebrow">{% trans "Accepted work" %}</p>
                 <h2 id="professional-assigned-list-title">{% trans "My Accepted Requests" %}</h2>
-                <p>{% trans "Manage active repair work." %}</p>
+                <p>{% trans "Manage active repair work and mark it completed only when the work is finished." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}
@@ -122,10 +122,17 @@
                         </div>
 
                         <div class="professional-request-card__footer">
-                            <form class="professional-complete-form" method="post" action="{% url 'professional_complete_request' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Mark repair request {{ title }} as completed{% endblocktrans %}">
-                                {% csrf_token %}
-                                <button class="btn btn--success professional-request-card__action" type="submit">{% trans "Mark as Completed" %}</button>
-                            </form>
+                            {% if repair.status == "in_progress" %}
+                                <form class="professional-complete-form" method="post" action="{% url 'professional_complete_request' repair.pk %}" aria-label="{% blocktrans trimmed with title=repair.title %}Mark repair request {{ title }} as completed{% endblocktrans %}">
+                                    {% csrf_token %}
+                                    <button class="btn btn--success professional-request-card__action" type="submit">{% trans "Mark as Completed" %}</button>
+                                </form>
+                            {% elif repair.status == "pending_customer" %}
+                                <div class="professional-request-state-note" role="note">
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6v6l4 2"/><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/></svg>
+                                    <span>{% trans "Waiting for customer approval before this work can be completed." %}</span>
+                                </div>
+                            {% endif %}
                         </div>
                     </article>
                 {% endfor %}
@@ -136,7 +143,7 @@
                     <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
                 </span>
                 <h3>{% trans "No accepted repair requests." %}</h3>
-                <p>{% trans "Browse open requests when you are ready for work." %}</p>
+                <p>{% trans "Browse open requests, or wait for accepted work to become active." %}</p>
                 <a class="btn btn--secondary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
             </div>
         {% endif %}

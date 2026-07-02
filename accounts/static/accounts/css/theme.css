@@ -441,6 +441,7 @@ html[data-theme="dark"] :is(
     .service-photo-band__content,
     .summary-card,
     .repair-guidance__item,
+    .workflow-note,
     .repair-live-brief,
     .repair-live-brief__grid div,
     .repair-list-summary,
@@ -559,6 +560,18 @@ html[data-theme="dark"] .icon-tile--success {
     color: var(--color-success);
     background: var(--theme-success-surface);
     border-color: var(--theme-success-border);
+}
+
+html[data-theme="dark"] .icon-tile--warning {
+    color: var(--color-warning);
+    background: var(--theme-warning-surface);
+    border-color: var(--theme-warning-border);
+}
+
+html[data-theme="dark"] .professional-request-state-note {
+    color: #FCD34D;
+    background: var(--theme-warning-surface);
+    border-color: var(--theme-warning-border);
 }
 
 html[data-theme="dark"] .icon-tile--danger {

@@ -118,7 +118,7 @@
         <div class="section-heading section-heading--sticky">
             <p class="eyebrow">{% trans "How it works" %}</p>
             <h2 id="process-title">{% trans "A clear path from issue to completed repair." %}</h2>
-            <p>{% trans "The interface is ready for a full marketplace flow while staying compatible with the current account and verification steps." %}</p>
+            <p>{% trans "The current workflow keeps request creation, assignment, status, and history easy to understand." %}</p>
         </div>
 
         <ol class="process-list">
@@ -140,7 +140,7 @@
                 <span class="process-list__number">3</span>
                 <div>
                     <h3>{% trans "Professional accepts the request." %}</h3>
-                    <p>{% trans "Accepted requests move from open work to the professional assigned queue." %}</p>
+                    <p>{% trans "Accepted requests leave the open queue and may wait for customer approval before active work." %}</p>
                 </div>
             </li>
             <li>
@@ -165,8 +165,8 @@
     <div class="container feature-grid">
         <div class="section-heading">
             <p class="eyebrow">{% trans "Verified professionals" %}</p>
-            <h2 id="professionals-title">{% trans "Profiles designed for confident comparison." %}</h2>
-            <p>{% trans "Approved professionals can browse open repair requests, accept suitable work, and mark assigned work as completed." %}</p>
+            <h2 id="professionals-title">{% trans "Professional tools for current repair work." %}</h2>
+            <p>{% trans "Approved professionals can browse open requests, accept suitable work, manage active work, and review completed history." %}</p>
         </div>
 
         <div class="empty-state">
@@ -174,7 +174,7 @@
                 <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
             </span>
             <h3>{% trans "Professional work starts after approval." %}</h3>
-            <p>{% trans "Approved accounts get access to open requests, accepted work, and completed work history." %}</p>
+            <p>{% trans "Approved accounts get access to open requests, active assigned work, and completed work history." %}</p>
             {% if request.user.is_authenticated and request.user.user_type == "master" and request.user.is_master_approved %}
                 <a class="btn btn--primary" href="{% url 'professional_request_list' %}">{% trans "Browse Open Requests" %}</a>
             {% elif request.user.is_authenticated and request.user.user_type == "master" %}
@@ -197,7 +197,7 @@
             <h3>{% trans "Supported lifecycle" %}</h3>
             <ul class="check-list">
                 <li>{% trans "Open requests can be edited, deleted, or cancelled before assignment" %}</li>
-                <li>{% trans "Accepted requests move to In Progress" %}</li>
+                <li>{% trans "Accepted requests may wait for customer approval before active work" %}</li>
                 <li>{% trans "Completed requests are locked as history" %}</li>
                 <li>{% trans "Cancelled requests remain visible in My Requests" %}</li>
             </ul>

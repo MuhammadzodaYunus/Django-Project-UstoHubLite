@@ -7,7 +7,7 @@
             <span class="status-badge status-badge--info">{% trans "Professional" %}</span>
             <div>
                 <h2>{% trans "Professional workspace navigation" %}</h2>
-                <p>{% trans "Review open requests and accept suitable work." %}</p>
+                <p>{% trans "Review open requests and follow accepted work by status." %}</p>
             </div>
         {% elif request.user.user_type == "master" %}
             <span class="status-badge status-badge--warning">{% trans "Pending approval" %}</span>
@@ -34,7 +34,7 @@
             <a class="workspace-context__step{% if current_route == 'professional_assigned_request_list' %} is-active{% endif %}" href="{% url 'professional_assigned_request_list' %}"{% if current_route == 'professional_assigned_request_list' %} aria-current="page"{% endif %}>
                 <span>2</span>
                 <strong>{% trans "Accepted" %}</strong>
-                <small>{% trans "Accepted requests move to your assigned queue." %}</small>
+                <small>{% trans "Requests in progress appear here." %}</small>
             </a>
             <a class="workspace-context__step{% if current_route == 'professional_completed_request_list' %} is-active{% endif %}" href="{% url 'professional_completed_request_list' %}"{% if current_route == 'professional_completed_request_list' %} aria-current="page"{% endif %}>
                 <span>3</span>

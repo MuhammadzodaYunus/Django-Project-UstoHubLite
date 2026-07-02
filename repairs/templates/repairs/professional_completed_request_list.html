@@ -6,7 +6,7 @@
 {% block auth_label %}{% trans "Professional completed repair requests" %}{% endblock %}
 {% block hero_eyebrow %}{% trans "Professional work history" %}{% endblock %}
 {% block hero_title %}{% trans "Completed Requests" %}{% endblock %}
-{% block hero_text %}{% trans "Review repair requests you have marked as completed." %}{% endblock %}
+{% block hero_text %}{% trans "Review repair requests you have marked as completed as read-only work history." %}{% endblock %}
 {% block hero_actions %}
     <a class="btn btn--secondary" href="{% url 'professional_assigned_request_list' %}">{% trans "View Active Requests" %}</a>
 {% endblock %}
@@ -47,7 +47,7 @@
         <span class="icon-tile icon-tile--success" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
         </span>
-        <p>{% trans "Only your completed requests are shown." %}</p>
+        <p>{% trans "Only your completed requests are shown, and no completion actions are available here." %}</p>
     </div>
 </article>
 {% endblock %}
@@ -59,7 +59,7 @@
             <div>
                 <p class="eyebrow">{% trans "Completed work" %}</p>
                 <h2 id="professional-completed-list-title">{% trans "Finished repair requests" %}</h2>
-                <p>{% trans "Review completed request records." %}</p>
+                <p>{% trans "Review completed request records without changing their status." %}</p>
             </div>
             {% if repairs %}
                 {% with total=repairs|length %}

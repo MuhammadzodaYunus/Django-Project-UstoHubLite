@@ -2628,6 +2628,96 @@ msgstr "Edit, delete, and cancel are available because this request is open and 
 msgid "Pending customer approval"
 msgstr "Pending customer approval"
 
+msgid "Review open requests and follow accepted work by status."
+msgstr "Review open requests and follow accepted work by status."
+
+msgid "Repair request workflow notes"
+msgstr "Repair request workflow notes"
+
+msgid "Open requests stay editable."
+msgstr "Open requests stay editable."
+
+msgid "Edit, delete, or cancel while no professional has accepted the request."
+msgstr "Edit, delete, or cancel while no professional has accepted the request."
+
+msgid "Accepted requests are protected."
+msgstr "Accepted requests are protected."
+
+msgid "Edit, delete, and cancel are hidden after assignment, completion, or cancellation."
+msgstr "Edit, delete, and cancel are hidden after assignment, completion, or cancellation."
+
+msgid "Review open customer requests and accept suitable work when you are ready to take responsibility for it."
+msgstr "Review open customer requests and accept suitable work when you are ready to take responsibility for it."
+
+msgid "Accepted requests are linked to your professional account and may wait for customer approval before active work begins."
+msgstr "Accepted requests are linked to your professional account and may wait for customer approval before active work begins."
+
+msgid "Review scope, urgency, location, and customer details before accepting."
+msgstr "Review scope, urgency, location, and customer details before accepting."
+
+msgid "Track repair requests assigned to your professional account after they become active work."
+msgstr "Track repair requests assigned to your professional account after they become active work."
+
+msgid "No active assigned requests right now."
+msgstr "No active assigned requests right now."
+
+msgid "Accepted customer requests appear here once they are in progress."
+msgstr "Accepted customer requests appear here once they are in progress."
+
+msgid "Only active requests assigned to you are shown."
+msgstr "Only active requests assigned to you are shown."
+
+msgid "Manage active repair work and mark it completed only when the work is finished."
+msgstr "Manage active repair work and mark it completed only when the work is finished."
+
+msgid "Browse open requests, or wait for accepted work to become active."
+msgstr "Browse open requests, or wait for accepted work to become active."
+
+msgid "Review repair requests you have marked as completed as read-only work history."
+msgstr "Review repair requests you have marked as completed as read-only work history."
+
+msgid "Only your completed requests are shown, and no completion actions are available here."
+msgstr "Only your completed requests are shown, and no completion actions are available here."
+
+msgid "Review completed request records without changing their status."
+msgstr "Review completed request records without changing their status."
+
+msgid "Code must contain only numbers."
+msgstr "Code must contain only numbers."
+
+msgid "Verification code was not found."
+msgstr "Verification code was not found."
+
+msgid "This verification code has expired."
+msgstr "This verification code has expired."
+
+msgid "The verification code is incorrect."
+msgstr "The verification code is incorrect."
+
+msgid "The current workflow keeps request creation, assignment, status, and history easy to understand."
+msgstr "The current workflow keeps request creation, assignment, status, and history easy to understand."
+
+msgid "Accepted requests leave the open queue and may wait for customer approval before active work."
+msgstr "Accepted requests leave the open queue and may wait for customer approval before active work."
+
+msgid "Professional tools for current repair work."
+msgstr "Professional tools for current repair work."
+
+msgid "Approved professionals can browse open requests, accept suitable work, manage active work, and review completed history."
+msgstr "Approved professionals can browse open requests, accept suitable work, manage active work, and review completed history."
+
+msgid "Approved accounts get access to open requests, active assigned work, and completed work history."
+msgstr "Approved accounts get access to open requests, active assigned work, and completed work history."
+
+msgid "Accepted requests may wait for customer approval before active work"
+msgstr "Accepted requests may wait for customer approval before active work"
+
+msgid "Waiting for customer approval before this work can be completed."
+msgstr "Waiting for customer approval before this work can be completed."
+
+msgid "Request sent to the customer for approval."
+msgstr "Request sent to the customer for approval."
+
 #~ msgid ""
 #~ "A customer can save the title, description, category, urgency, and "
 #~ "address for each repair request."

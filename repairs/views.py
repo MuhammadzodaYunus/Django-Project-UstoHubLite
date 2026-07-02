@@ -159,9 +159,9 @@ def professional_accept_request_view(request, pk):
     repair = get_object_or_404(RepairRequest, pk=pk, status="open", assigned_master__isnull=True)
 
     repair.assigned_master = request.user
-    repair.status = "in_progress"
+    repair.status = "pending_customer"
     repair.save()
-    messages.success(request, 'Repair request accepted successfully.')
+    messages.success(request, "Request sent to the customer for approval.")
     return redirect('professional_assigned_request_list')
     
         
@@ -173,7 +173,7 @@ def professional_assigned_request_list_view(request):
     
     repairs = RepairRequest.objects.filter(
         assigned_master=request.user, 
-        status='in_progress').order_by('-created_at')
+        status__in=['in_progress', 'pending_customer']).order_by('-created_at')
 
     return render(request, 'repairs/professional_assigned_request_list.html', {'repairs': repairs})
 
@@ -230,3 +230,39 @@ def repair_cancel_view(request, pk):
     else:
         messages.error(request, 'This repair request cannot be cancelled because a professional has already accepted it or the work is completed.')
         return redirect('repair_detail', pk=repair.pk)
+    
+
+@login_required
+@require_POST
+def customer_approve_master_view(request, pk):
+    if not is_customer(request.user):
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        else:
+            return redirect('home')
+        
+    repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user, status='pending_customer', assigned_master__isnull=True)
+
+    repair.status = 'in_progress'
+    repair.save()
+    messages.success(request, 'Professional approved. Your repair request is now inprogress.')
+    return redirect('repair_detail', pk=repair.pk)
+    
+
+@login_required
+@require_POST
+def customer_decline_master_view(request, pk):
+    if not is_customer(request.user):
+        if is_approved_master(request.user):
+            return redirect('professional_request_list')
+        else:
+            return redirect('home')
+        
+    
+    repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user, status='pending_customer', assigned_master__isnull=False)
+
+repair.assigned_master = None
+repair.status = 'open'
+repair.save()
+messages.success(request, 'Professional request declined. Your repair request iopen again.')
+return redirect('repair_detail', pk=repair.pk)

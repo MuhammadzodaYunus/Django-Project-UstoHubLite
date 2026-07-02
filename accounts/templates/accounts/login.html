@@ -68,7 +68,7 @@
                 <strong>{% trans "Login was not successful." %}</strong>
                 <ul>
                     {% for error in form.non_field_errors %}
-                        <li>{{ error }}</li>
+                        <li>{% trans error %}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -86,7 +86,7 @@
                 {% if form.username.errors %}
                     <ul id="id_username_errors" class="field-errors">
                         {% for error in form.username.errors %}
-                            <li>{{ error }}</li>
+                            <li>{% trans error %}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -107,7 +107,7 @@
                 {% if form.password.errors %}
                     <ul id="id_password_errors" class="field-errors">
                         {% for error in form.password.errors %}
-                            <li>{{ error }}</li>
+                            <li>{% trans error %}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
