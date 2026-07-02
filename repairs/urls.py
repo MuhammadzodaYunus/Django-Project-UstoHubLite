@@ -13,8 +13,8 @@ urlpatterns = [
     path("<int:pk>/complete/", views.professional_complete_request_view, name="professional_complete_request"),
     path("professional/completed/",views.professional_completed_request_list_view,name="professional_completed_request_list",),
     path('<int:pk>/cancel/', views.repair_cancel_view, name='repair_cancel'),
-    path('approve-master/', views.customer_approve_master_view, 'approve_master'),
-    path('decline-master/', views.customer_decline_master_view, 'decline_master'),
+    path('approve-master/<int:pk>/', views.customer_approve_master_view, name='approve_master'),
+    path('decline-master/<int:pk>/', views.customer_decline_master_view, name='decline_master'),
 
 ]
 

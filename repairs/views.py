@@ -241,11 +241,11 @@ def customer_approve_master_view(request, pk):
         else:
             return redirect('home')
         
-    repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user, status='pending_customer', assigned_master__isnull=True)
+    repair = get_object_or_404(RepairRequest, pk=pk, customer=request.user, status='pending_customer', assigned_master__isnull=False)
 
     repair.status = 'in_progress'
     repair.save()
-    messages.success(request, 'Professional approved. Your repair request is now inprogress.')
+    messages.success(request, 'Professional approved. Your repair request is now in progress.')
     return redirect('repair_detail', pk=repair.pk)
     
 
@@ -264,5 +264,5 @@ def customer_decline_master_view(request, pk):
     repair.assigned_master = None
     repair.status = 'open'
     repair.save()
-    messages.success(request, 'Professional request declined. Your repair request iopen again.')
+    messages.success(request, 'Professional request declined. Your repair request is open again.')
     return redirect('repair_detail', pk=repair.pk)
